@@ -3,3 +3,21 @@
 link:https://tauri.app/v1/api/js/app[原文地址]
 
 获取应用元数据。
+
+[[functions]]
+== Functions
+
+[[get-name]]
+=== getName
+
+[[get-tauri-version]]
+=== getTauriVersion
+
+[[get-version]]
+=== getVersion
+
+[[hide]]
+=== hide
+
+[[show]]
+=== show
