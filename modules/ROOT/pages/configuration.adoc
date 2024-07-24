@@ -1,5 +1,7 @@
 = 配置
 
+https://tauri.app/v1/api/config[原文地址]
+
 Tauri的配置对象，它是从文件中读取的。 你可以在里面自定义前端资源、配置打包选项、开启应用自动更新、定制系统托盘，还有配置API的白名单等等。
 
 配置文件在你的Tauri应用源目录(src-tauri)通过执行 xref:cli.adoc#init[tauri init]命令生成。
