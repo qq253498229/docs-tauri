@@ -1,0 +1,38 @@
+= CLI
+
+[[info]]
+== info
+
+[[init]]
+== init
+
+[[plugin-init]]
+== plugin init
+
+[[dev]]
+== dev
+
+[[build]]
+== build
+
+[[icon]]
+== icon
+
+[[completions]]
+== completions
+
+[[bash]]
+=== Bash
+
+[[zsh]]
+=== Zsh
+
+[[power-shell]]
+=== PowerShell
+
+[[version]]
+== version
+
+[[cli-usage]]
+== cli usage
+

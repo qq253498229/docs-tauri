@@ -1,0 +1,261 @@
+= 配置
+
+Tauri的配置对象，它是从文件中读取的。 你可以在里面自定义前端资源、配置打包选项、开启应用自动更新、定制系统托盘，还有配置API的白名单等等。
+
+配置文件在你的Tauri应用源目录(src-tauri)通过执行 xref:cli.adoc#init[tauri init]命令生成。
+
+生成后你也可以随时对其进行修改，来自定义Tauri应用。
+
+== 文件格式
+
+默认情况下，配置被定义为一个名为 `tauri.conf.json` 的 *JSON* 文件。
+
+Tauri 还分别通过 `config-json5` 和 `config-toml` 这两个 Cargo 特性支持 *JSON5* 和 *TOML* 文件。
+*JSON5* 文件名必须为 `tauri.conf.json` 或 `tauri.conf.json5`。
+*TOML* 文件名为 `Tauri.toml`。
+
+== 平台特定配置
+
+除了默认配置文件外，Tauri 还可以从 `tauri.linux.conf.json`、`tauri.windows.conf.json` 和 `tauri.macos.conf.json`（如果使用 `Tauri.toml` 格式，则为 `Tauri.linux.toml`、`Tauri.windows.toml` 和 `Tauri.macos.toml`）中读取平台特定的配置，这些配置将与主配置对象合并。
+
+== 配置结构
+
+配置由以下对象组成：
+
+- <<package-config,package>>: 包设置
+- <<tauri-config,tauri>>: Tauri 配置
+- <<build-config,build>>: 构建配置
+- <<plugin-config,plugins>>: 插件配置
+
+.tauri.config.json文件示例
+[source,json]
+----
+{
+  "build": {
+    "beforeBuildCommand": "",
+    "beforeDevCommand": "",
+    "devPath": "../dist",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "tauri-app",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true
+    },
+    "bundle": {},
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 600,
+        "resizable": true,
+        "title": "Tauri App",
+        "width": 800
+      }
+    ]
+  }
+}
+----
+
+`对象` 类型：
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`package`|<<package-config,PackageConfig>>|<<package-config,view>>|包配置
+|`tauri`|<<tauri-config,TauriConfig>>|<<tauri-config,view>>|Tauri配置
+|`tauri`|<<build-config,BuildConfig>>|<<build-config,view>>|构建配置
+|`tauri`|<<plugin-config,PluginConfig>>|<<plugin-config,view>>|插件配置
+|===
+
+[[package-config]]
+=== PackageConfig
+
+包相关的配置。
+
+`对象` 类型：
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`productName`|string?|null|App名称
+|`version`|string?|null|应用程序版本。它是一个符合语义化版本控制的版本号，或者是包含 `version` 字段的 `package.json` 文件的路径。如果移除，将使用 `Cargo.toml` 中的版本号。
+|===
+
+[[tauri-config]]
+=== TauriConfig
+
+Tauri相关的配置。
+
+`对象` 类型：
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`pattern`|<<pattern-kind,PatternKind>>|<<pattern-kind,view>>|使用的模式。
+|`windows`|<<window-config,WindowConfig>>|[]|窗口配置。
+|`cli`|<<cli-config,CliConfig?>>|<<cli-config,view>>|命令行配置。
+|`bundle`|<<bundle-config,BundleConfig>>|<<bundle-config,view>>|打包配置。
+|`allowlist`|<<allowlist-config,AllowlistConfig>>|<<allowlist-config,view>>|白名单配置。
+|`security`|<<security-config,SecurityConfig>>|<<security-config,view>>|安全配置。
+|`updater`|<<updater-config,UpdaterConfig>>|<<updater-config,view>>|更新配置。
+|`systemTray`|<<system-tray-config,SystemTrayConfig?>>|<<system-tray-config,view>>|应用系统托盘配置。
+|`macOSPrivateApi`|boolean|`false`|macOS 私有 API 配置。启用透明背景 API 并将 `fullScreenEnabled` 设置为 `true`。
+。
+|===
+
+[[pattern-kind]]
+==== PatternKind
+
+应用的模式。
+
+可以是以下类型中的任何**一个**：
+
+- `{"user":"brownfield"}`: Brownfield模式。
+
+|===
+|名称|类型|默认|描述
+|`user`|"brownfield"(required)||undefined
+|===
+
+- `{"user":"isolation","options":{"dir":string}}`:Isolation模式。以安全为目标的时候建议使用。
+
+|===
+|名称|类型|默认|描述
+|`use`|"isolation"(required)||undefined
+|`options`|{"dir":string}(required)||undefined
+|===
+
+[[window-config]]
+==== WindowConfig
+
+[[window-url]]
+===== WindowUrl
+
+[[theme]]
+===== Theme
+
+[[title-bar-style]]
+===== TitleBarStyle
+
+[[cli-config]]
+==== CliConfig
+
+[[cli-arg]]
+===== CliArg
+
+[[bundle-config]]
+==== BundleConfig
+
+[[bundle-target]]
+===== BundleTarget
+
+[[bundle-resources]]
+===== BundleResources
+
+[[app-image-config]]
+===== AppImageConfig
+
+[[deb-config]]
+===== DebConfig
+
+[[rpm-config]]
+===== RpmConfig
+
+[[dmg-config]]
+===== DmgConfig
+
+[[mac-config]]
+===== MacConfig
+
+[[windows-config]]
+===== WindowsConfig
+
+[[allowlist-config]]
+==== AllowlistConfig
+
+[[fs-allowlist-config]]
+===== FsAllowlistConfig
+
+[[window-allowlist-config]]
+===== WindowAllowlistConfig
+
+[[shell-allowlist-config]]
+===== ShellAllowlistConfig
+
+[[dialog-allowlist-config]]
+===== DialogAllowlistConfig
+
+[[http-allowlist-config]]
+===== HttpAllowlistConfig
+
+[[notification-allowlist-config]]
+===== NotificationAllowlistConfig
+
+[[global-shortcut-allowlist-config]]
+===== GlobalShortcutAllowlistConfig
+
+[[os-allowlist-config]]
+===== OsAllowlistConfig
+
+[[path-allowlist-config]]
+===== PathAllowlistConfig
+
+[[protocol-allowlist-config]]
+===== ProtocolAllowlistConfig
+
+[[process-allowlist-config]]
+===== ProcessAllowlistConfig
+
+[[clipboard-allowlist-config]]
+===== ClipboardAllowlistConfig
+
+[[app-allowlist-config]]
+===== AppAllowlistConfig
+
+[[security-config]]
+==== SecurityConfig
+
+[[csp]]
+===== Csp
+
+[[disabled-csp-modification-kind]]
+===== DisabledCspModificationKind
+
+[[remote-domain-access-scope]]
+===== RemoteDomainAccessScope
+
+[[updater-config]]
+==== UpdaterConfig
+
+[[updater-endpoint]]
+===== UpdaterEndpoint
+
+[[updater-windows-config]]
+===== UpdaterWindowsConfig
+
+[[system-tray-config]]
+==== SystemTrayConfig
+
+[[build-config]]
+=== BuildConfig
+
+[[app-url]]
+==== AppUrl
+
+[[before-dev-command]]
+==== BeforeDevCommand
+
+[[hook-command]]
+==== HookCommand
+
+[[plugin-config]]
+=== PluginConfig
