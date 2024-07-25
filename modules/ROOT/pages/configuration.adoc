@@ -1,4 +1,5 @@
 = 配置
+:link1:
 
 https://tauri.app/v1/api/config[原文地址]
 
@@ -67,7 +68,7 @@ Tauri 还分别通过 `config-json5` 和 `config-toml` 这两个 Cargo 特性支
 }
 ----
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -83,7 +84,7 @@ Tauri 还分别通过 `config-json5` 和 `config-toml` 这两个 Cargo 特性支
 
 包相关的配置。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -97,7 +98,7 @@ Tauri 还分别通过 `config-json5` 和 `config-toml` 这两个 Cargo 特性支
 
 Tauri相关的配置。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -141,7 +142,7 @@ Tauri相关的配置。
 
 窗口配置对象。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -238,7 +239,7 @@ Tauri相关的配置。
 
 描述命令行的配置
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -256,7 +257,7 @@ Tauri相关的配置。
 
 CLI参数定义。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -308,7 +309,7 @@ CLI参数定义。
 
 Tauri打包的配置。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -391,7 +392,7 @@ Tauri打包的配置。
 
 AppImage 打包的配置。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -404,7 +405,7 @@ AppImage 打包的配置。
 
 Debian（.deb）打包的配置。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -427,7 +428,7 @@ Debian（.deb）打包的配置。
 
 RPM包的配置。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -450,7 +451,7 @@ RPM包的配置。
 
 Apple磁盘映像（.dmg）捆绑包的配置。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -467,7 +468,7 @@ Apple磁盘映像（.dmg）捆绑包的配置。
 
 位置坐标结构体。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -481,7 +482,7 @@ Apple磁盘映像（.dmg）捆绑包的配置。
 
 窗口大小。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -495,7 +496,7 @@ Apple磁盘映像（.dmg）捆绑包的配置。
 
 macOS捆绑包的配置。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -520,7 +521,7 @@ macOS捆绑包的配置。
 
 Windows打包器配置。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -604,7 +605,7 @@ Webview2运行时的安装模式。请注意，对于更新程序捆绑包，使
 
 使用WiX的MSI捆绑包配置。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -646,7 +647,7 @@ Webview2运行时的安装模式。请注意，对于更新程序捆绑包，使
 
 WiX 构建目标语言的配置。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -659,7 +660,7 @@ WiX 构建目标语言的配置。
 
 使用 NSIS 的安装程序捆绑包配置。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -736,7 +737,7 @@ NSIS 安装程序中使用的压缩算法。
 
 - `<<allowlist-config,"app-all": true>>` 将使 xref:app.adoc#hide[hide] 端点可用，无论允许列表中的 `hide` 设置为 `false` 还是 `true`。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -762,7 +763,7 @@ NSIS 安装程序中使用的压缩算法。
 
 用于文件系统API的允许列表。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -809,7 +810,7 @@ NSIS 安装程序中使用的压缩算法。
 
 窗口 API 的允许列表。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -855,7 +856,7 @@ NSIS 安装程序中使用的压缩算法。
 
 shell API 的白名单。
 
-`对象` 类型：
+类型: `对象`
 
 [%autowidth]
 |===
@@ -870,80 +871,476 @@ shell API 的白名单。
 [[shell-allowlist-scope]]
 ====== ShellAllowlistScope
 
+Shell 范围定义。这是一个命令名称列表及其相关的命令行参数，用于限制从 webview 访问 API。
+
+类型: `<<shell-allowed-command,ShellAllowedCommand>>`
+
+[[shell-allowed-command]]
+====== ShellAllowedCommand
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`name`|string(required)||此允许的 shell 命令配置的名称。
+
+该名称将在 webview API 中用于调用此命令及任何指定的参数。
+|`cmd`|string|_null_|命令名称。它可以以解析为系统基本目录的变量开头。变量包括：`$AUDIO`, `$CACHE`, `$CONFIG`, `$DATA`, `$LOCALDATA`, `$DESKTOP`, `$DOCUMENT`, `$DOWNLOAD`, `$EXE`, `$FONT`, `$HOME`, `$PICTURE`, `$PUBLIC`, `$RUNTIME`, `$TEMPLATE`, `$VIDEO`, `$RESOURCE`, `$APP`, `$LOG`, `$TEMP`, `$APPCONFIG`, `$APPDATA`, `$APPLOCALDATA`, `$APPCACHE`, `$APPLOG`
+|`args`|<<shell-allowed-args,ShellAllowedArgs>>|`false`|允许的命令执行参数。
+|`sidecar`|boolean|`false`|如果此命令是一个 sidecar 命令。
+|===
+
 [[shell-allowed-args]]
 ====== ShellAllowedArgs
+
+由 webview API 允许执行的一组命令参数。
+
+设置为 `true` 时，允许传递任何参数给命令；设置为 `false` 时，禁用所有参数。使用 [`ShellAllowedArg`] 列表时，将这些参数设置为唯一有效的参数，用于传递给附加的命令配置。
+
+可以是以下任意类型：
+
+- `boolean`：使用简单的布尔值允许或禁用所有参数传递给此命令配置。
+- `<<shell-allowed-arg,ShellAllowedArg>>`：特定的一组 [`ShellAllowedArg`]，这些参数在命令配置中是有效的。
 
 [[shell-allowed-arg]]
 ====== ShellAllowedArg
 
+由 webview API 允许执行的命令参数。
+
+可以是以下任意类型：
+
+- `string`：一个非可配置的参数，以指定的顺序传递给命令。
+- `{ "validator": string }`：从 webview API 调用命令时设置的变量。
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`validator`|string(required)||https://docs.rs/regex/latest/regex/#syntax[正则表达式] 验证器，用于要求传递的值符合预期的输入。
+
+这将要求传递给此变量的参数值必须匹配 `validator` 的正则表达式，才能执行。
+|===
+
 [[shell-allowlist-open]]
 ====== ShellAllowlistOpen
+
+定义 `shell > open` API 范围。
+
+可以是以下任意类型：
+
+- `boolean`：是否应启用 shell open API。
+
+如果启用，将使用默认的验证正则表达式 (`^((mailto:\w+)|(tel:\w+)|(https?://\w+)).+`)。
+
+- `string`：启用 shell open API，并使用一个自定义正则表达式来验证打开的路径。
+
+如果使用自定义正则表达式来支持非 http(s) 协议，应小心避免通过验证的值包含类似标志的字符串，例如 `--enable-debugging`, `-i`, `/R`。
 
 [[dialog-allowlist-config]]
 ===== DialogAllowlistConfig
 
+对话框 API 的允许列表。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`all`|boolean|`false`|使用此标志以启用所有对话框 API 功能。
+|`open`|boolean|`false`|允许 API 打开对话窗口以选择文件。
+|`save`|boolean|`false`|允许 API 打开对话窗口以选择文件保存位置。
+|`message`|boolean|`false`|允许 API 显示消息对话窗口。
+|`ask`|boolean|`false`|允许 API 显示带有“是”/“否”按钮的对话窗口。
+|`confirm`|boolean|`false`|允许 API 显示带有“确定”/“取消”按钮的对话窗口。
+|===
+
 [[http-allowlist-config]]
 ===== HttpAllowlistConfig
+
+HTTP API 的允许列表。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`scope`|<<http-allowlist-scope,HttpAllowlistScope>>|[]|HTTP API 的访问范围。
+|`all`|boolean|`false`|使用此标志以启用所有 HTTP API 功能。
+|`request`|boolean|`false`|允许发起 HTTP 请求。
+|===
+
+[[http-allowlist-scope]]
+====== HttpAllowlistScope
+
+HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时可以访问这些 URL。范围 URL 使用 glob 模式与请求 URL 进行匹配。
+
+示例：
+
+- "https://*": 允许所有 HTTPS URL
+- "https://*.github.com/tauri-apps/tauri": 允许任何 "github.com" 的子域，并且路径为 "tauri-apps/api"
+- "https://myapi.service.com/users/*": 允许访问以 "https://myapi.service.com/users/" 开头的任何 URL
+
+类型：`string _(format: uri)_[]`
 
 [[notification-allowlist-config]]
 ===== NotificationAllowlistConfig
 
+通知 API 的允许列表。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`all`|boolean|`false`|使用此标志以启用所有通知 API 功能。
+|===
+
 [[global-shortcut-allowlist-config]]
 ===== GlobalShortcutAllowlistConfig
+
+全局快捷键 API 的允许列表。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`all`|boolean|`false`|使用此标志以启用所有全局快捷键 API 功能。
+|===
 
 [[os-allowlist-config]]
 ===== OsAllowlistConfig
 
+操作系统 API 的允许列表。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`all`|boolean|`false`|使用此标志以启用所有操作系统 API 功能。
+|===
+
 [[path-allowlist-config]]
 ===== PathAllowlistConfig
+
+路径 API 的允许列表。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`all`|boolean|`false`|使用此标志以启用所有路径 API 功能。
+|===
 
 [[protocol-allowlist-config]]
 ===== ProtocolAllowlistConfig
 
+自定义协议的允许列表。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`assetScope`|<<fs-allowlist-scope,FsAllowlistScope>>|[]|资产协议的访问范围。
+|`all`|boolean|`false`|使用此标志以启用所有自定义协议。
+|`asset`|boolean|`false`|启用资产协议。
+|===
+
 [[process-allowlist-config]]
 ===== ProcessAllowlistConfig
+
+进程 API 的允许列表。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`all`|boolean|`false`|使用此标志以启用所有进程 API。
+|`relaunch`|boolean|`false`|启用重新启动 API。
+|`relaunchDangerousAllowSymlinkMacos`|boolean|`false`|危险选项，允许 macOS 在二进制文件包含符号链接的情况下重新启动。
+
+这是由于 macOS 对符号链接的保护较少。强烈建议不要设置此标志，除非你有非常具体的理由，并且理解其影响。
+|`exit`|boolean|`false`|启用退出 API。
+|===
 
 [[clipboard-allowlist-config]]
 ===== ClipboardAllowlistConfig
 
+剪贴板 API 的允许列表。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`all`|boolean|`false`|使用此标志以启用所有剪贴板 API。
+|`writeText`|boolean|`false`|启用剪贴板的 `writeText` API。
+|`readText`|boolean|`false`|启用剪贴板的 `readText` API。
+|===
+
 [[app-allowlist-config]]
 ===== AppAllowlistConfig
+
+应用程序 API 的允许列表。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`all`|boolean|`false`|使用此标志以启用所有应用程序 API。
+|`show`|boolean|`false`|启用应用程序的 `show` API。
+|`hide`|boolean|`false`|启用应用程序的 `hide` API。
+|===
 
 [[security-config]]
 ==== SecurityConfig
 
+安全相关配置。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`csp`|<<csp,Csp>>?|<<csp,view>>|将注入到构建应用程序的所有 HTML 文件中的内容安全策略。如果未指定 dev_csp，此值也会在开发模式中注入。
+
+这是配置的一个非常重要的部分，因为它帮助确保你的 WebView 是安全的。请参见 https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP。
+|`devCsp`|<<csp,Csp>>?|<<csp,view>>|在开发模式中注入到所有 HTML 文件中的内容安全策略。
+
+这是配置的一个非常重要的部分，因为它帮助确保你的 WebView 是安全的。请参见 https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP。
+|`freezePrototype`|boolean|`false`|在使用自定义协议时冻结 `Object.prototype`。
+|`dangerousDisableAssetCspModification`|<<disabled-csp-modification-kind,DisabledCspModificationKind>>|`false`|禁用 Tauri 注入的 CSP 源。
+
+在编译时，Tauri 会解析所有前端资产，并将内容安全策略更改为仅允许加载你自己的脚本和样式，通过注入 nonce 和 hash 源来实现。这会严格限制你的 CSP，这可能在与其他灵活的源一起使用时引入问题。
+
+此配置选项允许使用布尔值和字符串列表作为值。布尔值指示 Tauri 禁用所有 CSP 注入，而字符串列表则表示 Tauri 无法注入的 CSP 指令。
+
+警告：只有在你知道自己在做什么并且已正确配置 CSP 的情况下才禁用此功能。没有这个 Tauri 保护，你的应用程序可能会受到 XSS 攻击的风险。
+|`dangerousRemoteDomainIpcAccess`|<<remote-domain-access-scope,RemoteDomainAccessScope>>|[]|允许外部域发送命令到 Tauri。
+
+默认情况下，外部域无法访问 `window.\__TAURI__`，这意味着它们无法与 Rust 中定义的命令进行通信。这可以防止外部加载的恶意或受损网站在用户设备上执行命令的攻击。
+
+此配置允许一组外部域访问 Tauri 命令。当你配置一个域允许访问 IPC 时，所有子路径都被允许。子域名是不允许的。
+
+警告：仅在你有内部检查来防范恶意外部网站或可以信任允许的外部网站时使用此选项。否则，你的应用程序可能会受到危险的 Tauri 命令相关攻击的风险。
+|`dangerousUseHttpScheme`|boolean|`false`|设置自定义协议是否在 Windows 上使用 `http://<scheme>.localhost` 而不是默认的 `https://<scheme>.localhost`。
+
+警告：使用 `http` 协议将允许在尝试获取 `http` 端点时出现混合内容，因此安全性较低，但会匹配 macOS 和 Linux 上使用的 `<scheme>://localhost` 协议的行为。
+|===
+
 [[csp]]
 ===== Csp
+
+内容安全策略定义。请参见 https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP。
+
+可以是以下任意类型：
+
+- `string`：整个 CSP 策略以单个文本字符串形式。
+- `<<csp-directive-sources,CspDirectiveSources>>`：一个对象，映射指令及其源值为字符串列表。
+
+[[csp-directive-sources]]
+====== CspDirectiveSources
+
+内容安全策略指令源列表。请参见 https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources。
+
+可以是以下任意类型：
+
+- `string`：CSP 源的内联列表。与 `List` 相同，但用空格分隔连接。
+- `string[]`：CSP 源的列表。集合将用空格分隔连接以形成 CSP 字符串。
 
 [[disabled-csp-modification-kind]]
 ===== DisabledCspModificationKind
 
+危险的 `dangerous_disable_asset_csp_modification` 配置选项的可能值。
+
+可以是以下任意类型：
+
+- `boolean`：如果为 `true`，禁用所有 CSP 修改。`false` 是默认值，配置 Tauri 以控制 CSP。
+- `string[]`：禁用给定列表中的 CSP 指令修改。
+
 [[remote-domain-access-scope]]
 ===== RemoteDomainAccessScope
+
+外部命令访问定义。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`scheme`|string?|_null_|允许的 URL 协议。默认情况下，所有协议都是允许的。
+|`domain`|string(required)||允许的域。
+|`windows`|string[](required)||此范围适用的窗口标签列表。
+|`plugins`|string[]|[]|此范围内允许的插件列表。名称应不包含 `tauri-plugin-` 前缀，例如 `"store"` 对于 `tauri-plugin-store`。
+|`enableTauriAPI`|boolean|`false`|启用对 Tauri API 的访问。
+|===
 
 [[updater-config]]
 ==== UpdaterConfig
 
+更新程序配置对象。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`active`|boolean|`false`|更新程序是否处于活动状态。
+|`dialog`|boolean|`true`|显示内置对话框或在禁用时使用事件系统。
+|`endpoints`|<<updater-endpoint,UpdaterEndpoint>>?|_null_|更新程序端点。生产环境强制使用 TLS。
+
+更新程序 URL 可以包含以下变量： +
+- {{current_version}}: 请求更新的应用程序版本 +
+- {{target}}: 操作系统名称（linux、windows 或 darwin 之一） +
+- {{arch}}: 机器的架构（x86_64、i686、aarch64 或 armv7 之一）
+
+# 示例 +
+- "link:https://my.cdn.com/latest.json[]": 一个原始 JSON 端点，返回最新版本和每个平台的下载链接。 +
+- "link:https://updates.app.dev/{{target}}?version={{current_version}}&arch={{arch}}[]": 一个具有位置和查询字符串参数的专用 API。
+
+|`pubkey`|string|_null_|签名公钥。 |`windows`|<<updater-windows-config,UpdaterWindowsConfig>>|<<updater-windows-config,view>>|更新程序的 Windows 配置。
+
+|===
+
 [[updater-endpoint]]
 ===== UpdaterEndpoint
+
+指向更新服务器的 URL。
+
+URL 在生产环境中必须使用 `https` 协议。
+
+类型：`string` (格式：`uri`)
 
 [[updater-windows-config]]
 ===== UpdaterWindowsConfig
 
+Windows 的更新程序配置。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`installerArgs`|string[]|[]|提供给 NSIS 或 WiX 安装程序的附加参数。
+|`installMode`|<<windows-update-install-mode,WindowsUpdateInstallMode>>|<<windows-update-install-mode,view>>|Windows 上更新的安装模式。默认为 `passive` 模式。
+|===
+
+[[windows-update-install-mode]]
+====== WindowsUpdateInstallMode
+
+Windows 更新的安装模式。
+
+可以是以下任意**一种**类型：
+
+- "basicUi": 指定安装过程中有基本的用户界面，包括最后的对话框。
+- "quiet": 静默模式，意味着不需要用户交互。如果安装程序需要，则需要管理员权限。
+- "passive": 指定无人值守模式，即安装过程仅显示进度条。
+
 [[system-tray-config]]
 ==== SystemTrayConfig
+
+应用程序系统托盘图标的配置。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`iconPath`|string(required)||系统托盘上使用的默认图标的路径。
+|`iconAsTemplate`|boolean|`false`|一个布尔值，决定图像是否表示 macOS 上的 https://developer.apple.com/documentation/appkit/nsimage/1520017-template?language=objc[模板] 图像。
+|`menuOnLeftClick`|boolean|`true`|一个布尔值，决定在 macOS 上托盘图标接收到左键点击时是否显示菜单。
+|`title`|string?|_null_|macOS 托盘的标题。
+|===
 
 [[build-config]]
 === BuildConfig
 
+构建配置对象。
+
+类型: `对象`
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`runner`|string?|_null_|用于构建和运行应用程序的二进制文件。
+|`devPath`|<<app-url,AppUrl>>|<<app-url,view>>|应用程序资产的路径或开发时加载的 URL。
+
+这通常是一个指向开发服务器的 URL，该服务器提供应用程序资产并支持实时重新加载。大多数现代 JavaScript 打包工具默认提供启动开发服务器的方式。
+
+请参见 https://vitejs.dev/guide/[vite]、https://webpack.js.org/configuration/dev-server/[Webpack DevServer] 和 https://github.com/lukeed/sirv[sirv]，以了解如何设置开发服务器的示例。
+|`distDir`|<<app-url,AppUrl>>|<<app-url,view>>|应用程序资产的路径或生产时加载的 URL。
+
+当提供一个相对于配置文件的路径时，它会递归读取所有文件，并将它们嵌入到应用程序二进制文件中。除非提供自定义窗口 URL，否则 Tauri 会查找 `index.html` 文件。
+
+您还可以提供一个路径列表以进行嵌入，这允许对添加到二进制文件的文件进行细粒度控制。在这种情况下，所有文件都添加到根目录中，您必须在 HTML 文件中以这种方式引用它们。
+
+当提供 URL 时，应用程序将没有打包的资产，应用程序将默认加载该 URL。
+|`beforeDevCommand`|<<before-dev-command,BeforeDevCommand>>?|<<before-dev-command,view>>|在 `tauri dev` 启动之前运行的 shell 命令。
+
+如果执行条件编译，将会设置 TAURI_PLATFORM、TAURI_ARCH、TAURI_FAMILY、TAURI_PLATFORM_VERSION、TAURI_PLATFORM_TYPE 和 TAURI_DEBUG 环境变量。
+|`beforeBuildCommand`|<<hook-command,HookCommand>>?|<<hook-command,view>>|在 `tauri build` 启动之前运行的 shell 命令。
+
+如果执行条件编译，将会设置 TAURI_PLATFORM、TAURI_ARCH、TAURI_FAMILY、TAURI_PLATFORM_VERSION、TAURI_PLATFORM_TYPE 和 TAURI_DEBUG 环境变量。
+|`beforeBundleCommand`|<<hook-command,HookCommand>>?|<<hook-command,view>>|在 `tauri build` 的打包阶段开始之前运行的 shell 命令。
+
+如果执行条件编译，将会设置 TAURI_PLATFORM、TAURI_ARCH、TAURI_FAMILY、TAURI_PLATFORM_VERSION、TAURI_PLATFORM_TYPE 和 TAURI_DEBUG 环境变量。
+|`features`|array?|_null_|传递给 `cargo` 命令的功能。
+|`withGlobalTauri`|boolean|`false`|是否应该在 `window.\___TAURI___` 上注入 Tauri API。
+|===
+
 [[app-url]]
 ==== AppUrl
+
+定义嵌入应用程序中的 URL 或资源。
+
+可以是以下任何类型：
+
+- `<<window-url,WindowUrl>>`：应用程序的外部 URL，或包含应用程序资源的目录路径。
+- `string[]`：要嵌入应用程序中的文件数组。
 
 [[before-dev-command]]
 ==== BeforeDevCommand
 
+描述在 `tauri dev` 之前运行的 shell 命令。
+
+可以是以下任何类型：
+
+- `string`：使用默认选项运行给定的脚本。
+- `{ "script": string, "cwd": string?, "wait": boolean }`：使用自定义选项运行给定的脚本。
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`script`|string(required)||要执行的脚本。
+|`cmd`|string?|_null_|当前工作目录。
+|`wait`|boolean|`false`|`tauri dev` 是否应等待命令完成。默认值为 `false`。
+|===
+
 [[hook-command]]
 ==== HookCommand
 
+描述在触发 CLI 钩子时要执行的 shell 命令。
+
+可以是以下任何类型：
+
+- `string`: 使用默认选项运行给定的脚本。
+- `{ "script": string, "cwd": string? }`: 使用自定义选项运行给定的脚本。
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`script`|string(required)||要执行的脚本。
+|`cmd`|string?|_null_|当前工作目录。
+|===
+
 [[plugin-config]]
 === PluginConfig
+
+插件配置包含一个 HashMap，将插件名称映射到其配置对象。
+
+类型: `对象`
