@@ -1,23 +1,125 @@
 = app
+:promise_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
 link:https://tauri.app/v1/api/js/app[原文地址]
 
 获取应用元数据。
 
+当 `tauri.conf.json` 中的 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 true 时，该包也可以通过 `window.____TAURI____.app` 访问。
+
+必须将 API 添加到 `tauri.conf.json` 中的 `xref:configuration.adoc#allowlist-config[tauri.allowlist.app]`：
+
+[source,json]
+----
+{
+  "tauri": {
+    "allowlist": {
+      "app": {
+        "all": true, // enable all app APIs
+        "show": true,
+        "hide": true
+      }
+    }
+  }
+}
+----
+
+建议仅将您使用的 API 加入允许列表，以实现最佳的包大小和安全性。
+
 [[functions]]
-== Functions
+== 函数
 
 [[get-name]]
 === getName
 
+ getName(): Promise<string>
+
+获取应用名称
+
+示例:
+
+[source,typescript]
+----
+import { getName } from '@tauri-apps/api/app';
+const appName = await getName();
+----
+
+Since: 1.0.0
+
+返回: link:{promise_url}[Promise]<string>
+
 [[get-tauri-version]]
 === getTauriVersion
+
+ getTauriVersion(): Promise<string>
+
+获取Tauri版本。
+
+示例
+
+[source,typescript]
+----
+import { getTauriVersion } from '@tauri-apps/api/app';
+const tauriVersion = await getTauriVersion();
+----
+
+Since: 1.0.0
+
+返回: link:{promise_url}[Promise]<string>
 
 [[get-version]]
 === getVersion
 
+ getVersion(): Promise<string>
+
+获取应用版本。
+
+示例
+
+[source,typescript]
+----
+import { getVersion } from '@tauri-apps/api/app';
+const appVersion = await getVersion();
+----
+
+Since: 1.0.0
+
+返回: link:{promise_url}[Promise]<string>
+
 [[hide]]
 === hide
 
+ hide(): Promise<void>
+
+在macOS系统隐藏应用
+
+示例
+
+[source,typescript]
+----
+import { hide } from '@tauri-apps/api/app';
+await hide();
+----
+
+Since: 1.2.0
+
+返回: link:{promise_url}[Promise]<void>
+
 [[show]]
 === show
+
+ show(): Promise<void>
+
+在 macOS 上显示应用程序。此功能不会自动聚焦到指定的应用窗口。
+
+示例
+
+[source,typescript]
+----
+import { show } from '@tauri-apps/api/app';
+await show();
+----
+
+Since: 1.2.0
+
+返回: link:{promise_url}[Promise]<void>
