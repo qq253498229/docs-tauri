@@ -1,0 +1,111 @@
+= tauri
+
+https://tauri.app/zh-cn/v1/api/js/tauri[原文地址]
+
+调用您的自定义命令。
+
+当 `tauri.conf.json` 中的 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 true 时，该包也可以通过 `window.____TAURI____.tauri` 访问。
+
+== Type Aliases
+
+[[invoke-args]]
+=== InvokeArgs
+
+- InvokeArgs: link:https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type[Record]<``string``, `unknown`>
+
+命令参数
+
+Since: 1.0.0
+
+定义在: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/tauri.ts#L63[tauri.ts:63]
+
+== 函数
+
+=== convertFileSrc
+
+- convertFileSrc(`filePath`: `string`, `protocol?`: `string`): `string`
+
+将设备文件路径转换为可以由 WebView 加载的 URL。请注意，必须将 `asset:` 和 `https://asset.localhost` 添加到 `tauri.conf.json` 中的 `xref:configuration.adoc#security-config[tauri.security.csp]`。例如，CSP 的值可以是： `"csp": "default-src 'self'; img-src 'self' asset: https://asset.localhost"` 以在图像资源中使用 asset 协议。
+
+此外，还必须将 `asset` 添加到 `tauri.conf.json` 中的 `xref:configuration.adoc#allowlist-config[tauri.allowlist.protocol]` 中，并且其访问范围必须在相同协议对象的 `assetScope` 数组中定义。
+
+示例
+
+[source,typescript]
+----
+import { appDataDir, join } from '@tauri-apps/api/path';
+import { convertFileSrc } from '@tauri-apps/api/tauri';
+const appDataDirPath = await appDataDir();
+const filePath = await join(appDataDirPath, 'assets/video.mp4');
+const assetUrl = convertFileSrc(filePath);
+
+const video = document.getElementById('my-video');
+const source = document.createElement('source');
+source.type = 'video/mp4';
+source.src = assetUrl;
+video.appendChild(source);
+video.load();
+----
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|默认|描述
+|`filePath`|`string`|`undefined`|文件的路径。
+|`protocol`|`string`|`'asset'`|使用的协议。默认为 `asset`。仅在使用自定义协议时需要设置此项。
+|===
+
+返回: `string`
+
+可以在 WebView 中用作资源的 URL。
+
+=== invoke
+
+- invoke<``T``>(`cmd`: `string`, `args?`: `<<invoke-args,InvokeArgs>>`): link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise:[Promise]<``T``>
+
+向后端发送一条消息。
+
+示例
+
+[source,typescript]
+----
+import { invoke } from '@tauri-apps/api/tauri';
+await invoke('login', { user: 'tauri', password: 'poiwe3h4r5ip3yrhtew9ty' });
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型|描述
+|`cmd`|`string`|命令的名称。
+|`args`|<<invoke-args,InvokeArgs>>|传递给命令的参数(可选)。
+|===
+
+返回: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise[Promise]<T>
+
+一个Promise，resolving或rejecting来自后端的响应。
+
+=== transformCallback
+
+- transformCallback(`callback?`: `fn`, `once?`: `boolean`): `number`
+
+将回调函数转换为一个可以传递给后端的字符串标识符。后端使用该标识符来 `eval()` 回调。
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型|默认值
+|`callback?`|(`response`: `any`) => `void`|`undefined`
+|`once`|`boolean`|`false`
+|===
+
+返回: `number`
+
+与回调函数关联的唯一标识符。
