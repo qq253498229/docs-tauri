@@ -1,4 +1,3 @@
-* link:https://tauri.app/zh-cn/v1/guides/[官方地址]
 * xref:configuration.adoc[]
 * xref:command_line_runner.adoc[]
 * JavaScript/TypeScript
@@ -19,3 +18,4 @@
 ** xref:tauri.adoc[]
 ** xref:updater.adoc[]
 ** xref:window.adoc[]
+* link:https://tauri.app/zh-cn/v1/guides/[官方地址]

@@ -1,0 +1,286 @@
+= CLI
+
+https://tauri.app/zh-cn/v1/api/cli[原文地址]
+
+[[info]]
+== info
+
+[source]
+----
+# npm
+npm run tauri info
+# yarn
+yarn tauri info
+# pnpm
+pnpm tauri info
+# bun
+bunx tauri info
+# cargo
+cargo tauri info
+----
+
+----
+使用方法: cargo-tauri info [选项]
+
+选项:
+      --interactive  交互模式以应用自动修复
+  -v, --verbose...   启用详细日志
+  -h, --help         打印帮助信息
+  -V, --version      打印版本信息
+----
+
+它显示了关于环境、Rust、Node.js 及其版本的简洁信息列表，以及一些相关配置。
+
+NOTE: 当你需要快速了解你的应用程序时，这个命令非常有用。在请求帮助时，分享这个报告可能会很有用。
+
+[[init]]
+== init
+
+----
+# npm
+npm run tauri init
+# yarn
+yarn tauri init
+# pnpm
+pnpm tauri init
+# bunx
+bunx tauri init
+# cargo
+cargo tauri init
+----
+
+----
+使用方法: cargo-tauri init [选项]
+
+选项:
+      --ci
+          跳过values提示
+  -v, --verbose...
+          启用详细日志
+  -f, --force
+          强制覆盖src-tauri文件夹
+  -l, --log
+          启用日志
+  -d, --directory <DIRECTORY>
+          设置目标文件夹 [默认: /home/runner/work/tauri-docs/tauri-docs]
+  -t, --tauri-path <TAURI_PATH>
+          要使用的 Tauri 项目的路径（相对于当前工作目录）
+  -A, --app-name <APP_NAME>
+          你的Tauri应用的应用名称
+  -W, --window-title <WINDOW_TITLE>
+          你的Tauri应用的窗口名称
+  -D, --dist-dir <DIST_DIR>
+          Web资源位置，相对于 <project-dir>/src-tauri
+  -P, --dev-path <DEV_PATH>
+          开发服务器的Url
+      --before-dev-command <BEFORE_DEV_COMMAND>
+          在 `tauri dev` 启动之前运行的shell命令
+      --before-build-command <BEFORE_BUILD_COMMAND>
+          在 `tauri build` 启动之前运行的shell命令
+  -h, --help
+          打印帮助信息
+  -V, --version
+          打印版本信息
+----
+
+[[plugin-init]]
+== plugin init
+
+----
+# npm
+npm run tauri plugin init
+# yarn
+yarn tauri plugin init
+# pnpm
+pnpm tauri plugin init
+# bunx
+bunx tauri plugin init
+# cargo
+cargo tauri plugin init
+----
+
+----
+使用方法: cargo-tauri plugin init [选项] --name <PLUGIN_NAME>
+
+选项:
+  -n, --name <PLUGIN_NAME>       你的Tauri插件的名称
+  -v, --verbose...               启用详细日志
+      --api                      用 TypeScript API 初始化 Tauri 插件
+  -d, --directory <DIRECTORY>    设置目标文件夹 [默认: /home/runner/work/tauri-docs/tauri-docs]
+  -t, --tauri-path <TAURI_PATH>  要使用的 Tauri 项目的路径（相对于当前工作目录）
+  -a, --author <AUTHOR>          作者名字
+  -h, --help                     打印帮助信息
+  -V, --version                  打印版本信息
+----
+
+[[dev]]
+== dev
+
+----
+# npm
+npm run tauri dev
+# yarn
+yarn tauri dev
+# pnpm
+pnpm tauri dev
+# bunx
+bunx tauri dev
+# cargo
+cargo tauri dev
+----
+
+----
+使用方法: cargo-tauri dev [选项] [ARGS]...
+
+参数:
+  [ARGS]...  传递给运行器的命令行参数。`--` 之后的参数传递给应用程序。
+
+选项:
+  -r, --runner <RUNNER>           用于运行应用程序的二进制文件
+  -v, --verbose...                启用详细日志
+  -t, --target <TARGET>           用于构建的target
+  -f, --features [<FEATURES>...]  要激活的 cargo 特性列表
+  -e, --exit-on-panic             在panic时退出
+  -c, --config <CONFIG>           要与 tauri.conf.json 合并的 JSON 字符串或 JSON 文件路径
+      --release                   以release模式运行代码
+      --no-watch                  禁用文件watcher
+      --no-dev-server             禁用用于静态文件的开发服务器
+      --port <PORT>               指定用于静态文件的开发服务器端口。默认为 1430。也可以使用 `TAURI_DEV_SERVER_PORT` 环境变量设置。
+  -h, --help                      打印帮助信息
+  -V, --version                   打印版本信息
+----
+
+此命令将在开发模式下打开 WebView。它使用 `src-tauri/tauri.conf.json` 文件中的 `build.devPath` 属性。
+
+如果你在 `build.beforeDevCommand` 属性中输入了命令，这个命令将在 `dev` 命令之前执行。
+
+xref:configuration.adoc#build-config[查看更多关于配置的信息。]
+
+WARNING: 如果你没有使用 `build.beforeDevCommand`，请确保你的 `build.devPath` 是正确的，并且如果使用开发服务器，请在使用此命令之前启动它。
+
+[[build]]
+== build
+
+----
+# npm
+npm run tauri build
+# yarn
+yarn tauri build
+# pnpm
+pnpm tauri build
+# bunx
+bunx tauri build
+# cargo
+cargo tauri build
+----
+
+----
+使用方法: cargo-tauri build [选项] [ARGS]...
+
+参数:
+  [ARGS]...
+          传递给运行器的命令行参数
+
+选项:
+  -r, --runner <RUNNER>
+          用于运行应用程序的二进制文件，默认为 `cargo`
+
+  -v, --verbose...
+          启用详细日志
+
+  -d, --debug
+          使用debug模式进行构建
+
+  -t, --target <TARGET>
+          用于构建的target
+
+          它必须是 `$rustc --print target-list` 输出的值之一，或者是用于通用 macOS 应用程序的 `universal-apple-darwin`。
+
+          请注意，编译通用 macOS 应用程序需要安装 `aarch64-apple-darwin` 和 `x86_64-apple-darwin` 目标。
+
+  -f, --features [<FEATURES>...]
+          要激活的特性列表，用空格或逗号分隔
+
+  -b, --bundles [<BUNDLES>...]
+          要打包的捆绑包列表，用空格或逗号分隔。
+
+          捆绑包选项分别是 `deb`、`appimage`、`msi`、`app` 或 `dmg` ，其中 `deb` 和 `appimage` 是linux系统下的，`msi`是windows系统下的，`app` 或 `dmg` 是 MacOS系统下的，`updater` 是所有平台的。如果指定为 `none`，将跳过打包程序。
+
+          请注意，`updater` 捆绑包不会自动添加，因此如果启用了更新程序，则必须指定它。
+
+  -c, --config <CONFIG>
+          要与 tauri.conf.json 合并的 JSON 字符串或 JSON 文件路径
+
+      --ci
+          跳过values提示
+
+  -h, --help
+          打印帮助信息（使用 '-h' 查看摘要）
+
+  -V, --version
+          打印版本信息
+----
+
+此命令将打包您的应用程序，默认情况下是以生产模式打包，如果您使用了 `--debug` 标志，则会以调试模式打包。该命令使用 `src-tauri/tauri.conf.json` 文件中的 `build.distDir` 属性。
+
+如果您在 `build.beforeBuildCommand` 属性中输入了一个命令，则该命令将在 `build` 命令之前执行。
+
+xref:configuration.adoc#build-config[查看更多配置相关信息。]
+
+[[icon]]
+== icon
+
+----
+# npm
+npm run tauri icon
+# yarn
+yarn tauri icon
+# pnpm
+pnpm tauri icon
+# bunx
+bunx tauri icon
+# cargo
+cargo tauri icon
+----
+
+----
+使用方法: cargo-tauri icon [选项] [INPUT]
+
+参数:
+  [INPUT]  源图标的路径（png格式，1240x1240px，带透明度） [默认值：./app-icon.png]
+
+选项:
+  -o, --output <OUTPUT>  输出目录。默认：tauri.conf.json 文件同级别的 'icons' 目录。
+  -v, --verbose...       启用详细日志
+  -p, --png <PNG>        要生成的自定义 PNG 图标尺寸。设置后，默认图标将不会生成。
+  -h, --help             打印帮助信息
+  -V, --version          打印版本信息
+----
+
+https://tauri.app/zh-cn/v1/guides/features/icons[Tauri icon 指南]
+
+[[version]]
+== version
+
+----
+# npm
+npm run tauri --version
+# yarn
+yarn tauri --version
+# pnpm
+pnpm tauri --version
+# bunx
+bunx tauri --version
+# cargo
+cargo tauri --version
+----
+
+----
+  描述
+    返回当前 Tauri 的版本
+----
+
+[[cli-usage]]
+== CLI usage
+
+请通过此 https://tauri.app/zh-cn/v1/guides/development/development-cycle[完整指南] 了解更多使用方法。
