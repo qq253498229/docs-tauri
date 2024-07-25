@@ -1,38 +1,91 @@
-= CLI
+= cli
 
-[[info]]
-== info
+https://tauri.app/zh-cn/v1/api/js/cli[原文地址]
 
-[[init]]
-== init
+从命令行界面解析参数。
 
-[[plugin-init]]
-== plugin init
+当 `tauri.conf.json` 中的 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 `true` 时，此包也可以通过 `window.____TAURI____.cli` 访问。
 
-[[dev]]
-== dev
+[[interface]]
+== Interface
 
-[[build]]
-== build
+[[arg-match]]
+=== ArgMatch
 
-[[icon]]
-== icon
+Since: 1.0.0
 
-[[completions]]
-== completions
+属性
 
-[[bash]]
-=== Bash
+- occurrences: `number`
 
-[[zsh]]
-=== Zsh
+出现的次数
 
-[[power-shell]]
-=== PowerShell
+定义在: link:https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/cli.ts#L27[cli.ts:27]
 
-[[version]]
-== version
+- value: `null` | `string` | `boolean` | `string[]`
 
-[[cli-usage]]
-== cli usage
+如果是单个值则为 `string`，如果是flag则为 `boolean`，如果是多个值则为 `string[]` 或 `null`。
 
+定义在: link:https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/cli.ts#L23[cli.ts:23]
+
+[[cli-matches]]
+=== CliMatches
+
+Since: 1.0.0
+
+属性
+
+- `args`: link:https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type[Record]<``string``, `<<arg-match,ArgMatch>>`>
+
+定义在: link:https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/cli.ts#L42[cli.ts:42]
+
+- subcommand: `null` | `<<subcommand-match,SubcommandMatch>>`
+
+定义在: link:https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/cli.ts#L43[cli.ts:43]
+
+[[subcommand-match]]
+=== SubcommandMatch
+
+Since: 1.0.0
+
+属性
+
+- matches: `<<cli-matches,CliMatches>>`
+
+定义在: link:https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/cli.ts#L35[cli.ts:35]
+
+- name: `string`
+
+定义在: link:https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/cli.ts#L34[cli.ts:34]
+
+[[functions]]
+== Functions
+
+[[get-matches]]
+=== getMatches
+
+- getMatches(): link:{promise_url}[Promise]<``<<cli-matches,CliMatches>>``>
+
+解析提供给当前进程的参数，并使用在 `tauri.conf.json` 中定义的 `xref:configuration.adoc#tauri-config[tauri.cli]` 配置获取匹配项。
+
+示例
+
+[source,typescript]
+----
+import { getMatches } from '@tauri-apps/api/cli';
+const matches = await getMatches();
+if (matches.subcommand?.name === 'run') {
+  // `./your-app run $ARGS` was executed
+  const args = matches.subcommand?.matches.args
+  if ('debug' in args) {
+    // `./your-app run --debug` was executed
+  }
+} else {
+  const args = matches.args
+  // `./your-app $ARGS` was executed
+}
+----
+
+Since: 1.0.0
+
+返回: link:{promise_url}[Promise]<``<<cli-matches,CliMatches>>``>

@@ -10,3 +10,5 @@ asciidoc:
     page-toctitle: 目录
     toc-title: 目录
     toclevels: 6
+    promise_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+

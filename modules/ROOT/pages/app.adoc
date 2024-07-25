@@ -1,5 +1,4 @@
 = app
-:promise_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
 link:https://tauri.app/v1/api/js/app[原文地址]
 
