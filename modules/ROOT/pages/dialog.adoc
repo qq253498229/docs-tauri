@@ -1,0 +1,380 @@
+= dialog
+
+用于打开和保存文件的本地系统对话框。
+
+当在 `tauri.conf.json` 中设置 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 为 `true` 时，该包也可以通过 `window.____TAURI____.dialog` 访问。
+
+这些 API 必须添加到 `tauri.conf.json` 的 `xref:configuration.adoc#tauri-config[tauri.allowlist.dialog]` 中：
+
+[source,typescript]
+----
+{
+  "tauri": {
+    "allowlist": {
+      "dialog": {
+        "all": true, // enable all dialog APIs
+        "ask": true, // enable dialog ask API
+        "confirm": true, // enable dialog confirm API
+        "message": true, // enable dialog message API
+        "open": true, // enable file open API
+        "save": true // enable file save API
+      }
+    }
+  }
+}
+----
+
+建议仅将你使用的 API 加入白名单，以获得最佳的包大小和安全性。
+
+[[interfaces]]
+== Interfaces
+
+[[confirm-dialog-options]]
+=== ConfirmDialogOptions
+
+属性
+
+- `Optional` cancelLabel: `string`
+
+取消按钮的标签。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L112[dialog.ts:112]
+
+- `Optional` okLabel: `string`
+
+确认按钮的标签。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L110[dialog.ts:110]
+
+- `Optional` title: `string`
+
+对话框的标题，默认为应用名称。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L106[dialog.ts:106]
+
+- `Optional` type: `"info"` | `"warning"` | `"error"`
+
+对话框的类型，默认为 `info`。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L108[dialog.ts:108]
+
+[[dialog-filter]]
+=== DialogFilter
+
+文件对话框的扩展名过滤器。
+
+Since: 1.0.0
+
+属性
+
+- extensions: `string[]`
+
+要过滤的扩展名，不带 `.` 前缀。
+
+示例
+
+----
+extensions: ['svg', 'png']
+----
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L48[dialog.ts:48]
+
+- name: `string`
+
+过滤器名称。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L40[dialog.ts:40]
+
+[[message-dialog-options]]
+=== MessageDialogOptions
+
+Since: 1.0.0
+
+属性
+
+- `Optional` okLabel: `string`
+
+确认按钮的标签。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L101[dialog.ts:101]
+
+- `Optional` title: `string`
+
+对话框的标题，默认为应用名称。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L97[dialog.ts:97]
+
+- `Optional` type: `"info"` | `"warning"` | `"error"`
+
+对话框的类型，默认为 `info`。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L99[dialog.ts:99]
+
+[[open-dialog-options]]
+=== OpenDialogOptions
+
+打开对话框的选项。
+
+Since: 1.0.0
+
+属性
+
+` `Optional` defaultPath: `string`
+
+初始目录或文件路径。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L62[dialog.ts:62]
+
+- `Optional` directory: `boolean`
+
+对话框是否为目录选择。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L66[dialog.ts:66]
+
+- `Optional` filters: `DialogFilter[]`
+
+对话框的过滤器。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L60[dialog.ts:60]
+
+- `Optional` multiple: `boolean`
+
+对话框是否允许多选。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L64[dialog.ts:64]
+
+- `Optional` recursive: `boolean`
+
+如果为 true，表示它将稍后递归读取。定义是否允许子目录进入范围。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L71[dialog.ts:71]
+
+- `Optional` title: `string`
+
+对话框窗口的标题。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L58[dialog.ts:58]
+
+[[save-dialog-options]]
+=== SaveDialogOptions
+
+保存对话框的选项。
+
+Since: 1.0.0
+
+属性
+
+- `Optional` defaultPath: `string`
+
+初始目录或文件路径。如果是目录路径，对话框界面将更改为该文件夹。如果不是现有目录，文件名将设置为对话框的文件名输入，对话框将设置为父文件夹。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L89[dialog.ts:89]
+
+- `Optional` filters: `DialogFilter[]`
+
+对话框的过滤器。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L83[dialog.ts:83]
+
+- `Optional` title: `string`
+
+对话框窗口的标题。
+
+*定义在*: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L81[dialog.ts:81]
+
+[[functions]]
+== Functions
+
+[[ask]]
+=== ask
+
+- ask(`message`: `string`, `options?`: `string` | `<<confirm-dialog-options,ConfirmDialogOptions>>`): `link:{promise_url}[Promise]`<``boolean``>
+
+显示一个带有“是”和“否”按钮的询问对话框。
+
+示例
+
+[source,typescript]
+----
+import { ask } from '@tauri-apps/api/dialog';
+const yes = await ask('Are you sure?', 'Tauri');
+const yes2 = await ask('This action cannot be reverted. Are you sure?', { title: 'Tauri', type: 'warning' });
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型|描述
+|`message`|`string`|要显示的信息
+|`options?`|`string`\|`<<confirm-dialog-options,ConfirmDialogOptions>>`|对话框的选项。如果是string，则会作为对话框的标题。
+|===
+
+*返回*: link:{promise_url}[Promise]<``boolean``>
+
+一个 Promise，解析为布尔值，指示是否点击了 `是`。
+
+[[confirm]]
+=== confirm
+
+- confirm(`message`: `string`, `options?`: `string` | `<<confirm-dialog-options,ConfirmDialogOptions>>`): link:{promise_url}[Promise]<``boolean``>
+
+显示一个带有 `确定` 和 `取消` 按钮的询问对话框。
+
+示例
+
+[source,typescript]
+----
+import { confirm } from '@tauri-apps/api/dialog';
+const confirmed = await confirm('Are you sure?', 'Tauri');
+const confirmed2 = await confirm('This action cannot be reverted. Are you sure?', { title: 'Tauri', type: 'warning' });
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型|描述
+|`message`|`string`|要显示的信息
+|`options?`|`string`\|`<<confirm-dialog-options,ConfirmDialogOptions>>`|对话框的选项。如果是string，则会作为对话框的标题。
+|===
+
+*返回*: link:{promise_url}[Promise]<``boolean``>
+
+一个 Promise，解析为布尔值，指示是否点击了 `是`。
+
+[[message]]
+=== message
+
+- message(`message`: `string`, `options?`: `string` | `<<message-dialog-options,MessageDialogOptions>>`): link:{promise_url}[Promise]<``void``>
+
+显示一个带有 `确定` 按钮的消息对话框。
+
+示例
+
+[source,typescript]
+----
+import { message } from '@tauri-apps/api/dialog';
+await message('Tauri is awesome', 'Tauri');
+await message('File not found', { title: 'Tauri', type: 'error' });
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型|描述
+|`message`|`string`|要显示的信息
+|`options?`|`string`\|`<<message-dialog-options,MessageDialogOptions>>`|对话框的选项。如果是string，则会作为对话框的标题。
+|===
+
+*返回*: link:{promise_url}[Promise]<``boolean``>
+
+一个 Promise，指示操作的成功或失败。
+
+[[open]]
+=== open
+
+- open(`options?`: `<<open-dialog-options,OpenDialogOptions>>`): Promise<``null`` | `string` | `string[]`>
+
+打开一个文件/目录选择对话框。
+
+选定的路径将添加到文件系统和资产协议白名单范围中。当安全性比 API 的易用性更重要时，建议编写一个专用的命令。
+
+请注意，白名单范围的更改不会被保存，因此当应用程序重新启动时，值会被清除。你可以使用 link:https://github.com/tauri-apps/tauri-plugin-persisted-scope[tauri-plugin-persisted-scope] 将其保存到文件系统中。
+
+示例
+
+[source,typescript]
+----
+import { open } from '@tauri-apps/api/dialog';
+// Open a selection dialog for image files
+const selected = await open({
+  multiple: true,
+  filters: [{
+    name: 'Image',
+    extensions: ['png', 'jpeg']
+  }]
+});
+if (Array.isArray(selected)) {
+  // user selected multiple files
+} else if (selected === null) {
+  // user cancelled the selection
+} else {
+  // user selected a single file
+}
+----
+
+示例
+
+[source,typescript]
+----
+import { open } from '@tauri-apps/api/dialog';
+import { appDir } from '@tauri-apps/api/path';
+// Open a selection dialog for directories
+const selected = await open({
+  directory: true,
+  multiple: true,
+  defaultPath: await appDir(),
+});
+if (Array.isArray(selected)) {
+  // user selected multiple directories
+} else if (selected === null) {
+  // user cancelled the selection
+} else {
+  // user selected a single directory
+}
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型
+|`options`|`<<open-dialog-options,OpenDialogOptions>>`
+|===
+
+返回: `link:{promise_url}[Promise]`<``null`` | `string` | `string[]`>
+
+一个 Promise，解析为选定的路径。
+
+[[save]]
+=== save
+
+- save(`options?`: `<<save-dialog-options,SaveDialogOptions>>`): link:{promise_url}[Promise]<``string`` | `null`>
+
+打开一个文件/目录保存对话框。
+
+选定的路径将添加到文件系统和资产协议白名单范围中。当安全性比 API 的易用性更重要时，建议编写一个专用的命令。
+
+请注意，白名单范围的更改不会被保存，因此当应用程序重新启动时，值会被清除。你可以使用 link:https://github.com/tauri-apps/tauri-plugin-persisted-scope[tauri-plugin-persisted-scope] 将其保存到文件系统中。
+
+示例
+
+[source,typescript]
+----
+import { save } from '@tauri-apps/api/dialog';
+const filePath = await save({
+  filters: [{
+    name: 'Image',
+    extensions: ['png', 'jpeg']
+  }]
+});
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型
+|`options`|`<<save-dialog-options,SaveDialogOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``string`` | `null`>
+
+一个 Promise，解析为选定的路径。
