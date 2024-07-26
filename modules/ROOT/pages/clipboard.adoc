@@ -1,0 +1,75 @@
+= clipboard
+
+https://tauri.app/zh-cn/v1/api/js/clipboard[原文地址]
+
+读取和写入系统剪贴板。
+
+当在 `tauri.conf.json` 中设置 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 为 `true` 时，该包也可以通过 `window.____TAURI____.clipboard` 访问。
+
+这些 API 必须添加到 `tauri.conf.json` 的 `xref:configuration.adoc#tauri-config[tauri.allowlist.clipboard]` 中。
+
+[source,json]
+----
+{
+  "tauri": {
+    "allowlist": {
+      "clipboard": {
+        "all": true, // enable all Clipboard APIs
+        "writeText": true,
+        "readText": true
+      }
+    }
+  }
+}
+----
+
+建议仅将你使用的 API 加入白名单，以获得最佳的包大小和安全性。
+
+[[functions]]
+== 函数
+
+[[read-text]]
+=== readText
+
+- readText(): `link:{promise_url}[Promise]`<``string`` | `null`>
+
+获取剪贴板内容为纯文本。
+
+[source,typescript]
+----
+import { readText } from '@tauri-apps/api/clipboard';
+const clipboardText = await readText();
+----
+
+Since: 1.0.0.
+
+返回: `link:{promise_url}[Promise]`<``string`` | `null`>
+
+[[write-text]]
+=== writeText
+
+- writeText(`text`: `string`): `link:{promise_url}[Promise]`<`void`>
+
+将纯文本写入剪贴板。
+
+示例
+
+[source,typescript]
+----
+import { writeText, readText } from '@tauri-apps/api/clipboard';
+await writeText('Tauri is awesome!');
+assert(await readText(), 'Tauri is awesome!');
+----
+
+Since: 1.0.0.
+
+参数
+
+|===
+|名称|类型
+|`text`|`string`
+|===
+
+返回: `link:{promise_url}[Promise]`<`void`>
+
+一个表示操作成功或失败的 Promise。
