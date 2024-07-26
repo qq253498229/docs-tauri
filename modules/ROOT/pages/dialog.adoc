@@ -1,8 +1,10 @@
 = dialog
 
+https://tauri.app/zh-cn/v1/api/js/dialog[原文地址]
+
 用于打开和保存文件的本地系统对话框。
 
-当在 `tauri.conf.json` 中设置 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 为 `true` 时，该包也可以通过 `window.____TAURI____.dialog` 访问。
+当在 `tauri.conf.json` 中设置 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 为 `true` 时，该包也可以通过 `pass:[window.__TAURI__.dialog]` 访问。
 
 这些 API 必须添加到 `tauri.conf.json` 的 `xref:configuration.adoc#tauri-config[tauri.allowlist.dialog]` 中：
 

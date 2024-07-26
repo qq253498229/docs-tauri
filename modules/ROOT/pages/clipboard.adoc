@@ -4,7 +4,7 @@ https://tauri.app/zh-cn/v1/api/js/clipboard[原文地址]
 
 读取和写入系统剪贴板。
 
-当在 `tauri.conf.json` 中设置 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 为 `true` 时，该包也可以通过 `window.____TAURI____.clipboard` 访问。
+当在 `tauri.conf.json` 中设置 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 为 `true` 时，该包也可以通过 `pass:[window.__TAURI__.clipboard]` 访问。
 
 这些 API 必须添加到 `tauri.conf.json` 的 `xref:configuration.adoc#tauri-config[tauri.allowlist.clipboard]` 中。
 

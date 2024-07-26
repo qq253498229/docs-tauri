@@ -1,5 +1,29 @@
 [[global-shortcut]]
 = globalShortcut
+:shortcut_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/globalShortcut.ts
+
+https://tauri.app/zh-cn/v1/api/js/globalShortcut[原文地址]
+
+注册全局快捷键。
+
+当 `tauri.conf.json` 中的 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 `true` 时，也可以通过 `pass:[window.__TAURI__.globalShortcut]` 访问此包。
+
+API 必须添加到 `tauri.conf.json` 中的 `xref:configuration.adoc#tauri-config[tauri.allowlist.globalShortcut]`：
+
+[source,json]
+----
+{
+  "tauri": {
+    "allowlist": {
+      "globalShortcut": {
+        "all": true // enable all global shortcut APIs
+      }
+    }
+  }
+}
+----
+
+建议仅将使用的 API 加入允许列表，以优化捆绑包大小和安全性。
 
 [[type-aliases]]
 == Type Aliases
@@ -7,20 +31,156 @@
 [[shortcut-handler]]
 === ShortcutHandler
 
+- ShortcutHandler: (`shortcut`: `string`) => `void`
+
+*类型声明*
+
+- (`shortcut`: `string`): `void`
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`shortcut`|`string`
+|===
+
+*返回*: `void`
+
+*定义在*: {shortcut_url}#L29[globalShortcut.ts:29]
+
 [[functions]]
 == Functions
 
 [[is-registered]]
 === isRegistered
 
+- isRegistered(`shortcut`: `string`): `{promise_url}[Promise]`<``boolean``>
+
+判断此应用程序是否注册了给定的快捷键。
+
+示例
+
+[source,typescript]
+----
+import { isRegistered } from '@tauri-apps/api/globalShortcut';
+const isRegistered = await isRegistered('CommandOrControl+P');
+----
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`shortcut`|`string`|快捷键定义数组，修饰符和键用“+”分隔，例如 CmdOrControl+Q
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``boolean``>
+
 [[register]]
 === register
+
+- register(`shortcut`: `string`, `handler`: `<<shortcut-handler,ShortcutHandler>>`): `link:{promise_url}[Promise]`<``void``>
+
+注册一个全局快捷键。
+
+示例
+
+[source,typescript]
+----
+import { register } from '@tauri-apps/api/globalShortcut';
+await register('CommandOrControl+Shift+C', () => {
+  console.log('Shortcut triggered');
+});
+----
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`shortcut`|`string`|快捷键定义，修饰符和键用“+”分隔，例如 CmdOrControl+Q
+|`handler`|`<<shortcut-handler,ShortcutHanlder>>`|快捷键处理回调函数 - 以触发的快捷键为参数
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``void``>
 
 [[register-all]]
 === registerAll
 
+- registerAll(`shortcuts`: `string`[], `handler`: `<<shortcut-handler,ShortcutHandler>>`): `{promise_url}[Promise]`<``void``>
+
+注册一组全局快捷键。
+
+示例
+
+[source,typescript]
+----
+import { registerAll } from '@tauri-apps/api/globalShortcut';
+await registerAll(['CommandOrControl+Shift+C', 'Ctrl+Alt+F12'], (shortcut) => {
+  console.log(`Shortcut ${shortcut} triggered`);
+});
+----
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`shortcut`|`string`[]|快捷键定义数组，修饰符和键用“+”分隔，例如 CmdOrControl+Q
+|`handler`|`<<shortcut-handler,ShortcutHanlder>>`|快捷键处理回调函数 - 以触发的快捷键为参数
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``void``>
+
 [[unregister]]
 === unregister
 
+- unregister(`shortcut`: `string`): `link:{promise_url}[Promise]`<``void``>
+
+取消注册一个全局快捷键。
+
+示例
+
+[source,typescript]
+----
+import { unregister } from '@tauri-apps/api/globalShortcut';
+await unregister('CmdOrControl+Space');
+----
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`shortcut`|`string`|快捷键定义，修饰符和键用“+”分隔，例如 CmdOrControl+Q
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``void``>
+
 [[unregister-all]]
 === unregisterAll
+
+- unregisterAll(): `link:{promise_url}[Promise]`<``void``>
+
+取消注册应用程序注册的所有快捷键。
+
+示例
+
+[source,typescript]
+----
+import { unregisterAll } from '@tauri-apps/api/globalShortcut';
+await unregisterAll();
+----
+
+Since: 1.0.0
+
+*返回*: `link:{promise_url}[Promise]`<``void``>

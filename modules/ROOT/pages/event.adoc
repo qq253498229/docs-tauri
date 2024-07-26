@@ -6,7 +6,7 @@ https://tauri.app/zh-cn/v1/api/js/event[原文地址]
 
 事件系统允许你向后端发送事件，或者是监听来自后端的事件。
 
-当在 tauri.conf.json 中设置 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 为 `true` 时，该包也可以通过 `window.____TAURI____.event` 访问。
+当在 tauri.conf.json 中设置 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 为 `true` 时，该包也可以通过 `pass:[window.__TAURI__.event]` 访问。
 
 [[enumerations]]
 == Enumerations

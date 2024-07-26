@@ -4,7 +4,7 @@ link:https://tauri.app/v1/api/js/app[原文地址]
 
 获取应用元数据。
 
-当 `tauri.conf.json` 中的 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 true 时，该包也可以通过 `window.____TAURI____.app` 访问。
+当 `tauri.conf.json` 中的 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 true 时，该包也可以通过 `pass:[window.__TAURI__.app]` 访问。
 
 必须将 API 添加到 `tauri.conf.json` 中的 `xref:configuration.adoc#allowlist-config[tauri.allowlist.app]`：
 

@@ -4,7 +4,7 @@ https://tauri.app/zh-cn/v1/api/js/tauri[原文地址]
 
 调用您的自定义命令。
 
-当 `tauri.conf.json` 中的 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 true 时，该包也可以通过 `window.____TAURI____.tauri` 访问。
+当 `tauri.conf.json` 中的 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 true 时，该包也可以通过 `pass:[window.__TAURI__.tauri]` 访问。
 
 == Type Aliases
 
