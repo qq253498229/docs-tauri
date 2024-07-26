@@ -1,8 +1,53 @@
 [[http]]
 = http
+:http_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts
+:record_url: https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type
+:omit_url: https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys
+
+https://tauri.app/zh-cn/v1/api/js/http#security[原文地址]
+
+访问用Rust编写的HTTP客户端。
+
+当 `tauri.conf.json` 中的 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 `true` 时，此包也可以通过 pass:[window.__TAURI__.http] 访问。
+
+这些API必须在 `tauri.conf.json` 中列入允许列表：
+
+----
+{
+  "tauri": {
+    "allowlist": {
+      "http": {
+        "all": true, // enable all http APIs
+        "request": true // enable HTTP request API
+      }
+    }
+  }
+}
+----
+
+建议仅列入您使用的API，以获得最佳的包大小和安全性。
 
 [[security]]
 == Security
+
+此API有一个作用域配置，强制您使用全局模式限制可访问的URL和路径。
+
+例如，此作用域配置仅允许对tauri-apps组织的GitHub API进行HTTP请求：
+
+[source,json]
+----
+{
+  "tauri": {
+    "allowlist": {
+      "http": {
+        "scope": ["https://api.github.com/repos/tauri-apps/*"]
+      }
+    }
+  }
+}
+----
+
+尝试执行任何未在作用域中配置的URL的API将导致因拒绝访问而承诺被拒绝。
 
 [[enumerations]]
 == Enumerations
@@ -10,17 +55,423 @@
 [[response-type]]
 === ResponseType
 
+==== Since: 1.0.0
+
+==== 枚举成员
+
+[%autowidth]
+|===
+|名称|类型|定义在
+|`Binary`|`3`|{http_url}#L74[http.ts:74]
+|`JSON`|`1`|{http_url}#L72[http.ts:72]
+|`Text`|`2`|{http_url}#L73[http.ts:73]
+|===
+
 [[classes]]
 == Classes
 
 [[body]]
 === Body
 
+用于POST和PUT请求的主体对象。
+
+==== Since: 1.0.0
+
+==== 属性
+
+- payload: `unknown`
+
+*定义在*: {http_url}#L95[http.ts:95]
+
+- type: `string`
+
+*定义在*: {http_url}#L94[http.ts:94]
+
+==== 方法
+
+- `Static` bytes(``bytes``: `Iterable`<``number``> | `link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer[ArrayBuffer]` | `ArrayLike`<``number``>): `<<body,Body>>`
+
+创建一个新的字节数组主体。
+
+示例
+
+[source,typescript]
+----
+import { Body } from "@tauri-apps/api/http"
+Body.bytes(new Uint8Array([1, 2, 3]));
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`bytes`|`Iterable`<``number``> \| `link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer[ArrayBuffer]` \| ``ArrayLike``<``number``>|请求体字节数组。
+|===
+
+*返回*: `<<body,Body>>`
+
+主体对象已准备好用于POST和PUT请求。
+
+- `Static` form(`data`: `link:{record_url}[Record]`<``string``, `<<part,Part>>`> | `link:https://developer.mozilla.org/en-US/docs/Web/API/FormData[FormData]`): <<body,Body>>
+
+创建一个新的表单数据主体。表单数据是一个对象，其中每个键是条目名称，值是字符串或文件对象。
+
+默认情况下，它会设置 `application/x-www-form-urlencoded` 内容类型头，但如果启用了Cargo功能 `http-multipart`，您可以将其设置为 `multipart/form-data`。
+
+注意，文件路径必须在 `fs` 允许列表范围内。
+
+示例
+
+[source,typescript]
+----
+import { Body } from "@tauri-apps/api/http"
+const body = Body.form({
+  key: 'value',
+  image: {
+    file: '/path/to/file', // either a path or an array buffer of the file contents
+    mime: 'image/jpeg', // optional
+    fileName: 'image.jpg' // optional
+  }
+});
+
+// alternatively, use a FormData:
+const form = new FormData();
+form.append('key', 'value');
+form.append('image', file, 'image.png');
+const formBody = Body.form(form);
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`data`|`link:{record_url}[Record]`<``string``, `<<part,Part>>`>\|``link:https://developer.mozilla.org/en-US/docs/Web/API/FormData[FormData]``|请求体数据。
+|===
+
+*返回*: `<<body,Body>>`
+
+主体对象已准备好用于POST和PUT请求。
+
+- `Static` json(`data`: `link:{record_url}[Record]`<``any``, `any`>): `<<body,Body>>`
+
+创建一个新的JSON请求体。
+
+示例
+
+[source,typescript]
+----
+import { Body } from "@tauri-apps/api/http"
+Body.json({
+  registered: true,
+  name: 'tauri'
+});
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`data`|`link:{record_url}[Record]`<``any``, `any`>|请求体JON对象。
+|===
+
+主体对象已准备好用于POST和PUT请求。
+
+- `Static` text(``value``: `string`): `<<body,Body>>`
+
+创建一个新的UTF-8字符串请求体。
+
+示例
+
+[source,typescript]
+----
+import { Body } from "@tauri-apps/api/http"
+Body.text('The body content as a string');
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`value`|`string`|请求体字符串。
+|===
+
+*返回*: `<<body,Body>>`
+
+主体对象已准备好用于POST和PUT请求。
+
 [[client]]
 === Client
 
+==== Since: 1.0.0
+
+==== 属性
+
+- id: `number`
+
+*定义在*: {http_url}#L303[http.ts:303]
+
+==== 方法
+
+- delete<``T``>(`url`: `string`, `options?`: `<<request-options,RequestOptions>>`): `link:{promise_url}[Promise]`<``<<response,Response>>``<``T``>>
+
+发送DELETE请求。
+
+示例
+
+[source,typescript]
+----
+import { getClient } from '@tauri-apps/api/http';
+const client = await getClient();
+const response = await client.delete('http://localhost:3003/users/1');
+----
+
+类型参数
+
+- `T`
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`url`|`string`
+|`options?`|`<<request-options,RequestOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``<<response,Response>>``<``T``>>
+
+- drop(): `link:{promise_url}[Promise]`<``void``>
+
+销毁客户端实例。
+
+示例
+
+[source,typescript]
+----
+import { getClient } from '@tauri-apps/api/http';
+const client = await getClient();
+await client.drop();
+----
+
+*返回*: `link:{promise_url}[Promise]`<``void``>
+
+- get<``T``>(`url`: `string`, `options?`: `<<request-options,RequestOptions>>`): `link:{promise_url}[Promise]`<``<<response,Response>>``<``T``>>
+
+发送GET请求。
+
+示例
+
+[source,typescript]
+----
+import { getClient, ResponseType } from '@tauri-apps/api/http';
+const client = await getClient();
+const response = await client.get('http://localhost:3003/users', {
+  timeout: 30,
+  // the expected response type
+  responseType: ResponseType.JSON
+});
+----
+
+类型参数
+
+- `T`
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`url`|`string`
+|`options?`|`<<request-options,RequestOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``<<response,Response>>``<``T``>>
+
+- patch<``T``>(`url`: `string`, `options?`: `<<request-options,RequestOptions>>`): `link:{promise_url}[Promise]`<``<<response,Response>>``<``T``>>
+
+发送PATCH请求。
+
+示例
+
+[source,typescript]
+----
+import { getClient, Body } from '@tauri-apps/api/http';
+const client = await getClient();
+const response = await client.patch('http://localhost:3003/users/1', {
+  body: Body.json({ email: 'contact@tauri.app' })
+});
+----
+
+类型参数
+
+- `T`
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`url`|`string`
+|`options?`|`<<request-options,RequestOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``<<response,Response>>``<``T``>>
+
+- post<``T``>(`url`: `string`, `body?`: `<<body,Body>>`, `options?`: `<<request-options,RequestOptions>>`): `link:{promise_url}[Promise]`<``<<response,Response>>``<``T``>>
+
+发送POST请求。
+
+示例
+
+[source,typescript]
+----
+import { getClient, Body, ResponseType } from '@tauri-apps/api/http';
+const client = await getClient();
+const response = await client.post('http://localhost:3003/users', {
+  body: Body.json({
+    name: 'tauri',
+    password: 'awesome'
+  }),
+  // in this case the server returns a simple string
+  responseType: ResponseType.Text,
+});
+----
+
+类型参数
+
+- `T`
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`url`|`string`
+|`body?`|`<<body,Body>>`
+|`options?`|`<<request-options,RequestOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``<<response,Response>>``<``T``>>
+
+- put<``T``>(`url`: `string`, `body?`: `<<body,Body>>`, `options?`: `<<request-options,RequestOptions>>`): `link:{promise_url}[Promise]`<``<<response,Response>>``<``T``>>
+
+发送PUT请求。
+
+示例
+
+[source,typescript]
+----
+import { getClient, Body } from '@tauri-apps/api/http';
+const client = await getClient();
+const response = await client.put('http://localhost:3003/users/1', {
+  body: Body.form({
+    file: {
+      file: '/home/tauri/avatar.png',
+      mime: 'image/png',
+      fileName: 'avatar.png'
+    }
+  })
+});
+----
+
+类型参数
+
+- `T`
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`url`|`string`
+|`body?`|`<<body,Body>>`
+|`options?`|`<<request-options,RequestOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``<<response,Response>>``<``T``>>
+
+- request<``T``>(`options`: `<<http-options,HttpOptions>>`): `link:{promise_url}[Promise]`<``<<response,Response>>``<``T``>>
+
+发起一个HTTP请求。
+
+示例
+
+[source,typescript]
+----
+import { getClient } from '@tauri-apps/api/http';
+const client = await getClient();
+const response = await client.request({
+  method: 'GET',
+  url: 'http://localhost:3003/users',
+});
+----
+
+类型参数
+
+- `T`
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`options?`|`<<http-options,HttpOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``<<response,Response>>``<``T``>>
+
 [[response]]
 === Response<T>
+
+响应对象。
+
+==== Since: 1.0.0
+
+==== 类型参数
+
+- `T`
+
+==== 属性
+
+- data: `T`
+
+响应数据
+
+*定义在*: {http_url}#L286[http.ts:286]
+
+- headers: `link:{record_url}[Record]`<``string``, `string`>
+
+响应头。
+
+*定义在*: {http_url}#L282[http.ts:282]
+
+- ok: `boolean`
+
+一个布尔值，指示响应是否成功（状态在200-299范围内）。
+
+*定义在*: {http_url}#L280[http.ts:280]
+
+- rawHeaders: `link:{record_url}[Record]`<``string``, `string`[]>
+
+响应的原始头信息。
+
+*定义在*: {http_url}#L284[http.ts:284]
+
+- status: `number`
+
+响应状态码。
+
+*定义在*: {http_url}#L278[http.ts:278]
+
+- url: `string`
+
+请求URL。
+
+*定义在*: {http_url}#L276[http.ts:276]
 
 [[interfaces]]
 == Interfaces
@@ -28,14 +479,94 @@
 [[client-options]]
 === ClientOptions
 
+Since: 1.0.0
+
+==== 属性
+
+- `Optional` connectTimeout: `number` | `<<duration,Duration>>`
+
+*定义在*: {http_url}#L65[http.ts:65]
+
+- `Optional` maxRedirections: `number`
+
+定义客户端应跟随的最大重定向次数。如果设置为0，则不会跟随任何重定向。
+
+*定义在*: {http_url}#L64[http.ts:64]
+
 [[duration]]
 === Duration
+
+==== Since: 1.0.0
+
+==== 属性
+
+- nanos: `number`
+
+*定义在*: {http_url}#L53[http.ts:53]
+
+- secs: `number`
+
+*定义在*: {http_url}#L52[http.ts:52]
 
 [[file-part]]
 === FilePart<T>
 
+==== Since: 1.0.0
+
+==== 类型参数
+
+- `T`
+
+==== 属性
+
+- file: `string` | `T`
+
+*定义在*: {http_url}#L81[http.ts:81]
+
+- `Optional` fileName: `string`
+
+*定义在*: {http_url}#L83[http.ts:83]
+
+- `Optional` mime: `string`
+
+*定义在*: {http_url}#L82[http.ts:82]
+
 [[http-options]]
 === HttpOptions
+
+发送到后端的选项对象。
+
+==== Since: 1.0.0
+
+==== 属性
+
+- `Optional` body: `<<body,Body>>`
+
+*定义在*: {http_url}#L250[http.ts:250]
+
+- `Optional` headers: `link:{record_url}[Record]`<``string``, `any`>
+
+*定义在*: {http_url}#L248[http.ts:248]
+
+- method: `<<http-verb,HttpVerb>>`
+
+*定义在*: {http_url}#L246[http.ts:246]
+
+- `Optional` query: `link:{record_url}[Record]`<``string``, `any`>
+
+*定义在*: {http_url}#L249[http.ts:249]
+
+- `Optional` responseType: `<<response-type,ResponseType>>`
+
+*定义在*: {http_url}#L252[http.ts:252]
+
+- `Optional` timeout: `number` | `<<duration,Duration>>`
+
+*定义在*: {http_url}#L251[http.ts:251]
+
+- url: `string`
+
+*定义在*: {http_url}#L247[http.ts:247]
 
 [[type-aliases]]
 == Type Aliases
@@ -43,14 +574,36 @@
 [[fetch-options]]
 === FetchOptions
 
+- FetchOptions: `link:{omit_url}[Omit]`<``<<http-options,HttpOptions>>``, `"url"`>
+
+`fetch` API的选项。
+
+*定义在*: {http_url}#L258[http.ts:258]
+
 [[http-verb]]
 === HttpVerb
+
+- HttpVerb: `"GET"` | `"POST"` | `"PUT"` | `"DELETE"` | `"PATCH"` | `"HEAD"` | `"OPTIONS"` | `"CONNECT"` | `"TRACE"`
+
+请求的HTTP动词。
+
+*定义在*: {http_url}#L229[http.ts:229]
 
 [[part]]
 === Part
 
+- Part: `string` | `link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array[Uint8Array]` | `<<file-part,FilePart>>`<``link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array[Uint8Array]``>
+
+*定义在*: {http_url}#L86[http.ts:86]
+
 [[request-options]]
 === RequestOptions
+
+- RequestOptions: `link:{omit_url}[Omit]`<``<<http-options,HttpOptions>>``, `"method"` | `"url"`>
+
+请求选项。
+
+*定义在*: {http_url}#L256[http.ts:256]
 
 [[functions]]
 == Functions
@@ -58,5 +611,61 @@
 [[fetch]]
 === fetch
 
+- fetch<``T``>(`url`: `string`, `options?`: `<<fetch-options,FetchOptions>>`): `link:{promise_url}[Promise]`<``<<response,Response>>``<``T``>>
+
+使用默认客户端执行HTTP请求。
+
+示例
+
+[source,typescript]
+----
+import { fetch } from '@tauri-apps/api/http';
+const response = await fetch('http://localhost:3003/users/2', {
+  method: 'GET',
+  timeout: 30,
+});
+----
+
+==== 类型参数
+
+- `T`
+
+==== 参数
+
+[%autowidth]
+|===
+|名称|类型
+|`url`|`string`
+|`options?`|`<<fetch-options,FetchOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``<<response,Response>>``<``T``>>
+
 [[get-client]]
 === getClient
+
+- getClient(`options?`: `<<client-options,ClientOptions>>`): `link:{promise_url}[Promise]`<``<<client,Client>>``>
+
+使用指定的选项创建一个新的客户端。
+
+示例
+
+[source,typescript]
+----
+import { getClient } from '@tauri-apps/api/http';
+const client = await getClient();
+----
+
+==== Since: 1.0.0
+
+==== 参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`options?`|`<<client-options,ClientOptions>>`|客户端配置
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``<<client,Client>>``>
+
+一个承诺对象，解析为客户端实例。
