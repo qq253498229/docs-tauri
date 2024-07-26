@@ -1,5 +1,6 @@
 [[fs]]
 = fs
+:fs_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/
 
 访问文件系统。
 
@@ -65,8 +66,12 @@
 [[dir]]
 === Dir
 
+<<base-directory>> 的重命名以及重新导出。
+
 [[write-file]]
 === writeFile
+
+<<write-text-file>> 的重命名以及重新导出。
 
 [[enumerations]]
 == Enumerations
@@ -74,23 +79,132 @@
 [[base-directory]]
 === BaseDirectory
 
+Since: 1.0.0
+
+枚举成员
+
+|===
+|名称|类型|定义在
+|`Audio`|`1`|link:{fs_url}fs.ts#L81[fs.ts:81]
+|`Cache`|`2`|link:{fs_url}fs.ts#L82[fs.ts:82]
+|`Config`|`3`|link:{fs_url}fs.ts#L83[fs.ts:83]
+|`Data`|`4`|link:{fs_url}fs.ts#L84[fs.ts:84]
+|`LocalData`|`5`|link:{fs_url}fs.ts#L85[fs.ts:85]
+|`Desktop`|`6`|link:{fs_url}fs.ts#L86[fs.ts:86]
+|`Document`|`7`|link:{fs_url}fs.ts#L87[fs.ts:87]
+|`Download`|`8`|link:{fs_url}fs.ts#L88[fs.ts:88]
+|`Executable`|`9`|link:{fs_url}fs.ts#L89[fs.ts:89]
+|`Font`|`10`|link:{fs_url}fs.ts#L90[fs.ts:90]
+|`Home`|`11`|link:{fs_url}fs.ts#L91[fs.ts:91]
+|`Picture`|`12`|link:{fs_url}fs.ts#L92[fs.ts:92]
+|`Public`|`13`|link:{fs_url}fs.ts#L93[fs.ts:93]
+|`Runtime`|`14`|link:{fs_url}fs.ts#L94[fs.ts:94]
+|`Template`|`15`|link:{fs_url}fs.ts#L95[fs.ts:95]
+|`Video`|`16`|link:{fs_url}fs.ts#L96[fs.ts:96]
+|`Resource`|`17`|link:{fs_url}fs.ts#L97[fs.ts:97]
+|`App`|`18`|link:{fs_url}fs.ts#L98[fs.ts:98]
+|`Log`|`19`|link:{fs_url}fs.ts#L99[fs.ts:99]
+|`Temp`|`20`|link:{fs_url}fs.ts#L100[fs.ts:100]
+|`AppConfig`|`21`|link:{fs_url}fs.ts#L101[fs.ts:101]
+|`AppData`|`22`|link:{fs_url}fs.ts#L102[fs.ts:102]
+|`AppLocalData`|`23`|link:{fs_url}fs.ts#L103[fs.ts:103]
+|`AppCache`|`24`|link:{fs_url}fs.ts#L104[fs.ts:104]
+|`AppLog`|`25`|link:{fs_url}fs.ts#L105[fs.ts:105]
+|===
+
 [[interfaces]]
 == Interfaces
 
 [[file-entry]]
 === FileEntry
 
+Since: 1.0.0
+
+属性
+
+- Optional `children`: `<<file-entry,FileEntry>>[]`
+
+如果是目录，此条目的子项；否则为null
+
+*定义在*: {fs_url}fs.ts#L161[fs.ts:161]
+
+- Optional `name`: `string`
+
+目录/文件的名称可以为null，如果路径以 `..` 结尾
+
+*定义在*: {fs_url}fs.ts#L159[fs.ts:159]
+
+- path: `string`
+
+*定义在*: {fs_url}fs.ts#L154[fs.ts:154]
+
 [[fs-binary-file-option]]
 === FsBinaryFileOption
+
+用于将二进制数据写入文件的选项对象。
+
+Since: 1.0.0
+
+属性
+
+- contents: `<<binary-file-contents,BinaryFileContents>>`
+
+字节数组的内容。
+
+*定义在*: {fs_url}fs.ts#L147[fs.ts:147]
+
+- path: `string`
+
+要写入的文件路径。
+
+*定义在*: {fs_url}fs.ts#L145[fs.ts:145]
 
 [[fs-dir-options]]
 === FsDirOptions
 
+Since: 1.0.0
+
+属性
+
+- `Optional` dir: `<<base-directory,BaseDirectory>>`
+
+*定义在*: {fs_url}fs.ts#L120[fs.ts:120]
+
+- `Optional` recursive: `boolean`
+
+*定义在*: {fs_url}fs.ts#L121[fs.ts:121]
+
 [[fs-options]]
 === FsOptions
 
+Since: 1.0.0
+
+属性
+
+- `Optional` dir: `<<base-directory,BaseDirectory>>`
+
+*定义在*: {fs_url}fs.ts#L112[fs.ts:112]
+
 [[fs-text-file-option]]
 === FsTextFileOption
+
+用于将UTF-8字符串写入文件的选项对象。
+
+Since: 1.0.0
+
+属性
+
+- contents: `string`
+
+要写入文件的UTF-8字符串。
+
+*定义在*: {fs_url}fs.ts#L133[fs.ts:133]
+
+- path: `string`
+
+要写入的文件路径。
+
+*定义在*: {fs_url}fs.ts#L131[fs.ts:131]
 
 [[type-aliases]]
 == Type Aliases
@@ -98,38 +212,316 @@
 [[binary-file-contents]]
 === BinaryFileContents
 
+- BinaryFileContents: `Iterable`<``number``> | `ArrayLike`<``number``> | `link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer[ArrayBuffer]`
+
+*定义在*: {fs_url}fs.ts#L136[fs.ts:136]
+
 [[functions]]
 == Functions
 
 [[copy-file]]
 === copyFile
 
+- copyFile(`source`: `string`, `destination`: `string`, `options?`: `<<fs-options,FsOptions>>`): `link:{promise_url}[Promise]`<``void``>
+
+将文件复制到目的地。
+
+示例
+
+[source,typescript]
+----
+import { copyFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Copy the `$APPCONFIG/app.conf` file to `$APPCONFIG/app.conf.bk`
+await copyFile('app.conf', 'app.conf.bk', { dir: BaseDirectory.AppConfig });
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型
+|`source`|`string`
+|`destination`|`string`
+|`options`|`<<fs-options,FsOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``void``>
+
+指示操作成功或失败的Promise。
+
 [[create-dir]]
 === createDir
+
+- createDir(`dir`: `string`, `options?`: `<<fs-dir-options,FsDirOptions>>`): `link:{promise_url}[Promise]`<``void``>
+
+创建目录。如果路径的父组件之一不存在且未将 `recursive` 选项设置为true，则Promise将被拒绝。
+
+示例
+
+[source,typescript]
+----
+import { createDir, BaseDirectory } from '@tauri-apps/api/fs';
+// Create the `$APPDATA/users` directory
+await createDir('users', { dir: BaseDirectory.AppData, recursive: true });
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型
+|`dir`|`string`
+|`options`|`<<fs-options,FsOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``void``>
+
+指示操作成功或失败的Promise。
 
 [[exists]]
 === exists
 
+- exists(`path`: `string`, `options?`: `<<fs-options,FsOptions>>`): `link:{promise_url}[Promise]`<``boolean``>
+
+检查路径是否存在。
+
+示例
+
+[source,typescript]
+----
+import { exists, BaseDirectory } from '@tauri-apps/api/fs';
+// Check if the `$APPDATA/avatar.png` file exists
+await exists('avatar.png', { dir: BaseDirectory.AppData });
+----
+
+Since: 1.1.0
+
+参数
+
+|===
+|名称|类型
+|`path`|`string`
+|`options`|`<<fs-options,FsOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``boolean``>
+
 [[read-binary-file]]
 === readBinaryFile
+
+- readBinaryFile(`filePath`: `string`, `options?`: `<<fs-options,FsOptions>>`): `link:{promise_url}[Promise]`<``link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array[Uint8Array]``>
+
+将文件读取为字节数组。
+
+示例
+
+[source,typescript]
+----
+import { readBinaryFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Read the image file in the `$RESOURCEDIR/avatar.png` path
+const contents = await readBinaryFile('avatar.png', { dir: BaseDirectory.Resource });
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型
+|`filePath`|`string`
+|`options`|`<<fs-options,FsOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array[Uint8Array]``>
 
 [[read-dir]]
 === readDir
 
+- readDir(`dir`: `string`, `options?`: `<<fs-dir-options,FsDirOptions>>`): `link:{promise_url}[Promise]`<``<<file-entry,FileEntry>>``[]>
+
+列出目录文件。
+
+示例
+
+[source,typescript]
+----
+import { readDir, BaseDirectory } from '@tauri-apps/api/fs';
+// Reads the `$APPDATA/users` directory recursively
+const entries = await readDir('users', { dir: BaseDirectory.AppData, recursive: true });
+
+function processEntries(entries) {
+  for (const entry of entries) {
+    console.log(`Entry: ${entry.path}`);
+    if (entry.children) {
+      processEntries(entry.children)
+    }
+  }
+}
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型
+|`dir`|`string`
+|`options`|`<<fs-options,FsOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``<<file-entry,FileEntry>>``[]>
+
 [[read-text-file]]
 === readTextFile
+
+- readTextFile(`filePath`: `string`, `options?`: `<<fs-options,FsOptions>>`): `link:{promise_url}[Promise]`<``string``>
+
+将文件读取为UTF-8编码的字符串。
+
+示例
+
+[source,typescript]
+----
+import { readTextFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Read the text file in the `$APPCONFIG/app.conf` path
+const contents = await readTextFile('app.conf', { dir: BaseDirectory.AppConfig });
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型
+|`filePath`|`string`
+|`options`|`<<fs-options,FsOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``string``>
 
 [[remove-dir]]
 === removeDir
 
+- removeDir(`dir`: `string`, `options?`: `<<fs-dir-options,FsDirOptions>>`): `link:{promise_url}[Promise]`<``void``>
+
+删除目录。如果目录不为空且未将 `recursive` 选项设置为true，则Promise将被拒绝。
+
+示例
+
+[source,typescript]
+----
+import { removeDir, BaseDirectory } from '@tauri-apps/api/fs';
+// Remove the directory `$APPDATA/users`
+await removeDir('users', { dir: BaseDirectory.AppData });
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型
+|`dir`|`string`
+|`options`|`<<fs-dir-options,FsDirOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``void``>
+
+指示操作成功或失败的Promise。
+
 [[remove-file]]
 === removeFile
+
+removeFile(`file`: `string`, `options?`: `<<fs-options,FsOptions>>`): `link:{promise_url}[Promise]`<``void``>
+
+删除文件。
+
+示例
+
+[source,typescript]
+----
+import { removeFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Remove the `$APPConfig/app.conf` file
+await removeFile('app.conf', { dir: BaseDirectory.AppConfig });
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型
+|`file`|`string`
+|`options`|`<<fs-options,FsOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``void``>
+
+指示操作成功或失败的Promise。
 
 [[rename-file]]
 === renameFile
 
+- renameFile(`oldPath`: `string`, `newPath`: `string`, `options?`: `<<fs-options,FsOptions>>`): `link:{promise_url}[Promise]`<``void``>
+
+重命名文件。
+
+示例
+
+[source,typescript]
+----
+import { renameFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Rename the `$APPDATA/avatar.png` file
+await renameFile('avatar.png', 'deleted.png', { dir: BaseDirectory.AppData });
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型
+|`oldPath`|`string`
+|`newPath`|`string`
+|`options`|`<<fs-options,FsOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``void``>
+
+指示操作成功或失败的Promise。
+
 [[write-binary-file]]
 === writeBinaryFile
+
+- writeBinaryFile(`path`: `string`, `contents`: `<<binary-file-contents,BinaryFileContents>>`, `options?`: `<<fs-options,FsOptions>>`): `link:{promise_url}[Promise]`<``void``>
+
+将字节数组内容写入文件。
+
+示例
+
+[source,typescript]
+----
+import { writeBinaryFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Write a binary file to the `$APPDATA/avatar.png` path
+await writeBinaryFile('avatar.png', new Uint8Array([]), { dir: BaseDirectory.AppData });
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型|描述
+|`path`|`string`|-
+|`contents`|`<<binary-file-contents,BinaryFileContents>>`|-
+|`options`|`<<fs-options,FsOptions>>`|配置对象。
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``void``>
+
+指示操作成功或失败的Promise。
 
 [[write-text-file]]
 === writeTextFile
