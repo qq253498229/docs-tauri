@@ -205,6 +205,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型|描述
 |`message`|`string`|要显示的信息
@@ -235,6 +236,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型|描述
 |`message`|`string`|要显示的信息
@@ -265,6 +267,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型|描述
 |`message`|`string`|要显示的信息
@@ -333,6 +336,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`options`|`<<open-dialog-options,OpenDialogOptions>>`
@@ -370,6 +374,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`options`|`<<save-dialog-options,SaveDialogOptions>>`

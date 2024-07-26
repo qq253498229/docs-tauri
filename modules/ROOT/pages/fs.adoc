@@ -83,6 +83,7 @@ Since: 1.0.0
 
 枚举成员
 
+[%autowidth]
 |===
 |名称|类型|定义在
 |`Audio`|`1`|link:{fs_url}fs.ts#L81[fs.ts:81]
@@ -239,6 +240,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`source`|`string`
@@ -270,6 +272,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`dir`|`string`
@@ -300,6 +303,7 @@ Since: 1.1.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`path`|`string`
@@ -328,6 +332,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`filePath`|`string`
@@ -365,6 +370,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`dir`|`string`
@@ -393,6 +399,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`filePath`|`string`
@@ -421,6 +428,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`dir`|`string`
@@ -451,6 +459,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`file`|`string`
@@ -481,6 +490,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`oldPath`|`string`
@@ -512,6 +522,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型|描述
 |`path`|`string`|-
@@ -525,3 +536,58 @@ Since: 1.0.0
 
 [[write-text-file]]
 === writeTextFile
+
+- writeTextFile(`path`: `string`, `contents`: `string`, `options?`: `<<fs-options,FsOptions>>`): `link:{promise_url}[Promise]`<``void``>
+
+写一个UTF-8文本文件。
+
+示例
+
+[source,typescript]
+----
+import { writeTextFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Write a text file to the `$APPCONFIG/app.conf` path
+await writeTextFile('app.conf', 'file contents', { dir: BaseDirectory.AppConfig });
+----
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`path`|`string`
+|`contents`|`string`
+|`options`|`<<fs-options,FsOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``void``>
+
+- writeTextFile(`file`: `<<fs-text-file-option,FsTextFileOption>>`, `options?`: `<<fs-options,FsOptions>>`): `link:{promise_url}[Promise]`<``void``>
+
+写一个UTF-8文本文件。
+
+示例
+
+[source,typescript]
+----
+import { writeTextFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Write a text file to the `$APPCONFIG/app.conf` path
+await writeTextFile({ path: 'app.conf', contents: 'file contents' }, { dir: BaseDirectory.AppConfig });
+----
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`path`|`string`
+|`options`|`<<fs-options,FsOptions>>`
+|===
+
+*返回*: `link:{promise_url}[Promise]`<``void``>
+
+指示操作成功或失败的Promise。

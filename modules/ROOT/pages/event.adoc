@@ -18,6 +18,7 @@ Since: 1.1.0
 
 枚举成员
 
+[%autowidth]
 |===
 |名称|类型|定义在
 |`CHECK_UPDATE`|`"tauri://update"`|{event_url}event.ts#L34[event.ts:34]
@@ -94,6 +95,7 @@ Since: 1.1.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`event`|`<<event,Event>>`<``T``>
@@ -145,6 +147,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型|描述
 |`event`|`string`|事件名称。只能包含字母、数字、`-`、`/`、`:` 和 `_`。
@@ -181,6 +184,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型|描述
 |`event`|`<<event-name,EventName>>`|事件名称。只能包含字母、数字、`-`、`/`、`:` 和 `_`。
@@ -223,6 +227,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型|描述
 |`event`|`<<event-name,EventName>>`|事件名称。只能包含字母、数字、`-`、`/`、`:` 和 `_`。

@@ -80,6 +80,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型|描述
 |`cmd`|`string`|命令的名称。
@@ -100,6 +101,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型|默认值
 |`callback?`|(`response`: `any`) => `void`|`undefined`

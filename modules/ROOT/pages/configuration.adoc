@@ -124,6 +124,7 @@ Tauri相关的配置。
 
 - `{"user":"brownfield"}`: Brownfield模式。
 
+[%autowidth]
 |===
 |名称|类型|默认|描述
 |`user`|"brownfield"(required)||undefined
@@ -131,6 +132,7 @@ Tauri相关的配置。
 
 - `{"user":"isolation","options":{"dir":string}}`:Isolation模式。以安全为目标的时候建议使用。
 
+[%autowidth]
 |===
 |名称|类型|默认|描述
 |`use`|"isolation"(required)||undefined
@@ -561,6 +563,7 @@ Webview2运行时的安装模式。请注意，对于更新程序捆绑包，使
 
 - `{"type":"skip"}`: 不要将Webview2作为Windows安装程序的一部分进行安装。
 
+[%autowidth]
 |===
 |名称|类型|默认|描述
 |`type`|"skip" (required)||undefined
@@ -568,6 +571,7 @@ Webview2运行时的安装模式。请注意，对于更新程序捆绑包，使
 
 - `{ "type": "downloadBootstrapper", "silent": boolean }`: 下载引导程序并运行它。需要互联网连接。结果是安装程序的大小较小，但不建议在Windows 7上使用。
 
+[%autowidth]
 |===
 |名称|类型|默认|描述
 |`type`|"downloadBootstrapper" (required)||undefined
@@ -576,6 +580,7 @@ Webview2运行时的安装模式。请注意，对于更新程序捆绑包，使
 
 - `{ "type": "embedBootstrapper", "silent": boolean }`: 嵌入引导程序并运行它。需要互联网连接。会增加约1.8MB的安装程序大小，但在Windows 7上提供更好的支持。
 
+[%autowidth]
 |===
 |名称|类型|默认|描述
 |`type`|"embedBootstrapper" (required)||undefined
@@ -584,6 +589,7 @@ Webview2运行时的安装模式。请注意，对于更新程序捆绑包，使
 
 - `{ "type": "offlineInstaller", "silent": boolean }`: 嵌入离线安装程序并运行它。不需要互联网连接。会增加约127MB的安装程序大小。
 
+[%autowidth]
 |===
 |名称|类型|默认|描述
 |`type`|"offlineInstaller" (required)||undefined
@@ -592,6 +598,7 @@ Webview2运行时的安装模式。请注意，对于更新程序捆绑包，使
 
 - `{ "type": "fixedRuntime", "path": string }`: 嵌入固定的Webview2版本并在运行时使用。会增加约180MB的安装程序大小。
 
+[%autowidth]
 |===
 |名称|类型|默认|描述
 |`type`|"fixedRuntime" (required)||undefined
