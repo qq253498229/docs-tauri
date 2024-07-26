@@ -1,1 +1,116 @@
+[[path]]
+= path
 
+[[references]]
+== References
+
+[[base-directory]]
+=== BaseDirectory
+
+[[variables]]
+== Variables
+
+[[delimiter]]
+=== delimiter
+
+[[sep]]
+=== sep
+
+[[function]]
+== Function
+
+[[app-cache-dir]]
+=== appCacheDir
+
+[[app-config-dir]]
+=== appConfigDir
+
+[[app-data-dir]]
+=== appDataDir
+
+[[app-dir]]
+=== appDir
+
+[[app-local-data-dir]]
+=== appLocalDataDir
+
+[[app-log-dir]]
+=== appLogDir
+
+[[audio-dir]]
+=== audioDir
+
+[[basename]]
+=== basename
+
+[[cache-dir]]
+=== cacheDir
+
+[[config-dir]]
+=== configDir
+
+[[data-dir]]
+=== dataDir
+
+[[desktop-dir]]
+=== desktopDir
+
+[[dirname]]
+=== dirname
+
+[[document-dir]]
+=== documentDir
+
+[[download-dir]]
+=== downloadDir
+
+[[executable-dir]]
+=== executableDir
+
+[[extname]]
+=== extname
+
+[[font-dir]]
+=== fontDir
+
+[[home-dir]]
+=== homeDir
+
+[[is-absolute]]
+=== isAbsolute
+
+[[join]]
+=== join
+
+[[local-data-dir]]
+=== localDataDir
+
+[[log-dir]]
+=== logDir
+
+[[normalize]]
+=== normalize
+
+[[picture-dir]]
+=== pictureDir
+
+[[public-dir]]
+=== publicDir
+
+[[resolve]]
+=== resolve
+
+[[resolve-resource]]
+=== resolveResource
+
+[[resource-dir]]
+=== resourceDir
+
+[[runtime-dir]]
+=== runtimeDir
+
+[[template-dir]]
+=== templateDir
+
+[[video-dir]]
+=== videoDir

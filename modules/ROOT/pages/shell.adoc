@@ -1,0 +1,38 @@
+[[shell]]
+= shell
+
+[[security]]
+== Security
+
+[[restricting-access-to-the-open-api]]
+=== Restricting access to the open API
+
+[[restricting-access-to-the-command-apis]]
+=== Restricting access to the Command APIs
+
+[[classes]]
+== Classes
+
+[[child]]
+=== Child
+
+[[command]]
+=== Command
+
+[[event-emitter]]
+=== EventEmitter<E>
+
+[[interfaces]]
+== Interfaces
+
+[[child-process]]
+=== ChildProcess
+
+[[spawn-options]]
+=== SpawnOptions
+
+[[functions]]
+== Functions
+
+[[open]]
+=== open

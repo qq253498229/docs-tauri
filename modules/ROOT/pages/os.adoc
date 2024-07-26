@@ -1,0 +1,38 @@
+[[os]]
+= os
+
+[[type-aliases]]
+== Type Aliases
+
+[[type-arch]]
+=== Arch
+
+[[os-type]]
+=== OsType
+
+[[type-platform]]
+=== Platform
+
+[[variables]]
+== Variables
+
+[[eol]]
+=== EOL
+
+[[functions]]
+== Functions
+
+[[functions-arch]]
+=== arch
+
+[[functions-platform]]
+=== platform
+
+[[tempdir]]
+=== tempdir
+
+[[type]]
+=== type
+
+[[version]]
+=== version

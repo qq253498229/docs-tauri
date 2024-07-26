@@ -1,0 +1,62 @@
+[[http]]
+= http
+
+[[security]]
+== Security
+
+[[enumerations]]
+== Enumerations
+
+[[response-type]]
+=== ResponseType
+
+[[classes]]
+== Classes
+
+[[body]]
+=== Body
+
+[[client]]
+=== Client
+
+[[response]]
+=== Response<T>
+
+[[interfaces]]
+== Interfaces
+
+[[client-options]]
+=== ClientOptions
+
+[[duration]]
+=== Duration
+
+[[file-part]]
+=== FilePart<T>
+
+[[http-options]]
+=== HttpOptions
+
+[[type-aliases]]
+== Type Aliases
+
+[[fetch-options]]
+=== FetchOptions
+
+[[http-verb]]
+=== HttpVerb
+
+[[part]]
+=== Part
+
+[[request-options]]
+=== RequestOptions
+
+[[functions]]
+== Functions
+
+[[fetch]]
+=== fetch
+
+[[get-client]]
+=== getClient

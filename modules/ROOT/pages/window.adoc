@@ -1,0 +1,83 @@
+[[window]]
+= window
+
+[[window-events]]
+== Window events
+
+[[enumerations]]
+== Enumerations
+
+[[user-attention-type]]
+=== UserAttentionType
+
+[[classes]]
+== Classes
+
+[[close-requested-event]]
+=== CloseRequestedEvent
+
+[[logical-position]]
+=== LogicalPosition
+
+[[logical-size]]
+=== LogicalSize
+
+[[physical-position]]
+=== PhysicalPosition
+
+[[physical-size]]
+=== PhysicalSize
+
+[[webview-window]]
+=== WebviewWindow
+
+[[interfaces]]
+== Interfaces
+
+[[monitor]]
+=== Monitor
+
+[[scale-factor-changed]]
+=== ScaleFactorChanged
+
+[[window-options]]
+=== WindowOptions
+
+[[type-aliases]]
+== Type Aliases
+
+[[cursor-icon]]
+=== CursorIcon
+
+[[file-drop-event]]
+=== FileDropEvent
+
+[[theme]]
+=== Theme
+
+[[title-bar-style]]
+=== TitleBarStyle
+
+[[variables]]
+== Variables
+
+[[app-window]]
+=== appWindow
+
+[[functions]]
+== Functions
+
+[[available-monitors]]
+=== availableMonitors
+
+[[current-monitor]]
+=== currentMonitor
+
+[[get-all]]
+=== getAll
+
+[[get-current]]
+=== getCurrent
+
+[[primary-monitor]]
+=== primaryMonitor

@@ -1,0 +1,26 @@
+[[notification]]
+= notification
+
+[[interfaces]]
+== Interfaces
+
+[[options]]
+=== Options
+
+[[type-aliases]]
+== Type Aliases
+
+[[permission]]
+=== Permission
+
+[[functions]]
+== Functions
+
+[[is-permission-granted]]
+=== isPermissionGranted
+
+[[request-permission]]
+=== requestPermission
+
+[[send-notification]]
+=== sendNotification

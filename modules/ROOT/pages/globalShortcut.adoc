@@ -1,0 +1,26 @@
+[[global-shortcut]]
+= globalShortcut
+
+[[type-aliases]]
+== Type Aliases
+
+[[shortcut-handler]]
+=== ShortcutHandler
+
+[[functions]]
+== Functions
+
+[[is-registered]]
+=== isRegistered
+
+[[register]]
+=== register
+
+[[register-all]]
+=== registerAll
+
+[[unregister]]
+=== unregister
+
+[[unregister-all]]
+=== unregisterAll

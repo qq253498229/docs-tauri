@@ -1,0 +1,32 @@
+[[updater]]
+= updater
+
+[[interfaces]]
+== Interfaces
+
+[[update-manifest]]
+=== UpdateManifest
+
+[[update-result]]
+=== UpdateResult
+
+[[update-status-result]]
+=== UpdateStatusResult
+
+[[type-aliases]]
+== Type Aliases
+
+[[update-status]]
+=== UpdateStatus
+
+[[functions]]
+== Functions
+
+[[check-update]]
+=== checkUpdate
+
+[[install-update]]
+=== installUpdate
+
+[[on-updater-event]]
+=== onUpdaterEvent

@@ -1,0 +1,135 @@
+[[fs]]
+= fs
+
+访问文件系统。
+
+当在 `tauri.conf.json` 中设置 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 为 `true` 时，该包也可以通过 `window.____TAURI____.fs` 访问。
+
+这些 API 必须添加到 `tauri.conf.json` 的 `xref:configuration.adoc#tauri-config[tauri.allowlist.fs]` 中：
+
+[source,json]
+----
+{
+  "tauri": {
+    "allowlist": {
+      "fs": {
+        "all": true, // enable all FS APIs
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "copyFile": true,
+        "createDir": true,
+        "removeDir": true,
+        "removeFile": true,
+        "renameFile": true,
+        "exists": true
+      }
+    }
+  }
+}
+----
+
+建议仅将你使用的 API 加入白名单，以获得最佳的包大小和安全性。
+
+[[security]]
+== Security
+
+该模块防止路径遍历，不允许使用绝对路径或父目录组件（即不允许使用"/usr/path/to/file"或"../path/to/file"路径）。使用此 API 访问的路径必须相对于其中一个 <<base-directory>>，因此如果需要访问任意文件系统路径，必须在核心层编写此类逻辑。
+
+该 API 具有强制限制使用全局模式访问路径的范围配置。
+
+范围配置是一个描述允许的文件夹路径的全局模式数组。例如，此范围配置仅允许访问 xref:path.adoc#app-data-dir[$APPDATA directory] 的 _databases_ 文件夹中的文件：
+
+[source,json]
+----
+{
+  "tauri": {
+    "allowlist": {
+      "fs": {
+        "scope": ["$APPDATA/databases/*"]
+      }
+    }
+  }
+}
+----
+
+请注意 `$APPDATA` 变量的使用。该值在运行时注入，解析为 xref:path.adoc#app-data-dir[app data directory]。可用的变量有：`xref:path.adoc#app-config-dir[$APPCONFIG]`、`xref:path.adoc#app-data-dir[$APPDATA]`、`xref:path.adoc#app-local-data-dir[$APPLOCALDATA]`、`xref:path.adoc#app-cache-dir[$APPCACHE]`、`xref:path.adoc#app-log-dir[$APPLOG]`、`xref:path.adoc#audio-dir[$AUDIO]`、`xref:path.adoc#cache-dir[$CACHE]`、`xref:path.adoc#config-dir[$CONFIG]`、`xref:path.adoc#data-dir[$DATA]`、`xref:path.adoc#local-data-dir[$LOCALDATA]`、`xref:path.adoc#desktop-dir[$DESKTOP]`、`xref:path.adoc#document-dir[$DOCUMENT]`、`xref:path.adoc#download-dir[$DOWNLOAD]`、`xref:path.adoc#executable-dir[$EXE]`、`xref:path.adoc#font-dir[$FONT]`、`xref:path.adoc#home-dir[$HOME]`、`xref:path.adoc#picture-dir[$PICTURE]`、`xref:path.adoc#public-dir[$PUBLIC]`、`xref:path.adoc#runtime-dir[$RUNTIME]`、`xref:path.adoc#template-dir[$TEMPLATE]`、`xref:path.adoc#video-dir[$VIDEO]`、`xref:path.adoc#resource-dir[$RESOURCE]`、`xref:path.adoc#app-dir[$APP]`、`xref:path.adoc#log-dir[$LOG]`、`xref:os.adoc#tempdir[$TEMP]`。
+
+尝试执行任何未在范围内配置的 URL 的 API 时，由于访问被拒绝，将导致 Promise 被拒绝。
+
+请注意，此范围适用于此模块中的所有 API。
+
+[[references]]
+== References
+
+[[dir]]
+=== Dir
+
+[[write-file]]
+=== writeFile
+
+[[enumerations]]
+== Enumerations
+
+[[base-directory]]
+=== BaseDirectory
+
+[[interfaces]]
+== Interfaces
+
+[[file-entry]]
+=== FileEntry
+
+[[fs-binary-file-option]]
+=== FsBinaryFileOption
+
+[[fs-dir-options]]
+=== FsDirOptions
+
+[[fs-options]]
+=== FsOptions
+
+[[fs-text-file-option]]
+=== FsTextFileOption
+
+[[type-aliases]]
+== Type Aliases
+
+[[binary-file-contents]]
+=== BinaryFileContents
+
+[[functions]]
+== Functions
+
+[[copy-file]]
+=== copyFile
+
+[[create-dir]]
+=== createDir
+
+[[exists]]
+=== exists
+
+[[read-binary-file]]
+=== readBinaryFile
+
+[[read-dir]]
+=== readDir
+
+[[read-text-file]]
+=== readTextFile
+
+[[remove-dir]]
+=== removeDir
+
+[[remove-file]]
+=== removeFile
+
+[[rename-file]]
+=== renameFile
+
+[[write-binary-file]]
+=== writeBinaryFile
+
+[[write-text-file]]
+=== writeTextFile
