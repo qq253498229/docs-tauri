@@ -1,14 +1,65 @@
 [[notification]]
 = notification
 
+向用户发送吐司通知（简短的自动消失的操作系统窗口元素）。也可以与 Notification Web API 一起使用。
+
+当 `tauri.conf.json` 中 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 `true` 时，该包也可以通过 pass:[window.__TAURI__.notification] 访问。
+
+这些 API 必须添加到 `tauri.conf.json` 中的 `xref:configuration.adoc#tauri-config[tauri.allowlist.notification]` ：
+
+[source,typescript]
+----
+{
+  "tauri": {
+    "allowlist": {
+      "notification": {
+        "all": true // enable all notification APIs
+      }
+    }
+  }
+}
+----
+
+建议只允许列出您使用的 API，以优化捆绑包大小和安全性。
+
 [[interfaces]]
 == Interfaces
 
 [[options]]
 === Options
 
+发送通知的选项。
+
+Since: 1.0.0
+
+属性
+
+- `Optional` body: `string`
+
+可选的通知正文。
+
+*定义在*: {not_url}#L38[notification.ts:38]
+
+- `Optional` icon: `string`
+
+可选的通知图标。
+
+*定义在*: {not_url}#L40[notification.ts:40]
+
+- title: `string`
+
+通知标题。
+
+*定义在*: {not_url}#L36[notification.ts:36]
+
 [[type-aliases]]
 == Type Aliases
+
+- Permission: `"granted"` | `"denied"` | `"default"`
+
+可能的权限值。
+
+*定义在*: {not_url}#L44[notification.ts:44]
 
 [[permission]]
 === Permission
@@ -19,8 +70,79 @@
 [[is-permission-granted]]
 === isPermissionGranted
 
+- isPermissionGranted(): `xref:{promise_url}[Promise]`<``boolean``>
+
+检查是否已获得发送通知的权限。
+
+示例
+
+[source,typescript]
+----
+import { isPermissionGranted } from '@tauri-apps/api/notification';
+const permissionGranted = await isPermissionGranted();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``boolean``>
+
 [[request-permission]]
 === requestPermission
 
+- requestPermission(): `xref:{promise_url}[Promise]`<``<<permission,Permission>>``>
+
+请求发送通知的权限。
+
+示例
+
+[source,typescript]
+----
+import { isPermissionGranted, requestPermission } from '@tauri-apps/api/notification';
+let permissionGranted = await isPermissionGranted();
+if (!permissionGranted) {
+  const permission = await requestPermission();
+  permissionGranted = permission === 'granted';
+}
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``<<permission,Permission>>``>
+
+一个 Promise，解析为用户是否授予权限。
+
 [[send-notification]]
 === sendNotification
+
+- sendNotification(``options``: `string` | `<<options,Options>>`): `void`
+
+向用户发送通知。
+
+示例
+
+[source,typescript]
+----
+import { isPermissionGranted, requestPermission, sendNotification } from '@tauri-apps/api/notification';
+let permissionGranted = await isPermissionGranted();
+if (!permissionGranted) {
+  const permission = await requestPermission();
+  permissionGranted = permission === 'granted';
+}
+if (permissionGranted) {
+  sendNotification('Tauri is awesome!');
+  sendNotification({ title: 'TAURI', body: 'Tauri is awesome!' });
+}
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型
+|`options`|`string` \| `<<options,Options>>`
+|===
+
+*返回*: `void`
+
+
