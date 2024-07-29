@@ -1,14 +1,81 @@
 [[shell]]
 = shell
 
+访问系统shell。允许您使用默认的应用程序生成子进程并管理文件和URL。
+
+如果在 `tauri.conf.json` 中设置了 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 为 `true`，也可以通过 `pass:[window.__TAURI__.shell]` 访问此包。
+
+这些API必须添加到 `tauri.conf.json` 中的 `xref:configuration.adoc#tauri-config[tauri.allowlist.shell]`：
+
+[source,json]
+----
+{
+  "tauri": {
+    "allowlist": {
+      "shell": {
+        "all": true, // enable all shell APIs
+        "execute": true, // enable process spawn APIs
+        "sidecar": true, // enable spawning sidecars
+        "open": true // enable opening files/URLs using the default program
+      }
+    }
+  }
+}
+----
+
+建议仅将您使用的API添加到白名单中，以获得最佳的捆绑包大小和安全性。
+
 [[security]]
 == Security
 
+此API具有范围配置，强制您限制可使用的程序和参数。
+
 [[restricting-access-to-the-open-api]]
-=== Restricting access to the open API
+=== Restricting access to the <<open>> API
+
+在白名单中，`open: true` 表示可以使用 `<<open,open>>` API 打开任何URL，因为参数已通过 `^((mailto:\w+)|(tel:\w+)|(https?://\w+)).+` 正则表达式验证。您可以将该布尔值更改为字符串来更改该正则表达式，例如 `open: ^https://github.com/`。
 
 [[restricting-access-to-the-command-apis]]
-=== Restricting access to the Command APIs
+=== Restricting access to the <<command,Command>> APIs
+
+`shell` 白名单对象有一个 `scope` 字段，该字段定义了可以使用的CLI数组。每个CLI都是一个配置对象 `{ name: string, cmd: string, sidecar?: bool, args?: boolean | Arg[] }`。
+
+* `name`：命令的唯一标识符，传递给  <<constructor,Command constructor>>。如果是辅助程序（sidecar），则必须是 `tauri.conf.json > tauri > bundle > externalBin` 中定义的值。
+* `cmd`：在此配置上执行的程序。如果是辅助程序（sidecar），则此值会被忽略。
+* `sidecar`：对象是配置辅助程序还是系统程序。
+* `args`：可以传递给程序的参数。默认情况下，不允许任何参数。
+** `true` 表示允许任何参数列表。
+** `false` 表示不允许任何参数。
+** 否则可以配置一个数组。每个项目可以是表示固定参数值的字符串，也可以是 `{ validator: string }`，它定义了验证参数值的正则表达式。
+
+示例范围配置
+
+CLI: `git commit -m "the commit message"`
+
+配置：
+
+[source,json]
+----
+{
+  "scope": [
+    {
+      "name": "run-git-commit",
+      "cmd": "git",
+      "args": ["commit", "-m", { "validator": "\\S+" }]
+    }
+  ]
+}
+----
+
+使用方法：
+
+[source,typescript]
+----
+import { Command } from '@tauri-apps/api/shell'
+new Command('run-git-commit', ['commit', '-m', 'the commit message'])
+----
+
+尝试使用未在范围中配置的程序执行任何API时，会因为拒绝访问而导致Promise被拒绝。
 
 [[classes]]
 == Classes
@@ -16,11 +83,526 @@
 [[child]]
 === Child
 
+Since: 1.1.0
+
+构造函数
+
+[[constructor]]
+constructor
+
+- new Child(``pid``: `number`): `Child`
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`pid`|`number`
+|===
+
+*定义在*: link:{shell_url}325[shell.ts:325]
+
+属性
+
+- pid: `number`
+
+子进程的进程 `pid`。
+
+*定义在*: link:{shell_url}323[shell.ts:323]
+
+方法
+
+- kill(): `{promise_url}[Promise]`<``void``>
+
+终止子进程。
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- write(``data``: `string` | `link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array[Uint8Array]`): `{promise_url}[Promise]`<``void``>
+
+向 `stdin` 写入 `data`。
+
+示例
+
+[source,typescript]
+----
+import { Command } from '@tauri-apps/api/shell';
+const command = new Command('node');
+const child = await command.spawn();
+await child.write('message');
+await child.write([0, 1, 2, 3, 4, 5]);
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`data`|`string` \| `link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array[Uint8Array]`|消息要写的内容，可以是字符串或者字节数组。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
 [[command]]
 === Command
 
+生成子进程的入口点。它会触发 `close` 和 `error` 事件。
+
+示例
+
+[source,typescript]
+----
+import { Command } from '@tauri-apps/api/shell';
+const command = new Command('node');
+command.on('close', data => {
+  console.log(`command finished with code ${data.code} and signal ${data.signal}`)
+});
+command.on('error', error => console.error(`command error: "${error}"`));
+command.stdout.on('data', line => console.log(`command stdout: "${line}"`));
+command.stderr.on('data', line => console.log(`command stderr: "${line}"`));
+
+const child = await command.spawn();
+console.log('pid:', child.pid);
+----
+
+Since: 1.1.0
+
+层次结构
+
+* `<<event-emitter,EventEmitter>>`<``"close"`` | `"error"`>
+** Command
+
+Constructors
+
+- new Command(``program``: `string`, `args?`: `string` | `string`[], `options?`: `<<spawn-options,SpawnOptions>>`): `<<command,Command>>`
+
+创建一个新的 `Command` 实例。
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|默认值|描述
+|`program`|`string`|`undefined`|要执行的程序名称。 +
+必须在 `tauri.conf.json > tauri > allowlist > shell > scope` 中配置。
+|`args`|``string`` \| `string`[]|`[]`|程序参数。
+|`options?`|`<<spawn-options,SpawnOptions>>`|`undefined`|生成选项。
+|===
+
+*覆盖*: <<event-emitter-constructor,EventEmitter.constructor>>
+
+*定义在*: {shell_url}413[shell.ts:413]
+
+属性
+
+- `Readonly` stderr: `<<event-emitter,EventEmitter>>`<``"data"``>
+
+用于 `stderr` 的事件发射器。触发 `data` 事件。
+
+*定义在*: {shell_url}403[shell.ts:403]
+
+- `Readonly` stdout: `<<event-emitter,EventEmitter>>`<``"data"``>
+
+用于 stdout 的事件发射器。触发 data 事件。
+
+*定义在*: {shell_url}401[shell.ts:401]
+
+方法
+
+- addListener(``eventName``: `"error"` | `"close"`, `listener`: `fn`): `<<command,Command>>`
+
+`emitter.on(eventName, listener)` 的别名。
+
+Since: 1.1.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`eventName`|``"error"`` \| `"close"`
+|`listener`|(...``args``: `any`[]) => `void`
+|===
+
+*返回*: `<<command,Command>>`
+
+- execute(): `{promise_url}[Promise]`<``<<child-process,ChildProcess>>``>
+
+作为子进程执行命令，等待其完成并收集所有输出。
+
+示例
+
+[source,typescript]
+----
+import { Command } from '@tauri-apps/api/shell';
+const output = await new Command('echo', 'message').execute();
+assert(output.code === 0);
+assert(output.signal === null);
+assert(output.stdout === 'message');
+assert(output.stderr === '');
+----
+
+*返回*: `{promise_url}[Promise]`<``<<child-process,ChildProcess>>``>
+
+一个 Promise，解析为子进程的输出。
+
+- listenerCount(``eventName``: `"error"` | `"close"`): `number`
+
+返回正在监听名为 `eventName` 事件的监听器数量。
+
+Since: 1.1.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`eventName`|``"error"`` \| `"close"`
+|===
+
+*返回*: `number`
+
+- off(``eventName``: `"error"` | `"close"`, `listener`: `fn`): `<<command,Command>>`
+
+从 listener 数组中移除指定的监听器，返回 `EventEmitter` 的引用，以便可以链式调用。
+
+Since: 1.1.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`eventName`|``"error"`` \| `"close"`
+|`listener`|(...``args``: `any`[]) => `void`
+|===
+
+*返回*: `<<command,Command>>`
+
+- on(``eventName``: `"error"` | `"close"`, `listener`: `fn`): `<<command,Command>>`
+
+将 `listener` 函数添加到名为 `eventName` 事件的监听器数组的末尾。不会检查 `listener` 是否已经添加。多次传递相同的 `eventName` 和 `listener` 组合将导致 `listener` 被多次添加和调用。
+
+返回 `EventEmitter` 的引用，以便可以链式调用。
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`eventName`|``"error"`` \| `"close"`
+|`listener`|(...``args``: `any`[]) => `void`
+|===
+
+*返回*: `<<command,Command>>`
+
+- once(``eventName``: `"error"` | `"close"`, `listener`: `fn`): `<<command,Command>>`
+
+为名为 `eventName` 的事件添加一个一次性 `listener` 函数。下次触发 `eventName` 时，此监听器将被移除并调用。
+
+返回 `EventEmitter` 的引用，以便可以链式调用。
+
+Since: 1.1.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`eventName`|``"error"`` \| `"close"`
+|`listener`|(...``args``: `any`[]) => `void`
+|===
+
+*返回*: `<<command,Command>>`
+
+- prependListener(``eventName``: `"error"` | `"close"`, `listener`: `fn`): `<<command,Command>>`
+
+将 `listener` 函数添加到名为 `eventName` 事件的监听器数组的开头。不会检查 `listener` 是否已经添加。多次传递相同的 `eventName` 和 `listener` 组合将导致 `listener` 被多次添加和调用。
+
+返回 `<<event-emitter,EventEmitter>>` 的引用，以便可以链式调用。
+
+Since: 1.1.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`eventName`|``"error"`` \| `"close"`
+|`listener`|(...``args``: `any`[]) => `void`
+|===
+
+*返回*: `<<command,Command>>`
+
+- prependOnceListener(``eventName``: `"error"` | `"close"`, `listener`: `fn`): `<<command,Command>>`
+
+为名为 `eventName` 的事件添加一个一次性 `listener` 函数，并将其添加到监听器数组的开头。下次触发 `eventName` 时，此监听器将被移除并调用。
+
+返回 `<<event-emitter,EventEmitter>>` 的引用，以便可以链式调用。
+
+Since: 1.1.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`eventName`|``"error"`` \| `"close"`
+|`listener`|(...``args``: `any`[]) => `void`
+|===
+
+*返回*: `<<command,Command>>`
+
+- removeAllListeners(``eventName``: `"error"` | `"close"`): `<<command,Command>>`
+
+移除所有监听器，或指定 eventName 的监听器。
+
+返回 `EventEmitter` 的引用，以便可以链式调用。
+
+Since: 1.1.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`event`|``"error"`` \| `"close"`
+|===
+
+*返回*: `<<command,Command>>`
+
+- removeListener(``eventName``: `"error"` | `"close"`, `listener`: `fn`): `<<command,Command>>`
+
+`emitter.off(eventName, listener)` 的别名。
+
+Since: 1.1.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`eventName`|``"error"`` \| `"close"`
+|`listener`|(...``args``: `any`[]) => `void`
+|===
+
+*返回*: `<<command,Command>>`
+
+- spawn(): `{promise_url}[Promise]`<``<<child,Child>>``>
+
+作为子进程执行命令，返回其句柄。
+
+*返回*: `{promise_url}[Promise]`<``<<child,Child>>``>
+
+一个 Promise，解析为子进程的句柄。
+
+- `Static` sidecar(``program``: `string`, `args?`: `string` | `string`[], `options?`: `<<spawn-options,SpawnOptions>>`): `<<command,Command>>`
+
+创建一个命令以执行指定的辅助程序。
+
+示例
+
+[source,typescript]
+----
+import { Command } from '@tauri-apps/api/shell';
+const command = Command.sidecar('my-sidecar');
+const output = await command.execute();
+----
+
+参数
+
+|===
+|名称|类型|默认值|描述
+|`program`|`string`|`undefined`|要执行的程序。
+必须在 `tauri.conf.json > tauri > allowlist > shell > scope` 中配置。
+|`args`|``string`` \| `string`[]|`[]`|-
+|`options?`|`<<spawn-options,SpawnOptions>>`|`undefined`|-
+|===
+
+*返回*: `<<command,Command>>`
+
 [[event-emitter]]
 === EventEmitter<E>
+
+Since: 1.0.0
+
+类型参数：
+
+- `E` extends `string`
+
+结构层级
+
+* EventEmitter
+** `<<command,Command>>`
+
+[[event-emitter-constructor]]
+构造函数
+
+- new EventEmitter<``E``>(): `<<event-emitter,EventEmitter>>`<``E``>
+
+类型参数：
+
+- `E` extends `string`
+
+方法
+
+- addListener(``eventName``: `E`, `listener`: `fn`): `<<event-emitter,EventEmitter>>`<``E``>
+
+`emitter.on(eventName, listener)` 的别名。
+
+Since: 1.1.0
+
+参数
+
+|===
+|名称|类型
+|`eventName`|`E`
+|`listener`|(...``args``: `any`[]) => `void`
+|===
+
+*返回*: `<<event-emitter,EventEmitter>>`<``E``>
+
+- listenerCount(``eventName``: `E`): `number`
+
+返回监听事件 `eventName` 的监听器数量。
+
+Since: 1.1.0
+
+参数
+
+|===
+|名称|类型
+|`eventName`|`E`
+|===
+
+*返回*: `number`
+
+- off(``eventName``: `E`, `listener`: `fn`): `<<event-emitter,EventEmitter>>`<``E``>
+
+从事件 eventName 的监听器数组中移除所有指定的监听器。返回对 `EventEmitter` 的引用，以便可以链接调用。
+
+Since: 1.1.0
+
+参数
+
+|===
+|名称|类型
+|`eventName`|`E`
+|`listener`|(...``args``: `any`[]) => `void`
+|===
+
+*返回*: `<<event-emitter,EventEmitter>>`<``E``>
+
+- on(``eventName``: `E`, `listener`: `fn`): `<<event-emitter,EventEmitter>>`<``E``>
+
+将 `listener` 函数添加到事件 `eventName` 的监听器数组的末尾。不检查该 `listener` 是否已添加。多次传递相同的 `eventName` 和 `listener` 组合，将导致 `listener` 被多次添加，并被多次调用。
+
+返回对 `EventEmitter` 的引用，以便可以链接调用。
+
+Since: 1.1.0
+
+参数
+
+|===
+|名称|类型
+|`eventName`|`E`
+|`listener`|(...``args``: `any`[]) => `void`
+|===
+
+*返回*: `<<event-emitter,EventEmitter>>`<``E``>
+
+- once(``eventName``: `E`, `listener`: `fn`): `<<event-emitter,EventEmitter>>`<``E``>
+
+为事件 `eventName` 添加一个一次性的 `listener` 函数。下次触发 `eventName` 时，将移除并调用该监听器。
+
+返回对 `EventEmitter` 的引用，以便可以链接调用。
+
+Since: 1.1.0
+
+参数
+
+|===
+|名称|类型
+|`eventName`|`E`
+|`listener`|(...``args``: `any`[]) => `void`
+|===
+
+*返回*: `<<event-emitter,EventEmitter>>`<``E``>
+
+- prependListener(``eventName``: `E`, `listener`: `fn`): `<<event-emitter,EventEmitter>>`<``E``>
+
+将 `listener` 函数添加到事件 `eventName` 的监听器数组的开头。不检查该 `listener` 是否已添加。多次传递相同的 `eventName` 和 `listener` 组合，将导致 `listener` 被多次添加，并被多次调用。
+
+返回对 `EventEmitter` 的引用，以便可以链接调用。
+
+Since: 1.1.0
+
+参数
+
+|===
+|名称|类型
+|`eventName`|`E`
+|`listener`|(...``args``: `any`[]) => `void`
+|===
+
+*返回*: `<<event-emitter,EventEmitter>>`<``E``>
+
+- prependOnceListener(``eventName``: `E`, `listener`: `fn`): `<<event-emitter,EventEmitter>>`<``E``>
+
+为事件 `eventName` 添加一个一次性的 `listener` 函数，并将其添加到 `listener` 数组的开头。下次触发 `eventName` 时，将移除并调用该监听器。
+
+返回对 `EventEmitter` 的引用，以便可以链接调用。
+
+Since: 1.1.0
+
+参数
+
+|===
+|名称|类型
+|`eventName`|`E`
+|`listener`|(...``args``: `any`[]) => `void`
+|===
+
+*返回*: `<<event-emitter,EventEmitter>>`<``E``>
+
+- removeAllListeners(``event?``: `E`): `<<event-emitter,EventEmitter>>`<``E``>
+
+移除所有监听器，或者移除指定事件 eventName 的监听器。
+
+返回对 `EventEmitter` 的引用，以便可以链接调用。
+
+Since: 1.1.0
+
+参数
+
+|===
+|名称|类型
+|`event`|`E`
+|===
+
+*返回*: `<<event-emitter,EventEmitter>>`<``E``>
+
+- removeListener(``eventName``: `E`, `listener`: `fn`): `<<event-emitter,EventEmitter>>`<``E``>
+
+`emitter.off(eventName, listener)` 的别名。
+
+Since: 1.1.0
+
+参数
+
+|===
+|名称|类型
+|`eventName`|`E`
+|`listener`|(...``args``: `any`[]) => `void`
+|===
+
+*返回*: `<<event-emitter,EventEmitter>>`<``E``>
 
 [[interfaces]]
 == Interfaces
@@ -28,11 +610,94 @@
 [[child-process]]
 === ChildProcess
 
+Since: 1.0.0
+
+属性
+
+- code: `null` | `number`
+
+进程的退出代码。如果进程在Unix系统上被信号终止，则为 `null`。
+
+*定义在*: {shell_url}109[shell.ts:109]
+
+- signal: `null` | `number`
+
+如果进程被信号终止，则表示该信号。
+
+*定义在*: {shell_url}111[shell.ts:111]
+
+- stderr: `string`
+
+进程写入 `stderr` 的数据。
+
+*定义在*: {shell_url}115[shell.ts:115]
+
+- stdout: `string`
+
+进程写入 `stdout` 的数据。
+
+*定义在*: {shell_url}113[shell.ts:113]
+
 [[spawn-options]]
 === SpawnOptions
+
+Since: 1.0.0
+
+属性
+
+- `Optional` cwd: `string`
+
+当前工作目录。
+
+*定义在*: {shell_url}88[shell.ts:88]
+
+- `Optional` encoding: `string`
+
+stdout/stderr的字符编码。
+
+Since: 1.1.0
+
+*定义在*: {shell_url}96[shell.ts:96]
+
+- `Optional` env: `{record_url}[Record]`<``string``, `string`>
+
+环境变量。设置为 `null` 以清除进程的环境变量。
+
+*定义在*: {shell_url}90[shell.ts:90]
 
 [[functions]]
 == Functions
 
 [[open]]
 === open
+
+- open(``path``: `string`, `openWith?`: `string`): `{promise_url}[Promise]`<``void``>
+
+使用系统默认应用程序或指定的应用程序（通过 `openWith` 指定）打开路径或URL。
+
+`openWith` 的值必须是以下之一： `firefox`、`google chrome`、`chromium`、`safari`、`open`、`start`、`xdg-open`、`gio`、`gnome-open`、``kde-open``或``wslview``。
+
+示例
+
+[source,typescript]
+----
+import { open } from '@tauri-apps/api/shell';
+// opens the given URL on the default browser:
+await open('https://github.com/tauri-apps/tauri');
+// opens the given URL using `firefox`:
+await open('https://github.com/tauri-apps/tauri', 'firefox');
+// opens a file using the default program:
+await open('/path/to/file');
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型|描述
+|`path`|`string`|要打开的路径或URL。这个值与 `tauri.conf.json > tauri > allowlist > shell > open` 定义的字符串正则表达式匹配，默认值为 `^((mailto:\w+)\|(tel:\w+)\|(https?://\w+)).+`。
+|`openWith?`|`string`|用于打开文件或URL的应用程序。默认为指定路径类型的系统默认应用程序。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>

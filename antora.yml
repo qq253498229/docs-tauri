@@ -20,6 +20,7 @@ asciidoc:
     not_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/notification.ts
     os_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/os.ts#L
     path_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/path.ts#L
+    shell_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/shell.ts#L
 
 
 
