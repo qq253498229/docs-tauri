@@ -4,7 +4,7 @@ https://tauri.app/v1/api/config[原文地址]
 
 Tauri的配置对象，它是从文件中读取的。 你可以在里面自定义前端资源、配置打包选项、开启应用自动更新、定制系统托盘，还有配置API的白名单等等。
 
-配置文件在你的Tauri应用源目录(src-tauri)通过执行 xref:cli.adoc#init[tauri init]命令生成。
+配置文件在你的Tauri应用源目录(src-tauri)通过执行 xref:command_line_runner.adoc#init[tauri init]命令生成。
 
 生成后你也可以随时对其进行修改，来自定义Tauri应用。
 
@@ -1201,13 +1201,13 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 |`endpoints`|<<updater-endpoint,UpdaterEndpoint>>?|_null_|更新程序端点。生产环境强制使用 TLS。
 
 更新程序 URL 可以包含以下变量： +
-- {{current_version}}: 请求更新的应用程序版本 +
-- {{target}}: 操作系统名称（linux、windows 或 darwin 之一） +
-- {{arch}}: 机器的架构（x86_64、i686、aarch64 或 armv7 之一）
+- pass:[{{current_version}}]: 请求更新的应用程序版本 +
+- pass:[{{target}}]: 操作系统名称（linux、windows 或 darwin 之一） +
+- pass:[{{arch}}]: 机器的架构（x86_64、i686、aarch64 或 armv7 之一）
 
 # 示例 +
 - "link:https://my.cdn.com/latest.json[]": 一个原始 JSON 端点，返回最新版本和每个平台的下载链接。 +
-- "link:https://updates.app.dev/{{target}}?version={{current_version}}&arch={{arch}}[]": 一个具有位置和查询字符串参数的专用 API。
+- "link:https://updates.app.dev/pass:[{{target}}]?version=pass:[{{current_version}}]&arch=pass:[{{arch}}][]": 一个具有位置和查询字符串参数的专用 API。
 
 |`pubkey`|string|_null_|签名公钥。 |`windows`|<<updater-windows-config,UpdaterWindowsConfig>>|<<updater-windows-config,view>>|更新程序的 Windows 配置。
 

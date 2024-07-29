@@ -1,11 +1,34 @@
 [[path]]
 = path
 
+路径模块提供了处理文件和目录路径的工具。
+
+如果在 `tauri.conf.json` 中将 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 `true`，这个包也可以通过 `pass:[window.__TAURI__.path]` 访问。
+
+这些 API 必须被添加到 `tauri.conf.json` 中的 `xref:configuration.adoc#tauri-config[tauri.allowlist.path]`：
+
+[source,json]
+----
+{
+  "tauri": {
+    "allowlist": {
+      "path": {
+        "all": true, // enable all Path APIs
+      }
+    }
+  }
+}
+----
+
+建议只允许列表中使用的 API 以获得最佳的包大小和安全性。
+
 [[references]]
 == References
 
 [[base-directory]]
 === BaseDirectory
+
+重新导出 `xref:fs.adoc#base-directory[BaseDirectory]`
 
 [[variables]]
 == Variables
@@ -13,8 +36,30 @@
 [[delimiter]]
 === delimiter
 
+- `Const` delimiter: `";"` | `":"`
+
+提供平台特定的路径分段分隔符：
+
+- `;` on Windows
+- `:` on POSIX
+
+Since: 1.0.0
+
+*定义在*: `{path_url}660[path.ts:660]`
+
 [[sep]]
 === sep
+
+- `Const` sep: `"\\"` | `"/"`
+
+提供平台特定的路径分段分隔符：
+
+- `\` on Windows
+- `/` on POSIX
+
+Since: 1.0.0
+
+*定义在*: `{path_url}651[path.ts:651]`
 
 [[function]]
 == Function
@@ -22,95 +67,777 @@
 [[app-cache-dir]]
 === appCacheDir
 
+- appCacheDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回应用程序缓存文件建议目录的路径。解析为 `pass:[${cacheDir}/${bundleIdentifier}]`，其中 `bundleIdentifier` 是在 `tauri.conf.json` 中配置的 `xref:configuration.adoc#tauri-config[tauri.bundle.identifier]` 的值。
+
+示例
+
+[source,typescript]
+----
+import { appCacheDir } from '@tauri-apps/api/path';
+const appCacheDirPath = await appCacheDir();
+----
+
+Since: 1.2.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[app-config-dir]]
 === appConfigDir
+
+- appConfigDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回应用程序配置文件建议目录的路径。解析为 `pass:[${configDir}/${bundleIdentifier}]`，其中 `bundleIdentifier` 是在 `tauri.conf.json` 中配置的 `xref:configuration.adoc#tauri-config[tauri.bundle.identifier]` 的值。
+
+示例
+
+[source,typescript]
+----
+import { appConfigDir } from '@tauri-apps/api/path';
+const appConfigDirPath = await appConfigDir();
+----
+
+Since: 1.2.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
 
 [[app-data-dir]]
 === appDataDir
 
+- appDataDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回应用程序数据文件建议目录的路径。解析为 `pass:[${dataDir}/${bundleIdentifier}]`，其中 `bundleIdentifier` 是在 `tauri.conf.json` 中配置的 `xref:configuration.adoc#tauri-config[tauri.bundle.identifier]` 的值。
+
+示例
+
+[source,typescript]
+----
+import { appDataDir } from '@tauri-apps/api/path';
+const appDataDirPath = await appDataDir();
+----
+
+Since: 1.2.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[app-dir]]
 === appDir
+
+- appDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回应用程序配置文件建议目录的路径。
+
+弃用
+
+since 1.2.0: 将在 2.0.0 版本中移除。请使用 `<<app-config-dir,appConfigDir>>` 或 `<<app-data-dir,appDataDir>>` 代替。
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
 
 [[app-local-data-dir]]
 === appLocalDataDir
 
+- appLocalDataDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回应用程序的本地数据文件建议目录的路径。解析为 `pass:[${localDataDir}/${bundleIdentifier}]`，其中 `bundleIdentifier` 是在 `tauri.conf.json` 中配置的 `xref:configuration.adoc#tauri-config[tauri.bundle.identifier]` 的值。
+
+示例
+
+[source,typescript]
+----
+import { appLocalDataDir } from '@tauri-apps/api/path';
+const appLocalDataDirPath = await appLocalDataDir();
+----
+
+Since: 1.2.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[app-log-dir]]
 === appLogDir
+
+- appLogDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回应用程序日志文件建议目录的路径。
+
+特定平台的路径：
+
+- Linux：解析为 `pass:[${configDir}/${bundleIdentifier}/logs]`
+- macOS：解析为 `pass:[${homeDir}/Library/Logs/{bundleIdentifier}]`
+- Windows：解析为 `pass:[${configDir}/${bundleIdentifier}/logs]`
+
+示例
+
+[source,typescript]
+----
+import { appLogDir } from '@tauri-apps/api/path';
+const appLogDirPath = await appLogDir();
+----
+
+Since: 1.2.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
 
 [[audio-dir]]
 === audioDir
 
+- audioDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回用户音频目录的路径。
+
+特定平台的路径：
+
+- Linux：解析为 `link:https://www.freedesktop.org/wiki/Software/xdg-user-dirs/[xdg-user-dirs]` 的 `XDG_MUSIC_DIR`
+- macOS：解析为 `$HOME/Music`
+- Windows：解析为 `\{FOLDERID_Music}`
+
+示例
+
+[source,typescript]
+----
+import { audioDir } from '@tauri-apps/api/path';
+const audioDirPath = await audioDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[basename]]
 === basename
+
+- basename(``path``: `string`, `ext?`: `string`): `xref:{promise_url}[Promise]`<``string``>
+
+返回 `path` 的最后一部分。尾部的目录分隔符将被忽略。
+
+示例
+
+[source,typescript]
+----
+import { basename, resolveResource } from '@tauri-apps/api/path';
+const resourcePath = await resolveResource('app.conf');
+const base = await basename(resourcePath);
+assert(base === 'app.conf');
+----
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`path`|`string`|-
+|`ext?`|`string`|可选的文件扩展名会从返回的路径中移除。
+|===
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
 
 [[cache-dir]]
 === cacheDir
 
+- cacheDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回用户缓存目录的路径。
+
+特定平台的路径：
+
+- Linux：解析为 `$XDG_CACHE_HOME` 或 `$HOME/.cache`
+- macOS：解析为 `$HOME/Library/Caches`
+- Windows：解析为 `\{FOLDERID_LocalAppData}`
+
+示例
+
+[source,typescript]
+----
+import { cacheDir } from '@tauri-apps/api/path';
+const cacheDirPath = await cacheDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[config-dir]]
 === configDir
+
+- configDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回用户配置目录的路径。
+
+特定平台的路径：
+
+- Linux：解析为 `$XDG_CONFIG_HOME` 或 `$HOME/.config`
+- macOS：解析为 `$HOME/Library/Application Support`
+- Windows：解析为 `\{FOLDERID_RoamingAppData}`
+
+示例
+
+[source,typescript]
+----
+import { configDir } from '@tauri-apps/api/path';
+const configDirPath = await configDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
 
 [[data-dir]]
 === dataDir
 
+- dataDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回用户数据目录的路径。
+
+特定平台的路径：
+
+- Linux：解析为 `$XDG_DATA_HOME` 或 `$HOME/.local/share`
+- macOS：解析为 `$HOME/Library/Application Support`
+- Windows：解析为 `\{FOLDERID_RoamingAppData}`
+
+示例
+
+[source,typescript]
+----
+import { dataDir } from '@tauri-apps/api/path';
+const dataDirPath = await dataDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[desktop-dir]]
 === desktopDir
+
+- desktopDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回用户桌面目录的路径。
+
+特定平台的路径：
+
+- Linux：解析为 `link:https://www.freedesktop.org/wiki/Software/xdg-user-dirs/[xdg-user-dirs]` 的 `XDG_DESKTOP_DIR`
+- macOS：解析为 `$HOME/Desktop`
+- Windows：解析为 `\{FOLDERID_Desktop}`
+
+示例
+
+[source,typescript]
+----
+import { desktopDir } from '@tauri-apps/api/path';
+const desktopPath = await desktopDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
 
 [[dirname]]
 === dirname
 
+- dirname(path: string): `{promise_url}[Promise]`<``string``>
+
+示例
+
+[source,typescript]
+----
+import { dirname, appDataDir } from '@tauri-apps/api/path';
+const appDataDirPath = await appDataDir();
+const dir = await dirname(appDataDirPath);
+----
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`name`|`string`
+|===
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[document-dir]]
 === documentDir
+
+- documentDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回路径的目录名。忽略尾部的目录分隔符。
+
+示例
+
+[source,typescript]
+----
+import { documentDir } from '@tauri-apps/api/path';
+const documentDirPath = await documentDir();
+----
+
+返回用户的文档目录的路径。
+
+平台特定
+
+- Linux：解析为 `link:https://www.freedesktop.org/wiki/Software/xdg-user-dirs/[xdg-user-dirs]` 的 `XDG_DOCUMENTS_DIR`。
+- macOS：解析为 `$HOME/Documents`。
+- Windows：解析为 `\{FOLDERID_Documents}`。
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
 
 [[download-dir]]
 === downloadDir
 
+- executableDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回用户的下载目录的路径。
+
+平台特定
+
+- Linux：解析为 `https://www.freedesktop.org/wiki/Software/xdg-user-dirs/[xdg-user-dirs]` 的 `XDG_DOWNLOAD_DIR`。
+- macOS：解析为 `$HOME/Downloads`。
+- Windows：解析为 `\{FOLDERID_Downloads}`。
+
+示例
+
+[source,typescript]
+----
+import { downloadDir } from '@tauri-apps/api/path';
+const downloadDirPath = await downloadDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[executable-dir]]
 === executableDir
+
+- executableDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回用户的可执行文件目录的路径。
+
+平台特定
+
+- Linux：解析为 `$XDG_BIN_HOME/../bin` 或 `$XDG_DATA_HOME/../bin` 或 `$HOME/.local/bin`。
+- macOS：不支持。
+- Windows：不支持。
+
+示例
+
+[source,typescript]
+----
+import { executableDir } from '@tauri-apps/api/path';
+const executableDirPath = await executableDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
 
 [[extname]]
 === extname
 
+- extname(``path``: `string`): `xref:{promise_url}[Promise]`<``string``>
+
+返回 `path` 的扩展名。
+
+示例
+
+[source,typescript]
+----
+import { extname, resolveResource } from '@tauri-apps/api/path';
+const resourcePath = await resolveResource('app.conf');
+const ext = await extname(resourcePath);
+assert(ext === 'conf');
+----
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`path`|`string`
+|===
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[font-dir]]
 === fontDir
+
+- fontDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回用户的字体目录的路径。
+
+平台特定
+
+- Linux：解析为 `$XDG_DATA_HOME/fonts` 或 `$HOME/.local/share/fonts`。
+- macOS：解析为 `$HOME/Library/Fonts`。
+- Windows：不支持。
+
+示例
+
+[source,typescript]
+----
+import { fontDir } from '@tauri-apps/api/path';
+const fontDirPath = await fontDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
 
 [[home-dir]]
 === homeDir
 
+- homeDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回用户的主目录的路径。
+
+平台特定
+
+- Linux：解析为 `$HOME`。
+- macOS：解析为 `$HOME`。
+- Windows：解析为 `\{FOLDERID_Profile}`。
+
+示例
+
+[source,typescript]
+----
+import { homeDir } from '@tauri-apps/api/path';
+const homeDirPath = await homeDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[is-absolute]]
 === isAbsolute
+
+- isAbsolute(``path``: ``string``): `xref:{promise_url}[Promise]`<``boolean``>
+
+返回路径是否是绝对路径。
+
+示例
+
+[source,typescript]
+----
+import { isAbsolute } from '@tauri-apps/api/path';
+assert(await isAbsolute('/home/tauri'));
+----
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`path`|`string`
+|===
+
+*返回*: `xref:{promise_url}[Promise]`<``boolean``>
 
 [[join]]
 === join
 
+- join(...``paths``: `string`[]): `xref:{promise_url}[Promise]`<``string``>
+
+使用平台特定的分隔符作为定界符，将所有给定的 `path` 片段连接在一起，然后规范化生成的路径。
+
+示例
+
+[source,typescript]
+----
+import { join, appDataDir } from '@tauri-apps/api/path';
+const appDataDirPath = await appDataDir();
+const path = await join(appDataDirPath, 'users', 'tauri', 'avatar.png');
+----
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`...paths`|`string`[]
+|===
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[local-data-dir]]
 === localDataDir
+
+- localDataDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回用户的本地数据目录的路径。
+
+平台特定
+
+- Linux：解析为 `$XDG_DATA_HOME` 或 `$HOME/.local/share`。
+- macOS：解析为 `$HOME/Library/Application Support`。
+- Windows：解析为 `\{FOLDERID_LocalAppData}`。
+
+示例
+
+[source,typescript]
+----
+import { localDataDir } from '@tauri-apps/api/path';
+const localDataDirPath = await localDataDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
 
 [[log-dir]]
 === logDir
 
+- logDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回建议的日志目录的路径。
+
+已弃用
+
+since 1.2.0: 将在 2.0.0 中移除。请使用 `<<app-log-dir,appLogDir>>`。
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[normalize]]
 === normalize
+
+- normalize(``path``: `string`): `xref:{promise_url}[Promise]`<``string``>
+
+规范化给定 `path`，解析 `'..'` 和 `'.'` 片段并解析符号链接。
+
+示例
+
+[source,typescript]
+----
+import { normalize, appDataDir } from '@tauri-apps/api/path';
+const appDataDirPath = await appDataDir();
+const path = await normalize(appDataDirPath, '..', 'users', 'tauri', 'avatar.png');
+----
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`path`|`string`
+|===
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
 
 [[picture-dir]]
 === pictureDir
 
+- pictureDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回用户的图片目录的路径。
+
+平台特定
+
+- Linux：解析为 `link:https://www.freedesktop.org/wiki/Software/xdg-user-dirs/[xdg-user-dirs]` 的 `XDG_PICTURES_DIR`。
+- macOS：解析为 `$HOME/Pictures`。
+- Windows：解析为 `\{FOLDERID_Pictures}`。
+
+示例
+
+[source,typescript]
+----
+import { pictureDir } from '@tauri-apps/api/path';
+const pictureDirPath = await pictureDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[public-dir]]
 === publicDir
+
+- publicDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回用户公共目录的路径。
+
+平台特定
+
+- Linux：解析为 `link:https://www.freedesktop.org/wiki/Software/xdg-user-dirs/[xdg-user-dirs]` 的 `XDG_PUBLICSHARE_DIR`。
+- macOS：解析为 `$HOME/Public`。
+- Windows：解析为 `\{FOLDERID_Public}`。
+
+示例
+
+[source,typescript]
+----
+import { publicDir } from '@tauri-apps/api/path';
+const publicDirPath = await publicDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
 
 [[resolve]]
 === resolve
 
+- resolve(...``paths``: `string`[]): `xref:{promise_url}[Promise]`<``string``>
+
+将一系列 `paths` 或 `path` 解析为绝对路径。
+
+示例
+
+[source,typescript]
+----
+import { resolve, appDataDir } from '@tauri-apps/api/path';
+const appDataDirPath = await appDataDir();
+const path = await resolve(appDataDirPath, '..', 'users', 'tauri', 'avatar.png');
+----
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`...paths`|`string`[]
+|===
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[resolve-resource]]
 === resolveResource
+
+- resolveResource(``resourcePath``: `string`): `xref:{promise_url}[Promise]`<``string``>
+
+解析资源文件的路径。
+
+示例
+
+[source,typescript]
+----
+import { resolveResource } from '@tauri-apps/api/path';
+const resourcePath = await resolveResource('script.sh');
+----
+
+Since: 1.0.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`resourcePath`|`string`|资源的路径。 +
+必须遵循 `tauri.conf.json > tauri > bundle > resources` 中定义的相同语法，即保留子文件夹和父目录组件（``../``）。
+|===
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
+资源的完整路径。
 
 [[resource-dir]]
 === resourceDir
 
+- resourceDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回应用程序资源目录的路径。要解析资源路径，请参见 `<<resolve-resource,resolveResource API>>`。
+
+示例
+
+[source,typescript]
+----
+import { resourceDir } from '@tauri-apps/api/path';
+const resourceDirPath = await resourceDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[runtime-dir]]
 === runtimeDir
+
+- runtimeDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回用户运行时目录的路径。
+
+平台特定
+
+- Linux：解析为 `$XDG_RUNTIME_DIR`。
+- macOS：不支持。
+- Windows：不支持。
+
+示例
+
+[source,typescript]
+----
+import { runtimeDir } from '@tauri-apps/api/path';
+const runtimeDirPath = await runtimeDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
 
 [[template-dir]]
 === templateDir
 
+- templateDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回用户模板目录的路径。
+
+平台特定
+
+- Linux：解析为 `link:https://www.freedesktop.org/wiki/Software/xdg-user-dirs/[xdg-user-dirs]` 的 `XDG_TEMPLATES_DIR`。
+- macOS：不支持。
+- Windows：解析为 `\{FOLDERID_Templates}`。
+
+示例
+
+[source,typescript]
+----
+import { templateDir } from '@tauri-apps/api/path';
+const templateDirPath = await templateDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[video-dir]]
 === videoDir
+
+- videoDir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回用户视频目录的路径。
+
+平台特定
+
+- Linux：解析为 `link:https://www.freedesktop.org/wiki/Software/xdg-user-dirs/[xdg-user-dirs]` 的 `XDG_VIDEOS_DIR`。
+- macOS：解析为 `$HOME/Movies`。
+- Windows：解析为 `\{FOLDERID_Videos}`。
+
+示例
+
+[source,typescript]
+----
+import { videoDir } from '@tauri-apps/api/path';
+const videoDirPath = await videoDir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
