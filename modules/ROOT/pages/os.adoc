@@ -1,17 +1,50 @@
 [[os]]
 = os
 
+提供与操作系统相关的实用方法和属性。
+
+当 `tauri.conf.json` 中的 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 `true` 时，可以通过 `pass:[window.__TAURI__.os]` 访问此包。
+
+这些 API 必须添加到 `tauri.conf.json` 中的 `xref:configuration.adoc#tauri-config[tauri.allowlist.os]` 中：
+
+[source,json]
+----
+{
+  "tauri": {
+    "allowlist": {
+      "os": {
+        "all": true, // enable all Os APIs
+      }
+    }
+  }
+}
+----
+
+建议仅将您使用的 API 列入白名单，以获得最佳的包大小和安全性。
+
 [[type-aliases]]
 == Type Aliases
 
-[[type-arch]]
+[[arch]]
 === Arch
+
+- Arch: `"x86"` | `"x86_64"` | `"arm"` | `"aarch64"` | `"mips"` | `"mips64"` | `"powerpc"` | `"powerpc64"` | `"riscv64"` | `"s390x"` | `"sparc64"`
+
+*定义在*: {os_url}43[os.ts:43]
 
 [[os-type]]
 === OsType
 
-[[type-platform]]
+- OsType: `"Linux"` | `"Darwin"` | `"Windows_NT"`
+
+*定义在*: {os_url}41[os.ts:41]
+
+[[platform]]
 === Platform
+
+- Platform: `"linux"` | `"darwin"` | `"ios"` | `"freebsd"` | `"dragonfly"` | `"netbsd"` | `"openbsd"` | `"solaris"` | `"android"` | `"win32"`
+
+*定义在*: {os_url}29[os.ts:29]
 
 [[variables]]
 == Variables
@@ -19,20 +52,111 @@
 [[eol]]
 === EOL
 
+- Const EOL: `"\n"` | `"\r\n"`
+
+返回特定于操作系统的行尾标记。
+
+- `\n` on POSIX
+- `\r\n` on Windows
+
+Since: 1.0.0
+
+*定义在*: {os_url}63[os.ts:63]
+
 [[functions]]
 == Functions
 
 [[functions-arch]]
 === arch
 
+- arch(): `xref:{promise_url}[Promise]`<``<<arch,Arch>>``>
+
+返回为 tauri 应用编译的操作系统 CPU 架构。可能的值有 `'x86'`、`'x86_64'`、`'arm'`、`'aarch64'`、`'mips'`、`'mips64'`、`'powerpc'`、`'powerpc64'`、`'riscv64'`、`'s390x'`、`'sparc64'`。
+
+示例
+
+[source,typescript]
+----
+import { arch } from '@tauri-apps/api/os';
+const archName = await arch();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``<<arch,Arch>>``>
+
 [[functions-platform]]
 === platform
+
+- platform(): `xref:{promise_url}[Promise]`<``<<platform,Platform>>``>
+
+返回标识操作系统平台的字符串。该值在编译时设置。可能的值有 `'linux'`、`'darwin'`、`'ios'`、`'freebsd'`、`'dragonfly'`、`'netbsd'`、`'openbsd'`、`'solaris'`、`'android'`、`'win32'`。
+
+示例
+
+[source,typescript]
+----
+import { platform } from '@tauri-apps/api/os';
+const platformName = await platform();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``<<platform,Platform>>``>
 
 [[tempdir]]
 === tempdir
 
+- tempdir(): `xref:{promise_url}[Promise]`<``string``>
+
+返回操作系统默认的临时文件目录的字符串。
+
+示例
+
+[source,typescript]
+----
+import { tempdir } from '@tauri-apps/api/os';
+const tempdirPath = await tempdir();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
+
 [[type]]
 === type
 
+- type(): `xref:{promise_url}[Promise]`<``<<os-type,OsType>>``>
+
+在 Linux 上返回 `'Linux'`，在 macOS 上返回 `'Darwin'`，在 Windows 上返回 `'Windows_NT'`。
+
+示例
+
+[source,typescript]
+----
+import { type } from '@tauri-apps/api/os';
+const osType = await type();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``<<os-type,OsType>>``>
+
 [[version]]
 === version
+
+- version(): `xref:{promise_url}[Promise]`<``string``>
+
+返回标识内核版本的字符串。
+
+示例
+
+[source,typescript]
+----
+import { version } from '@tauri-apps/api/os';
+const osVersion = await version();
+----
+
+Since: 1.0.0
+
+*返回*: `xref:{promise_url}[Promise]`<``string``>
