@@ -1,6 +1,5 @@
 [[event]]
 = event
-:event_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/
 
 https://tauri.app/zh-cn/v1/api/js/event[原文地址]
 

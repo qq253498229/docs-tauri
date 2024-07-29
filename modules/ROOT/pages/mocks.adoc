@@ -7,8 +7,160 @@
 [[clear-mocks]]
 === clearMocks
 
+- clearMocks(): `void`
+
+清除该模块中由其他函数注入的模拟函数/数据。当使用无法为每个测试提供新窗口对象的测试运行器时，调用此函数将重置特定于 Tauri 的属性。
+
+示例
+
+[source,typescript]
+----
+import { mockWindows, clearMocks } from "@tauri-apps/api/mocks"
+
+afterEach(() => {
+   clearMocks()
+})
+
+test("mocked windows", () => {
+   mockWindows("main", "second", "third");
+
+   expect(window).toHaveProperty("__TAURI_METADATA__")
+})
+
+test("no mocked windows", () => {
+   expect(window).not.toHaveProperty("__TAURI_METADATA__")
+})
+----
+
+Since: 1.0.0
+
+*返回*: `void`
+
 [[mock-ipc]]
 === mockIPC
 
+- mockIPC(`cb`: `fn`): `void`
+
+拦截所有 IPC 请求，并使用给定的模拟处理程序进行处理。
+
+此函数可以在测试 Tauri 前端应用程序或在静态网站生成期间在 Node.js 环境中运行前端时使用。
+
+示例
+
+使用 vitest 进行测试设置：
+
+[source,typescript]
+----
+import { mockIPC, clearMocks } from "@tauri-apps/api/mocks"
+import { invoke } from "@tauri-apps/api/tauri"
+
+afterEach(() => {
+   clearMocks()
+})
+
+test("mocked command", () => {
+ mockIPC((cmd, args) => {
+  switch (cmd) {
+    case "add":
+      return (args.a as number) + (args.b as number);
+    default:
+      break;
+    }
+ });
+
+ expect(invoke('add', { a: 12, b: 15 })).resolves.toBe(27);
+})
+----
+
+回调函数也可以返回一个 Promise：
+
+[source,typescript]
+----
+import { mockIPC, clearMocks } from "@tauri-apps/api/mocks"
+import { invoke } from "@tauri-apps/api/tauri"
+
+afterEach(() => {
+   clearMocks()
+})
+
+test("mocked command", () => {
+ mockIPC((cmd, args) => {
+  if(cmd === "get_data") {
+   return fetch("https://example.com/data.json")
+     .then((response) => response.json())
+  }
+ });
+
+ expect(invoke('get_data')).resolves.toBe({ foo: 'bar' });
+})
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型
+|`cb`|(``cmd``: `string`, `args`: `link:{record_url}[Record]`<``string``, `unknown`>) => `any`
+|===
+
+*返回*: `void`
+
 [[mock-windows]]
 === mockWindows
+
+- mockWindows(``current``: `string`, ...``additionalWindows``: `string`[]): `void`
+
+模拟一个或多个窗口标签。在非 Tauri 环境中，必须在使用 `@tauri-apps/api/window` 模块之前调用此函数。
+
+此函数仅模拟窗口的存在，窗口属性（例如宽度和高度）可以像常规 IPC 调用一样使用 `mockIPC` 函数进行模拟。
+
+示例
+
+[source,typescript]
+----
+import { mockWindows } from "@tauri-apps/api/mocks";
+import { getCurrent } from "@tauri-apps/api/window";
+
+mockWindows("main", "second", "third");
+
+const win = getCurrent();
+
+win.label // "main"
+----
+
+[source,typescript]
+----
+import { mockWindows } from "@tauri-apps/api/mocks";
+
+mockWindows("main", "second", "third");
+
+mockIPC((cmd, args) => {
+ if (cmd === "tauri") {
+   if (
+     args?.__tauriModule === "Window" &&
+     args?.message?.cmd === "manage" &&
+     args?.message?.data?.cmd?.type === "close"
+   ) {
+     console.log('closing window!');
+   }
+ }
+});
+
+const { getCurrent } = await import("@tauri-apps/api/window");
+
+const win = getCurrent();
+await win.close(); // this will cause the mocked IPC handler to log to the console.
+----
+
+Since: 1.0.0
+
+参数
+
+|===
+|名称|类型|描述
+|`current`|`string`|运行此 JavaScript 上下文的窗口的标签。
+|`...additionalWindows`|`string`[]|应用程序中其他窗口的标签。
+|===
+
+*返回*: `void`

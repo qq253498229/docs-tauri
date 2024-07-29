@@ -11,4 +11,12 @@ asciidoc:
     toc-title: 目录
     toclevels: 6
     promise_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+    http_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts
+    record_url: https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type
+    omit_url: https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys
+    shortcut_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/globalShortcut.ts
+    fs_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/
+    event_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/
+
+
 

@@ -1,8 +1,5 @@
 [[http]]
 = http
-:http_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts
-:record_url: https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type
-:omit_url: https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys
 
 https://tauri.app/zh-cn/v1/api/js/http#security[原文地址]
 

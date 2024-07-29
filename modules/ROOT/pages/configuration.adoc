@@ -1,5 +1,4 @@
 = 配置
-:link1:
 
 https://tauri.app/v1/api/config[原文地址]
 
