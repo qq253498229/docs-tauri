@@ -1,17 +1,59 @@
 [[updater]]
 = updater
 
+定制自动更新流程。
+
+当 `tauri.conf.json` 中的 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 `true` 时，该包也可以通过 `pass:[window.__TAURI__.updater]` 访问。
+
 [[interfaces]]
 == Interfaces
 
 [[update-manifest]]
 === UpdateManifest
 
+Since: 1.0.0
+
+- body: `string`
+
+*定义在*: {updater_url}34[updater.ts:34]
+
+- date: `string`
+
+*定义在*: {updater_url}33[updater.ts:33]
+
+- version: `string`
+
+*定义在*: {updater_url}32[updater.ts:32]
+
 [[update-result]]
 === UpdateResult
 
+Since: 1.0.0
+
+属性
+
+- `Optional` manifest: `<<update-manifest,UpdateManifest>>`
+
+*定义在*: {updater_url}41[updater.ts:41]
+
+- shouldUpdate: `boolean`
+
+*定义在*: {updater_url}42[updater.ts:42]
+
 [[update-status-result]]
 === UpdateStatusResult
+
+Since: 1.0.0
+
+属性
+
+- `Optional` error: `string`
+
+*定义在*: {updater_url}24[updater.ts:24]
+
+- status: `<<update-status,UpdateStatus>>`
+
+*定义在*: {updater_url}25[updater.ts:25]
 
 [[type-aliases]]
 == Type Aliases
@@ -19,14 +61,92 @@
 [[update-status]]
 === UpdateStatus
 
+- UpdateStatus: `"PENDING"` | `"ERROR"` | `"DONE"` | `"UPTODATE"`
+
+Since: 1.0.0
+
+*定义在*: {updater_url}18[updater.ts:18]
+
 [[functions]]
 == Functions
 
 [[check-update]]
 === checkUpdate
 
+- checkUpdate(): `{promise_url}[Promise]`<``<<update-result,UpdateResult>>``>
+
+检查是否有更新可用。
+
+示例
+
+[source,typescript]
+----
+import { checkUpdate } from '@tauri-apps/api/updater';
+const update = await checkUpdate();
+// now run installUpdate() if needed
+----
+
+Since: 1.0.0
+
+*返回*: `{promise_url}[Promise]`<``<<update-result,UpdateResult>>``>
+
+一个 Promise，解析为更新状态。
+
 [[install-update]]
 === installUpdate
 
+- installUpdate(): `{promise_url}[Promise]`<``void``>
+
+如果有可用更新，则安装更新。
+
+示例
+
+[source,typescript]
+----
+import { checkUpdate, installUpdate } from '@tauri-apps/api/updater';
+const update = await checkUpdate();
+if (update.shouldUpdate) {
+  console.log(`Installing update ${update.manifest?.version}, ${update.manifest?.date}, ${update.manifest.body}`);
+  await installUpdate();
+}
+----
+
+Since: 1.0.0
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个 Promise，表示操作成功或失败。
+
 [[on-updater-event]]
 === onUpdaterEvent
+
+- onUpdaterEvent(``handler``: `fn`): `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+监听更新器事件。
+
+示例
+
+[source,typescript]
+----
+import { onUpdaterEvent } from "@tauri-apps/api/updater";
+const unlisten = await onUpdaterEvent(({ error, status }) => {
+ console.log('Updater event', error, status);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();
+----
+
+Since: 1.0.2
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`handler`|(``status``: `<<update-status-result,UpdateStatusResult>>`) => `void`
+|===
+
+*返回*: `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+一个 Promise，解析为用于停止监听事件的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。
