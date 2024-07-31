@@ -138,6 +138,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`options`|`string` \| `<<options,Options>>`

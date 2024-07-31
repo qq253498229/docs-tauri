@@ -417,6 +417,7 @@ const output = await command.execute();
 
 参数
 
+[%autowidth]
 |===
 |名称|类型|默认值|描述
 |`program`|`string`|`undefined`|要执行的程序。
@@ -460,6 +461,7 @@ Since: 1.1.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`eventName`|`E`
@@ -476,6 +478,7 @@ Since: 1.1.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`eventName`|`E`
@@ -491,6 +494,7 @@ Since: 1.1.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`eventName`|`E`
@@ -509,6 +513,7 @@ Since: 1.1.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`eventName`|`E`
@@ -527,6 +532,7 @@ Since: 1.1.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`eventName`|`E`
@@ -545,6 +551,7 @@ Since: 1.1.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`eventName`|`E`
@@ -563,6 +570,7 @@ Since: 1.1.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`eventName`|`E`
@@ -581,6 +589,7 @@ Since: 1.1.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`event`|`E`
@@ -596,6 +605,7 @@ Since: 1.1.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`eventName`|`E`
@@ -694,6 +704,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型|描述
 |`path`|`string`|要打开的路径或URL。这个值与 `tauri.conf.json > tauri > allowlist > shell > open` 定义的字符串正则表达式匹配，默认值为 `^((mailto:\w+)\|(tel:\w+)\|(https?://\w+)).+`。

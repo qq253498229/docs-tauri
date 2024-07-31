@@ -99,6 +99,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型
 |`cb`|(``cmd``: `string`, `args`: `link:{record_url}[Record]`<``string``, `unknown`>) => `any`
@@ -157,6 +158,7 @@ Since: 1.0.0
 
 参数
 
+[%autowidth]
 |===
 |名称|类型|描述
 |`current`|`string`|运行此 JavaScript 上下文的窗口的标签。
