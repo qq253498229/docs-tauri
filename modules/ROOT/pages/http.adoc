@@ -86,7 +86,7 @@ https://tauri.app/zh-cn/v1/api/js/http#security[原文地址]
 
 ==== 方法
 
-- `Static` bytes(``bytes``: `Iterable`<``number``> | `link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer[ArrayBuffer]` | `ArrayLike`<``number``>): `<<body,Body>>`
+- `Static` bytes(``bytes``: `Iterable`<``number``> | `link:{array_buffer_url}[ArrayBuffer]` | `ArrayLike`<``number``>): `<<body,Body>>`
 
 创建一个新的字节数组主体。
 
@@ -103,14 +103,14 @@ Body.bytes(new Uint8Array([1, 2, 3]));
 [%autowidth]
 |===
 |名称|类型|描述
-|`bytes`|`Iterable`<``number``> \| `link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer[ArrayBuffer]` \| ``ArrayLike``<``number``>|请求体字节数组。
+|`bytes`|`Iterable`<``number``> \| `link:{array_buffer_url}[ArrayBuffer]` \| ``ArrayLike``<``number``>|请求体字节数组。
 |===
 
 *返回*: `<<body,Body>>`
 
 主体对象已准备好用于POST和PUT请求。
 
-- `Static` form(`data`: `link:{record_url}[Record]`<``string``, `<<part,Part>>`> | `link:https://developer.mozilla.org/en-US/docs/Web/API/FormData[FormData]`): <<body,Body>>
+- `Static` form(`data`: `link:{record_url}[Record]`<``string``, `<<part,Part>>`> | `link:{form_url}[FormData]`): <<body,Body>>
 
 创建一个新的表单数据主体。表单数据是一个对象，其中每个键是条目名称，值是字符串或文件对象。
 
@@ -144,7 +144,7 @@ const formBody = Body.form(form);
 [%autowidth]
 |===
 |名称|类型|描述
-|`data`|`link:{record_url}[Record]`<``string``, `<<part,Part>>`>\|``link:https://developer.mozilla.org/en-US/docs/Web/API/FormData[FormData]``|请求体数据。
+|`data`|`link:{record_url}[Record]`<``string``, `<<part,Part>>`>\|``link:{form_url}[FormData]``|请求体数据。
 |===
 
 *返回*: `<<body,Body>>`
@@ -589,7 +589,7 @@ Since: 1.0.0
 [[part]]
 === Part
 
-- Part: `string` | `link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array[Uint8Array]` | `<<file-part,FilePart>>`<``link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array[Uint8Array]``>
+- Part: `string` | `link:{uint8_url}[Uint8Array]` | `<<file-part,FilePart>>`<``link:{uint8_url}[Uint8Array]``>
 
 *定义在*: {http_url}#L86[http.ts:86]
 

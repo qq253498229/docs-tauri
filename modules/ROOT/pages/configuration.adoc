@@ -1115,10 +1115,10 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 |名称|类型|默认|描述
 |`csp`|<<csp,Csp>>?|<<csp,view>>|将注入到构建应用程序的所有 HTML 文件中的内容安全策略。如果未指定 dev_csp，此值也会在开发模式中注入。
 
-这是配置的一个非常重要的部分，因为它帮助确保你的 WebView 是安全的。请参见 https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP。
+这是配置的一个非常重要的部分，因为它帮助确保你的 WebView 是安全的。请参见 {csp_url}。
 |`devCsp`|<<csp,Csp>>?|<<csp,view>>|在开发模式中注入到所有 HTML 文件中的内容安全策略。
 
-这是配置的一个非常重要的部分，因为它帮助确保你的 WebView 是安全的。请参见 https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP。
+这是配置的一个非常重要的部分，因为它帮助确保你的 WebView 是安全的。请参见 {csp_url}。
 |`freezePrototype`|boolean|`false`|在使用自定义协议时冻结 `Object.prototype`。
 |`dangerousDisableAssetCspModification`|<<disabled-csp-modification-kind,DisabledCspModificationKind>>|`false`|禁用 Tauri 注入的 CSP 源。
 
@@ -1142,7 +1142,7 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 [[csp]]
 ===== Csp
 
-内容安全策略定义。请参见 https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP。
+内容安全策略定义。请参见 {csp_url}。
 
 可以是以下任意类型：
 
@@ -1152,7 +1152,7 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 [[csp-directive-sources]]
 ====== CspDirectiveSources
 
-内容安全策略指令源列表。请参见 https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources。
+内容安全策略指令源列表。请参见 {source_url}。
 
 可以是以下任意类型：
 

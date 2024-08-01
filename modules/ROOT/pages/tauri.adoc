@@ -64,7 +64,7 @@ Since: 1.0.0
 
 === invoke
 
-- invoke<``T``>(`cmd`: `string`, `args?`: `<<invoke-args,InvokeArgs>>`): link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise:[Promise]<``T``>
+- invoke<``T``>(`cmd`: `string`, `args?`: `<<invoke-args,InvokeArgs>>`): link:{promise_url}[Promise]<``T``>
 
 向后端发送一条消息。
 
@@ -87,7 +87,7 @@ Since: 1.0.0
 |`args`|<<invoke-args,InvokeArgs>>|传递给命令的参数(可选)。
 |===
 
-返回: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise[Promise]<T>
+返回: {promise_url}[Promise]<T>
 
 一个Promise，resolving或rejecting来自后端的响应。
 

@@ -120,7 +120,7 @@ constructor
 
 一个表示操作成功或失败的 Promise。
 
-- write(``data``: `string` | `link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array[Uint8Array]`): `{promise_url}[Promise]`<``void``>
+- write(``data``: `string` | `link:{uint8_url}[Uint8Array]`): `{promise_url}[Promise]`<``void``>
 
 向 `stdin` 写入 `data`。
 
@@ -140,7 +140,7 @@ await child.write([0, 1, 2, 3, 4, 5]);
 [%autowidth]
 |===
 |名称|类型|描述
-|`data`|`string` \| `link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array[Uint8Array]`|消息要写的内容，可以是字符串或者字节数组。
+|`data`|`string` \| `link:{uint8_url}[Uint8Array]`|消息要写的内容，可以是字符串或者字节数组。
 |===
 
 *返回*: `{promise_url}[Promise]`<``void``>

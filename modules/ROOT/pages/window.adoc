@@ -1,8 +1,67 @@
 [[window]]
 = window
 
+提供API以创建窗口，与其他窗口通信并操作当前窗口。
+
+当 `tauri.conf.json` 中的 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 `true` 时，也可以通过 `pass:[window.__TAURI__.window]` 访问该包。
+
+必须将这些API添加到 `tauri.conf.json` 中的 `xref:configuration.adoc#tauri-config[tauri.allowlist.window]`：
+
+[source,json]
+----
+{
+  "tauri": {
+    "allowlist": {
+      "window": {
+        "all": true, // enable all window APIs
+        "create": true, // enable window creation
+        "center": true,
+        "requestUserAttention": true,
+        "setResizable": true,
+        "setTitle": true,
+        "maximize": true,
+        "unmaximize": true,
+        "minimize": true,
+        "unminimize": true,
+        "show": true,
+        "hide": true,
+        "close": true,
+        "setDecorations": true,
+        "setAlwaysOnTop": true,
+        "setContentProtected": true,
+        "setSize": true,
+        "setMinSize": true,
+        "setMaxSize": true,
+        "setPosition": true,
+        "setFullscreen": true,
+        "setFocus": true,
+        "setIcon": true,
+        "setSkipTaskbar": true,
+        "setCursorGrab": true,
+        "setCursorVisible": true,
+        "setCursorIcon": true,
+        "setCursorPosition": true,
+        "setIgnoreCursorEvents": true,
+        "startDragging": true,
+        "print": true
+      }
+    }
+  }
+}
+----
+
+建议只允许使用的API，以优化包大小和安全性。
+
 [[window-events]]
 == Window events
+
+可以使用 `appWindow.listen` 监听事件：
+
+[source,typescript]
+----
+import { appWindow } from "@tauri-apps/api/window";
+appWindow.listen("my-window-event", ({ event, payload }) => { });
+----
 
 [[enumerations]]
 == Enumerations
@@ -10,26 +69,1595 @@
 [[user-attention-type]]
 === UserAttentionType
 
+请求窗口时的关注类型。
+
+Since: 1.0.0
+
+枚举成员
+
+[%autowidth]
+|===
+|名称|类型|描述|定义在
+|`Critical`|`1`|平台特定 +
+- *macOS*：在应用程序聚焦之前，使Dock图标闪烁。 +
+- *Windows*：在应用程序聚焦之前，使窗口和任务栏按钮闪烁。|link:{window_url}225[window.ts:225]
+|`Informational`|`2`|平台特定 +
+- *macOS*：Dock图标闪烁一次。 +
+- *Windows*：任务栏按钮闪烁，直到应用程序聚焦。|link:{window_url}231[window.ts:231]
+|===
+
 [[classes]]
 == Classes
 
 [[close-requested-event]]
 === CloseRequestedEvent
 
+Since: 1.0.2
+
+构造函数
+
+- new CloseRequestedEvent(``event``: `xref:event.adoc#event[Event]`<``null``>): `<<close-requested-event,CloseRequestedEvent>>`
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`event`|`xref:event.adoc#event[Event]`<``null``>
+|===
+
+*定义在*: {window_url}1933[window.ts:1933]
+
+属性
+
+- event: `xref:event.adoc#event-name[EventName]`
+
+事件名称
+
+*定义在*: {window_url}1926[window.ts:1926]
+
+- id: `number`
+
+用于取消监听的事件标识符。
+
+*定义在*: {window_url}1930[window.ts:1930]
+
+- windowLabel: `string`
+
+触发此事件的窗口的标签。
+
+*定义在*: {window_url}1928[window.ts:1928]
+
+方法
+
+- isPreventDefault(): `boolean`
+
+*返回*: `boolean`
+
+- preventDefault(): `void`
+
+*返回*: `void`
+
 [[logical-position]]
 === LogicalPosition
+
+以逻辑像素表示的位置。
+
+Since: 1.0.0
+
+构造函数
+
+- new LogicalPosition(``x``: `number`, `y`: `number`): `<<logical-position,LogicalPosition>>`
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`x`|`number`
+|`y`|`number`
+|===
+
+*定义在*: {window_url}163[window.ts:163]
+
+属性
+
+- type: `string` = `'Logical'`
+
+*定义在*: {window_url}159[window.ts:159]
+
+- x: `number`
+
+*定义在*: {window_url}160[window.ts:160]
+
+- y: `number`
+
+*定义在*: {window_url}161[window.ts:161]
 
 [[logical-size]]
 === LogicalSize
 
+以逻辑像素表示的大小。
+
+Since: 1.0.0
+
+构造函数
+
+- new LogicalSize(``width``: `number`, `height`: `number`): `<<logical-size,LogicalSize>>`
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`width`|`number`
+|`height`|`number`
+|===
+
+*定义在*: {window_url}117[window.ts:117]
+
+属性
+
+- height: `number`
+
+*定义在*: {window_url}115[window.ts:115]
+
+- type: `string` = `'Logical'`
+
+*定义在*: {window_url}113[window.ts:113]
+
+- width: `number`
+
+*定义在*: {window_url}114[window.ts:114]
+
 [[physical-position]]
 === PhysicalPosition
+
+以物理像素表示的位置。
+
+Since: 1.0.0
+
+构造函数
+
+- new PhysicalPosition(``x``: `number`, `y`: `number`): `<<physical-position,PhysicalPosition>>`
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`x`|`number`
+|`y`|`number`
+|===
+
+*定义在*: {window_url}179[window.ts:179]
+
+属性
+
+- type: `string` = `'Physical'`
+
+*定义在*: {window_url}175[window.ts:175]
+
+- x: `number`
+
+*定义在*: {window_url}176[window.ts:176]
+
+- y: `number`
+
+*定义在*: {window_url}177[window.ts:177]
+
+方法
+
+- toLogical(``scaleFactor``: `number`): `<<logical-position,LogicalPosition>>`
+
+将物理位置转换为逻辑位置。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const factor = await appWindow.scaleFactor();
+const position = await appWindow.innerPosition();
+const logical = position.toLogical(factor);
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`scaleFactor`|`number`
+|===
+
+*返回*: `<<logical-position,LogicalPosition>>`
 
 [[physical-size]]
 === PhysicalSize
 
+以物理像素表示的大小。
+
+Since: 1.0.0
+
+构造函数
+
+- new PhysicalSize(``width``: `number`, `height`: `number`): `<<physical-size,PhysicalSize>>`
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`width`|`number`
+|`height`|`number`
+|===
+
+*定义在*: {window_url}133[window.ts:133]
+
+属性
+
+- height: `number`
+
+*定义在*: {window_url}131[window.ts:131]
+
+- type: string = `'Physical'`
+
+*定义在*: {window_url}129[window.ts:129]
+
+- width: `number`
+
+*定义在*: {window_url}130[window.ts:130]
+
+方法
+
+- toLogical(``scaleFactor``: `number`): `<<logical-size,LogicalSize>>`
+
+将物理大小转换为逻辑大小。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const factor = await appWindow.scaleFactor();
+const size = await appWindow.innerSize();
+const logical = size.toLogical(factor);
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`scaleFactor`|`number`
+|===
+
+*返回*: `<<logical-size,LogicalSize>>`
+
 [[webview-window]]
 === WebviewWindow
+
+创建新的webview窗口并获取现有窗口的句柄。
+
+窗口通过一个标签（唯一标识符）进行识别，可用于以后引用。它只能包含字母数字字符 `a-zA-Z` 以及以下特殊字符：`-`，``/``，``:`` 和 `_`。
+
+示例
+
+[source,typescript]
+----
+// loading embedded asset:
+const webview = new WebviewWindow('theUniqueLabel', {
+  url: 'path/to/page.html'
+});
+// alternatively, load a remote URL:
+const webview = new WebviewWindow('theUniqueLabel', {
+  url: 'https://github.com/tauri-apps/tauri'
+});
+
+webview.once('tauri://created', function () {
+ // webview window successfully created
+});
+webview.once('tauri://error', function (e) {
+ // an error happened creating the webview window
+});
+
+// emit an event to the backend
+await webview.emit("some event", "data");
+// listen to an event from the backend
+const unlisten = await webview.listen("event name", e => {});
+unlisten();
+----
+
+Since: 1.0.2
+
+层次结构
+
+* `WindowManager`
+** WebviewWindow
+
+构造函数
+
+- new WebviewWindow(``label``: `string`, `options?`: `<<window-options,WindowOptions>>`): `<<webview-window,WebviewWindow>>`
+
+创建一个新的 WebviewWindow。
+
+示例
+
+[source,typescript]
+----
+import { WebviewWindow } from '@tauri-apps/api/window';
+const webview = new WebviewWindow('my-label', {
+  url: 'https://github.com/tauri-apps/tauri'
+});
+webview.once('tauri://created', function () {
+ // webview window successfully created
+});
+webview.once('tauri://error', function (e) {
+ // an error happened creating the webview window
+});
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`label`|`string`|唯一的 webview 窗口标签。必须是字母数字字符：``a-zA-Z-/:_``。
+|`options`|`<<window-options,WindowOptions>>`|-
+|===
+
+*覆盖*: WindowManager.constructor
+
+*定义在*: {window_url}2001[window.ts:2001]
+
+属性
+
+- label: `string`
+
+窗口标签。它是窗口的唯一标识符，可用于以后引用。
+
+*继承自*: WindowManager.label
+
+*定义在*: {window_url}315[window.ts:315]
+
+- listeners: `{record_url}[Record]`<``string``, `xref:event.adoc#event-callback[EventCallback]`<``any``>[]>
+
+监听本地事件。
+
+*继承自*: WindowManager.listeners
+
+*定义在*: {window_url}317[window.ts:317]
+
+方法
+
+- center(): `{promise_url}[Promise]`<``void``>
+
+居中窗口。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.center();
+----
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- close(): `{promise_url}[Promise]`<``void``>
+
+关闭窗口。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.close();
+----
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- emit(``event``: `string`, `payload?`: `unknown`): `{promise_url}[Promise]`<``void``>
+
+向后端发出一个与webview窗口相关的事件。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.emit('window-loaded', { loggedIn: true, token: 'authToken' });
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`event`|`string`|事件名称。只能包含字母、数字、``-``、``/``、``:`` 和 ``_``。
+|`payload?`|`unknown`|事件负载。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+- hide(): `{promise_url}[Promise]`<``void``>
+
+将窗口可见性设置为false。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.hide();
+----
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- innerPosition(): `{promise_url}[Promise]`<``<<physical-position,PhysicalPosition>>``>
+
+窗口客户端区域左上角相对于桌面左上角的位置。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const position = await appWindow.innerPosition();
+----
+
+*返回*: `{promise_url}[Promise]`<``<<physical-position,PhysicalPosition>>``>
+
+窗口的内部位置。
+
+- innerSize(): `{promise_url}[Promise]`<``<<physical-size,PhysicalSize>>``>
+
+窗口客户端区域的物理大小。客户端区域是窗口的内容，不包括标题栏和边框。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const size = await appWindow.innerSize();
+----
+
+*返回*: `{promise_url}[Promise]`<``<<physical-size,PhysicalSize>>``>
+
+窗口的内部大小。
+
+- isDecorated(): `{promise_url}[Promise]`<``boolean``>
+
+获取窗口当前的装饰状态。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const decorated = await appWindow.isDecorated();
+----
+
+*返回*: `{promise_url}[Promise]`<``boolean``>
+
+窗口是否装饰。
+
+- isFullscreen(): `{promise_url}[Promise]`<``boolean``>
+
+获取窗口当前的全屏状态。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const fullscreen = await appWindow.isFullscreen();
+----
+
+*返回*: `{promise_url}[Promise]`<``boolean``>
+
+窗口是否处于全屏模式。
+
+- isMaximized(): `{promise_url}[Promise]`<``boolean``>
+
+获取窗口当前的最大化状态。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const maximized = await appWindow.isMaximized();
+----
+
+*返回*: `{promise_url}[Promise]`<``boolean``>
+
+窗口是否最大化。
+
+- isMinimized(): `{promise_url}[Promise]`<``boolean``>
+
+获取窗口当前的最小化状态。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const minimized = await appWindow.isMinimized();
+----
+
+Since: 1.3.0
+
+*返回*: `{promise_url}[Promise]`<``boolean``>
+
+- isResizable(): `{promise_url}[Promise]`<``boolean``>
+
+获取窗口当前的可调整大小状态。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const resizable = await appWindow.isResizable();
+----
+
+*返回*: `{promise_url}[Promise]`<``boolean``>
+
+窗口是否可调整大小。
+
+- isVisible(): `{promise_url}[Promise]`<``boolean``>
+
+获取窗口当前的可见状态。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const visible = await appWindow.isVisible();
+----
+
+*返回*: `{promise_url}[Promise]`<``boolean``>
+
+窗口是否可见。
+
+- listen<T>(``event``: `xref:event.adoc#event-name[EventName]`, `handler`: `xref:event.adoc#event-callback[EventCallback]`<``T``>): `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+监听由后端发出的与webview窗口相关的事件。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const unlisten = await appWindow.listen<string>('state-changed', (event) => {
+  console.log(`Got error: ${payload}`);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();
+----
+
+类型参数
+
+* `T`
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`event`|`xref:event.adoc#event-name[EventName]`|事件名称。只能包含字母、数字、``-``、``/``、``:`` 和 ``_``。
+|`handler`|`xref:event.adoc#event-callback[EventCallback]`<``T``>|事件句柄。
+|===
+
+*返回*: `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。
+
+- maximize(): `{promise_url}[Promise]`<``void``>
+
+最大化窗口。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.maximize();
+----
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- minimize(): `{promise_url}[Promise]`<``void``>
+
+最小化窗口。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.minimize();
+----
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- onCloseRequested(``handler``: `fn`): `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+监听窗口关闭请求。当用户请求关闭窗口时触发。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from "@tauri-apps/api/window";
+import { confirm } from '@tauri-apps/api/dialog';
+const unlisten = await appWindow.onCloseRequested(async (event) => {
+  const confirmed = await confirm('Are you sure?');
+  if (!confirmed) {
+    // user did not confirm closing the window; let's prevent it
+    event.preventDefault();
+  }
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();
+----
+
+Since: 1.0.2
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`handler`|(``event``: `<<close-requested-event,CloseRequestedEvent>>`) => `void` \| `{promise_url}[Promise]`<``void``>
+|===
+
+*返回*: `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。
+
+- onFileDropEvent(``handler``: `xref:event.adoc#event-callback[EventCallback]`<``<<file-drop-event,FileDropEvent>>``>): `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+监听文件拖放事件。当用户将选定的文件悬停在窗口上、拖放文件或取消操作时，触发该监听器。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from "@tauri-apps/api/window";
+const unlisten = await appWindow.onFileDropEvent((event) => {
+ if (event.payload.type === 'hover') {
+   console.log('User hovering', event.payload.paths);
+ } else if (event.payload.type === 'drop') {
+   console.log('User dropped', event.payload.paths);
+ } else {
+   console.log('File drop cancelled');
+ }
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();
+----
+
+Since: 1.0.2
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`handler`|``xref:event.adoc#event-callback[EventCallback]``<``<<file-drop-event,FileDropEvent>>``>
+|===
+
+*返回*: `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。
+
+- onFocusChanged(``handler``: `xref:event.adoc#event-callback[EventCallback]`<``boolean``>): `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+监听窗口焦点变化。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from "@tauri-apps/api/window";
+const unlisten = await appWindow.onFocusChanged(({ payload: focused }) => {
+ console.log('Focus changed, window is focused? ' + focused);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();
+----
+
+Since: 1.0.2
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`handler`|``xref:event.adoc#event-callback[EventCallback]``<``boolean``>
+|===
+
+*返回*: `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。
+
+- onMenuClicked(``handler``: `xref:event.adoc#event-callback[EventCallback]`<``string``>): `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+监听窗口菜单项点击。负载是项目ID。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from "@tauri-apps/api/window";
+const unlisten = await appWindow.onMenuClicked(({ payload: menuId }) => {
+ console.log('Menu clicked: ' + menuId);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();
+----
+
+Since: 1.0.2
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`handler`|``xref:event.adoc#event-callback[EventCallback]``<``string``>
+|===
+
+*返回*: `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。
+
+- onMoved(``handler``: `xref:event.adoc#event-callback[EventCallback]`<``<<physical-position,PhysicalPosition>>``>): `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+监听窗口的移动。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from "@tauri-apps/api/window";
+const unlisten = await appWindow.onMoved(({ payload: position }) => {
+ console.log('Window moved', position);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();
+----
+
+Since: 1.0.2
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`handler`|``xref:event.adoc#event-callback[EventCallback]``<``<<physical-position,PhysicalPosition>>``>
+|===
+
+*返回*: `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。
+
+- onResized(``handler``: `xref:event.adoc#event-callback[EventCallback]`<``<<physical-size,PhysicalSize>>``>): `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+监听窗口的大小调整事件。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from "@tauri-apps/api/window";
+const unlisten = await appWindow.onResized(({ payload: size }) => {
+ console.log('Window resized', size);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();
+----
+
+Since: 1.0.2
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`handler`|``xref:event.adoc#event-callback[EventCallback]``<``<<physical-size,PhysicalSize>>``>
+|===
+
+*返回*: `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。
+
+- onScaleChanged(``handler``: `xref:event.adoc#event-callback[EventCallback]`<``<<scale-factor-changed,ScaleFactorChanged>>``>): `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+监听窗口比例变化。当窗口的比例因子改变时触发。以下用户操作可能导致DPI变化：
+
+* 更改显示器的分辨率。
+* 更改显示器的比例因子（例如，在Windows的控制面板中）。
+* 将窗口移动到比例因子不同的显示器。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from "@tauri-apps/api/window";
+const unlisten = await appWindow.onScaleChanged(({ payload }) => {
+ console.log('Scale changed', payload.scaleFactor, payload.size);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();
+----
+
+Since: 1.0.2
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`handler`|``xref:event.adoc#event-callback[EventCallback]``<``<<scale-factor-changed,ScaleFactorChanged>>``>
+|===
+
+*返回*: `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。
+
+- onThemeChanged(``handler``: `xref:event.adoc#event-callback[EventCallback]`<``<<theme,Theme>>``>): `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+监听系统主题变化。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from "@tauri-apps/api/window";
+const unlisten = await appWindow.onThemeChanged(({ payload: theme }) => {
+ console.log('New theme: ' + theme);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();
+----
+
+Since: 1.0.2
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`handler`|``xref:event.adoc#event-callback[EventCallback]``<``<<theme,Theme>>``>
+|===
+
+*返回*: `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。
+
+- once<``T``>(``event``: `string`, `handler`: `xref:event.adoc#event-callback[EventCallback]`<``T``>): `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+监听由后端发出的与webview窗口相关的单次事件。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const unlisten = await appWindow.once<null>('initialized', (event) => {
+  console.log(`Window initialized!`);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();
+----
+
+类型参数
+
+* `T`
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`event`|`string`|事件名称。只能包含字母、数字、``-``、``/``、``:`` 和 ``_``。
+|`handler`|`xref:event.adoc#event-callback[EventCallback]`<``T``>|事件句柄。
+|===
+
+*返回*: `{promise_url}[Promise]`<``xref:event.adoc#unlisten-fn[UnlistenFn]``>
+
+一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。
+
+- outerPosition(): `{promise_url}[Promise]`<``<<physical-position,PhysicalPosition>>``>
+
+窗口左上角相对于桌面左上角的位置。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const position = await appWindow.outerPosition();
+----
+
+*返回*: `{promise_url}[Promise]`<``<<physical-position,PhysicalPosition>>``>
+
+窗口的外部位置。
+
+- outerSize(): `{promise_url}[Promise]`<``<<physical-size,PhysicalSize>>``>
+
+整个窗口的物理尺寸。这些尺寸包括标题栏和边框。如果您不需要（通常也不需要），请使用内部大小（inner_size）。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const size = await appWindow.outerSize();
+----
+
+*返回*: `{promise_url}[Promise]`<``<<physical-size,PhysicalSize>>``>
+
+窗口的外部大小。
+
+- requestUserAttention(``requestType``: `null` | `<<user-attention-type,UserAttentionType>>`): `{promise_url}[Promise]`<``void``>
+
+请求用户关注窗口，如果应用程序已经聚焦，则此操作无效。请求用户关注的表现方式取决于平台，请参阅 `UserAttentionType` 了解详情。
+
+提供 `null` 将取消用户关注请求。当窗口接收到输入时，WM可能不会自动取消用户关注请求。
+
+平台特定
+
+* *macOS*: `null` 无效。
+* *Linux*: 紧急级别有相同的效果。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.requestUserAttention();
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`requestType`|``null`` \| `<<user-attention-type,UserAttentionType>>`
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- scaleFactor(): `{promise_url}[Promise]`<``number``>
+
+用于将物理像素映射到逻辑像素的比例因子。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const factor = await appWindow.scaleFactor();
+----
+
+*返回*: `{promise_url}[Promise]`<``number``>
+
+窗口的显示器比例因子。
+
+- setAlwaysOnTop(``alwaysOnTop``: `boolean`): `{promise_url}[Promise]`<``void``>
+
+窗口是否应始终位于其他窗口之上。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setAlwaysOnTop(true);
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`alwaysOnTop`|``boolean`` | 窗口是否应始终位于其他窗口之上。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setContentProtected(``protected_``: `boolean`): `{promise_url}[Promise]`<``void``>
+
+防止窗口内容被其他应用程序捕获。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setContentProtected(true);
+----
+
+Since: 1.2.0
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`protected_`|``boolean``
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setCursorGrab(``grab``: `boolean`): `{promise_url}[Promise]`<``void``>
+
+捕获光标，防止其离开窗口。
+
+无法保证光标会隐藏。如果你想隐藏它，应该自己动手。
+
+平台特定
+
+* *Linux*: 不支持。
+* *macOS*: 这会将光标锁定在固定位置，视觉上会显得很尴尬。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setCursorGrab(true);
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`grab`|``boolean``|`true` 表示捕获光标图标，`false` 表示释放它。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setCursorIcon(``icon``: `<<cursor-icon,CursorIcon>>`): `{promise_url}[Promise]`<``void``>
+
+修改窗口的光标图标。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setCursorIcon('help');
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`icon`|``<<cursor-icon,CursorIcon>>``|新的光标图标。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setCursorPosition(``position``: `<<physical-position,PhysicalPosition>>` | `<<logical-position,LogicalPosition>>`): `{promise_url}[Promise]`<``void``>
+
+更改光标在窗口坐标中的位置。
+
+示例
+
+[source,typescript]
+----
+import { appWindow, LogicalPosition } from '@tauri-apps/api/window';
+await appWindow.setCursorPosition(new LogicalPosition(600, 300));
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`position`|``<<physical-position,PhysicalPosition>>`` \| `<<logical-position,LogicalPosition>>`|新的光标位置。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setCursorVisible(``visible``: `boolean`): `{promise_url}[Promise]`<``void``>
+
+将光标的可见性进行修改。
+
+平台特定：
+
+* *Windows*: 光标仅在窗口范围内隐藏。
+* *macOS*: 只要窗口具有输入焦点，即使光标在窗口外也会隐藏。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setCursorVisible(false);
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`visible`|``boolean``|如果为 `false`，将隐藏光标。如果为 `true`，将显示光标。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setDecorations(``decorations``: `boolean`): `{promise_url}[Promise]`<``void``>
+
+设置窗口是否应有边框和工具栏。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setDecorations(false);
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`decorations`|``boolean``|窗口是否应该有边框和条。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setFocus(): `{promise_url}[Promise]`<``void``>
+
+将窗口置于前端并聚焦。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setFocus();
+----
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setFullscreen(``fullscreen``: `boolean`): `{promise_url}[Promise]`<``void``>
+
+设置窗口的全屏状态。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setFullscreen(true);
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`fullscreen`|``boolean``|是否应将窗口置于全屏状态。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setIcon(``icon``: `string` | `link:{uint8_url}[Uint8Array]`): Promise<void>
+
+设置窗口图标。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setIcon('/tauri/awesome.png');
+----
+
+注意：使用此 API 需要启用 `icon-ico` 或 `icon-png` Cargo 功能。要启用它，请更改您的 Cargo.toml 文件：
+
+[source,toml]
+----
+[dependencies]
+tauri = { version = "...", features = ["...", "icon-png"] }
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`icon`|``string`` \| `link:{uint8_url}[Uint8Array]`|图标的字节或图标文件的路径。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setIgnoreCursorEvents(``ignore``: `boolean`): `{promise_url}[Promise]`<``void``>
+
+改变光标事件的行为。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setIgnoreCursorEvents(true);
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`ignore`|``boolean``|`true` 忽略光标事件；`false` 正常处理。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setMaxSize(``size``: `undefined` | `null` | `<<physical-size,PhysicalSize>>` | `<<logical-size,LogicalSize>>`): `{promise_url}[Promise]`<``void``>
+
+设置窗口的最大内部尺寸。如果 `size` 参数未定义，则解除限制。
+
+示例
+
+[source,typescript]
+----
+import { appWindow, LogicalSize } from '@tauri-apps/api/window';
+await appWindow.setMaxSize(new LogicalSize(600, 500));
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`size`|``undefined`` \| `null` \| `<<physical-size,PhysicalSize>>` \| `<<logical-size,LogicalSize>>`|逻辑或物理内部尺寸，或者为 `null` 解除限制。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setMinSize(``size``: `undefined` | `null` | `<<physical-size,PhysicalSize>>` | `<<logical-size,LogicalSize>>`): `{promise_url}[Promise]`<``void``>
+
+设置窗口的最小内部尺寸。如果没有提供 `size` 参数，则解除限制。
+
+示例
+
+[source,typescript]
+----
+import { appWindow, PhysicalSize } from '@tauri-apps/api/window';
+await appWindow.setMinSize(new PhysicalSize(600, 500));
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`size`|``undefined`` \| `null` \| `<<physical-size,PhysicalSize>>` \| `<<logical-size,LogicalSize>>`|逻辑或物理内部尺寸，或者为 `null` 解除限制。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setPosition(``position``: `<<physical-size,PhysicalSize>>` | `<<logical-size,LogicalSize>>`): `{promise_url}[Promise]`<``void``>
+
+设置窗口外部的位置。
+
+示例
+
+[source,typescript]
+----
+import { appWindow, LogicalPosition } from '@tauri-apps/api/window';
+await appWindow.setPosition(new LogicalPosition(600, 500));
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`position`|`<<physical-size,PhysicalSize>>` \| `<<logical-size,LogicalSize>>`|新的位置，以逻辑或物理像素为单位。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setResizable(``resizable``: `boolean`): `{promise_url}[Promise]`<``void``>
+
+更新窗口的可调整大小标志。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setResizable(false);
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型
+|`resizable`|``boolean``
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setSize(``size``: `<<physical-size,PhysicalSize>>` | `<<logical-size,LogicalSize>>`): `{promise_url}[Promise]`<``void``>
+
+用新的内部尺寸调整窗口大小。
+
+示例
+
+[source,typescript]
+----
+import { appWindow, LogicalSize } from '@tauri-apps/api/window';
+await appWindow.setSize(new LogicalSize(600, 500));
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`size`|`<<physical-size,PhysicalSize>>` \| `<<logical-size,LogicalSize>>`|逻辑或物理内部尺寸。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setSkipTaskbar(``skip``: `boolean`): `{promise_url}[Promise]`<``void``>
+
+窗口图标是否应从任务栏中隐藏。
+
+平台特定：
+
+* *macOS*: 不支持。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setSkipTaskbar(true);
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`size`|``boolean``|true 隐藏窗口图标，false 显示窗口图标。
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- setTitle(``title``: `string`): `{promise_url}[Promise]`<``void``>
+
+设置窗口标题。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setTitle('Tauri');
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`title`|``string``|新标题
+|===
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- show(): `{promise_url}[Promise]`<``void``>
+
+将窗口设置为可见。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.show();
+----
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- startDragging(): `{promise_url}[Promise]`<``void``>
+
+开始拖动窗口。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.startDragging();
+----
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- theme(): `{promise_url}[Promise]`<``null`` | `<<theme,Theme>>`>
+
+获取窗口的当前主题。
+
+平台特定：
+
+* *macOS*: 主题在 macOS 10.14 上引入。在 macOS 10.13 及以下版本上返回 `light`。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const theme = await appWindow.theme();
+----
+
+*返回*: `{promise_url}[Promise]`<``null`` | `<<theme,Theme>>`>
+
+窗口主题。
+
+- title(): `{promise_url}[Promise]`<``string``>
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+const title = await appWindow.title();
+----
+
+Since: 1.3.0
+
+*返回*: `{promise_url}[Promise]`<``string``>
+
+- toggleMaximize(): `{promise_url}[Promise]`<``void``>
+
+获取窗口的当前标题。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.toggleMaximize();
+----
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- unmaximize(): `{promise_url}[Promise]`<``void``>
+
+取消窗口最大化。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.unmaximize();
+----
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- unminimize(): `{promise_url}[Promise]`<``void``>
+
+取消窗口最小化。
+
+示例
+
+[source,typescript]
+----
+import { appWindow } from '@tauri-apps/api/window';
+await appWindow.unminimize();
+----
+
+*返回*: `{promise_url}[Promise]`<``void``>
+
+一个表示操作成功或失败的 Promise。
+
+- `Static` getByLabel(``label``: `string`): `null` | `<<webview-window,WebviewWindow>>`
+
+获取与给定标签关联的 webview 的 WebviewWindow。
+
+示例
+
+[source,typescript]
+----
+import { WebviewWindow } from '@tauri-apps/api/window';
+const mainWindow = WebviewWindow.getByLabel('main');
+----
+
+参数
+
+[%autowidth]
+|===
+|名称|类型|描述
+|`label`|``string``|webview窗口标签。
+|===
+
+*返回*: `null` | `<<webview-window,WebviewWindow>>`
+
+用于与 webview 通信的 WebviewWindow 实例，如果 webview 不存在，则为 null。
 
 [[interfaces]]
 == Interfaces
@@ -37,11 +1665,243 @@
 [[monitor]]
 === Monitor
 
+允许您检索有关给定显示器的信息。
+
+Since: 1.0.0
+
+属性
+
+- name: `null` | `string`
+
+显示器的可读名称。
+
+*定义在*: {window_url}80[window.ts:80]
+
+- position: `<<physical-position,PhysicalPosition>>`
+
+显示器左上角相对于整个屏幕区域的位置。
+
+*定义在*: {window_url}84[window.ts:84]
+
+- scaleFactor: `number`
+
+用于将物理像素映射到逻辑像素的缩放因子。
+
+*定义在*: {window_url}86[window.ts:86]
+
+- size: `<<physical-size,PhysicalSize>>`
+
+显示器的分辨率。
+
+*定义在*: {window_url}82[window.ts:82]
+
 [[scale-factor-changed]]
 === ScaleFactorChanged
 
+`scaleChange` 事件的负载。
+
+Since: 1.0.2
+
+属性
+
+- scaleFactor: `number`
+
+新的窗口缩放因子。
+
+*定义在*: {window_url}96[window.ts:96]
+
+- size: `<<physical-size,PhysicalSize>>`
+
+新的窗口大小。
+
+*定义在*: {window_url}98[window.ts:98]
+
 [[window-options]]
 === WindowOptions
+
+创建窗口的配置。
+
+Since: 1.0.0
+
+属性
+
+- `Optional` acceptFirstMouse: `boolean`
+
+在 macOS 上，点击不活跃的窗口是否也会点击到 webview。
+
+*定义在*: {window_url}2143[window.ts:2143]
+
+- `Optional` alwaysOnTop: `boolean`
+
+窗口是否始终位于其他窗口之上。
+
+*定义在*: {window_url}2115[window.ts:2115]
+
+- `Optional` center: `boolean`
+
+在屏幕中央显示窗口。
+
+*定义在*: {window_url}2077[window.ts:2077]
+
+- `Optional` contentProtected: `boolean`
+
+防止窗口内容被其他应用捕获。
+
+*定义在*: {window_url}2117[window.ts:2117]
+
+- `Optional` decorations: `boolean`
+
+窗口是否应该有边框和栏。
+
+*定义在*: {window_url}2113[window.ts:2113]
+
+- `Optional` fileDropEnabled: `boolean`
+
+webview 是否启用文件拖放。默认情况下启用。
+
+在 Windows 上，禁用它是前端使用拖放功能的前提。
+
+*定义在*: {window_url}2125[window.ts:2125]
+
+- `Optional` focus: `boolean`
+
+窗口是否最初是聚焦的。
+
+*定义在*: {window_url}2101[window.ts:2101]
+
+- `Optional` fullscreen: `boolean`
+
+窗口是否处于全屏模式。
+
+*定义在*: {window_url}2099[window.ts:2099]
+
+- `Optional` height: `number`
+
+初始高度。
+
+*定义在*: {window_url}2085[window.ts:2085]
+
+- `Optional` hiddenTitle: `boolean`
+
+如果为真，在 macOS 上将窗口标题隐藏。
+
+*定义在*: {window_url}2139[window.ts:2139]
+
+- `Optional` maxHeight: `number`
+
+最大高度。仅在设置了 `maxWidth` 时适用。
+
+*定义在*: {window_url}2093[window.ts:2093]
+
+- `Optional` maxWidth: `number`
+
+最大宽度。仅在设置了 `maxHeight` 时适用。
+
+*定义在*: {window_url}2091[window.ts:2091]
+
+- `Optional` maximized: `boolean`
+
+窗口在创建时是否应最大化。
+
+*定义在*: {window_url}2109[window.ts:2109]
+
+- `Optional` minHeight: `number`
+
+最小高度。仅在设置了 `minWidth` 时适用。
+
+*定义在*: {window_url}2089[window.ts:2089]
+
+- `Optional` minWidth: `number`
+
+最小宽度。仅在设置了 `minHeight` 时适用。
+
+*定义在*: {window_url}2087[window.ts:2087]
+
+- `Optional` resizable: `boolean`
+
+窗口是否可调整大小。
+
+*定义在*: {window_url}2095[window.ts:2095]
+
+- `Optional` skipTaskbar: `boolean`
+
+是否将窗口图标添加到任务栏。
+
+*定义在*: {window_url}2119[window.ts:2119]
+
+- `Optional` tabbingIdentifier: `string`
+
+定义 macOS 上的窗口 https://developer.apple.com/documentation/appkit/nswindow/1644704-tabbingidentifier[标签标识符]。
+
+具有相同标签标识符的窗口将被分组在一起。如果没有设置标签标识符，将禁用自动标签。
+
+*定义在*: {window_url}2150[window.ts:2150]
+
+- `Optional` theme: `<<theme,Theme>>`
+
+初始窗口主题。默认为系统主题。
+
+仅在 Windows 和 macOS 10.14+ 上实现。
+
+*定义在*: {window_url}2131[window.ts:2131]
+
+- `Optional` title: `string`
+
+窗口标题。
+
+*定义在*: {window_url}2097[window.ts:2097]
+
+- `Optional` titleBarStyle: `<<title-bar-style,TitleBarStyle>>`
+
+macOS 标题栏的样式。
+
+*定义在*: {window_url}2135[window.ts:2135]
+
+- `Optional` transparent: `boolean`
+
+窗口是否透明。请注意，在 `macOS` 上需要启用 `macos-private-api` 特性标志，该标志在 `tauri.conf.json > tauri > macOSPrivateApi` 下启用。警告：在 `macOS` 上使用私有 API 将阻止您的应用程序被 `App Store` 接受。
+
+*定义在*: {window_url}2107[window.ts:2107]
+
+- `Optional` url: `string`
+
+要打开的远程 URL 或本地文件路径。
+
+* URL，例如 `https://github.com/tauri-apps`，直接在 Tauri 窗口上打开。
+* data: URL，例如 `data:text/html,<html>...`，仅支持 `Tauri` 依赖的 `window-data-url` Cargo 功能。
+* 本地文件路径或路由，例如 `/path/to/page.html` 或 `/users`，附加到应用程序 URL（开发时为 devServer URL，生产时为 `tauri://localhost/` 和 `https://tauri.localhost/`）。
+
+*定义在*: {window_url}2075[window.ts:2075]
+
+- `Optional` userAgent: `string`
+
+webview 的用户代理。
+
+*定义在*: {window_url}2154[window.ts:2154]
+
+- `Optional` visible: `boolean`
+
+窗口在创建时是否应该立即可见。
+
+*定义在*: {window_url}2111[window.ts:2111]
+
+- `Optional` width: `number`
+
+初始宽度。
+
+*定义在*: {window_url}2083[window.ts:2083]
+
+- `Optional` x: `number`
+
+初始垂直位置。仅在设置了 `y` 时适用。
+
+*定义在*: {window_url}2079[window.ts:2079]
+
+- `Optional` y: `number`
+
+初始水平位置。仅在设置了 `x` 时适用。
+
+*定义在*: {window_url}2081[window.ts:2081]
 
 [[type-aliases]]
 == Type Aliases
@@ -49,14 +1909,32 @@
 [[cursor-icon]]
 === CursorIcon
 
+- CursorIcon: `"default"` | `"crosshair"` | `"hand"` | `"arrow"` | `"move"` | `"text"` | `"wait"` | `"help"` | `"progress"` | `"notAllowed"` | `"contextMenu"` | `"cell"` | `"verticalText"` | `"alias"` | `"copy"` | `"noDrop"` | `"grab"` | `"grabbing"` | `"allScroll"` | `"zoomIn"` | `"zoomOut"` | `"eResize"` | `"nResize"` | `"neResize"` | `"nwResize"` | `"sResize"` | `"seResize"` | `"swResize"` | `"wResize"` | `"ewResize"` | `"nsResize"` | `"neswResize"` | `"nwseResize"` | `"colResize"` |`` "rowResize"``
+
+*定义在*: {window_url}234[window.ts:234]
+
 [[file-drop-event]]
 === FileDropEvent
+
+- FileDropEvent: { `paths`: `string`[] ; `type`: `"hover"` } | { `paths`: `string`[] ; `type`: `"drop"` } | { `type`: `"cancel"` }
+
+文件拖放事件类型。
+
+*定义在*: {window_url}102[window.ts:102]
 
 [[theme]]
 === Theme
 
+- Theme: `"light"` | `"dark"`
+
+*定义在*: {window_url}70[window.ts:70]
+
 [[title-bar-style]]
 === TitleBarStyle
+
+- TitleBarStyle: `"visible"` | `"transparent"` | `"overlay"`
+
+*定义在*: {window_url}71[window.ts:71]
 
 [[variables]]
 == Variables
@@ -64,20 +1942,90 @@
 [[app-window]]
 === appWindow
 
+- appWindow: `<<webview-window,WebviewWindow>>`
+
+当前窗口的 WebviewWindow。
+
+*定义在*: {window_url}2043[window.ts:2043]
+
 [[functions]]
 == Functions
 
 [[available-monitors]]
 === availableMonitors
 
+- availableMonitors(): `{promise_url}[Promise]`<``<<monitor,Monitor>>``[]>
+
+返回系统上所有可用显示器的列表。
+
+示例
+
+[source,typescript]
+----
+import { availableMonitors } from '@tauri-apps/api/window';
+const monitors = availableMonitors();
+----
+
+Since: 1.0.0
+
+*返回*: `{promise_url}[Promise]`<``<<monitor,Monitor>>``[]>
+
 [[current-monitor]]
 === currentMonitor
+
+- currentMonitor(): `{promise_url}[Promise]`<``<<monitor,Monitor>>`` | `null`>
+
+返回当前窗口所在的显示器。如果无法检测到当前显示器，则返回 null。
+
+示例
+
+[source,typescript]
+----
+import { currentMonitor } from '@tauri-apps/api/window';
+const monitor = currentMonitor();
+----
+
+Since: 1.0.0
+
+*返回*: `{promise_url}[Promise]`<``<<monitor,Monitor>>`` | `null`>
 
 [[get-all]]
 === getAll
 
+- getAll(): `<<webview-window,WebviewWindow>>`[]
+
+获取所有可用 Webview 窗口的 WebviewWindow 实例列表。
+
+Since: 1.0.0
+
+*返回*: `<<webview-window,WebviewWindow>>`[]
+
 [[get-current]]
 === getCurrent
 
+- getAll(): `<<webview-window,WebviewWindow>>`
+
+获取当前 Webview 窗口的 WebviewWindow 实例。
+
+Since: 1.0.0
+
+*返回*: `<<webview-window,WebviewWindow>>`
+
 [[primary-monitor]]
 === primaryMonitor
+
+- primaryMonitor(): `{promise_url}[Promise]`<``<<monitor,Monitor>>`` | `null`>
+
+返回系统的主显示器。如果无法识别任何显示器为主显示器，则返回 `null`。
+
+示例
+
+[source,typescript]
+----
+import { primaryMonitor } from '@tauri-apps/api/window';
+const monitor = primaryMonitor();
+----
+
+Since: 1.0.0
+
+*返回*: `{promise_url}[Promise]`<``<<monitor,Monitor>>`` | `null`>

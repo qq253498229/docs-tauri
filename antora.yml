@@ -11,9 +11,14 @@ asciidoc:
     toc-title: 目录
     toclevels: 6
     promise_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-    http_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts
+    csp_url: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+    uint8_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
+    array_buffer_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
+    form_url: https://developer.mozilla.org/en-US/docs/Web/API/FormData
+    source_url: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources
     record_url: https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type
     omit_url: https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys
+    http_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts
     shortcut_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/globalShortcut.ts
     fs_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/
     event_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/
@@ -22,6 +27,7 @@ asciidoc:
     path_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/path.ts#L
     shell_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/shell.ts#L
     updater_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/updater.ts#L
+    window_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L
 
 
 

@@ -214,7 +214,7 @@ Since: 1.0.0
 [[binary-file-contents]]
 === BinaryFileContents
 
-- BinaryFileContents: `Iterable`<``number``> | `ArrayLike`<``number``> | `link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer[ArrayBuffer]`
+- BinaryFileContents: `Iterable`<``number``> | `ArrayLike`<``number``> | `link:{array_buffer_url}[ArrayBuffer]`
 
 *定义在*: {fs_url}fs.ts#L136[fs.ts:136]
 
@@ -316,7 +316,7 @@ Since: 1.1.0
 [[read-binary-file]]
 === readBinaryFile
 
-- readBinaryFile(`filePath`: `string`, `options?`: `<<fs-options,FsOptions>>`): `link:{promise_url}[Promise]`<``link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array[Uint8Array]``>
+- readBinaryFile(`filePath`: `string`, `options?`: `<<fs-options,FsOptions>>`): `link:{promise_url}[Promise]`<``link:{uint8_url}[Uint8Array]``>
 
 将文件读取为字节数组。
 
@@ -340,7 +340,7 @@ Since: 1.0.0
 |`options`|`<<fs-options,FsOptions>>`
 |===
 
-*返回*: `link:{promise_url}[Promise]`<``link:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array[Uint8Array]``>
+*返回*: `link:{promise_url}[Promise]`<``link:{uint8_url}[Uint8Array]``>
 
 [[read-dir]]
 === readDir
