@@ -1,12 +1,12 @@
 name: docs-tauri
-title: docs-tauri
-version: '0.0.1'
+title: Tauri API 文档
+version: 'v1'
 start_page: ROOT:index.adoc
 nav:
   - modules/ROOT/nav.adoc
 asciidoc:
   attributes:
-    page-toclevels: 3
+    page-toclevels: 3@
     page-toctitle: 目录
     toc-title: 目录
     toclevels: 6
@@ -16,6 +16,7 @@ asciidoc:
     array_buffer_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
     form_url: https://developer.mozilla.org/en-US/docs/Web/API/FormData
     source_url: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources
+    webview2_url: https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section
     record_url: https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type
     omit_url: https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys
     http_url: https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts

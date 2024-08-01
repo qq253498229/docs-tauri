@@ -1,4 +1,5 @@
 = 配置
+:page-toclevels: 2
 
 https://tauri.app/v1/api/config[原文地址]
 
@@ -67,17 +68,6 @@ Tauri 还分别通过 `config-json5` 和 `config-toml` 这两个 Cargo 特性支
 }
 ----
 
-类型: `对象`
-
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`package`|<<package-config,PackageConfig>>|<<package-config,view>>|包配置
-|`tauri`|<<tauri-config,TauriConfig>>|<<tauri-config,view>>|Tauri配置
-|`tauri`|<<build-config,BuildConfig>>|<<build-config,view>>|构建配置
-|`tauri`|<<plugin-config,PluginConfig>>|<<plugin-config,view>>|插件配置
-|===
-
 [[package-config]]
 === PackageConfig
 
@@ -88,8 +78,8 @@ Tauri 还分别通过 `config-json5` 和 `config-toml` 这两个 Cargo 特性支
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`productName`|string?|null|App名称
-|`version`|string?|null|应用程序版本。它是一个符合语义化版本控制的版本号，或者是包含 `version` 字段的 `package.json` 文件的路径。如果移除，将使用 `Cargo.toml` 中的版本号。
+|`productName`|`string`?|null|App名称
+|`version`|`string`?|null|应用程序版本。它是一个符合语义化版本控制的版本号，或者是包含 `version` 字段的 `package.json` 文件的路径。
 |===
 
 [[tauri-config]]
@@ -102,16 +92,15 @@ Tauri相关的配置。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`pattern`|<<pattern-kind,PatternKind>>|<<pattern-kind,view>>|使用的模式。
-|`windows`|<<window-config,WindowConfig>>|[]|窗口配置。
-|`cli`|<<cli-config,CliConfig?>>|<<cli-config,view>>|命令行配置。
-|`bundle`|<<bundle-config,BundleConfig>>|<<bundle-config,view>>|打包配置。
-|`allowlist`|<<allowlist-config,AllowlistConfig>>|<<allowlist-config,view>>|白名单配置。
-|`security`|<<security-config,SecurityConfig>>|<<security-config,view>>|安全配置。
-|`updater`|<<updater-config,UpdaterConfig>>|<<updater-config,view>>|更新配置。
-|`systemTray`|<<system-tray-config,SystemTrayConfig?>>|<<system-tray-config,view>>|应用系统托盘配置。
-|`macOSPrivateApi`|boolean|`false`|macOS 私有 API 配置。启用透明背景 API 并将 `fullScreenEnabled` 设置为 `true`。
-。
+|`pattern`|`<<pattern-kind,PatternKind>>`|<<pattern-kind,view>>|使用的模式。
+|`windows`|`<<window-config,WindowConfig>>`|[]|窗口配置。
+|`cli`|`<<cli-config,CliConfig>>`?|<<cli-config,view>>|命令行配置。
+|`bundle`|`<<bundle-config,BundleConfig>>`|<<bundle-config,view>>|打包配置。
+|`allowlist`|`<<allowlist-config,AllowlistConfig>>`|<<allowlist-config,view>>|白名单配置。
+|`security`|`<<security-config,SecurityConfig>>`|<<security-config,view>>|安全配置。
+|`updater`|`<<updater-config,UpdaterConfig>>`|<<updater-config,view>>|更新配置。
+|`systemTray`|`<<system-tray-config,SystemTrayConfig>>`?|<<system-tray-config,view>>|应用系统托盘配置。
+|`macOSPrivateApi`|`boolean`|`false`|macOS 私有 API 配置。启用透明背景 API 并将 `fullScreenEnabled` 设置为 `true`。
 |===
 
 [[pattern-kind]]
@@ -119,27 +108,13 @@ Tauri相关的配置。
 
 应用的模式。
 
-可以是以下类型中的任何**一个**：
+可以是以下类型中的任意**一个**：
 
 - `{"user":"brownfield"}`: Brownfield模式。
-
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`user`|"brownfield"(required)||undefined
-|===
-
-- `{"user":"isolation","options":{"dir":string}}`:Isolation模式。以安全为目标的时候建议使用。
-
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`use`|"isolation"(required)||undefined
-|`options`|{"dir":string}(required)||undefined
-|===
+- `{"user":"isolation","options":{"dir":string}}`: Isolation(隔离)模式。以安全为目标的时候建议使用。
 
 [[window-config]]
-==== WindowConfig
+=== WindowConfig
 
 窗口配置对象。
 
@@ -148,55 +123,47 @@ Tauri相关的配置。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`label`|string|_null_|窗口的id标识符。必须由字母数字组成。
-|`url`|<<window-url,WindowUrl>>|<<window-url,view>>|窗口的 webview URL。
-|`userAgent`|string?|_null_|webview中的user agent。
-|`fileDropEnabled`|boolean|`true`|webview是否启用了文件拖放功能。默认情况下它是启用的。 +
+|`label`|`string`|_null_|窗口的id标识符。必须由字母数字组成。
+|`url`|`<<window-url,WindowUrl>>`|<<window-url,view>>|窗口的 webview URL。
+|`userAgent`|`string`?|_null_|webview中的user agent。
+|`fileDropEnabled`|`boolean`|`true`|webview是否启用了文件拖放功能。默认情况下它是启用的。
+
 在Windows的前端禁用它是为了使用拖放功能。
-|`center`|boolean|`false`|窗口启动时是否居中显示。
-|`x`|number?(format: `double`)|null|窗口左上角的水平位置。
-|`y`|number?(format: `double`)|null|窗口左上角的垂直位置。
-|`width`|number?(format: `double`)|`800`|窗口宽度。
-|`height`|number?(format: `double`)|`600`|窗口高度。
-|`minWidth`|number?(format: `double`)|null|窗口的最小宽度。
-|`minHeight`|number?(format: `double`)|null|窗口的最小高度。
-|`maxWidth`|number?(format: `double`)|null|窗口的最大宽度。
-|`maxHeight`|number?(format: `double`)|null|窗口的最大高度。
-|`resizable`|boolean|`true`|窗口是否允许调整大小。当resizable设置为 `false` 时，原生窗口的最大化按钮将自动禁用。
-|`maximizable`|boolean|`true`|是否启用窗口的原生最大化按钮。如果resizable设置为false，这个设置将被忽略。 +
-## 特定平台 +
-- *macOS*: 禁用窗口标题栏中的“放大”按钮，该按钮也用于进入全屏模式。 +
-- *Linux* / *iOS* / *Android*: 不支持。
-|`minimizable`|boolean|`true`|是否启用窗口的原生最小化按钮。 +
-## 特定平台 +
-- *Linux* / *iOS* / *Android*: 不支持。
-|`closable`|boolean|`true`|- *Linux*: "GTK+ 将尽其所能说服窗口管理器不要显示关闭按钮。根据系统的不同，如果这个功能在窗口已经可见时调用，可能不会有任何效果。" +
-- *iOS* / *Android*: 不支持。
-|`title`|string|_null_|窗口的标题。
-|`fullscreen`|boolean|`false`|窗口启动后是否全屏。
-|`focus`|boolean|`true`|窗口启动后是否获得焦点。
-|`transparent`|boolean|`false`|窗口是否透明。 +
+|`center`|`boolean`|`false`|窗口启动时是否居中显示。
+|`x`|`number`?(format: `double`)|_null_|窗口左上角的水平位置。
+|`y`|`number`?(format: `double`)|_null_|窗口左上角的垂直位置。
+|`width`|`number`?(format: `double`)|`800`|窗口宽度。
+|`height`|`number`?(format: `double`)|`600`|窗口高度。
+|`minWidth`|`number`?(format: `double`)|_null_|窗口的最小宽度。
+|`minHeight`|`number`?(format: `double`)|_null_|窗口的最小高度。
+|`maxWidth`|`number`?(format: `double`)|_null_|窗口的最大宽度。
+|`maxHeight`|`number`?(format: `double`)|_null_|窗口的最大高度。
+|`resizable`|`boolean`|`true`|窗口是否允许调整大小。
+|`title`|`string`|_null_|窗口的标题。
+|`fullscreen`|`boolean`|`false`|窗口启动后是否全屏。
+|`focus`|`boolean`|`true`|窗口启动后是否获得焦点。
+|`transparent`|`boolean`|`false`|窗口是否透明。
 
 注意，在 `macOS` 上，这需要在 `tauri > macOSPrivateApi` 下启用 `macos-private-api` 特性标志。 +
 警告：在 `macOS` 上使用私有API可能会阻止您的应用程序发布到 `App Store`。
-|`maximized`|boolean|`false`|窗口是否最大化。
-|`visible`|boolean|`true`|窗口是否可见。
-|`decorations`|boolean|`true`|窗口是否应该拥有边框和条栏。
-|`alwaysOnTop`|boolean|`false`|窗口是否保持在其它窗口的上方。
-|`contentProtected`|boolean|`false`|防止窗口内容被其他应用程序捕获。
-|`skipTaskbar`|boolean|`false`|如果为 `true`，则在Windows和Linux上从任务栏隐藏窗口图标。
-|`theme`|<<theme,Theme>>?|<<theme,view>>|初始窗口主题。默认为系统主题。仅在Windows和macOS 10.14及以上版本可用。
-|`titleBarStyle`|<<title-bar-style,titleBarStyle>>?|<<title-bar-style,view>>|macOS 标题栏的风格。
-|`hiddenTitle`|boolean|`false`|如果为 `true`，则在macOS系统中隐藏窗口标题。
-|`acceptFirstMouse`|boolean|`false`|在macOS上，点击非活动窗口是否也会传递点击webview的事件。
-|`tabbingIdentifier`|string?|_null_|定义了macOS的 link:https://developer.apple.com/documentation/appkit/nswindow/1644704-tabbingidentifier[窗口标签标识符]。
+|`maximized`|`boolean`|`false`|窗口是否最大化。
+|`visible`|`boolean`|`true`|窗口是否可见。
+|`decorations`|`boolean`|`true`|窗口是否应该拥有边框和条栏。
+|`alwaysOnTop`|`boolean`|`false`|窗口是否保持在其它窗口的上方。
+|`contentProtected`|`boolean`|`false`|防止窗口内容被其他应用程序捕获。
+|`skipTaskbar`|`boolean`|`false`|如果为 `true`，则在Windows和Linux上从任务栏隐藏窗口图标。
+|`theme`|`<<theme,Theme>>`?|<<theme,view>>|初始窗口主题。默认为系统主题。仅在Windows和macOS 10.14及以上版本可用。
+|`titleBarStyle`|`<<title-bar-style,titleBarStyle>>`|<<title-bar-style,view>>|macOS 标题栏的风格。
+|`hiddenTitle`|`boolean`|`false`|如果为 `true`，则在macOS系统中隐藏窗口标题。
+|`acceptFirstMouse`|`boolean`|`false`|在macOS上，点击非活动窗口是否也会传递点击webview的事件。
+|`tabbingIdentifier`|`string`?|_null_|定义了macOS的 link:https://developer.apple.com/documentation/appkit/nswindow/1644704-tabbingidentifier[窗口标签标识符]。
 
 具有匹配标签标识符的窗口将被分组在一起。如果未设置标签标识符，则自动标签功能将被禁用。
-|`additionalBrowserArgs`|string?|_null_|在Windows上定义额外的浏览器参数。默认情况下会传递参数 `--disable-features=msWebOOUI,msPdfOOUI,msSmartScreenProtection`，所以如果你使用这个方法，你也需要自己禁用这些组件，如果你想要的话。
+|`additionalBrowserArgs`|`string`?|_null_|在Windows上定义额外的浏览器参数。默认情况下会传递参数 `--disable-features=msWebOOUI,msPdfOOUI,msSmartScreenProtection`，所以如果你使用这个方法，你也需要自己禁用这些组件，如果你想要的话。
 |===
 
 [[window-url]]
-===== WindowUrl
+==== WindowUrl
 
 打开Tauri webview窗口的URL。
 
@@ -206,7 +173,7 @@ Tauri相关的配置。
 - `string`:应用程序URL的路径部分。例如，要加载 `tauri://localhost/users/john`，你可以在简单地配置为 `users/john`。
 
 [[theme]]
-===== Theme
+==== Theme
 
 系统主题。
 
@@ -216,27 +183,25 @@ Tauri相关的配置。
 - "Dark": 黑暗主题。
 
 [[title-bar-style]]
-===== TitleBarStyle
+==== TitleBarStyle
 
 在macOS上，窗口标题栏应该如何显示。
 
 可以是以下类型中的任何**一个**：
 
-- "Visible": 正常的标题栏。
-- "Transparent": 透明的标题栏，以便显示窗口背景颜色。
-
+* "Visible": 正常的标题栏。
+* "Transparent": 透明的标题栏，以便显示窗口背景颜色。 +
 如果您不需要在标题栏下有实际的HTML内容，这可以让您避免使用 `TitleBarStyle::Overlay` 的注意事项。当Tauri允许您设置自定义窗口背景颜色时，这将更加有用。
-
-- "Overlay": 在窗口内容上以透明覆盖层的形式显示标题栏。
-
+* "Overlay": 在窗口内容上以透明覆盖层的形式显示标题栏。 +
++
 请注意：
 
-- 不同操作系统版本的标题栏高度可能不同，这可能导致窗口控件和标题出现在您意想不到的位置。
-- 您需要定义一个自定义拖拽区域来使窗口可拖动，但由于一个限制，当窗口没有焦点时您无法拖动窗口，有关这个问题的讨论可以在Tauri的GitHub问题跟踪器中找到，链接是： https://github.com/tauri-apps/tauri/issues/4316。
-- 窗口标题的颜色取决于系统主题。
+* 不同操作系统版本的标题栏高度可能不同，这可能导致窗口控件和标题出现在您意想不到的位置。
+* 您需要定义一个自定义拖拽区域来使窗口可拖动，但由于一个限制，当窗口没有焦点时您无法拖动窗口，有关这个问题的讨论可以在Tauri的GitHub问题跟踪器中找到，链接是： https://github.com/tauri-apps/tauri/issues/4316。
+* 窗口标题的颜色取决于系统主题。
 
 [[cli-config]]
-==== CliConfig
+=== CliConfig
 
 描述命令行的配置
 
@@ -245,16 +210,16 @@ Tauri相关的配置。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`description`|string?|_null_|命令描述，将显示在帮助信息中。
-|`longDescription`|string?|_null_|命令的详细描述，将在帮助信息中展示。
-|`beforeHelp`|string?|_null_|在帮助信息中除了自动生成的帮助内容外，添加额外的帮助信息。这些信息会在自动生成的帮助信息之前显示。这通常用于显示头部信息。
-|`afterHelp`|string?|_null_|在自动生成的帮助信息之外添加额外的帮助信息。这些信息会在自动生成的帮助信息之后显示。这通常用于描述如何使用参数，或者需要注意的事项。
-|`args`|<<cli-arg,CliArg>>?|_null_|命令的参数列表。
-|`subcommands`|<<cli-config,CliConfig>>?|_null_|命令的子命令列表。
+|`description`|`string`?|_null_|命令描述，将显示在帮助信息中。
+|`longDescription`|`string`?|_null_|命令的详细描述，将在帮助信息中展示。
+|`beforeHelp`|`string`?|_null_|在帮助信息中除了自动生成的帮助内容外，添加额外的帮助信息。这些信息会在自动生成的帮助信息之前显示。这通常用于显示头部信息。
+|`afterHelp`|`string`?|_null_|在自动生成的帮助信息之外添加额外的帮助信息。这些信息会在自动生成的帮助信息之后显示。这通常用于描述如何使用参数，或者需要注意的事项。
+|`args`|`array`?|_null_|命令的参数列表。
+|`subcommands`|`object`?|_null_|命令的子命令列表。
 |===
 
 [[cli-arg]]
-===== CliArg
+==== CliArg
 
 CLI参数定义。
 
@@ -263,50 +228,55 @@ CLI参数定义。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`short`|string?|_null_|参数的简短版本，不包括前面的 -。
+|`short`|`string`?|_null_|参数的简短版本，不包括前面的 -。
 
 注意：任何前导的 `-` 字符将被剥离，并且只使用第一个非 - 字符作为简短版本。
-|`name`|string(required)||唯一参数名称。
-|`description`|string?|_null_|参数的描述，将在帮助信息中显示。通常，这是对参数的简短（一行）描述。
-|`longDescription`|string?|_null_|参数的详细描述，将在帮助信息中展示。通常这是一个更详细（多行）的消息，用来描述参数。
-|`takesValue`|boolean|`false`|指定该参数在运行时需要一个值。
+|`name`|`string`(required)|_null_|唯一参数名称。
+|`description`|`string`?|_null_|参数的描述，将在帮助信息中显示。通常，这是对参数的简短（一行）描述。
+|`longDescription`|`string`?|_null_|参数的详细描述，将在帮助信息中展示。通常这是一个更详细（多行）的消息，用来描述参数。
+|`takesValue`|`boolean`|`false`|指定该参数在运行时需要一个值。
 
 注意：参数的值可以通过以下任何一种方式指定： +
 - 使用空格，例如 `-o value` 或 `--option value` +
 - 使用等号且没有空格，例如 `-o=value` 或 `--option=value` +
 - 使用简短形式且没有空格，例如 `-ovalue`
+|`multiple`|`boolean`|`false`|指定参数可能具有未知数量的多个值。如果没有其他设置，此参数只能出现一次。
+
+例如，`--opt val1 val2` 是允许的，但 `--opt val1 val2 --opt val3` 是不允许的。
+
+注意：设置此项需要将 `takes_value` 设置为 `true`。
 |`multipleOccurrences`|boolean|`false`|指定参数可以出现多次。对于标志（flags），这将记录标志出现的次数。例如，`-ddd` 或 `-d -d -d` 将被计为三次出现。对于需要值的选项或参数，这不会影响它们可以接受的值的数量。（即只允许一次接受一个值）
 
 例如，允许使用 `--opt val1 --opt val2`，但不允许使用 `--opt val1 val2`。
-|`numberOfValues`|integer? (format: `uint`)|_null_|指定需要多少个值来满足这个参数。例如，如果你有一个 `-f <file>` 参数，你希望正好有3个 'files'，你会设置 `number_of_values = 3`，并且除非用户提供了3个且仅有3个值，否则这个参数不会得到满足。
+|`numberOfValues`|`integer`? (format: `uint`)|_null_|指定需要多少个值来满足这个参数。例如，如果你有一个 `-f <file>` 参数，你希望正好有3个 'files'，你会设置 `number_of_values = 3`，并且除非用户提供了3个且仅有3个值，否则这个参数不会得到满足。
 
 注意：不需要设置 `multiple_occurrences = true`。设置 `multiple_occurrences = true` 将允许 `-f <file> <file> <file> -f <file> <file> <file>`，而如果不设置它，则只允许这个参数出现一次。
 
 注意：隐式设置 `takes_value = true` 和 `multiple_values = true`。
-|`possibleValues`|array?|_null_|指定此参数的可能值列表。在运行时，CLI会验证是否只使用了指定值中的一个，否则会以错误消息失败。
-|`minValues`|integer? (format: `uint`)|_null_|指定此参数的最小值数量。例如，如果你有一个 `-f <file>` 参数，你希望至少有2个 'files'，你会设置 `minValues: 2`，如果用户提供了2个或更多的值，这个参数就会得到满足。
-|`maxValues`|integer? (format: `uint`)|_null_|指定此参数的最大值数量。例如，如果你有一个 `-f <file>` 参数，你希望最多有3个 'files'，你会设置 `.max_values(3)`，如果用户提供了1、2或3个值，这个参数就会得到满足。
-|`required`|boolean|`false`|默认情况下设置参数是否必需。
+|`possibleValues`|`array`?|_null_|指定此参数的可能值列表。在运行时，CLI会验证是否只使用了指定值中的一个，否则会以错误消息失败。
+|`minValues`|`integer`? (format: `uint`)|_null_|指定此参数的最小值数量。例如，如果你有一个 `-f <file>` 参数，你希望至少有2个 'files'，你会设置 `minValues: 2`，如果用户提供了2个或更多的值，这个参数就会得到满足。
+|`maxValues`|`integer`? (format: `uint`)|_null_|指定此参数的最大值数量。例如，如果你有一个 `-f <file>` 参数，你希望最多有3个 'files'，你会设置 `.max_values(3)`，如果用户提供了1、2或3个值，这个参数就会得到满足。
+|`required`|`boolean`|`false`|默认情况下设置参数是否必需。
 
 - 默认必需意味着它是必需的，当没有其他冲突的规则被评估时 +
 - 冲突的规则优先于必需性。
-|`requiredUnlessPresent`|string?|_null_|设置一个参数，该参数会覆盖此参数的必需设置，即除非存在另一个参数，否则此参数将是必需的。
-|`requiredUnlessPresentAll`|array?|_null_|设置参数，这些参数会覆盖此参数的必需设置，即除非所有这些其他参数都存在，否则此参数将是必需的。
-|`requiredUnlessPresentAny`|array?|_null_|设置参数，这些参数会覆盖此参数的必需设置，即除非至少有一个这些其他参数存在，否则此参数将是必需的。
-|`conflictsWith`|string?|_null_|设置一个冲突的参数，通过名称指定，即当使用这个参数时，以下参数不能存在，反之亦然。
-|`conflictsWithAll`|array?|_null_|与 `conflictsWith` 相同，但允许为每个参数指定多个双向冲突。
-|`requires`|string?|_null_|测试一个参数，通过名称指定，即当此参数存在时，以下参数必须存在。
-|`requiresAll`|array?|_null_|设置多个参数，通过名称指定，这些参数在当前参数存在时是必需的，即在使用这个参数时，以下参数必须存在。
-|`requiresIf`|array?|_null_|允许有条件的需求，具有签名 [arg, value]，只有在 `arg` 的值等于 `$\{value}` 时，需求才会变得有效。
-|`requiredIfEq`|array?|_null_|允许指定参数的需求是有条件的，具有签名 [arg, value]，只有在 `arg` 的值等于 `$\{value}` 时，需求才会变得有效。
-|`requireEquals`|boolean?|_null_|要求选项使用 `--option=val` 的语法，即选项和相关值之间需要有一个等号。
-|`index`|integer? (format: `uint`, minimum: `1`)|_null_|位置参数的索引，从1开始。
+|`requiredUnlessPresent`|`string`?|_null_|设置一个参数，该参数会覆盖此参数的必需设置，即除非存在另一个参数，否则此参数将是必需的。
+|`requiredUnlessPresentAll`|`array`?|_null_|设置参数，这些参数会覆盖此参数的必需设置，即除非所有这些其他参数都存在，否则此参数将是必需的。
+|`requiredUnlessPresentAny`|`array`?|_null_|设置参数，这些参数会覆盖此参数的必需设置，即除非至少有一个这些其他参数存在，否则此参数将是必需的。
+|`conflictsWith`|`string`?|_null_|设置一个冲突的参数，通过名称指定，即当使用这个参数时，以下参数不能存在，反之亦然。
+|`conflictsWithAll`|`array`?|_null_|与 `conflictsWith` 相同，但允许为每个参数指定多个双向冲突。
+|`requires`|`string`?|_null_|测试一个参数，通过名称指定，即当此参数存在时，以下参数必须存在。
+|`requiresAll`|`array`?|_null_|设置多个参数，通过名称指定，这些参数在当前参数存在时是必需的，即在使用这个参数时，以下参数必须存在。
+|`requiresIf`|`array`?|_null_|允许有条件的需求，具有签名 [arg, value]，只有在 `arg` 的值等于 `$\{value}` 时，需求才会变得有效。
+|`requiredIfEq`|`array`?|_null_|允许指定参数的需求是有条件的，具有签名 [arg, value]，只有在 `arg` 的值等于 `$\{value}` 时，需求才会变得有效。
+|`requireEquals`|`boolean`?|_null_|要求选项使用 `--option=val` 的语法，即选项和相关值之间需要有一个等号。
+|`index`|`integer`? (format: `uint`, minimum: `1`)|_null_|位置参数的索引，从1开始。
 
 该索引是相对于其他位置参数的位置。它并不定义在整个参数列表中的位置。当与 `multiple=true` 一起使用时，只有最后一个位置参数可以被定义为多个（即具有最高索引的那个）。
 |===
 
 [[bundle-config]]
-==== BundleConfig
+=== BundleConfig
 
 Tauri打包的配置。
 
@@ -315,31 +285,24 @@ Tauri打包的配置。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`active`|boolean|`false`|Tauri 是否应该打包你的应用程序还是只输出可执行文件。
-|`targets`|<<bundle-target,BundleTarget>>|<<bundle-target,view>>|目前支持的打包目标包括 ["deb", "rpm", "appimage", "nsis", "msi", "app", "dmg", "updater"] 或 "all"。
-|`identifier`|string(required)||应用程序标识符应使用反向域名表示法（例如 `com.tauri.example`）。这个字符串必须是唯一的，因为它用于系统配置，如包 ID 和 webview 数据目录的路径。此字符串只能包含字母数字字符（A-Z，a-z 和 0-9）、连字符（-）和点（.）。
-|`publisher`|string?|_null_|应用程序的发布者。默认情况下，它是标识符字符串中的第二个元素。目前它对应于 Windows 安装程序的 Manufacturer 属性。
-|`icon`|string[]|[]|应用的图标
-|`resources`|<<bundle-resources,BundleResources>>?|<<bundle-resources,view>>|应用程序需要打包的资源。每个资源是指向文件或目录的路径。支持使用通配符模式。
-|`copyright`|string?|_null_|与您的应用程序相关的版权字符串。
-|`category`|string?|_null_|应用程序类型。
+|`active`|`boolean`|`false`|Tauri 是否应该打包你的应用程序还是只输出可执行文件。
+|`targets`|`<<bundle-target,BundleTarget>>`|<<bundle-target,view>>|目前支持的打包目标包括 ["deb", "rpm", "appimage", "nsis", "msi", "app", "dmg", "updater"] 或 "all"。
+|`identifier`|`string`(required)||应用程序标识符应使用反向域名表示法（例如 `com.tauri.example`）。这个字符串必须是唯一的，因为它用于系统配置，如包 ID 和 webview 数据目录的路径。此字符串只能包含字母数字字符（A-Z，a-z 和 0-9）、连字符（-）和点（.）。
+|`publisher`|`string`?|_null_|应用程序的发布者。默认情况下，它是标识符字符串中的第二个元素。目前它对应于 Windows 安装程序的 Manufacturer 属性。
+|`icon`|`string[]`|[]|应用的图标
+|`resources`|`array`?|_null_|应用程序需要打包的资源。每个资源是指向文件或目录的路径。支持使用通配符模式。
+|`copyright`|`string`?|_null_|与您的应用程序相关的版权字符串。
+|`category`|`string`?|_null_|应用程序类型。
 
 应该是以下之一：商务、开发者工具、教育、娱乐、金融、游戏、动作游戏、冒险游戏、街机游戏、棋盘游戏、纸牌游戏、赌场游戏、骰子游戏、教育游戏、家庭游戏、儿童游戏、音乐游戏、益智游戏、赛车游戏、角色扮演游戏、模拟游戏、体育游戏、策略游戏、问答游戏、文字游戏、图形与设计、健康与健身、生活方式、医疗、音乐、新闻、摄影、生产力、参考、社交网络、体育、旅行、实用工具、视频、天气。
-|`shortDescription`|string?|_null_|您的应用程序的简短描述。
-|`longDescription`|string?|_null_|应用程序的详细描述是一个多行文本。
-|`useLocalToolsDir`|boolean|`false`|是否使用项目的 `target` 目录作为缓存构建工具的目标（例如，Wix 和 NSIS）当构建此应用程序时。默认为 `false`。
+|`shortDescription`|`string`?|_null_|您的应用程序的简短描述。
+|`longDescription`|`string`?|_null_|应用程序的详细描述是一个多行文本。
+|`appimage`|`<<app-image-config,AppImageConfig>>`|<<app-image-config,view>>|AppImage 捆绑包的配置。
+|`deb`|`<<deb-config,DebConfig>>`|<<deb-config,view>>|Debian 捆绑包的配置。
+|`macOS`|`<<mac-config,MacConfig>>`|<<mac-config,view>>|macOS 捆绑包的配置。
+|`externalBin`|`array`?|_null_|用于应用程序的二进制文件列表——可以是绝对路径或相对路径。
 
-如果为 `true`，则工具将被缓存在 `target\.tauri-tools` 中。如果为 `false`，则工具将被缓存在当前用户的平台特定的缓存目录中。
-
-一个适当设置为 `true` 的示例是当作为 Windows 系统用户构建此应用程序时（例如，AWS EC2 工作负载），因为 Windows 系统的应用程序数据目录是受限的。
-|`appimage`|<<app-image-config,AppImageConfig>>|<<app-image-config,view>>|AppImage 捆绑包的配置。
-|`deb`|<<deb-config,DebConfig>>|<<deb-config,view>>|Debian 捆绑包的配置。
-|`rpm`|<<rpm-config,RpmConfig>>|<<rpm-config,view>>|Rpm 捆绑包的配置。
-|`dmg`|<<dmg-config,DmgConfig>>|<<dmg-config,view>>|DMG特殊的配置。
-|`macOS`|<<mac-config,MacConfig>>|<<mac-config,view>>|macOS 捆绑包的配置。
-|`externalBin`|array?|_null_|用于应用程序的二进制文件列表——可以是绝对路径或相对路径。
-
-请注意，Tauri 会按照 "binary-name\{-target-triple}\{.system-extension}" 的模式寻找特定于系统的二进制文件。
+请注意，Tauri 会按照 "pass:[binary-name{-target-triple}{.system-extension}]" 的模式寻找特定于系统的二进制文件。
 
 例如，对于外部二进制文件 "my-binary"，Tauri 会寻找：
 
@@ -348,29 +311,28 @@ Tauri打包的配置。
 - Linux 系统下的 "my-binary-x86_64-unknown-linux-gnu"
 
 因此，别忘了为所有目标平台提供二进制文件。
-|`windows`|<<windows-config,WindowsConfig>>|<<windows-config,view>>|Windows 包的配置。
+|`windows`|`<<windows-config,WindowsConfig>>`|<<windows-config,view>>|Windows 包的配置。
 |===
 
 [[bundle-target]]
-===== BundleTarget
+==== BundleTarget
 
 打包的目标。每个值都不区分大小写。
 
 可以是以下类型之一：
 
-- "all"：打包所有目标。
-- <<bundle-type,BundleType>>：打包目标的列表。
-- <<bundle-type,BundleType>>：单个打包目标。
+- `"all"`：打包所有目标。
+- `<<bundle-type,BundleType[]>>`：打包目标的列表。
+- `<<bundle-type,BundleType>>`：单个打包目标。
 
 [[bundle-type]]
-===== BundleType
+==== BundleType
 
 由 tauri-bundler 引用的打包类型。
 
 可以是以下类型中的任何**一个**：
 
 - "deb"：Debian 打包（.deb）。
-- "rpm"：RPM 打包（.rpm）。
 - "appimage"：AppImage 打包（.appimage）。
 - "msi"：微软安装程序打包（.msi）。
 - "nsis"：NSIS 打包（.exe）。
@@ -378,18 +340,8 @@ Tauri打包的配置。
 - "dmg"：苹果磁盘映像打包（.dmg）。
 - "updater"：Tauri 更新程序打包。
 
-[[bundle-resources]]
-===== BundleResources
-
-打包资源的定义。可以是包含路径的列表，或者是源路径到目标路径的映射。
-
-可以是以下类型之一：
-
-- `string[]`：包含路径的列表。
-- `object`：源路径到目标路径的映射。
-
 [[app-image-config]]
-===== AppImageConfig
+=== AppImageConfig
 
 AppImage 打包的配置。
 
@@ -398,11 +350,11 @@ AppImage 打包的配置。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`bundleMediaFramework`|boolean|`false`|包括音频和视频播放所需的额外 GStreamer 依赖项。这将根据你的构建系统，使打包大小增加约 15-35MB。
+|`bundleMediaFramework`|`boolean`|`false`|包括音频和视频播放所需的额外 gstreamer 依赖项。这将根据你的构建系统，使打包大小增加约 15-35MB。
 |===
 
 [[deb-config]]
-===== DebConfig
+=== DebConfig
 
 Debian（.deb）打包的配置。
 
@@ -411,89 +363,12 @@ Debian（.deb）打包的配置。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`depends`|array?|_null_|您的应用程序所依赖的Debian软件包列表。
-|`provides`|array?|_null_|软件包提供的依赖列表。
-|`conflicts`|array?|_null_|软件包冲突列表。
-|`replaces`|array?|_null_|软件包替代列表。
-|`files`|object|_null_|软件包中要包含的文件列表。
-|`desktopTemplate`|string?|_null_|自定义桌面文件Handlebars模板的路径。
-
-可用变量：`categories`（类别）、`comment`（可选）、`exec`（执行命令）、`icon`（图标）和 `name`（名称）。
-|`section`|string?|_null_|在Debian控制文件中定义部分（Section）。请参阅： https://www.debian.org/doc/debian-policy/ch-archive.html#s-subsections
-|`priority`|string?|_null_|更改Debian软件包的优先级。默认情况下，它被设置为可选（`optional`）。目前公认的优先级有：必需（`required`）、重要（`important`）、标准（`standard`）、可选（`optional`）、额外（`extra`）。
-|`changelog`|string?|_null_|未压缩的变更日志文件的路径应存储在 `/usr/share/doc/package-name/changelog.gz`。详细信息请参见： https://www.debian.org/doc/debian-policy/ch-docs.html#changelog-files-and-release-notes
-|===
-
-[[rpm-config]]
-===== RpmConfig
-
-RPM包的配置。
-
-类型: `对象`
-
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`license`|string?|_null_|包的许可证标识符。如果未设置，则默认为Cargo.toml文件中的许可证。
-|`depends`|array?|_null_|您的应用程序依赖的RPM依赖项列表。
-|`provides`|array?|_null_|您的应用程序提供的RPM依赖项列表。
-|`conflicts`|array?|_null_|您的应用程序与之冲突的RPM依赖项列表。为了安装该软件包，这些依赖项必须不存在。
-|`obsoletes`|array?|_null_|您的应用程序取代的RPM依赖项列表——如果安装此软件包，列为“obsoletes已过时”的软件包（如果存在）将自动被移除。
-|`release`|string|_null_|RPM发布标签。
-|`epoch`|integer (format: `uint32`)|`0`|RPM 的 epoch。
-|`files`|object|_null_|要包含在包中的文件。
-|`desktopTemplate`|string?|_null_|自定义桌面文件 Handlebars 模板的路径。
-
-可用变量：`categories`、`comment`（可选）、`exec`、`icon` 和 `name`。
-|===
-
-[[dmg-config]]
-===== DmgConfig
-
-Apple磁盘映像（.dmg）捆绑包的配置。
-
-类型: `对象`
-
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`background`|string?|_null_|在dmg文件中用作背景的图像。接受的格式：`png`/`jpg`/`gif`。
-|`windowPosition`|<<position,Position>>|<<position,view>>|屏幕上volume窗口的位置。
-|`windowSize`|<<size,Size>>|<<size,view>>|volume窗口的大小。
-|`appPosition`|<<position,Position>>|<<position,view>>|窗口中应用程序文件的位置。
-|`applicationFolderPosition`|<<position,Position>>|<<position,view>>|窗口中应用程序文件夹的位置。
-|===
-
-[[position]]
-====== Position
-
-位置坐标结构体。
-
-类型: `对象`
-
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`x`|integer (format: `uint32`) (required)||X轴坐标
-|`y`|integer (format: `uint32`) (required)||Y轴坐标
-|===
-
-[[size]]
-====== Size
-
-窗口大小。
-
-类型: `对象`
-
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`width`|integer (format: `uint32`) (required)||窗口宽度。
-|`height`|integer (format: `uint32`) (required)||窗口高度。
+|`depends`|`array`?|_null_|您的应用程序所依赖的Debian软件包列表。
+|`files`|`object`|_null_|软件包中要包含的文件列表。
 |===
 
 [[mac-config]]
-===== MacConfig
+=== MacConfig
 
 macOS捆绑包的配置。
 
@@ -502,57 +377,52 @@ macOS捆绑包的配置。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`frameworks`|array?|_null_|指示需要与应用程序捆绑的任何macOS X框架的字符串列表。
+|`frameworks`|`array`?|_null_|指示需要与应用程序捆绑的任何macOS X框架的字符串列表。
 
 如果使用名称，则必须省略“.framework”，系统会查找标准安装位置。您还可以使用指向特定框架的路径。
-|`minimumSystemVersion`|string?|_null_|一个版本字符串，指示捆绑的应用程序支持的最低macOS X版本。默认为``10.13``。
+|`minimumSystemVersion`|`string`?|_null_|一个版本字符串，指示捆绑的应用程序支持的最低macOS X版本。默认为``10.13``。
 
 将其设置为``null``会完全删除捆绑包``Info.plist``中的``LSMinimumSystemVersion``字段和``MACOSX_DEPLOYMENT_TARGET``环境变量。
 
 空字符串被视为无效值，因此使用默认值。
-|`exceptionDomain`|string?|_null_|允许您的应用程序与外界通信。它应该是小写的，不带端口和协议的域名。
-|`license`|string?|_null_|要添加到DMG捆绑包的许可证文件的路径。
-|`signingIdentity`|string?|_null_|用于代码签名的身份。
-|`providerShortName`|string?|_null_|公证的提供商简称。
-|`entitlements`|string?|_null_|权利文件的路径。
+|`exceptionDomain`|`string`?|_null_|允许您的应用程序与外界通信。它应该是小写的，不带端口和协议的域名。
+|`license`|`string`?|_null_|要添加到DMG捆绑包的许可证文件的路径。
+|`signingIdentity`|`string`?|_null_|用于代码签名的身份。
+|`providerShortName`|`string`?|_null_|公证的提供商简称。
+|`entitlements`|`string`?|_null_|权利文件的路径。
 |===
 
 [[windows-config]]
-===== WindowsConfig
+=== WindowsConfig
 
-Windows打包器配置。
+Windows打包配置。
 
 类型: `对象`
 
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`digestAlgorithm`|string?|_null_|指定用于创建文件签名的文件摘要算法。代码签名时必需。建议使用SHA-256。
-|`certificateThumbprint`|string?|_null_|指定签名证书的SHA1哈希。
-|`timestampUrl`|string?|_null_|时间戳使用的服务器。
-|`tsp`|boolean|`false`|是否使用时间戳协议（TSP，即RFC 3161）作为时间戳服务器。您的代码签名提供商可能使用TSP时间戳服务器，例如SSL.com。如果是这样，请将其设置为true以启用TSP。
-|`webviewInstallMode`|<<webview-install-mode,WebviewInstallMode>>|<<webview-install-mode,view>>|Webview2运行时的安装模式。
-|`webviewFixedRuntimePath`|string?|_null_|要使用的Webview固定运行时的路径。如果设置，将覆盖 `webview_install_mode`。
+|`digestAlgorithm`|`string`?|_null_|指定用于创建文件签名的文件摘要算法。代码签名时必需。建议使用SHA-256。
+|`certificateThumbprint`|`string`?|_null_|指定签名证书的SHA1哈希。
+|`timestampUrl`|`string`?|_null_|时间戳使用的服务器。
+|`tsp`|`boolean`|`false`|是否使用时间戳协议（TSP，即RFC 3161）作为时间戳服务器。您的代码签名提供商可能使用TSP时间戳服务器，例如SSL.com。如果是这样，请将其设置为true以启用TSP。
+|`webviewInstallMode`|`<<webview-install-mode,WebviewInstallMode>>`|<<webview-install-mode,view>>|Webview2运行时的安装模式。
+|`webviewFixedRuntimePath`|`string`?|_null_|要使用的Webview固定运行时的路径。如果设置，将覆盖 `webview_install_mode`。
 
 将在v2中删除，建议使用 `webview_install_mode` 选项。
 
-固定版本可以从 link:https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section[官方网站] 下载。必须将 `.cab` 文件解压到一个文件夹中，并在此字段中定义该文件夹路径。
-|`allowDowngrades`|boolean|`true`|验证第二次应用程序安装，如果设置为 `false`，则阻止用户安装旧版本。
+固定版本可以从 link:{webview2_url}[官方网站] 下载。必须将 `.cab` 文件解压到一个文件夹中，并在此字段中定义该文件夹路径。
+|`allowDowngrades`|`boolean`|`true`|验证第二次应用程序安装，如果设置为 `false`，则阻止用户安装旧版本。
 
 例如，如果已安装 `1.2.1` 版本，则用户将无法安装 `1.2.0` 或 `1.1.5` 版本的应用程序。
 
 此标志的默认值为 `true`。
-|`wix`|<<wix-config,WixConfig>>?|<<wix-config,view>>|使用WiX生成的MSI的配置。
-|`nsis`|<<nsis-config,NsisConfig>>?|<<nsis-config,view>>|使用NSIS生成的安装程序的配置。
-|`signCommand`|string?|_null_|指定一个自定义命令来签名二进制文件。该命令需要包含一个 `%1`，这是二进制文件路径的占位符，我们将在调用命令之前检测并替换。
-
-示例： `text sign-cli --arg1 --arg2 %1`
-
-默认情况下，我们使用 `signtool.exe`，它只能在Windows上找到，因此如果您在其他平台上并且想要交叉编译和签名，则需要使用其他工具，如 `osslsigncode`。
+|`wix`|`<<wix-config,WixConfig>>`?|<<wix-config,view>>|使用WiX生成的MSI的配置。
+|`nsis`|`<<nsis-config,NsisConfig>>`?|<<nsis-config,view>>|使用NSIS生成的安装程序的配置。
 |===
 
 [[webview-install-mode]]
-====== WebviewInstallMode
+==== WebviewInstallMode
 
 Webview2运行时的安装模式。请注意，对于更新程序捆绑包，使用 `DownloadBootstrapper`。
 
@@ -561,53 +431,13 @@ Webview2运行时的安装模式。请注意，对于更新程序捆绑包，使
 可以是以下类型中的任何**一个**：
 
 - `{"type":"skip"}`: 不要将Webview2作为Windows安装程序的一部分进行安装。
-
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`type`|"skip" (required)||undefined
-|===
-
 - `{ "type": "downloadBootstrapper", "silent": boolean }`: 下载引导程序并运行它。需要互联网连接。结果是安装程序的大小较小，但不建议在Windows 7上使用。
-
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`type`|"downloadBootstrapper" (required)||undefined
-|`silent`|boolean|`true`|指示安装程序以静默模式运行引导程序。默认为 `true`。
-|===
-
 - `{ "type": "embedBootstrapper", "silent": boolean }`: 嵌入引导程序并运行它。需要互联网连接。会增加约1.8MB的安装程序大小，但在Windows 7上提供更好的支持。
-
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`type`|"embedBootstrapper" (required)||undefined
-|`silent`|boolean|`true`|指示安装程序以静默模式运行引导程序。默认为 `true`。
-|===
-
 - `{ "type": "offlineInstaller", "silent": boolean }`: 嵌入离线安装程序并运行它。不需要互联网连接。会增加约127MB的安装程序大小。
-
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`type`|"offlineInstaller" (required)||undefined
-|`silent`|boolean|`true`|指示安装程序以静默模式运行安装程序。默认为 `true`。
-|===
-
 - `{ "type": "fixedRuntime", "path": string }`: 嵌入固定的Webview2版本并在运行时使用。会增加约180MB的安装程序大小。
 
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`type`|"fixedRuntime" (required)||undefined
-|`path`|string(required)||要使用的固定运行时的路径。
-
-固定版本可以从 link:https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section[官方网站] 下载。必须将 `.cab` 文件解压到一个文件夹中，并在此字段中定义该文件夹路径。
-|===
-
 [[wix-config]]
-====== WixConfig
+=== WixConfig
 
 使用WiX的MSI捆绑包配置。
 
@@ -616,29 +446,29 @@ Webview2运行时的安装模式。请注意，对于更新程序捆绑包，使
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`language`|<<wix-language,WixLanguage>>|<<wix-language,WixLanguage>>|要构建的安装程序语言。请参见  https://docs.microsoft.com/en-us/windows/win32/msi/localizing-the-error-and-actiontext-tables。
-|`template`|string?|_null_|自定义 .wxs 模板以供使用。
-|`fragmentPaths`|string[]|[]|使用的包含 WiX 片段的 .wxs 文件路径列表。
-|`componentGroupRefs`|string[]|[]|要从片段中引用的 ComponentGroup 元素 ID。
-|`componentRefs`|string[]|[]|要从片段中引用的 Component 元素 ID。
-|`featureGroupRefs`|string[]|[]|要从片段中引用的 FeatureGroup 元素 ID。
-|`featureRefs`|string[]|[]|要从片段中引用的 Feature 元素 ID。
-|`mergeRefs`|string[]|[]|要从片段中引用的 Merge 元素 ID。
-|`skipWebviewInstall`|boolean|`false`|在应用安装后禁用 Webview2 运行时安装。
+|`language`|`<<wix-language,WixLanguage>>`|<<wix-language,WixLanguage>>|要构建的安装程序语言。请参见  https://docs.microsoft.com/en-us/windows/win32/msi/localizing-the-error-and-actiontext-tables。
+|`template`|`string`?|_null_|自定义 .wxs 模板以供使用。
+|`fragmentPaths`|`string[]`|[]|使用的包含 WiX 片段的 .wxs 文件路径列表。
+|`componentGroupRefs`|`string[]`|[]|要从片段中引用的 ComponentGroup 元素 ID。
+|`componentRefs`|`string[]`|[]|要从片段中引用的 Component 元素 ID。
+|`featureGroupRefs`|`string[]`|[]|要从片段中引用的 FeatureGroup 元素 ID。
+|`featureRefs`|`string[]`|[]|要从片段中引用的 Feature 元素 ID。
+|`mergeRefs`|`string[]`|[]|要从片段中引用的 Merge 元素 ID。
+|`skipWebviewInstall`|`boolean`|`false`|在应用安装后禁用 Webview2 运行时安装。
 
 将在 v2 中移除，建议使用 [`WindowsConfig::webview_install_mode`] 选项。
-|`license`|string?|_null_|要在安装程序中呈现的许可证文件路径。
+|`license`|`string`?|_null_|要在安装程序中呈现的许可证文件路径。
 
 必须是 RTF 文件，如果提供了其他扩展名，我们会将其转换为 RTF 格式。
-|`enableElevatedUpdateTask`|boolean|`false`|在 Windows 任务计划程序中创建一个提升权限的更新任务。
-|`bannerPath`|string?|_null_|用作安装用户界面横幅的位图文件路径。此位图将出现在安装程序的所有页面顶部，但不包括第一页。
+|`enableElevatedUpdateTask`|`boolean`|`false`|在 Windows 任务计划程序中创建一个提升权限的更新任务。
+|`bannerPath`|`string`?|_null_|用作安装用户界面横幅的位图文件路径。此位图将出现在安装程序的所有页面顶部，但不包括第一页。
 
 所需的尺寸为 493 像素 × 58 像素。
-|`dialogImagePath`|string?|_null_|用作安装用户界面对话框的位图文件路径。它用于欢迎和完成对话框。所需的尺寸为 493 像素 × 312 像素。
+|`dialogImagePath`|`string`?|_null_|用作安装用户界面对话框的位图文件路径。它用于欢迎和完成对话框。所需的尺寸为 493 像素 × 312 像素。
 |===
 
 [[wix-language]]
-====== WixLanguage
+==== WixLanguage
 
 使用 WiX 构建的语言。
 
@@ -646,10 +476,10 @@ Webview2运行时的安装模式。请注意，对于更新程序捆绑包，使
 
 - `string`: 单一语言构建，无需配置。
 - `string[]`: 语言列表构建，无需配置。
-- `<<wix-language-config,WixLanguageConfig>>`: 语言及其配置的映射。
+- `object`: 语言及其配置的映射。
 
 [[wix-language-config]]
-====== WixLanguageConfig
+=== WixLanguageConfig
 
 WiX 构建目标语言的配置。
 
@@ -658,11 +488,11 @@ WiX 构建目标语言的配置。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`localePath`|string?|_null_|区域设置 (.wxl) 文件的路径。请参见 https://wixtoolset.org/documentation/manual/v3/howtos/ui_and_localization/build_a_localized_version.html。
+|`localePath`|`string`?|_null_|区域设置 (`.wxl`) 文件的路径。请参见 https://wixtoolset.org/documentation/manual/v3/howtos/ui_and_localization/build_a_localized_version.html。
 |===
 
 [[nsis-config]]
-====== NsisConfig
+=== NsisConfig
 
 使用 NSIS 的安装程序捆绑包配置。
 
@@ -671,75 +501,52 @@ WiX 构建目标语言的配置。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`template`|string?|_null_|要使用的自定义 .nsi 模板。
-|`license`|string?|_null_|要在安装程序中呈现的许可证文件路径。
-|`headerImage`|string?|_null_|要在安装程序页面头部显示的位图文件路径。
+|`license`|`string`?|_null_|要在安装程序中呈现的许可证文件路径。
+|`headerImage`|`string`?|_null_|要在安装程序页面头部显示的位图文件路径。
 
 推荐的尺寸为 150 像素 × 57 像素。
-|`sidebarImage`|string?|_null_|欢迎页面和完成页面使用的位图文件路径。
+|`sidebarImage`|`string`?|_null_|欢迎页面和完成页面使用的位图文件路径。
 
 推荐尺寸为 164 像素 × 314 像素。
-|`installerIcon`|string?|_null_|用作安装程序图标的图标文件路径。
-|`installMode`|<<nsisinstaller-mode,NSISInstallerMode>>|<<nsisinstaller-mode,view>>|安装是为所有用户还是仅为当前用户。
-|`languages`|array?|_null_|安装程序语言列表。默认情况下使用操作系统语言。如果操作系统语言不在语言列表中，将使用第一个语言。要允许用户选择语言，请将 `display_language_selector` 设置为 `true`。
+|`installerIcon`|`string`?|_null_|用作安装程序图标的图标文件路径。
+|`installMode`|`<<nsisinstaller-mode,NSISInstallerMode>>`|<<nsisinstaller-mode,view>>|安装是为所有用户还是仅为当前用户。
+|`languages`|`array`?|_null_|安装程序语言列表。默认情况下使用操作系统语言。如果操作系统语言不在语言列表中，将使用第一个语言。要允许用户选择语言，请将 `display_language_selector` 设置为 `true`。
 
 请参见 https://github.com/kichik/nsis/tree/9465c08046f00ccb6eda985abbdbf52c275c6c4d/Contrib/Language%20files 获取完整的语言列表。
-|`customLanguageFiles`|object?|_null_|一个键值对，其中键是语言，值是自定义 `.nsh` 文件的路径，该文件包含 Tauri 的自定义消息的翻译文本。
-
-请参见 https://github.com/tauri-apps/tauri/blob/dev/tooling/bundler/src/bundle/windows/templates/nsis-languages/English.nsh 了解 `.nsh` 文件的示例。
-
-注意：键必须是有效的 NSIS 语言，并且必须添加到 [`NsisConfig`] 的 languages 数组中。
-|`displayLanguageSelector`|boolean|`false`|是否在安装程序和卸载程序窗口呈现之前显示语言选择对话框。默认情况下，选择操作系统语言，如果操作系统语言不在语言数组中，则回退到 `languages` 数组中的第一个语言。
-|`compression`|<<nsis-compression,NsisCompression>>?|<<nsis-compression,view>>|设置用于压缩安装程序中文件的压缩算法。
-
-请参见 https://nsis.sourceforge.io/Reference/SetCompressor
+|`displayLanguageSelector`|`boolean`|`false`|是否在安装程序和卸载程序窗口呈现之前显示语言选择对话框。默认情况下，选择操作系统语言，如果操作系统语言不在语言数组中，则回退到 `languages` 数组中的第一个语言。
 |===
 
 [[nsisinstaller-mode]]
-====== NSISInstallerMode
+==== NSISInstallerMode
 
 NSIS 安装程序的安装模式。
 
 可以是以下任意**一种**类型：
 
-- "currentUser": 安装程序的默认模式。
+* "currentUser": 安装程序的默认模式。 +
++
+默认将应用程序安装在不需要管理员访问权限的目录中。
 
-  默认将应用程序安装在不需要管理员访问权限的目录中。
+安装程序元数据将保存在 `HKCU` 注册表路径下。
 
-  安装程序元数据将保存在 `HKCU` 注册表路径下。
-
-- "perMachine": 默认将应用程序安装在 `Program Files` 文件夹中，安装需要管理员访问权限。
-
-  安装程序元数据将保存在 `HKLM` 注册表路径下。
-
-- "both": 结合了两种模式，允许用户在安装时选择是为当前用户还是为所有用户安装。请注意，即使用户仅希望为当前用户安装，此模式也需要管理员访问权限。
-
-  安装程序元数据将根据用户的选择保存在 `HKLM` 或 `HKCU` 注册表路径下。
-
-[[nsis-compression]]
-====== NsisCompression
-
-NSIS 安装程序中使用的压缩算法。
-
-请参见 https://nsis.sourceforge.io/Reference/SetCompressor
-
-可以是以下任意一种类型：
-
-- "zlib": ZLIB 使用 deflate 算法，是一种快速且简单的方法。使用默认的压缩级别时，它大约使用 300 KB 的内存。
-- "bzip2": BZIP2 通常提供比 ZLIB 更好的压缩比，但稍慢且使用更多内存。使用默认的压缩级别时，它大约使用 4 MB 的内存。
-- "lzma": LZMA（默认）是一种新的压缩方法，提供非常好的压缩比。解压速度较高（在 2 GHz CPU 上为 10-20 MB/s），但压缩速度较慢。解压时使用的内存大小为字典大小加上几 KB，默认是 8 MB。
+* "perMachine": 默认将应用程序安装在 `Program Files` 文件夹中，安装需要管理员访问权限。 +
++
+安装程序元数据将保存在 `HKLM` 注册表路径下。
+* "both": 结合了两种模式，允许用户在安装时选择是为当前用户还是为所有用户安装。请注意，即使用户仅希望为当前用户安装，此模式也需要管理员访问权限。 +
++
+安装程序元数据将根据用户的选择保存在 `HKLM` 或 `HKCU` 注册表路径下。
 
 [[allowlist-config]]
-==== AllowlistConfig
+=== AllowlistConfig
 
 允许列表配置。允许列表是 https://docs.rs/tauri/latest/tauri/#cargo-allowlist-features[Cargo 允许列表功能] 的翻译。
 
-注意事项：
+==== 注意事项
 
 - 没有自己的允许列表选项的端点默认启用。
 - 只有“选择加入”，没有“选择退出”。将选项设置为 `false` 不会有任何效果。
 
-示例：
+==== 示例
 
 - `<<allowlist-config,"app-all": true>>` 将使 xref:app.adoc#hide[hide] 端点可用，无论允许列表中的 `hide` 设置为 `false` 还是 `true`。
 
@@ -748,24 +555,24 @@ NSIS 安装程序中使用的压缩算法。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`all`|boolean|`false`|使用此标志以启用所有 API 功能。
-|`fs`|<<fs-allowlist-config,FsAllowlistConfig>>|<<fs-allowlist-config,view>>|文件系统 API 允许列表。
-|`window`|<<window-allowlist-config,WindowAllowlistConfig>>|<<window-allowlist-config,view>>|窗口 API 允许列表。
-|`shell`|<<shell-allowlist-config,ShellAllowlistConfig>>|<<shell-allowlist-config,view>>|Shell API 允许列表。
-|`dialog`|<<dialog-allowlist-config,DialogAllowlistConfig>>|<<dialog-allowlist-config,view>>|对话框 API 允许列表。
-|`http`|<<http-allowlist-config,HttpAllowlistConfig>>|<<http-allowlist-config,view>>|HTTP API 允许列表。
-|`notification`|<<notification-allowlist-config,NotificationAllowlistConfig>>|<<notification-allowlist-config,view>>|通知 API 允许列表。
-|`globalShortcut`|<<global-shortcut-allowlist-config,GlobalShortcutAllowlistConfig>>|<<global-shortcut-allowlist-config,view>>|全局快捷键 API 允许列表。
-|`os`|<<os-allowlist-config,OsAllowlistConfig>>|<<os-allowlist-config,view>>|操作系统允许列表。
-|`path`|<<path-allowlist-config,PathAllowlistConfig>>|<<path-allowlist-config,view>>|路径 API 允许列表。
-|`protocol`|<<protocol-allowlist-config,ProtocolAllowlistConfig>>|<<protocol-allowlist-config,view>>|自定义协议允许列表。
-|`process`|<<process-allowlist-config,ProcessAllowlistConfig>>|<<process-allowlist-config,view>>|进程 API 允许列表。
-|`clipboard`|<<clipboard-allowlist-config,ClipboardAllowlistConfig>>|<<clipboard-allowlist-config,view>>|剪贴板 API 允许列表。
-|`app`|<<app-allowlist-config,AppAllowlistConfig>>|<<app-allowlist-config,view>>|应用程序 API 允许列表。
+|`all`|`boolean`|`false`|使用此标志以启用所有 API 功能。
+|`fs`|`<<fs-allowlist-config,FsAllowlistConfig>>`|<<fs-allowlist-config,view>>|文件系统 API 允许列表。
+|`window`|`<<window-allowlist-config,WindowAllowlistConfig>>`|<<window-allowlist-config,view>>|窗口 API 允许列表。
+|`shell`|`<<shell-allowlist-config,ShellAllowlistConfig>>`|<<shell-allowlist-config,view>>|Shell API 允许列表。
+|`dialog`|`<<dialog-allowlist-config,DialogAllowlistConfig>>`|<<dialog-allowlist-config,view>>|对话框 API 允许列表。
+|`http`|`<<http-allowlist-config,HttpAllowlistConfig>>`|<<http-allowlist-config,view>>|HTTP API 允许列表。
+|`notification`|`<<notification-allowlist-config,NotificationAllowlistConfig>>`|<<notification-allowlist-config,view>>|通知 API 允许列表。
+|`globalShortcut`|`<<global-shortcut-allowlist-config,GlobalShortcutAllowlistConfig>>`|<<global-shortcut-allowlist-config,view>>|全局快捷键 API 允许列表。
+|`os`|`<<os-allowlist-config,OsAllowlistConfig>>`|<<os-allowlist-config,view>>|操作系统允许列表。
+|`path`|`<<path-allowlist-config,PathAllowlistConfig>>`|<<path-allowlist-config,view>>|路径 API 允许列表。
+|`protocol`|`<<protocol-allowlist-config,ProtocolAllowlistConfig>>`|<<protocol-allowlist-config,view>>|自定义协议允许列表。
+|`process`|`<<process-allowlist-config,ProcessAllowlistConfig>>`|<<process-allowlist-config,view>>|进程 API 允许列表。
+|`clipboard`|`<<clipboard-allowlist-config,ClipboardAllowlistConfig>>`|<<clipboard-allowlist-config,view>>|剪贴板 API 允许列表。
+|`app`|`<<app-allowlist-config,AppAllowlistConfig>>`|<<app-allowlist-config,view>>|应用程序 API 允许列表。
 |===
 
 [[fs-allowlist-config]]
-===== FsAllowlistConfig
+=== FsAllowlistConfig
 
 用于文件系统API的允许列表。
 
@@ -775,20 +582,20 @@ NSIS 安装程序中使用的压缩算法。
 |===
 |名称|类型|默认|描述
 |`scope`|`<<fs-allowlist-scope,FsAllowlistScope>>`|[]|文件系统 API 的访问范围。
-|`all`|boolean|`false`|使用此标志来启用所有文件系统 API 功能。
-|`readFile`|boolean|`false`|从本地文件系统读取文件。
-|`writeFile`|boolean|`false`|将文件写入本地文件系统。
-|`readDir`|boolean|`false`|从本地文件系统读取目录。
-|`copyFile`|boolean|`false`|从本地文件系统复制文件。
-|`createDir`|boolean|`false`|创建本地文件系统的目录。
-|`removeDir`|boolean|`false`|从本地文件系统删除目录。
-|`removeFile`|boolean|`false`|从本地文件系统删除文件。
-|`renameFile`|boolean|`false`|从本地文件系统重命名文件。
-|`exists`|boolean|`false`|检查本地文件系统上路径是否存在。
+|`all`|`boolean`|`false`|使用此标志来启用所有文件系统 API 功能。
+|`readFile`|`boolean`|`false`|从本地文件系统读取文件。
+|`writeFile`|`boolean`|`false`|将文件写入本地文件系统。
+|`readDir`|`boolean`|`false`|从本地文件系统读取目录。
+|`copyFile`|`boolean`|`false`|从本地文件系统复制文件。
+|`createDir`|`boolean`|`false`|创建本地文件系统的目录。
+|`removeDir`|`boolean`|`false`|从本地文件系统删除目录。
+|`removeFile`|`boolean`|`false`|从本地文件系统删除文件。
+|`renameFile`|`boolean`|`false`|从本地文件系统重命名文件。
+|`exists`|`boolean`|`false`|检查本地文件系统上路径是否存在。
 |===
 
 [[fs-allowlist-scope]]
-====== FsAllowlistScope
+==== FsAllowlistScope
 
 文件系统范围定义。它是一组限制webview API访问的全局模式列表。
 
@@ -796,23 +603,11 @@ NSIS 安装程序中使用的压缩算法。
 
 可以是以下任何类型：
 
-- `string[]`: 此范围允许的路径列表。
-- `{ "allow": string[], "deny": string[], "requireLiteralLeadingDot": boolean? }`: 完整的范围配置。
-
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`allow`|string[]|[]|此范围允许的路径列表。
-|`deny`|string[]|[]|此范围不允许的路径列表。这优先于 `Scope::allow` 列表。
-|`requireLiteralLeadingDot`|boolean|_null_|此范围不允许的路径列表。这将优先于允许列表。
-
-是否要求路径中以点 `.` 开头的组件必须在模式中明确出现该点；`\*`、`?`、`\*\*` 或 `[...]` 不会匹配。这对于Unix系统上的传统隐藏文件非常有用，可能希望在列出文件时跳过它们。
-
-在Unix系统上默认为 `true`，在Windows系统上默认为 `false`。
-|===
+* `string[]`: 此范围允许的路径列表。
+* `object`: 完整的范围配置。
 
 [[window-allowlist-config]]
-===== WindowAllowlistConfig
+=== WindowAllowlistConfig
 
 窗口 API 的允许列表。
 
@@ -821,44 +616,41 @@ NSIS 安装程序中使用的压缩算法。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`all`|boolean|`false`|启用此标志以启用所有窗口 API 功能。
-|`create`|boolean|`false`|允许动态窗口创建。
-|`center`|boolean|`false`|允许窗口居中。
-|`requestUserAttention`|boolean|`false`|允许请求窗口上用户的关注。
-|`setResizable`|boolean|`false`|允许设置窗口的可调整大小标志。
-|`setMaximizable`|boolean|`false`|允许设置窗口的原生最大化按钮是否启用。
-|`setMinimizable`|boolean|`false`|允许设置窗口的原生最小化按钮是否启用。
-|`setClosable`|boolean|`false`|允许设置窗口的原生关闭按钮是否启用。
-|`setTitle`|boolean|`false`|允许更改窗口标题。
-|`maximize`|boolean|`false`|允许最大化窗口。
-|`unmaximize`|boolean|`false`|允许还原最大化的窗口。
-|`minimize`|boolean|`false`|允许最小化窗口。
-|`unminimize`|boolean|`false`|允许还原最小化的窗口。
-|`show`|boolean|`false`|允许显示窗口。
-|`hide`|boolean|`false`|允许隐藏窗口。
-|`close`|boolean|`false`|允许关闭窗口。
-|`setDecorations`|boolean|`false`|允许设置窗口的装饰标志。
-|`setAlwaysOnTop`|boolean|`false`|允许设置窗口的“always_on_top”标志。
-|`setContentProtected`|boolean|`false`|允许防止窗口内容被其他应用程序捕获。
-|`setSize`|boolean|`false`|允许设置窗口大小。
-|`setMinSize`|boolean|`false`|允许设置窗口的最小尺寸。
-|`setMaxSize`|boolean|`false`|允许设置窗口的最大尺寸。
-|`setPosition`|boolean|`false`|允许更改窗口的位置。
-|`setFullscreen`|boolean|`false`|允许设置窗口的全屏标志。
-|`setFocus`|boolean|`false`|允许使窗口获得焦点。
-|`setIcon`|boolean|`false`|允许更改窗口图标。
-|`setSkipTaskbar`|boolean|`false`|允许设置窗口的“跳过任务栏”标志。
-|`setCursorGrab`|boolean|`false`|允许捕获光标。
-|`setCursorVisible`|boolean|`false`|允许设置光标的可见性。
-|`setCursorIcon`|boolean|`false`|允许更改光标图标。
-|`setCursorPosition`|boolean|`false`|允许设置光标位置。
-|`setIgnoreCursorEvents`|boolean|`false`|允许忽略光标事件。
-|`startDragging`|boolean|`false`|允许在窗口上开始拖动操作。
-|`print`|boolean|`false`|允许打开系统对话框以打印窗口内容。
+|`all`|`boolean`|`false`|启用此标志以启用所有窗口 API 功能。
+|`create`|`boolean`|`false`|允许动态窗口创建。
+|`center`|`boolean`|`false`|允许窗口居中。
+|`requestUserAttention`|`boolean`|`false`|允许请求窗口上用户的关注。
+|`setResizable`|`boolean`|`false`|允许设置窗口的可调整大小标志。
+|`setTitle`|`boolean`|`false`|允许更改窗口标题。
+|`maximize`|`boolean`|`false`|允许最大化窗口。
+|`unmaximize`|`boolean`|`false`|允许还原最大化的窗口。
+|`minimize`|`boolean`|`false`|允许最小化窗口。
+|`unminimize`|`boolean`|`false`|允许还原最小化的窗口。
+|`show`|`boolean`|`false`|允许显示窗口。
+|`hide`|`boolean`|`false`|允许隐藏窗口。
+|`close`|`boolean`|`false`|允许关闭窗口。
+|`setDecorations`|`boolean`|`false`|允许设置窗口的装饰标志。
+|`setAlwaysOnTop`|`boolean`|`false`|允许设置窗口的“always_on_top”标志。
+|`setContentProtected`|`boolean`|`false`|允许防止窗口内容被其他应用程序捕获。
+|`setSize`|`boolean`|`false`|允许设置窗口大小。
+|`setMinSize`|`boolean`|`false`|允许设置窗口的最小尺寸。
+|`setMaxSize`|`boolean`|`false`|允许设置窗口的最大尺寸。
+|`setPosition`|`boolean`|`false`|允许更改窗口的位置。
+|`setFullscreen`|`boolean`|`false`|允许设置窗口的全屏标志。
+|`setFocus`|`boolean`|`false`|允许使窗口获得焦点。
+|`setIcon`|`boolean`|`false`|允许更改窗口图标。
+|`setSkipTaskbar`|`boolean`|`false`|允许设置窗口的“跳过任务栏”标志。
+|`setCursorGrab`|`boolean`|`false`|允许捕获光标。
+|`setCursorVisible`|`boolean`|`false`|允许设置光标的可见性。
+|`setCursorIcon`|`boolean`|`false`|允许更改光标图标。
+|`setCursorPosition`|`boolean`|`false`|允许设置光标位置。
+|`setIgnoreCursorEvents`|`boolean`|`false`|允许忽略光标事件。
+|`startDragging`|`boolean`|`false`|允许在窗口上开始拖动操作。
+|`print`|`boolean`|`false`|允许打开系统对话框以打印窗口内容。
 |===
 
 [[shell-allowlist-config]]
-===== ShellAllowlistConfig
+=== ShellAllowlistConfig
 
 shell API 的白名单。
 
@@ -867,38 +659,38 @@ shell API 的白名单。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`scope`|<<shell-allowlist-scope,ShellAllowlistScope>>|[]|二进制执行 API 的访问范围。Sidecars 会自动启用。
-|`all`|boolean|`false`|使用此标志以启用所有 shell API 功能。
-|`execute`|boolean|`false`|启用二进制执行。
-|`sidecar`|boolean|`false`|启用 sidecar 执行，允许 JavaScript 层启动一个 sidecar 命令，这是一个与应用程序一起提供的可执行文件。有关更多信息，请参见 https://tauri.app/v1/guides/building/sidecar。
-|`open`|<<shell-allowlist-open,ShellAllowlistOpen>>|`false`|使用用户的默认应用程序打开 URL。
+|`scope`|`<<shell-allowlist-scope,ShellAllowlistScope>>`|[]|二进制执行 API 的访问范围。Sidecars 会自动启用。
+|`all`|`boolean`|`false`|使用此标志以启用所有 shell API 功能。
+|`execute`|`boolean`|`false`|启用二进制执行。
+|`sidecar`|`boolean`|`false`|启用 sidecar 执行，允许 JavaScript 层启动一个 sidecar 命令，这是一个与应用程序一起提供的可执行文件。有关更多信息，请参见 https://tauri.app/v1/guides/building/sidecar。
+|`open`|`<<shell-allowlist-open,ShellAllowlistOpen>>`|`false`|使用用户的默认应用程序打开 URL。
 |===
 
 [[shell-allowlist-scope]]
-====== ShellAllowlistScope
+==== ShellAllowlistScope
 
 Shell 范围定义。这是一个命令名称列表及其相关的命令行参数，用于限制从 webview 访问 API。
 
-类型: `<<shell-allowed-command,ShellAllowedCommand>>`
+类型: `<<shell-allowed-command,ShellAllowedCommand[]>>`
 
 [[shell-allowed-command]]
-====== ShellAllowedCommand
+==== ShellAllowedCommand
 
 类型: `对象`
 
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`name`|string(required)||此允许的 shell 命令配置的名称。
+|`name`|`string`(required)||此允许的 shell 命令配置的名称。
 
 该名称将在 webview API 中用于调用此命令及任何指定的参数。
-|`cmd`|string|_null_|命令名称。它可以以解析为系统基本目录的变量开头。变量包括：`$AUDIO`, `$CACHE`, `$CONFIG`, `$DATA`, `$LOCALDATA`, `$DESKTOP`, `$DOCUMENT`, `$DOWNLOAD`, `$EXE`, `$FONT`, `$HOME`, `$PICTURE`, `$PUBLIC`, `$RUNTIME`, `$TEMPLATE`, `$VIDEO`, `$RESOURCE`, `$APP`, `$LOG`, `$TEMP`, `$APPCONFIG`, `$APPDATA`, `$APPLOCALDATA`, `$APPCACHE`, `$APPLOG`
-|`args`|<<shell-allowed-args,ShellAllowedArgs>>|`false`|允许的命令执行参数。
-|`sidecar`|boolean|`false`|如果此命令是一个 sidecar 命令。
+|`cmd`|`string`|_null_|命令名称。它可以以解析为系统基本目录的变量开头。变量包括：`$AUDIO`, `$CACHE`, `$CONFIG`, `$DATA`, `$LOCALDATA`, `$DESKTOP`, `$DOCUMENT`, `$DOWNLOAD`, `$EXE`, `$FONT`, `$HOME`, `$PICTURE`, `$PUBLIC`, `$RUNTIME`, `$TEMPLATE`, `$VIDEO`, `$RESOURCE`, `$APP`, `$LOG`, `$TEMP`, `$APPCONFIG`, `$APPDATA`, `$APPLOCALDATA`, `$APPCACHE`, `$APPLOG`
+|`args`|`<<shell-allowed-args,ShellAllowedArgs>>`|`false`|允许的命令执行参数。
+|`sidecar`|`boolean`|`false`|如果此命令是一个 sidecar 命令。
 |===
 
 [[shell-allowed-args]]
-====== ShellAllowedArgs
+==== ShellAllowedArgs
 
 由 webview API 允许执行的一组命令参数。
 
@@ -906,44 +698,35 @@ Shell 范围定义。这是一个命令名称列表及其相关的命令行参�
 
 可以是以下任意类型：
 
-- `boolean`：使用简单的布尔值允许或禁用所有参数传递给此命令配置。
-- `<<shell-allowed-arg,ShellAllowedArg>>`：特定的一组 [`ShellAllowedArg`]，这些参数在命令配置中是有效的。
+* `boolean`：使用简单的布尔值允许或禁用所有参数传递给此命令配置。
+* `<<shell-allowed-arg,ShellAllowedArg[]>>`：特定的一组 [`ShellAllowedArg`]，这些参数在命令配置中是有效的。
 
 [[shell-allowed-arg]]
-====== ShellAllowedArg
+==== ShellAllowedArg
 
 由 webview API 允许执行的命令参数。
 
 可以是以下任意类型：
 
-- `string`：一个非可配置的参数，以指定的顺序传递给命令。
-- `{ "validator": string }`：从 webview API 调用命令时设置的变量。
-
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`validator`|string(required)||https://docs.rs/regex/latest/regex/#syntax[正则表达式] 验证器，用于要求传递的值符合预期的输入。
-
-这将要求传递给此变量的参数值必须匹配 `validator` 的正则表达式，才能执行。
-|===
+* `string`：一个非可配置的参数，以指定的顺序传递给命令。
+* `object`：从 webview API 调用命令时设置的变量。
 
 [[shell-allowlist-open]]
-====== ShellAllowlistOpen
+==== ShellAllowlistOpen
 
 定义 `shell > open` API 范围。
 
 可以是以下任意类型：
 
-- `boolean`：是否应启用 shell open API。
-
+* `boolean`：是否应启用 shell open API。 +
++
 如果启用，将使用默认的验证正则表达式 (`^((mailto:\w+)|(tel:\w+)|(https?://\w+)).+`)。
-
-- `string`：启用 shell open API，并使用一个自定义正则表达式来验证打开的路径。
-
+* `string`：启用 shell open API，并使用一个自定义正则表达式来验证打开的路径。 +
++
 如果使用自定义正则表达式来支持非 http(s) 协议，应小心避免通过验证的值包含类似标志的字符串，例如 `--enable-debugging`, `-i`, `/R`。
 
 [[dialog-allowlist-config]]
-===== DialogAllowlistConfig
+=== DialogAllowlistConfig
 
 对话框 API 的允许列表。
 
@@ -952,16 +735,16 @@ Shell 范围定义。这是一个命令名称列表及其相关的命令行参�
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`all`|boolean|`false`|使用此标志以启用所有对话框 API 功能。
-|`open`|boolean|`false`|允许 API 打开对话窗口以选择文件。
-|`save`|boolean|`false`|允许 API 打开对话窗口以选择文件保存位置。
-|`message`|boolean|`false`|允许 API 显示消息对话窗口。
-|`ask`|boolean|`false`|允许 API 显示带有“是”/“否”按钮的对话窗口。
-|`confirm`|boolean|`false`|允许 API 显示带有“确定”/“取消”按钮的对话窗口。
+|`all`|`boolean`|`false`|使用此标志以启用所有对话框 API 功能。
+|`open`|`boolean`|`false`|允许 API 打开对话窗口以选择文件。
+|`save`|`boolean`|`false`|允许 API 打开对话窗口以选择文件保存位置。
+|`message`|`boolean`|`false`|允许 API 显示消息对话窗口。
+|`ask`|`boolean`|`false`|允许 API 显示带有“是”/“否”按钮的对话窗口。
+|`confirm`|`boolean`|`false`|允许 API 显示带有“确定”/“取消”按钮的对话窗口。
 |===
 
 [[http-allowlist-config]]
-===== HttpAllowlistConfig
+=== HttpAllowlistConfig
 
 HTTP API 的允许列表。
 
@@ -970,26 +753,26 @@ HTTP API 的允许列表。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`scope`|<<http-allowlist-scope,HttpAllowlistScope>>|[]|HTTP API 的访问范围。
-|`all`|boolean|`false`|使用此标志以启用所有 HTTP API 功能。
-|`request`|boolean|`false`|允许发起 HTTP 请求。
+|`scope`|`<<http-allowlist-scope,HttpAllowlistScope>>`|[]|HTTP API 的访问范围。
+|`all`|`boolean`|`false`|使用此标志以启用所有 HTTP API 功能。
+|`request`|`boolean`|`false`|允许发起 HTTP 请求。
 |===
 
 [[http-allowlist-scope]]
-====== HttpAllowlistScope
+==== HttpAllowlistScope
 
 HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时可以访问这些 URL。范围 URL 使用 glob 模式与请求 URL 进行匹配。
 
 示例：
 
-- "https://*": 允许所有 HTTPS URL
-- "https://*.github.com/tauri-apps/tauri": 允许任何 "github.com" 的子域，并且路径为 "tauri-apps/api"
-- "https://myapi.service.com/users/*": 允许访问以 "https://myapi.service.com/users/" 开头的任何 URL
+* "https://*": 允许所有 HTTPS URL
+* "https://*.github.com/tauri-apps/tauri": 允许任何 "github.com" 的子域，并且路径为 "tauri-apps/api"
+* "https://myapi.service.com/users/*": 允许访问以 "https://myapi.service.com/users/" 开头的任何 URL
 
-类型：`string _(format: uri)_[]`
+类型：`string` _(格式: `uri`)_
 
 [[notification-allowlist-config]]
-===== NotificationAllowlistConfig
+=== NotificationAllowlistConfig
 
 通知 API 的允许列表。
 
@@ -998,11 +781,11 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`all`|boolean|`false`|使用此标志以启用所有通知 API 功能。
+|`all`|`boolean`|`false`|使用此标志以启用所有通知 API 功能。
 |===
 
 [[global-shortcut-allowlist-config]]
-===== GlobalShortcutAllowlistConfig
+=== GlobalShortcutAllowlistConfig
 
 全局快捷键 API 的允许列表。
 
@@ -1011,11 +794,11 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`all`|boolean|`false`|使用此标志以启用所有全局快捷键 API 功能。
+|`all`|`boolean`|`false`|使用此标志以启用所有全局快捷键 API 功能。
 |===
 
 [[os-allowlist-config]]
-===== OsAllowlistConfig
+=== OsAllowlistConfig
 
 操作系统 API 的允许列表。
 
@@ -1024,11 +807,11 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`all`|boolean|`false`|使用此标志以启用所有操作系统 API 功能。
+|`all`|`boolean`|`false`|使用此标志以启用所有操作系统 API 功能。
 |===
 
 [[path-allowlist-config]]
-===== PathAllowlistConfig
+=== PathAllowlistConfig
 
 路径 API 的允许列表。
 
@@ -1037,11 +820,11 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`all`|boolean|`false`|使用此标志以启用所有路径 API 功能。
+|`all`|`boolean`|`false`|使用此标志以启用所有路径 API 功能。
 |===
 
 [[protocol-allowlist-config]]
-===== ProtocolAllowlistConfig
+=== ProtocolAllowlistConfig
 
 自定义协议的允许列表。
 
@@ -1050,13 +833,13 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`assetScope`|<<fs-allowlist-scope,FsAllowlistScope>>|[]|资产协议的访问范围。
-|`all`|boolean|`false`|使用此标志以启用所有自定义协议。
-|`asset`|boolean|`false`|启用资产协议。
+|`assetScope`|`<<fs-allowlist-scope,FsAllowlistScope>>`|[]|资产协议的访问范围。
+|`all`|`boolean`|`false`|使用此标志以启用所有自定义协议。
+|`asset`|`boolean`|`false`|启用资产协议。
 |===
 
 [[process-allowlist-config]]
-===== ProcessAllowlistConfig
+=== ProcessAllowlistConfig
 
 进程 API 的允许列表。
 
@@ -1065,16 +848,16 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`all`|boolean|`false`|使用此标志以启用所有进程 API。
-|`relaunch`|boolean|`false`|启用重新启动 API。
-|`relaunchDangerousAllowSymlinkMacos`|boolean|`false`|危险选项，允许 macOS 在二进制文件包含符号链接的情况下重新启动。
+|`all`|`boolean`|`false`|使用此标志以启用所有进程 API。
+|`relaunch`|`boolean`|`false`|启用重新启动 API。
+|`relaunchDangerousAllowSymlinkMacos`|`boolean`|`false`|危险选项，允许 macOS 在二进制文件包含符号链接的情况下重新启动。
 
 这是由于 macOS 对符号链接的保护较少。强烈建议不要设置此标志，除非你有非常具体的理由，并且理解其影响。
-|`exit`|boolean|`false`|启用退出 API。
+|`exit`|`boolean`|`false`|启用退出 API。
 |===
 
 [[clipboard-allowlist-config]]
-===== ClipboardAllowlistConfig
+=== ClipboardAllowlistConfig
 
 剪贴板 API 的允许列表。
 
@@ -1083,13 +866,13 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`all`|boolean|`false`|使用此标志以启用所有剪贴板 API。
-|`writeText`|boolean|`false`|启用剪贴板的 `writeText` API。
-|`readText`|boolean|`false`|启用剪贴板的 `readText` API。
+|`all`|`boolean`|`false`|使用此标志以启用所有剪贴板 API。
+|`writeText`|`boolean`|`false`|启用剪贴板的 `writeText` API。
+|`readText`|`boolean`|`false`|启用剪贴板的 `readText` API。
 |===
 
 [[app-allowlist-config]]
-===== AppAllowlistConfig
+=== AppAllowlistConfig
 
 应用程序 API 的允许列表。
 
@@ -1098,13 +881,13 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`all`|boolean|`false`|使用此标志以启用所有应用程序 API。
-|`show`|boolean|`false`|启用应用程序的 `show` API。
-|`hide`|boolean|`false`|启用应用程序的 `hide` API。
+|`all`|`boolean`|`false`|使用此标志以启用所有应用程序 API。
+|`show`|`boolean`|`false`|启用应用程序的 `show` API。
+|`hide`|`boolean`|`false`|启用应用程序的 `hide` API。
 |===
 
 [[security-config]]
-==== SecurityConfig
+=== SecurityConfig
 
 安全相关配置。
 
@@ -1113,44 +896,41 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`csp`|<<csp,Csp>>?|<<csp,view>>|将注入到构建应用程序的所有 HTML 文件中的内容安全策略。如果未指定 dev_csp，此值也会在开发模式中注入。
+|`csp`|`<<csp,Csp>>`?|<<csp,view>>|将注入到构建应用程序的所有 HTML 文件中的内容安全策略。如果未指定 `dev_csp`，此值也会在开发模式中注入。
 
 这是配置的一个非常重要的部分，因为它帮助确保你的 WebView 是安全的。请参见 {csp_url}。
 |`devCsp`|<<csp,Csp>>?|<<csp,view>>|在开发模式中注入到所有 HTML 文件中的内容安全策略。
 
 这是配置的一个非常重要的部分，因为它帮助确保你的 WebView 是安全的。请参见 {csp_url}。
-|`freezePrototype`|boolean|`false`|在使用自定义协议时冻结 `Object.prototype`。
-|`dangerousDisableAssetCspModification`|<<disabled-csp-modification-kind,DisabledCspModificationKind>>|`false`|禁用 Tauri 注入的 CSP 源。
+|`freezePrototype`|`boolean`|`false`|在使用自定义协议时冻结 `Object.prototype`。
+|`dangerousDisableAssetCspModification`|`<<disabled-csp-modification-kind,DisabledCspModificationKind>>`|`false`|禁用 Tauri 注入的 CSP 源。
 
 在编译时，Tauri 会解析所有前端资产，并将内容安全策略更改为仅允许加载你自己的脚本和样式，通过注入 nonce 和 hash 源来实现。这会严格限制你的 CSP，这可能在与其他灵活的源一起使用时引入问题。
 
 此配置选项允许使用布尔值和字符串列表作为值。布尔值指示 Tauri 禁用所有 CSP 注入，而字符串列表则表示 Tauri 无法注入的 CSP 指令。
 
 警告：只有在你知道自己在做什么并且已正确配置 CSP 的情况下才禁用此功能。没有这个 Tauri 保护，你的应用程序可能会受到 XSS 攻击的风险。
-|`dangerousRemoteDomainIpcAccess`|<<remote-domain-access-scope,RemoteDomainAccessScope>>|[]|允许外部域发送命令到 Tauri。
+|`dangerousRemoteDomainIpcAccess`|`<<remote-domain-access-scope,RemoteDomainAccessScope[]>>`|[]|允许外部域发送命令到 Tauri。
 
-默认情况下，外部域无法访问 `window.\__TAURI__`，这意味着它们无法与 Rust 中定义的命令进行通信。这可以防止外部加载的恶意或受损网站在用户设备上执行命令的攻击。
+默认情况下，外部域无法访问 `pass:[window.__TAURI__]`，这意味着它们无法与 Rust 中定义的命令进行通信。这可以防止外部加载的恶意或受损网站在用户设备上执行命令的攻击。
 
 此配置允许一组外部域访问 Tauri 命令。当你配置一个域允许访问 IPC 时，所有子路径都被允许。子域名是不允许的。
 
 警告：仅在你有内部检查来防范恶意外部网站或可以信任允许的外部网站时使用此选项。否则，你的应用程序可能会受到危险的 Tauri 命令相关攻击的风险。
-|`dangerousUseHttpScheme`|boolean|`false`|设置自定义协议是否在 Windows 上使用 `http://<scheme>.localhost` 而不是默认的 `https://<scheme>.localhost`。
-
-警告：使用 `http` 协议将允许在尝试获取 `http` 端点时出现混合内容，因此安全性较低，但会匹配 macOS 和 Linux 上使用的 `<scheme>://localhost` 协议的行为。
 |===
 
 [[csp]]
-===== Csp
+==== Csp
 
 内容安全策略定义。请参见 {csp_url}。
 
 可以是以下任意类型：
 
 - `string`：整个 CSP 策略以单个文本字符串形式。
-- `<<csp-directive-sources,CspDirectiveSources>>`：一个对象，映射指令及其源值为字符串列表。
+- `object`：一个对象，映射指令及其源值为字符串列表。
 
 [[csp-directive-sources]]
-====== CspDirectiveSources
+==== CspDirectiveSources
 
 内容安全策略指令源列表。请参见 {source_url}。
 
@@ -1160,7 +940,7 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 - `string[]`：CSP 源的列表。集合将用空格分隔连接以形成 CSP 字符串。
 
 [[disabled-csp-modification-kind]]
-===== DisabledCspModificationKind
+==== DisabledCspModificationKind
 
 危险的 `dangerous_disable_asset_csp_modification` 配置选项的可能值。
 
@@ -1170,7 +950,7 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 - `string[]`：禁用给定列表中的 CSP 指令修改。
 
 [[remote-domain-access-scope]]
-===== RemoteDomainAccessScope
+==== RemoteDomainAccessScope
 
 外部命令访问定义。
 
@@ -1179,15 +959,15 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`scheme`|string?|_null_|允许的 URL 协议。默认情况下，所有协议都是允许的。
-|`domain`|string(required)||允许的域。
-|`windows`|string[](required)||此范围适用的窗口标签列表。
-|`plugins`|string[]|[]|此范围内允许的插件列表。名称应不包含 `tauri-plugin-` 前缀，例如 `"store"` 对于 `tauri-plugin-store`。
-|`enableTauriAPI`|boolean|`false`|启用对 Tauri API 的访问。
+|`scheme`|`string`?|_null_|允许的 URL 协议。默认情况下，所有协议都是允许的。
+|`domain`|`string`(required)|_null_|允许的域。
+|`windows`|`string[]`(required)|_null_|此范围适用的窗口标签列表。
+|`plugins`|`string[]`|[]|此范围内允许的插件列表。
+|`enableTauriAPI`|`boolean`|`false`|启用对 Tauri API 的访问。
 |===
 
 [[updater-config]]
-==== UpdaterConfig
+=== UpdaterConfig
 
 更新程序配置对象。
 
@@ -1196,25 +976,25 @@ HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`active`|boolean|`false`|更新程序是否处于活动状态。
-|`dialog`|boolean|`true`|显示内置对话框或在禁用时使用事件系统。
-|`endpoints`|<<updater-endpoint,UpdaterEndpoint>>?|_null_|更新程序端点。生产环境强制使用 TLS。
+|`active`|`boolean`|`false`|更新程序是否处于活动状态。
+|`dialog`|`boolean`|`true`|显示内置对话框或在禁用时使用事件系统。
+|`endpoints`|`array`?|_null_|更新程序端点。生产环境强制使用 TLS。
 
 更新程序 URL 可以包含以下变量： +
 - pass:[{{current_version}}]: 请求更新的应用程序版本 +
-- pass:[{{target}}]: 操作系统名称（linux、windows 或 darwin 之一） +
-- pass:[{{arch}}]: 机器的架构（x86_64、i686、aarch64 或 armv7 之一）
+- pass:[{{target}}]: 操作系统名称（``linux``、`windows` 或 `darwin` 之一） +
+- pass:[{{arch}}]: 机器的架构（``x86_64``、`i686`、`aarch64` 或 `armv7` 之一）
 
 # 示例 +
 - "link:https://my.cdn.com/latest.json[]": 一个原始 JSON 端点，返回最新版本和每个平台的下载链接。 +
 - "link:https://updates.app.dev/pass:[{{target}}]?version=pass:[{{current_version}}]&arch=pass:[{{arch}}][]": 一个具有位置和查询字符串参数的专用 API。
 
-|`pubkey`|string|_null_|签名公钥。 |`windows`|<<updater-windows-config,UpdaterWindowsConfig>>|<<updater-windows-config,view>>|更新程序的 Windows 配置。
+|`pubkey`|`string`|_null_|签名公钥。 |`windows`|`<<updater-windows-config,UpdaterWindowsConfig>>`|<<updater-windows-config,view>>|更新程序的 Windows 配置。
 
 |===
 
 [[updater-endpoint]]
-===== UpdaterEndpoint
+==== UpdaterEndpoint
 
 指向更新服务器的 URL。
 
@@ -1223,7 +1003,7 @@ URL 在生产环境中必须使用 `https` 协议。
 类型：`string` (格式：`uri`)
 
 [[updater-windows-config]]
-===== UpdaterWindowsConfig
+=== UpdaterWindowsConfig
 
 Windows 的更新程序配置。
 
@@ -1232,23 +1012,23 @@ Windows 的更新程序配置。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`installerArgs`|string[]|[]|提供给 NSIS 或 WiX 安装程序的附加参数。
-|`installMode`|<<windows-update-install-mode,WindowsUpdateInstallMode>>|<<windows-update-install-mode,view>>|Windows 上更新的安装模式。默认为 `passive` 模式。
+|`installerArgs`|`string[]`|[]|提供给 NSIS 或 WiX 安装程序的附加参数。
+|`installMode`|`<<windows-update-install-mode,WindowsUpdateInstallMode>>`|<<windows-update-install-mode,view>>|Windows 上更新的安装模式。默认为 `passive` 模式。
 |===
 
 [[windows-update-install-mode]]
-====== WindowsUpdateInstallMode
+==== WindowsUpdateInstallMode
 
 Windows 更新的安装模式。
 
 可以是以下任意**一种**类型：
 
-- "basicUi": 指定安装过程中有基本的用户界面，包括最后的对话框。
-- "quiet": 静默模式，意味着不需要用户交互。如果安装程序需要，则需要管理员权限。
-- "passive": 指定无人值守模式，即安装过程仅显示进度条。
+* "basicUi": 指定安装过程中有基本的用户界面，包括最后的对话框。
+* "quiet": 静默模式，意味着不需要用户交互。如果安装程序需要，则需要管理员权限。
+* "passive": 指定无人值守模式，即安装过程仅显示进度条。
 
 [[system-tray-config]]
-==== SystemTrayConfig
+=== SystemTrayConfig
 
 应用程序系统托盘图标的配置。
 
@@ -1257,10 +1037,10 @@ Windows 更新的安装模式。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`iconPath`|string(required)||系统托盘上使用的默认图标的路径。
-|`iconAsTemplate`|boolean|`false`|一个布尔值，决定图像是否表示 macOS 上的 https://developer.apple.com/documentation/appkit/nsimage/1520017-template?language=objc[模板] 图像。
-|`menuOnLeftClick`|boolean|`true`|一个布尔值，决定在 macOS 上托盘图标接收到左键点击时是否显示菜单。
-|`title`|string?|_null_|macOS 托盘的标题。
+|`iconPath`|`string`(required)|_null_|系统托盘上使用的默认图标的路径。
+|`iconAsTemplate`|`boolean`|`false`|一个布尔值，决定图像是否表示 macOS 上的 https://developer.apple.com/documentation/appkit/nsimage/1520017-template?language=objc[模板] 图像。
+|`menuOnLeftClick`|`boolean`|`true`|一个布尔值，决定在 macOS 上托盘图标接收到左键点击时是否显示菜单。
+|`title`|`string`?|_null_|macOS 托盘的标题。
 |===
 
 [[build-config]]
@@ -1273,30 +1053,30 @@ Windows 更新的安装模式。
 [%autowidth]
 |===
 |名称|类型|默认|描述
-|`runner`|string?|_null_|用于构建和运行应用程序的二进制文件。
-|`devPath`|<<app-url,AppUrl>>|<<app-url,view>>|应用程序资产的路径或开发时加载的 URL。
+|`runner`|`string`?|_null_|用于构建和运行应用程序的二进制文件。
+|`devPath`|`<<app-url,AppUrl>>`|<<app-url,view>>|应用程序资产的路径或开发时加载的 URL。
 
 这通常是一个指向开发服务器的 URL，该服务器提供应用程序资产并支持实时重新加载。大多数现代 JavaScript 打包工具默认提供启动开发服务器的方式。
 
-请参见 https://vitejs.dev/guide/[vite]、https://webpack.js.org/configuration/dev-server/[Webpack DevServer] 和 https://github.com/lukeed/sirv[sirv]，以了解如何设置开发服务器的示例。
-|`distDir`|<<app-url,AppUrl>>|<<app-url,view>>|应用程序资产的路径或生产时加载的 URL。
+请参见 https://vitejs.dev/guide/[vite]、 https://webpack.js.org/configuration/dev-server/[Webpack DevServer] 和 https://github.com/lukeed/sirv[sirv]，以了解如何设置开发服务器的示例。
+|`distDir`|`<<app-url,AppUrl>>`|<<app-url,view>>|应用程序资产的路径或生产时加载的 URL。
 
 当提供一个相对于配置文件的路径时，它会递归读取所有文件，并将它们嵌入到应用程序二进制文件中。除非提供自定义窗口 URL，否则 Tauri 会查找 `index.html` 文件。
 
 您还可以提供一个路径列表以进行嵌入，这允许对添加到二进制文件的文件进行细粒度控制。在这种情况下，所有文件都添加到根目录中，您必须在 HTML 文件中以这种方式引用它们。
 
 当提供 URL 时，应用程序将没有打包的资产，应用程序将默认加载该 URL。
-|`beforeDevCommand`|<<before-dev-command,BeforeDevCommand>>?|<<before-dev-command,view>>|在 `tauri dev` 启动之前运行的 shell 命令。
+|`beforeDevCommand`|`<<before-dev-command,BeforeDevCommand>>`?|<<before-dev-command,view>>|在 `tauri dev` 启动之前运行的 shell 命令。
 
 如果执行条件编译，将会设置 TAURI_PLATFORM、TAURI_ARCH、TAURI_FAMILY、TAURI_PLATFORM_VERSION、TAURI_PLATFORM_TYPE 和 TAURI_DEBUG 环境变量。
-|`beforeBuildCommand`|<<hook-command,HookCommand>>?|<<hook-command,view>>|在 `tauri build` 启动之前运行的 shell 命令。
+|`beforeBuildCommand`|`<<hook-command,HookCommand>>`?|<<hook-command,view>>|在 `tauri build` 启动之前运行的 shell 命令。
 
 如果执行条件编译，将会设置 TAURI_PLATFORM、TAURI_ARCH、TAURI_FAMILY、TAURI_PLATFORM_VERSION、TAURI_PLATFORM_TYPE 和 TAURI_DEBUG 环境变量。
-|`beforeBundleCommand`|<<hook-command,HookCommand>>?|<<hook-command,view>>|在 `tauri build` 的打包阶段开始之前运行的 shell 命令。
+|`beforeBundleCommand`|`<<hook-command,HookCommand>>`?|<<hook-command,view>>|在 `tauri build` 的打包阶段开始之前运行的 shell 命令。
 
 如果执行条件编译，将会设置 TAURI_PLATFORM、TAURI_ARCH、TAURI_FAMILY、TAURI_PLATFORM_VERSION、TAURI_PLATFORM_TYPE 和 TAURI_DEBUG 环境变量。
-|`features`|array?|_null_|传递给 `cargo` 命令的功能。
-|`withGlobalTauri`|boolean|`false`|是否应该在 `window.\___TAURI___` 上注入 Tauri API。
+|`features`|`array`?|_null_|传递给 `cargo` 命令的功能。
+|`withGlobalTauri`|`boolean`|`false`|是否应该在 `pass:[window.__TAURI__]` 上注入 Tauri API。
 |===
 
 [[app-url]]
@@ -1317,15 +1097,7 @@ Windows 更新的安装模式。
 可以是以下任何类型：
 
 - `string`：使用默认选项运行给定的脚本。
-- `{ "script": string, "cwd": string?, "wait": boolean }`：使用自定义选项运行给定的脚本。
-
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`script`|string(required)||要执行的脚本。
-|`cmd`|string?|_null_|当前工作目录。
-|`wait`|boolean|`false`|`tauri dev` 是否应等待命令完成。默认值为 `false`。
-|===
+- `object`：使用自定义选项运行给定的脚本。
 
 [[hook-command]]
 ==== HookCommand
@@ -1335,14 +1107,7 @@ Windows 更新的安装模式。
 可以是以下任何类型：
 
 - `string`: 使用默认选项运行给定的脚本。
-- `{ "script": string, "cwd": string? }`: 使用自定义选项运行给定的脚本。
-
-[%autowidth]
-|===
-|名称|类型|默认|描述
-|`script`|string(required)||要执行的脚本。
-|`cmd`|string?|_null_|当前工作目录。
-|===
+- `object`: 使用自定义选项运行给定的脚本。
 
 [[plugin-config]]
 === PluginConfig
