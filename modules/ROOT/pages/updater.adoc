@@ -1,6 +1,8 @@
 [[updater]]
 = updater
 
+https://tauri.app/zh-cn/v1/api/js/updater[原文地址]
+
 定制自动更新流程。
 
 当 `tauri.conf.json` 中的 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 `true` 时，该包也可以通过 `pass:[window.__TAURI__.updater]` 访问。

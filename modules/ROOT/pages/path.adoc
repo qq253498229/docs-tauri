@@ -1,6 +1,8 @@
 [[path]]
 = path
 
+https://tauri.app/zh-cn/v1/api/js/path[原文地址]
+
 路径模块提供了处理文件和目录路径的工具。
 
 如果在 `tauri.conf.json` 中将 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 `true`，这个包也可以通过 `pass:[window.__TAURI__.path]` 访问。

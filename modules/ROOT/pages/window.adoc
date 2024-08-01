@@ -1,6 +1,8 @@
 [[window]]
 = window
 
+https://tauri.app/zh-cn/v1/api/js/window[原文地址]
+
 提供API以创建窗口，与其他窗口通信并操作当前窗口。
 
 当 `tauri.conf.json` 中的 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 `true` 时，也可以通过 `pass:[window.__TAURI__.window]` 访问该包。

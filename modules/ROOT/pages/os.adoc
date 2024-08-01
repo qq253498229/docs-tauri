@@ -1,6 +1,8 @@
 [[os]]
 = os
 
+https://tauri.app/zh-cn/v1/api/js/os[原文地址]
+
 提供与操作系统相关的实用方法和属性。
 
 当 `tauri.conf.json` 中的 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 `true` 时，可以通过 `pass:[window.__TAURI__.os]` 访问此包。

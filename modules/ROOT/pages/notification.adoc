@@ -1,6 +1,8 @@
 [[notification]]
 = notification
 
+https://tauri.app/zh-cn/v1/api/js/notification[原文地址]
+
 向用户发送吐司通知（简短的自动消失的操作系统窗口元素）。也可以与 Notification Web API 一起使用。
 
 当 `tauri.conf.json` 中 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 设置为 `true` 时，该包也可以通过 pass:[window.__TAURI__.notification] 访问。

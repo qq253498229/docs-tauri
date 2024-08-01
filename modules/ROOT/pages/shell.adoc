@@ -1,6 +1,8 @@
 [[shell]]
 = shell
 
+https://tauri.app/zh-cn/v1/api/js/shell[原文地址]
+
 访问系统shell。允许您使用默认的应用程序生成子进程并管理文件和URL。
 
 如果在 `tauri.conf.json` 中设置了 `xref:configuration.adoc#build-config[build.withGlobalTauri]` 为 `true`，也可以通过 `pass:[window.__TAURI__.shell]` 访问此包。
