@@ -1,5 +1,5 @@
 [[os]]
-= os
+= 操作系统(os)
 
 https://tauri.app/zh-cn/v1/api/js/os[原文地址]
 

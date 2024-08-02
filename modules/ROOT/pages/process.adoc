@@ -1,5 +1,5 @@
 [[process]]
-= process
+= 进程(process)
 
 https://tauri.app/zh-cn/v1/api/js/process[原文地址]
 

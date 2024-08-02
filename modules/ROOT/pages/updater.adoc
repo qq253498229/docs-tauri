@@ -1,5 +1,5 @@
 [[updater]]
-= updater
+= 更新(updater)
 
 https://tauri.app/zh-cn/v1/api/js/updater[原文地址]
 

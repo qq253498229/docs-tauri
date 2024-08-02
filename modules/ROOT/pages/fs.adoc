@@ -1,5 +1,5 @@
 [[fs]]
-= fs
+= 事件(fs)
 
 https://tauri.app/zh-cn/v1/api/js/fs[原文地址]
 

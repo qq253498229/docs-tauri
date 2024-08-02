@@ -1,4 +1,4 @@
-= event
+= 事件(event)
 
 https://tauri.app/zh-cn/v1/api/js/event[原文地址]
 

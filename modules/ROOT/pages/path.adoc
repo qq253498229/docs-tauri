@@ -1,5 +1,5 @@
 [[path]]
-= path
+= 路径(path)
 
 https://tauri.app/zh-cn/v1/api/js/path[原文地址]
 

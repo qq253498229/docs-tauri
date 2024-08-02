@@ -1,5 +1,5 @@
 [[window]]
-= window
+= 窗口(window)
 
 https://tauri.app/zh-cn/v1/api/js/window[原文地址]
 

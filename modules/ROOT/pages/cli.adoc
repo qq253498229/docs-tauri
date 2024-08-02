@@ -1,4 +1,4 @@
-= cli
+= 命令行(cli)
 
 https://tauri.app/zh-cn/v1/api/js/cli[原文地址]
 

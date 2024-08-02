@@ -1,4 +1,4 @@
-= dialog
+= 对话框(dialog)
 
 https://tauri.app/zh-cn/v1/api/js/dialog[原文地址]
 
