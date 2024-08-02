@@ -426,7 +426,7 @@ Windows打包配置。
 
 Webview2运行时的安装模式。请注意，对于更新程序捆绑包，使用 `DownloadBootstrapper`。
 
-有关更多信息，请参见 https://tauri.app/v1/guides/building/windows。
+有关更多信息，请参见 https://tauri.app/zh-cn/v1/guides/building/windows。
 
 可以是以下类型中的任何**一个**：
 

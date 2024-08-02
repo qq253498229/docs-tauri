@@ -1,6 +1,6 @@
 = app
 
-link:https://tauri.app/v1/api/js/app[原文地址]
+https://tauri.app/zh-cn/v1/api/js/app[原文地址]
 
 获取应用元数据。
 
