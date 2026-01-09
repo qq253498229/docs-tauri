@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>shell :: docs-tauri</title>
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-tauri</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-tauri" data-version="v1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Tauri API 文档</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configuration.html">配置</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command_line_runner.html">CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript/TypeScript</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="app.html">应用(app)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli.html">命令行(cli)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clipboard.html">剪贴板(clipboard)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dialog.html">对话框(dialog)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="event.html">事件(event)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fs.html">文件系统(fs)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="globalShortcut.html">快捷键(globalShortcut)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="http.html">http</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mocks.html">mocks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="notification.html">通知(notification)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="os.html">操作系统(os)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="path.html">路径(path)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="process.html">进程(process)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="shell.html">shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tauri.html">tauri</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="updater.html">更新(updater)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="window.html">窗口(window)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://tauri.app/zh-cn/v1/guides/">官方地址</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Tauri API 文档</span>
+    <span class="version">v1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Tauri API 文档</a></li>
+    <li>JavaScript/TypeScript</li>
+    <li><a href="shell.html">shell</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-tauri/edit/master/modules/ROOT/pages/shell.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">shell</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://tauri.app/zh-cn/v1/api/js/shell">原文地址</a></p>
+</div>
+<div class="paragraph">
+<p>访问系统shell。允许您使用默认的应用程序生成子进程并管理文件和URL。</p>
+</div>
+<div class="paragraph">
+<p>如果在 <code>tauri.conf.json</code> 中设置了 <code><a href="configuration.html#build-config" class="xref page">build.withGlobalTauri</a></code> 为 <code>true</code>，也可以通过 <code>window.__TAURI__.shell</code> 访问此包。</p>
+</div>
+<div class="paragraph">
+<p>这些API必须添加到 <code>tauri.conf.json</code> 中的 <code><a href="configuration.html#tauri-config" class="xref page">tauri.allowlist.shell</a></code>：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "tauri": {
+    "allowlist": {
+      "shell": {
+        "all": true, // enable all shell APIs
+        "execute": true, // enable process spawn APIs
+        "sidecar": true, // enable spawning sidecars
+        "open": true // enable opening files/URLs using the default program
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>建议仅将您使用的API添加到白名单中，以获得最佳的捆绑包大小和安全性。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="security"><a class="anchor" href="#security"></a>Security</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>此API具有范围配置，强制您限制可使用的程序和参数。</p>
+</div>
+<div class="sect2">
+<h3 id="restricting-access-to-the-open-api"><a class="anchor" href="#restricting-access-to-the-open-api"></a>Restricting access to the <a href="#open">open</a> API</h3>
+<div class="paragraph">
+<p>在白名单中，<code>open: true</code> 表示可以使用 <code><a href="#open">open</a></code> API 打开任何URL，因为参数已通过 <code>^mailto:\w+)|(tel:\w+)|(https?://\w+.+</code> 正则表达式验证。您可以将该布尔值更改为字符串来更改该正则表达式，例如 <code>open: ^https://github.com/</code>。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="restricting-access-to-the-command-apis"><a class="anchor" href="#restricting-access-to-the-command-apis"></a>Restricting access to the <a href="#command">Command</a> APIs</h3>
+<div class="paragraph">
+<p><code>shell</code> 白名单对象有一个 <code>scope</code> 字段，该字段定义了可以使用的CLI数组。每个CLI都是一个配置对象 <code>{ name: string, cmd: string, sidecar?: bool, args?: boolean | Arg[] }</code>。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>name</code>：命令的唯一标识符，传递给  <a href="#constructor">Command constructor</a>。如果是辅助程序（sidecar），则必须是 <code>tauri.conf.json &gt; tauri &gt; bundle &gt; externalBin</code> 中定义的值。</p>
+</li>
+<li>
+<p><code>cmd</code>：在此配置上执行的程序。如果是辅助程序（sidecar），则此值会被忽略。</p>
+</li>
+<li>
+<p><code>sidecar</code>：对象是配置辅助程序还是系统程序。</p>
+</li>
+<li>
+<p><code>args</code>：可以传递给程序的参数。默认情况下，不允许任何参数。</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>true</code> 表示允许任何参数列表。</p>
+</li>
+<li>
+<p><code>false</code> 表示不允许任何参数。</p>
+</li>
+<li>
+<p>否则可以配置一个数组。每个项目可以是表示固定参数值的字符串，也可以是 <code>{ validator: string }</code>，它定义了验证参数值的正则表达式。</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例范围配置</p>
+</div>
+<div class="paragraph">
+<p>CLI: <code>git commit -m "the commit message"</code></p>
+</div>
+<div class="paragraph">
+<p>配置：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "scope": [
+    {
+      "name": "run-git-commit",
+      "cmd": "git",
+      "args": ["commit", "-m", { "validator": "\\S+" }]
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>使用方法：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { Command } from '@tauri-apps/api/shell'
+new Command('run-git-commit', ['commit', '-m', 'the commit message'])</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>尝试使用未在范围中配置的程序执行任何API时，会因为拒绝访问而导致Promise被拒绝。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="classes"><a class="anchor" href="#classes"></a>Classes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="child"><a class="anchor" href="#child"></a>Child</h3>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>构造函数</p>
+</div>
+<div id="constructor" class="paragraph">
+<p>constructor</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>new Child(<code>pid</code>: <code>number</code>): <code>Child</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pid</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/shell.ts#L325">shell.ts:325</a></p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>pid: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>子进程的进程 <code>pid</code>。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/shell.ts#L323">shell.ts:323</a></p>
+</div>
+<div class="paragraph">
+<p>方法</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>kill(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>终止子进程。</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>write(<code>data</code>: <code>string</code> | <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>向 <code>stdin</code> 写入 <code>data</code>。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { Command } from '@tauri-apps/api/shell';
+const command = new Command('node');
+const child = await command.spawn();
+await child.write('message');
+await child.write([0, 1, 2, 3, 4, 5]);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code> | <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">消息要写的内容，可以是字符串或者字节数组。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="command"><a class="anchor" href="#command"></a>Command</h3>
+<div class="paragraph">
+<p>生成子进程的入口点。它会触发 <code>close</code> 和 <code>error</code> 事件。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { Command } from '@tauri-apps/api/shell';
+const command = new Command('node');
+command.on('close', data =&gt; {
+  console.log(`command finished with code ${data.code} and signal ${data.signal}`)
+});
+command.on('error', error =&gt; console.error(`command error: "${error}"`));
+command.stdout.on('data', line =&gt; console.log(`command stdout: "${line}"`));
+command.stderr.on('data', line =&gt; console.log(`command stderr: "${line}"`));
+
+const child = await command.spawn();
+console.log('pid:', child.pid);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>层次结构</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>"close"</code> | <code>"error"</code>&gt;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Command</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Constructors</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>new Command(<code>program</code>: <code>string</code>, <code>args?</code>: <code>string</code> | <code>string</code>[], <code>options?</code>: <code><a href="#spawn-options">SpawnOptions</a></code>): <code><a href="#command">Command</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>创建一个新的 <code>Command</code> 实例。</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认值</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>program</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要执行的程序名称。<br>
+必须在 <code>tauri.conf.json &gt; tauri &gt; allowlist &gt; shell &gt; scope</code> 中配置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>args</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code> | <code>string</code>[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">程序参数。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#spawn-options">SpawnOptions</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">生成选项。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>覆盖</strong>: <a href="#event-emitter-constructor">EventEmitter.constructor</a></p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/shell.ts#L413">shell.ts:413</a></p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Readonly</code> stderr: <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>"data"</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>用于 <code>stderr</code> 的事件发射器。触发 <code>data</code> 事件。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/shell.ts#L403">shell.ts:403</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Readonly</code> stdout: <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>"data"</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>用于 stdout 的事件发射器。触发 data 事件。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/shell.ts#L401">shell.ts:401</a></p>
+</div>
+<div class="paragraph">
+<p>方法</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>addListener(<code>eventName</code>: <code>"error"</code> | <code>"close"</code>, <code>listener</code>: <code>fn</code>): <code><a href="#command">Command</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>emitter.on(eventName, listener)</code> 的别名。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"error"</code> | <code>"close"</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listener</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(&#8230;&#8203;<code>args</code>: <code>any</code>[]) &#8658; <code>void</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#command">Command</a></code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>execute(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#child-process">ChildProcess</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>作为子进程执行命令，等待其完成并收集所有输出。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { Command } from '@tauri-apps/api/shell';
+const output = await new Command('echo', 'message').execute();
+assert(output.code === 0);
+assert(output.signal === null);
+assert(output.stdout === 'message');
+assert(output.stderr === '');</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#child-process">ChildProcess</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为子进程的输出。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>listenerCount(<code>eventName</code>: <code>"error"</code> | <code>"close"</code>): <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回正在监听名为 <code>eventName</code> 事件的监听器数量。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"error"</code> | <code>"close"</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code>number</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>off(<code>eventName</code>: <code>"error"</code> | <code>"close"</code>, <code>listener</code>: <code>fn</code>): <code><a href="#command">Command</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>从 listener 数组中移除指定的监听器，返回 <code>EventEmitter</code> 的引用，以便可以链式调用。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"error"</code> | <code>"close"</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listener</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(&#8230;&#8203;<code>args</code>: <code>any</code>[]) &#8658; <code>void</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#command">Command</a></code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>on(<code>eventName</code>: <code>"error"</code> | <code>"close"</code>, <code>listener</code>: <code>fn</code>): <code><a href="#command">Command</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将 <code>listener</code> 函数添加到名为 <code>eventName</code> 事件的监听器数组的末尾。不会检查 <code>listener</code> 是否已经添加。多次传递相同的 <code>eventName</code> 和 <code>listener</code> 组合将导致 <code>listener</code> 被多次添加和调用。</p>
+</div>
+<div class="paragraph">
+<p>返回 <code>EventEmitter</code> 的引用，以便可以链式调用。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"error"</code> | <code>"close"</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listener</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(&#8230;&#8203;<code>args</code>: <code>any</code>[]) &#8658; <code>void</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#command">Command</a></code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>once(<code>eventName</code>: <code>"error"</code> | <code>"close"</code>, <code>listener</code>: <code>fn</code>): <code><a href="#command">Command</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>为名为 <code>eventName</code> 的事件添加一个一次性 <code>listener</code> 函数。下次触发 <code>eventName</code> 时，此监听器将被移除并调用。</p>
+</div>
+<div class="paragraph">
+<p>返回 <code>EventEmitter</code> 的引用，以便可以链式调用。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"error"</code> | <code>"close"</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listener</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(&#8230;&#8203;<code>args</code>: <code>any</code>[]) &#8658; <code>void</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#command">Command</a></code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>prependListener(<code>eventName</code>: <code>"error"</code> | <code>"close"</code>, <code>listener</code>: <code>fn</code>): <code><a href="#command">Command</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将 <code>listener</code> 函数添加到名为 <code>eventName</code> 事件的监听器数组的开头。不会检查 <code>listener</code> 是否已经添加。多次传递相同的 <code>eventName</code> 和 <code>listener</code> 组合将导致 <code>listener</code> 被多次添加和调用。</p>
+</div>
+<div class="paragraph">
+<p>返回 <code><a href="#event-emitter">EventEmitter</a></code> 的引用，以便可以链式调用。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"error"</code> | <code>"close"</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listener</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(&#8230;&#8203;<code>args</code>: <code>any</code>[]) &#8658; <code>void</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#command">Command</a></code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>prependOnceListener(<code>eventName</code>: <code>"error"</code> | <code>"close"</code>, <code>listener</code>: <code>fn</code>): <code><a href="#command">Command</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>为名为 <code>eventName</code> 的事件添加一个一次性 <code>listener</code> 函数，并将其添加到监听器数组的开头。下次触发 <code>eventName</code> 时，此监听器将被移除并调用。</p>
+</div>
+<div class="paragraph">
+<p>返回 <code><a href="#event-emitter">EventEmitter</a></code> 的引用，以便可以链式调用。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"error"</code> | <code>"close"</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listener</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(&#8230;&#8203;<code>args</code>: <code>any</code>[]) &#8658; <code>void</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#command">Command</a></code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>removeAllListeners(<code>eventName</code>: <code>"error"</code> | <code>"close"</code>): <code><a href="#command">Command</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>移除所有监听器，或指定 eventName 的监听器。</p>
+</div>
+<div class="paragraph">
+<p>返回 <code>EventEmitter</code> 的引用，以便可以链式调用。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>event</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"error"</code> | <code>"close"</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#command">Command</a></code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>removeListener(<code>eventName</code>: <code>"error"</code> | <code>"close"</code>, <code>listener</code>: <code>fn</code>): <code><a href="#command">Command</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>emitter.off(eventName, listener)</code> 的别名。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"error"</code> | <code>"close"</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listener</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(&#8230;&#8203;<code>args</code>: <code>any</code>[]) &#8658; <code>void</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#command">Command</a></code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>spawn(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#child">Child</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>作为子进程执行命令，返回其句柄。</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#child">Child</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为子进程的句柄。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Static</code> sidecar(<code>program</code>: <code>string</code>, <code>args?</code>: <code>string</code> | <code>string</code>[], <code>options?</code>: <code><a href="#spawn-options">SpawnOptions</a></code>): <code><a href="#command">Command</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>创建一个命令以执行指定的辅助程序。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { Command } from '@tauri-apps/api/shell';
+const command = Command.sidecar('my-sidecar');
+const output = await command.execute();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认值</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>program</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要执行的程序。
+必须在 <code>tauri.conf.json &gt; tauri &gt; allowlist &gt; shell &gt; scope</code> 中配置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>args</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code> | <code>string</code>[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#spawn-options">SpawnOptions</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>undefined</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#command">Command</a></code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="event-emitter"><a class="anchor" href="#event-emitter"></a>EventEmitter&lt;E&gt;</h3>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>类型参数：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>E</code> extends <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>结构层级</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>EventEmitter</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code><a href="#command">Command</a></code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="event-emitter-constructor" class="paragraph">
+<p>构造函数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>new EventEmitter&lt;<code>E</code>&gt;(): <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>类型参数：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>E</code> extends <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>方法</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>addListener(<code>eventName</code>: <code>E</code>, <code>listener</code>: <code>fn</code>): <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>emitter.on(eventName, listener)</code> 的别名。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>E</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listener</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(&#8230;&#8203;<code>args</code>: <code>any</code>[]) &#8658; <code>void</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>listenerCount(<code>eventName</code>: <code>E</code>): <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回监听事件 <code>eventName</code> 的监听器数量。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>E</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code>number</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>off(<code>eventName</code>: <code>E</code>, <code>listener</code>: <code>fn</code>): <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>从事件 eventName 的监听器数组中移除所有指定的监听器。返回对 <code>EventEmitter</code> 的引用，以便可以链接调用。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>E</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listener</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(&#8230;&#8203;<code>args</code>: <code>any</code>[]) &#8658; <code>void</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>on(<code>eventName</code>: <code>E</code>, <code>listener</code>: <code>fn</code>): <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将 <code>listener</code> 函数添加到事件 <code>eventName</code> 的监听器数组的末尾。不检查该 <code>listener</code> 是否已添加。多次传递相同的 <code>eventName</code> 和 <code>listener</code> 组合，将导致 <code>listener</code> 被多次添加，并被多次调用。</p>
+</div>
+<div class="paragraph">
+<p>返回对 <code>EventEmitter</code> 的引用，以便可以链接调用。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>E</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listener</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(&#8230;&#8203;<code>args</code>: <code>any</code>[]) &#8658; <code>void</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>once(<code>eventName</code>: <code>E</code>, <code>listener</code>: <code>fn</code>): <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>为事件 <code>eventName</code> 添加一个一次性的 <code>listener</code> 函数。下次触发 <code>eventName</code> 时，将移除并调用该监听器。</p>
+</div>
+<div class="paragraph">
+<p>返回对 <code>EventEmitter</code> 的引用，以便可以链接调用。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>E</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listener</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(&#8230;&#8203;<code>args</code>: <code>any</code>[]) &#8658; <code>void</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>prependListener(<code>eventName</code>: <code>E</code>, <code>listener</code>: <code>fn</code>): <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将 <code>listener</code> 函数添加到事件 <code>eventName</code> 的监听器数组的开头。不检查该 <code>listener</code> 是否已添加。多次传递相同的 <code>eventName</code> 和 <code>listener</code> 组合，将导致 <code>listener</code> 被多次添加，并被多次调用。</p>
+</div>
+<div class="paragraph">
+<p>返回对 <code>EventEmitter</code> 的引用，以便可以链接调用。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>E</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listener</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(&#8230;&#8203;<code>args</code>: <code>any</code>[]) &#8658; <code>void</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>prependOnceListener(<code>eventName</code>: <code>E</code>, <code>listener</code>: <code>fn</code>): <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>为事件 <code>eventName</code> 添加一个一次性的 <code>listener</code> 函数，并将其添加到 <code>listener</code> 数组的开头。下次触发 <code>eventName</code> 时，将移除并调用该监听器。</p>
+</div>
+<div class="paragraph">
+<p>返回对 <code>EventEmitter</code> 的引用，以便可以链接调用。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>E</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listener</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(&#8230;&#8203;<code>args</code>: <code>any</code>[]) &#8658; <code>void</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>removeAllListeners(<code>event?</code>: <code>E</code>): <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>移除所有监听器，或者移除指定事件 eventName 的监听器。</p>
+</div>
+<div class="paragraph">
+<p>返回对 <code>EventEmitter</code> 的引用，以便可以链接调用。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>event</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>E</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>removeListener(<code>eventName</code>: <code>E</code>, <code>listener</code>: <code>fn</code>): <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>emitter.off(eventName, listener)</code> 的别名。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eventName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>E</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listener</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(&#8230;&#8203;<code>args</code>: <code>any</code>[]) &#8658; <code>void</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#event-emitter">EventEmitter</a></code>&lt;<code>E</code>&gt;</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="interfaces"><a class="anchor" href="#interfaces"></a>Interfaces</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="child-process"><a class="anchor" href="#child-process"></a>ChildProcess</h3>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>code: <code>null</code> | <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>进程的退出代码。如果进程在Unix系统上被信号终止，则为 <code>null</code>。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/shell.ts#L109">shell.ts:109</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>signal: <code>null</code> | <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>如果进程被信号终止，则表示该信号。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/shell.ts#L111">shell.ts:111</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>stderr: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>进程写入 <code>stderr</code> 的数据。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/shell.ts#L115">shell.ts:115</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>stdout: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>进程写入 <code>stdout</code> 的数据。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/shell.ts#L113">shell.ts:113</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="spawn-options"><a class="anchor" href="#spawn-options"></a>SpawnOptions</h3>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> cwd: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>当前工作目录。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/shell.ts#L88">shell.ts:88</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> encoding: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>stdout/stderr的字符编码。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/shell.ts#L96">shell.ts:96</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> env: <code><a href="https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type">Record</a></code>&lt;<code>string</code>, <code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>环境变量。设置为 <code>null</code> 以清除进程的环境变量。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/shell.ts#L90">shell.ts:90</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="open"><a class="anchor" href="#open"></a>open</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>open(<code>path</code>: <code>string</code>, <code>openWith?</code>: <code>string</code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>使用系统默认应用程序或指定的应用程序（通过 <code>openWith</code> 指定）打开路径或URL。</p>
+</div>
+<div class="paragraph">
+<p><code>openWith</code> 的值必须是以下之一： <code>firefox</code>、<code>google chrome</code>、<code>chromium</code>、<code>safari</code>、<code>open</code>、<code>start</code>、<code>xdg-open</code>、<code>gio</code>、<code>gnome-open</code>、<code>kde-open</code>或<code>wslview</code>。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { open } from '@tauri-apps/api/shell';
+// opens the given URL on the default browser:
+await open('https://github.com/tauri-apps/tauri');
+// opens the given URL using `firefox`:
+await open('https://github.com/tauri-apps/tauri', 'firefox');
+// opens a file using the default program:
+await open('/path/to/file');</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要打开的路径或URL。这个值与 <code>tauri.conf.json &gt; tauri &gt; allowlist &gt; shell &gt; open</code> 定义的字符串正则表达式匹配，默认值为 <code>^mailto:\w+)|(tel:\w+)|(https?://\w+.+</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>openWith?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">用于打开文件或URL的应用程序。默认为指定路径类型的系统默认应用程序。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

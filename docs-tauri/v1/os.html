@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>操作系统(os) :: docs-tauri</title>
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-tauri</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-tauri" data-version="v1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Tauri API 文档</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configuration.html">配置</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command_line_runner.html">CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript/TypeScript</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="app.html">应用(app)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli.html">命令行(cli)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clipboard.html">剪贴板(clipboard)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dialog.html">对话框(dialog)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="event.html">事件(event)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fs.html">文件系统(fs)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="globalShortcut.html">快捷键(globalShortcut)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="http.html">http</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mocks.html">mocks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="notification.html">通知(notification)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="os.html">操作系统(os)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="path.html">路径(path)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="process.html">进程(process)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shell.html">shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tauri.html">tauri</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="updater.html">更新(updater)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="window.html">窗口(window)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://tauri.app/zh-cn/v1/guides/">官方地址</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Tauri API 文档</span>
+    <span class="version">v1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Tauri API 文档</a></li>
+    <li>JavaScript/TypeScript</li>
+    <li><a href="os.html">操作系统(os)</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-tauri/edit/master/modules/ROOT/pages/os.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">操作系统(os)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://tauri.app/zh-cn/v1/api/js/os">原文地址</a></p>
+</div>
+<div class="paragraph">
+<p>提供与操作系统相关的实用方法和属性。</p>
+</div>
+<div class="paragraph">
+<p>当 <code>tauri.conf.json</code> 中的 <code><a href="configuration.html#build-config" class="xref page">build.withGlobalTauri</a></code> 设置为 <code>true</code> 时，可以通过 <code>window.__TAURI__.os</code> 访问此包。</p>
+</div>
+<div class="paragraph">
+<p>这些 API 必须添加到 <code>tauri.conf.json</code> 中的 <code><a href="configuration.html#tauri-config" class="xref page">tauri.allowlist.os</a></code> 中：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "tauri": {
+    "allowlist": {
+      "os": {
+        "all": true, // enable all Os APIs
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>建议仅将您使用的 API 列入白名单，以获得最佳的包大小和安全性。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="type-aliases"><a class="anchor" href="#type-aliases"></a>Type Aliases</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="arch"><a class="anchor" href="#arch"></a>Arch</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Arch: <code>"x86"</code> | <code>"x86_64"</code> | <code>"arm"</code> | <code>"aarch64"</code> | <code>"mips"</code> | <code>"mips64"</code> | <code>"powerpc"</code> | <code>"powerpc64"</code> | <code>"riscv64"</code> | <code>"s390x"</code> | <code>"sparc64"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/os.ts#L43">os.ts:43</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="os-type"><a class="anchor" href="#os-type"></a>OsType</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>OsType: <code>"Linux"</code> | <code>"Darwin"</code> | <code>"Windows_NT"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/os.ts#L41">os.ts:41</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="platform"><a class="anchor" href="#platform"></a>Platform</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Platform: <code>"linux"</code> | <code>"darwin"</code> | <code>"ios"</code> | <code>"freebsd"</code> | <code>"dragonfly"</code> | <code>"netbsd"</code> | <code>"openbsd"</code> | <code>"solaris"</code> | <code>"android"</code> | <code>"win32"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/os.ts#L29">os.ts:29</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="variables"><a class="anchor" href="#variables"></a>Variables</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="eol"><a class="anchor" href="#eol"></a>EOL</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Const EOL: <code>"\n"</code> | <code>"\r\n"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回特定于操作系统的行尾标记。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>\n</code> on POSIX</p>
+</li>
+<li>
+<p><code>\r\n</code> on Windows</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/os.ts#L63">os.ts:63</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="functions-arch"><a class="anchor" href="#functions-arch"></a>arch</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>arch(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#arch">Arch</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回为 tauri 应用编译的操作系统 CPU 架构。可能的值有 <code>'x86'</code>、<code>'x86_64'</code>、<code>'arm'</code>、<code>'aarch64'</code>、<code>'mips'</code>、<code>'mips64'</code>、<code>'powerpc'</code>、<code>'powerpc64'</code>、<code>'riscv64'</code>、<code>'s390x'</code>、<code>'sparc64'</code>。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { arch } from '@tauri-apps/api/os';
+const archName = await arch();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#arch">Arch</a></code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="functions-platform"><a class="anchor" href="#functions-platform"></a>platform</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>platform(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#platform">Platform</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回标识操作系统平台的字符串。该值在编译时设置。可能的值有 <code>'linux'</code>、<code>'darwin'</code>、<code>'ios'</code>、<code>'freebsd'</code>、<code>'dragonfly'</code>、<code>'netbsd'</code>、<code>'openbsd'</code>、<code>'solaris'</code>、<code>'android'</code>、<code>'win32'</code>。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { platform } from '@tauri-apps/api/os';
+const platformName = await platform();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#platform">Platform</a></code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tempdir"><a class="anchor" href="#tempdir"></a>tempdir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>tempdir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回操作系统默认的临时文件目录的字符串。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { tempdir } from '@tauri-apps/api/os';
+const tempdirPath = await tempdir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="type"><a class="anchor" href="#type"></a>type</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>type(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#os-type">OsType</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>在 Linux 上返回 <code>'Linux'</code>，在 macOS 上返回 <code>'Darwin'</code>，在 Windows 上返回 <code>'Windows_NT'</code>。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { type } from '@tauri-apps/api/os';
+const osType = await type();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#os-type">OsType</a></code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="version"><a class="anchor" href="#version"></a>version</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>version(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回标识内核版本的字符串。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { version } from '@tauri-apps/api/os';
+const osVersion = await version();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

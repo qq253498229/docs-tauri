@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>对话框(dialog) :: docs-tauri</title>
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-tauri</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-tauri" data-version="v1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Tauri API 文档</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configuration.html">配置</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command_line_runner.html">CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript/TypeScript</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="app.html">应用(app)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli.html">命令行(cli)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clipboard.html">剪贴板(clipboard)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="dialog.html">对话框(dialog)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="event.html">事件(event)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fs.html">文件系统(fs)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="globalShortcut.html">快捷键(globalShortcut)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="http.html">http</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mocks.html">mocks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="notification.html">通知(notification)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="os.html">操作系统(os)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="path.html">路径(path)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="process.html">进程(process)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shell.html">shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tauri.html">tauri</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="updater.html">更新(updater)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="window.html">窗口(window)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://tauri.app/zh-cn/v1/guides/">官方地址</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Tauri API 文档</span>
+    <span class="version">v1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Tauri API 文档</a></li>
+    <li>JavaScript/TypeScript</li>
+    <li><a href="dialog.html">对话框(dialog)</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-tauri/edit/master/modules/ROOT/pages/dialog.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">对话框(dialog)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://tauri.app/zh-cn/v1/api/js/dialog">原文地址</a></p>
+</div>
+<div class="paragraph">
+<p>用于打开和保存文件的本地系统对话框。</p>
+</div>
+<div class="paragraph">
+<p>当在 <code>tauri.conf.json</code> 中设置 <code><a href="configuration.html#build-config" class="xref page">build.withGlobalTauri</a></code> 为 <code>true</code> 时，该包也可以通过 <code>window.__TAURI__.dialog</code> 访问。</p>
+</div>
+<div class="paragraph">
+<p>这些 API 必须添加到 <code>tauri.conf.json</code> 的 <code><a href="configuration.html#tauri-config" class="xref page">tauri.allowlist.dialog</a></code> 中：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">{
+  "tauri": {
+    "allowlist": {
+      "dialog": {
+        "all": true, // enable all dialog APIs
+        "ask": true, // enable dialog ask API
+        "confirm": true, // enable dialog confirm API
+        "message": true, // enable dialog message API
+        "open": true, // enable file open API
+        "save": true // enable file save API
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>建议仅将你使用的 API 加入白名单，以获得最佳的包大小和安全性。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="interfaces"><a class="anchor" href="#interfaces"></a>Interfaces</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="confirm-dialog-options"><a class="anchor" href="#confirm-dialog-options"></a>ConfirmDialogOptions</h3>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> cancelLabel: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>取消按钮的标签。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L112">dialog.ts:112</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> okLabel: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>确认按钮的标签。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L110">dialog.ts:110</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> title: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>对话框的标题，默认为应用名称。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L106">dialog.ts:106</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> type: <code>"info"</code> | <code>"warning"</code> | <code>"error"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>对话框的类型，默认为 <code>info</code>。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L108">dialog.ts:108</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="dialog-filter"><a class="anchor" href="#dialog-filter"></a>DialogFilter</h3>
+<div class="paragraph">
+<p>文件对话框的扩展名过滤器。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>extensions: <code>string[]</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>要过滤的扩展名，不带 <code>.</code> 前缀。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>extensions: ['svg', 'png']</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L48">dialog.ts:48</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>name: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>过滤器名称。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L40">dialog.ts:40</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="message-dialog-options"><a class="anchor" href="#message-dialog-options"></a>MessageDialogOptions</h3>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> okLabel: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>确认按钮的标签。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L101">dialog.ts:101</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> title: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>对话框的标题，默认为应用名称。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L97">dialog.ts:97</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> type: <code>"info"</code> | <code>"warning"</code> | <code>"error"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>对话框的类型，默认为 <code>info</code>。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L99">dialog.ts:99</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="open-dialog-options"><a class="anchor" href="#open-dialog-options"></a>OpenDialogOptions</h3>
+<div class="paragraph">
+<p>打开对话框的选项。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="paragraph">
+<p>` <code>Optional</code> defaultPath: <code>string</code></p>
+</div>
+<div class="paragraph">
+<p>初始目录或文件路径。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L62">dialog.ts:62</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> directory: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>对话框是否为目录选择。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L66">dialog.ts:66</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> filters: <code>DialogFilter[]</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>对话框的过滤器。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L60">dialog.ts:60</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> multiple: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>对话框是否允许多选。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L64">dialog.ts:64</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> recursive: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>如果为 true，表示它将稍后递归读取。定义是否允许子目录进入范围。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L71">dialog.ts:71</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> title: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>对话框窗口的标题。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L58">dialog.ts:58</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="save-dialog-options"><a class="anchor" href="#save-dialog-options"></a>SaveDialogOptions</h3>
+<div class="paragraph">
+<p>保存对话框的选项。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> defaultPath: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>初始目录或文件路径。如果是目录路径，对话框界面将更改为该文件夹。如果不是现有目录，文件名将设置为对话框的文件名输入，对话框将设置为父文件夹。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L89">dialog.ts:89</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> filters: <code>DialogFilter[]</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>对话框的过滤器。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L83">dialog.ts:83</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> title: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>对话框窗口的标题。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/dialog.ts#L81">dialog.ts:81</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ask"><a class="anchor" href="#ask"></a>ask</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>ask(<code>message</code>: <code>string</code>, <code>options?</code>: <code>string</code> | <code><a href="#confirm-dialog-options">ConfirmDialogOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>显示一个带有“是”和“否”按钮的询问对话框。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { ask } from '@tauri-apps/api/dialog';
+const yes = await ask('Are you sure?', 'Tauri');
+const yes2 = await ask('This action cannot be reverted. Are you sure?', { title: 'Tauri', type: 'warning' });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要显示的信息</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>|<code><a href="#confirm-dialog-options">ConfirmDialogOptions</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">对话框的选项。如果是string，则会作为对话框的标题。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<code>boolean</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为布尔值，指示是否点击了 <code>是</code>。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="confirm"><a class="anchor" href="#confirm"></a>confirm</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>confirm(<code>message</code>: <code>string</code>, <code>options?</code>: <code>string</code> | <code><a href="#confirm-dialog-options">ConfirmDialogOptions</a></code>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<code>boolean</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>显示一个带有 <code>确定</code> 和 <code>取消</code> 按钮的询问对话框。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { confirm } from '@tauri-apps/api/dialog';
+const confirmed = await confirm('Are you sure?', 'Tauri');
+const confirmed2 = await confirm('This action cannot be reverted. Are you sure?', { title: 'Tauri', type: 'warning' });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要显示的信息</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>|<code><a href="#confirm-dialog-options">ConfirmDialogOptions</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">对话框的选项。如果是string，则会作为对话框的标题。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<code>boolean</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为布尔值，指示是否点击了 <code>是</code>。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="message"><a class="anchor" href="#message"></a>message</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>message(<code>message</code>: <code>string</code>, <code>options?</code>: <code>string</code> | <code><a href="#message-dialog-options">MessageDialogOptions</a></code>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>显示一个带有 <code>确定</code> 按钮的消息对话框。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { message } from '@tauri-apps/api/dialog';
+await message('Tauri is awesome', 'Tauri');
+await message('File not found', { title: 'Tauri', type: 'error' });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要显示的信息</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>|<code><a href="#message-dialog-options">MessageDialogOptions</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">对话框的选项。如果是string，则会作为对话框的标题。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<code>boolean</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，指示操作的成功或失败。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="open"><a class="anchor" href="#open"></a>open</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>open(<code>options?</code>: <code><a href="#open-dialog-options">OpenDialogOptions</a></code>): Promise&lt;<code>null</code> | <code>string</code> | <code>string[]</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>打开一个文件/目录选择对话框。</p>
+</div>
+<div class="paragraph">
+<p>选定的路径将添加到文件系统和资产协议白名单范围中。当安全性比 API 的易用性更重要时，建议编写一个专用的命令。</p>
+</div>
+<div class="paragraph">
+<p>请注意，白名单范围的更改不会被保存，因此当应用程序重新启动时，值会被清除。你可以使用 <a href="https://github.com/tauri-apps/tauri-plugin-persisted-scope">tauri-plugin-persisted-scope</a> 将其保存到文件系统中。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { open } from '@tauri-apps/api/dialog';
+// Open a selection dialog for image files
+const selected = await open({
+  multiple: true,
+  filters: [{
+    name: 'Image',
+    extensions: ['png', 'jpeg']
+  }]
+});
+if (Array.isArray(selected)) {
+  // user selected multiple files
+} else if (selected === null) {
+  // user cancelled the selection
+} else {
+  // user selected a single file
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { open } from '@tauri-apps/api/dialog';
+import { appDir } from '@tauri-apps/api/path';
+// Open a selection dialog for directories
+const selected = await open({
+  directory: true,
+  multiple: true,
+  defaultPath: await appDir(),
+});
+if (Array.isArray(selected)) {
+  // user selected multiple directories
+} else if (selected === null) {
+  // user cancelled the selection
+} else {
+  // user selected a single directory
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#open-dialog-options">OpenDialogOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>返回: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>null</code> | <code>string</code> | <code>string[]</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为选定的路径。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="save"><a class="anchor" href="#save"></a>save</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>save(<code>options?</code>: <code><a href="#save-dialog-options">SaveDialogOptions</a></code>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<code>string</code> | <code>null</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>打开一个文件/目录保存对话框。</p>
+</div>
+<div class="paragraph">
+<p>选定的路径将添加到文件系统和资产协议白名单范围中。当安全性比 API 的易用性更重要时，建议编写一个专用的命令。</p>
+</div>
+<div class="paragraph">
+<p>请注意，白名单范围的更改不会被保存，因此当应用程序重新启动时，值会被清除。你可以使用 <a href="https://github.com/tauri-apps/tauri-plugin-persisted-scope">tauri-plugin-persisted-scope</a> 将其保存到文件系统中。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { save } from '@tauri-apps/api/dialog';
+const filePath = await save({
+  filters: [{
+    name: 'Image',
+    extensions: ['png', 'jpeg']
+  }]
+});</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#save-dialog-options">SaveDialogOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code> | <code>null</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为选定的路径。</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>http :: docs-tauri</title>
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-tauri</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-tauri" data-version="v1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Tauri API 文档</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configuration.html">配置</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command_line_runner.html">CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript/TypeScript</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="app.html">应用(app)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli.html">命令行(cli)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clipboard.html">剪贴板(clipboard)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dialog.html">对话框(dialog)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="event.html">事件(event)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fs.html">文件系统(fs)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="globalShortcut.html">快捷键(globalShortcut)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="http.html">http</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mocks.html">mocks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="notification.html">通知(notification)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="os.html">操作系统(os)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="path.html">路径(path)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="process.html">进程(process)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shell.html">shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tauri.html">tauri</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="updater.html">更新(updater)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="window.html">窗口(window)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://tauri.app/zh-cn/v1/guides/">官方地址</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Tauri API 文档</span>
+    <span class="version">v1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Tauri API 文档</a></li>
+    <li>JavaScript/TypeScript</li>
+    <li><a href="http.html">http</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-tauri/edit/master/modules/ROOT/pages/http.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">http</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://tauri.app/zh-cn/v1/api/js/http#security">原文地址</a></p>
+</div>
+<div class="paragraph">
+<p>访问用Rust编写的HTTP客户端。</p>
+</div>
+<div class="paragraph">
+<p>当 <code>tauri.conf.json</code> 中的 <code><a href="configuration.html#build-config" class="xref page">build.withGlobalTauri</a></code> 设置为 <code>true</code> 时，此包也可以通过 window.__TAURI__.http 访问。</p>
+</div>
+<div class="paragraph">
+<p>这些API必须在 <code>tauri.conf.json</code> 中列入允许列表：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "tauri": {
+    "allowlist": {
+      "http": {
+        "all": true, // enable all http APIs
+        "request": true // enable HTTP request API
+      }
+    }
+  }
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>建议仅列入您使用的API，以获得最佳的包大小和安全性。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="security"><a class="anchor" href="#security"></a>Security</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>此API有一个作用域配置，强制您使用全局模式限制可访问的URL和路径。</p>
+</div>
+<div class="paragraph">
+<p>例如，此作用域配置仅允许对tauri-apps组织的GitHub API进行HTTP请求：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "tauri": {
+    "allowlist": {
+      "http": {
+        "scope": ["https://api.github.com/repos/tauri-apps/*"]
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>尝试执行任何未在作用域中配置的URL的API将导致因拒绝访问而承诺被拒绝。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="enumerations"><a class="anchor" href="#enumerations"></a>Enumerations</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="response-type"><a class="anchor" href="#response-type"></a>ResponseType</h3>
+<div class="sect3">
+<h4 id="_since_1_0_0"><a class="anchor" href="#_since_1_0_0"></a>Since: 1.0.0</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_枚举成员"><a class="anchor" href="#_枚举成员"></a>枚举成员</h4>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">定义在</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Binary</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L74">http.ts:74</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>JSON</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L72">http.ts:72</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Text</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L73">http.ts:73</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="classes"><a class="anchor" href="#classes"></a>Classes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="body"><a class="anchor" href="#body"></a>Body</h3>
+<div class="paragraph">
+<p>用于POST和PUT请求的主体对象。</p>
+</div>
+<div class="sect3">
+<h4 id="_since_1_0_0_2"><a class="anchor" href="#_since_1_0_0_2"></a>Since: 1.0.0</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_属性"><a class="anchor" href="#_属性"></a>属性</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>payload: <code>unknown</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L95">http.ts:95</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>type: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L94">http.ts:94</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_方法"><a class="anchor" href="#_方法"></a>方法</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Static</code> bytes(<code>bytes</code>: <code>Iterable</code>&lt;<code>number</code>&gt; | <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> | <code>ArrayLike</code>&lt;<code>number</code>&gt;): <code><a href="#body">Body</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>创建一个新的字节数组主体。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { Body } from "@tauri-apps/api/http"
+Body.bytes(new Uint8Array([1, 2, 3]));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bytes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Iterable</code>&lt;<code>number</code>&gt; | <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> | <code>ArrayLike</code>&lt;<code>number</code>&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">请求体字节数组。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#body">Body</a></code></p>
+</div>
+<div class="paragraph">
+<p>主体对象已准备好用于POST和PUT请求。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Static</code> form(<code>data</code>: <code><a href="https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type">Record</a></code>&lt;<code>string</code>, <code><a href="#part">Part</a></code>&gt; | <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">FormData</a></code>): <a href="#body">Body</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>创建一个新的表单数据主体。表单数据是一个对象，其中每个键是条目名称，值是字符串或文件对象。</p>
+</div>
+<div class="paragraph">
+<p>默认情况下，它会设置 <code>application/x-www-form-urlencoded</code> 内容类型头，但如果启用了Cargo功能 <code>http-multipart</code>，您可以将其设置为 <code>multipart/form-data</code>。</p>
+</div>
+<div class="paragraph">
+<p>注意，文件路径必须在 <code>fs</code> 允许列表范围内。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { Body } from "@tauri-apps/api/http"
+const body = Body.form({
+  key: 'value',
+  image: {
+    file: '/path/to/file', // either a path or an array buffer of the file contents
+    mime: 'image/jpeg', // optional
+    fileName: 'image.jpg' // optional
+  }
+});
+
+// alternatively, use a FormData:
+const form = new FormData();
+form.append('key', 'value');
+form.append('image', file, 'image.png');
+const formBody = Body.form(form);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type">Record</a></code>&lt;<code>string</code>, <code><a href="#part">Part</a></code>&gt;|<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">FormData</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">请求体数据。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#body">Body</a></code></p>
+</div>
+<div class="paragraph">
+<p>主体对象已准备好用于POST和PUT请求。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Static</code> json(<code>data</code>: <code><a href="https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type">Record</a></code>&lt;<code>any</code>, <code>any</code>&gt;): <code><a href="#body">Body</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>创建一个新的JSON请求体。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { Body } from "@tauri-apps/api/http"
+Body.json({
+  registered: true,
+  name: 'tauri'
+});</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type">Record</a></code>&lt;<code>any</code>, <code>any</code>&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">请求体JON对象。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>主体对象已准备好用于POST和PUT请求。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Static</code> text(<code>value</code>: <code>string</code>): <code><a href="#body">Body</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>创建一个新的UTF-8字符串请求体。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { Body } from "@tauri-apps/api/http"
+Body.text('The body content as a string');</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>value</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">请求体字符串。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#body">Body</a></code></p>
+</div>
+<div class="paragraph">
+<p>主体对象已准备好用于POST和PUT请求。</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="client"><a class="anchor" href="#client"></a>Client</h3>
+<div class="sect3">
+<h4 id="_since_1_0_0_3"><a class="anchor" href="#_since_1_0_0_3"></a>Since: 1.0.0</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_属性_2"><a class="anchor" href="#_属性_2"></a>属性</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>id: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L303">http.ts:303</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_方法_2"><a class="anchor" href="#_方法_2"></a>方法</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>delete&lt;<code>T</code>&gt;(<code>url</code>: <code>string</code>, <code>options?</code>: <code><a href="#request-options">RequestOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#response">Response</a></code>&lt;<code>T</code>&gt;&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>发送DELETE请求。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { getClient } from '@tauri-apps/api/http';
+const client = await getClient();
+const response = await client.delete('http://localhost:3003/users/1');</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>类型参数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#request-options">RequestOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#response">Response</a></code>&lt;<code>T</code>&gt;&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>drop(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>销毁客户端实例。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { getClient } from '@tauri-apps/api/http';
+const client = await getClient();
+await client.drop();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>get&lt;<code>T</code>&gt;(<code>url</code>: <code>string</code>, <code>options?</code>: <code><a href="#request-options">RequestOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#response">Response</a></code>&lt;<code>T</code>&gt;&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>发送GET请求。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { getClient, ResponseType } from '@tauri-apps/api/http';
+const client = await getClient();
+const response = await client.get('http://localhost:3003/users', {
+  timeout: 30,
+  // the expected response type
+  responseType: ResponseType.JSON
+});</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>类型参数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#request-options">RequestOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#response">Response</a></code>&lt;<code>T</code>&gt;&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>patch&lt;<code>T</code>&gt;(<code>url</code>: <code>string</code>, <code>options?</code>: <code><a href="#request-options">RequestOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#response">Response</a></code>&lt;<code>T</code>&gt;&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>发送PATCH请求。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { getClient, Body } from '@tauri-apps/api/http';
+const client = await getClient();
+const response = await client.patch('http://localhost:3003/users/1', {
+  body: Body.json({ email: 'contact@tauri.app' })
+});</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>类型参数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#request-options">RequestOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#response">Response</a></code>&lt;<code>T</code>&gt;&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>post&lt;<code>T</code>&gt;(<code>url</code>: <code>string</code>, <code>body?</code>: <code><a href="#body">Body</a></code>, <code>options?</code>: <code><a href="#request-options">RequestOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#response">Response</a></code>&lt;<code>T</code>&gt;&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>发送POST请求。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { getClient, Body, ResponseType } from '@tauri-apps/api/http';
+const client = await getClient();
+const response = await client.post('http://localhost:3003/users', {
+  body: Body.json({
+    name: 'tauri',
+    password: 'awesome'
+  }),
+  // in this case the server returns a simple string
+  responseType: ResponseType.Text,
+});</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>类型参数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>body?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#body">Body</a></code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#request-options">RequestOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#response">Response</a></code>&lt;<code>T</code>&gt;&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>put&lt;<code>T</code>&gt;(<code>url</code>: <code>string</code>, <code>body?</code>: <code><a href="#body">Body</a></code>, <code>options?</code>: <code><a href="#request-options">RequestOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#response">Response</a></code>&lt;<code>T</code>&gt;&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>发送PUT请求。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { getClient, Body } from '@tauri-apps/api/http';
+const client = await getClient();
+const response = await client.put('http://localhost:3003/users/1', {
+  body: Body.form({
+    file: {
+      file: '/home/tauri/avatar.png',
+      mime: 'image/png',
+      fileName: 'avatar.png'
+    }
+  })
+});</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>类型参数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>body?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#body">Body</a></code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#request-options">RequestOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#response">Response</a></code>&lt;<code>T</code>&gt;&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>request&lt;<code>T</code>&gt;(<code>options</code>: <code><a href="#http-options">HttpOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#response">Response</a></code>&lt;<code>T</code>&gt;&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>发起一个HTTP请求。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { getClient } from '@tauri-apps/api/http';
+const client = await getClient();
+const response = await client.request({
+  method: 'GET',
+  url: 'http://localhost:3003/users',
+});</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>类型参数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#http-options">HttpOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#response">Response</a></code>&lt;<code>T</code>&gt;&gt;</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="response"><a class="anchor" href="#response"></a>Response&lt;T&gt;</h3>
+<div class="paragraph">
+<p>响应对象。</p>
+</div>
+<div class="sect3">
+<h4 id="_since_1_0_0_4"><a class="anchor" href="#_since_1_0_0_4"></a>Since: 1.0.0</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_类型参数"><a class="anchor" href="#_类型参数"></a>类型参数</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_属性_3"><a class="anchor" href="#_属性_3"></a>属性</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>data: <code>T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>响应数据</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L286">http.ts:286</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>headers: <code><a href="https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type">Record</a></code>&lt;<code>string</code>, <code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>响应头。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L282">http.ts:282</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ok: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>一个布尔值，指示响应是否成功（状态在200-299范围内）。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L280">http.ts:280</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>rawHeaders: <code><a href="https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type">Record</a></code>&lt;<code>string</code>, <code>string</code>[]&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>响应的原始头信息。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L284">http.ts:284</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>status: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>响应状态码。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L278">http.ts:278</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>url: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>请求URL。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L276">http.ts:276</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="interfaces"><a class="anchor" href="#interfaces"></a>Interfaces</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="client-options"><a class="anchor" href="#client-options"></a>ClientOptions</h3>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="sect3">
+<h4 id="_属性_4"><a class="anchor" href="#_属性_4"></a>属性</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> connectTimeout: <code>number</code> | <code><a href="#duration">Duration</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L65">http.ts:65</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> maxRedirections: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>定义客户端应跟随的最大重定向次数。如果设置为0，则不会跟随任何重定向。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L64">http.ts:64</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="duration"><a class="anchor" href="#duration"></a>Duration</h3>
+<div class="sect3">
+<h4 id="_since_1_0_0_5"><a class="anchor" href="#_since_1_0_0_5"></a>Since: 1.0.0</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_属性_5"><a class="anchor" href="#_属性_5"></a>属性</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>nanos: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L53">http.ts:53</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>secs: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L52">http.ts:52</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="file-part"><a class="anchor" href="#file-part"></a>FilePart&lt;T&gt;</h3>
+<div class="sect3">
+<h4 id="_since_1_0_0_6"><a class="anchor" href="#_since_1_0_0_6"></a>Since: 1.0.0</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_类型参数_2"><a class="anchor" href="#_类型参数_2"></a>类型参数</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_属性_6"><a class="anchor" href="#_属性_6"></a>属性</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>file: <code>string</code> | <code>T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L81">http.ts:81</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> fileName: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L83">http.ts:83</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> mime: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L82">http.ts:82</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="http-options"><a class="anchor" href="#http-options"></a>HttpOptions</h3>
+<div class="paragraph">
+<p>发送到后端的选项对象。</p>
+</div>
+<div class="sect3">
+<h4 id="_since_1_0_0_7"><a class="anchor" href="#_since_1_0_0_7"></a>Since: 1.0.0</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_属性_7"><a class="anchor" href="#_属性_7"></a>属性</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> body: <code><a href="#body">Body</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L250">http.ts:250</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> headers: <code><a href="https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type">Record</a></code>&lt;<code>string</code>, <code>any</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L248">http.ts:248</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>method: <code><a href="#http-verb">HttpVerb</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L246">http.ts:246</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> query: <code><a href="https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type">Record</a></code>&lt;<code>string</code>, <code>any</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L249">http.ts:249</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> responseType: <code><a href="#response-type">ResponseType</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L252">http.ts:252</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> timeout: <code>number</code> | <code><a href="#duration">Duration</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L251">http.ts:251</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>url: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L247">http.ts:247</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="type-aliases"><a class="anchor" href="#type-aliases"></a>Type Aliases</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="fetch-options"><a class="anchor" href="#fetch-options"></a>FetchOptions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>FetchOptions: <code><a href="https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys">Omit</a></code>&lt;<code><a href="#http-options">HttpOptions</a></code>, <code>"url"</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>fetch</code> API的选项。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L258">http.ts:258</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="http-verb"><a class="anchor" href="#http-verb"></a>HttpVerb</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>HttpVerb: <code>"GET"</code> | <code>"POST"</code> | <code>"PUT"</code> | <code>"DELETE"</code> | <code>"PATCH"</code> | <code>"HEAD"</code> | <code>"OPTIONS"</code> | <code>"CONNECT"</code> | <code>"TRACE"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>请求的HTTP动词。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L229">http.ts:229</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="part"><a class="anchor" href="#part"></a>Part</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Part: <code>string</code> | <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a></code> | <code><a href="#file-part">FilePart</a></code>&lt;<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L86">http.ts:86</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="request-options"><a class="anchor" href="#request-options"></a>RequestOptions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>RequestOptions: <code><a href="https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys">Omit</a></code>&lt;<code><a href="#http-options">HttpOptions</a></code>, <code>"method"</code> | <code>"url"</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>请求选项。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/http.ts#L256">http.ts:256</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="fetch"><a class="anchor" href="#fetch"></a>fetch</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>fetch&lt;<code>T</code>&gt;(<code>url</code>: <code>string</code>, <code>options?</code>: <code><a href="#fetch-options">FetchOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#response">Response</a></code>&lt;<code>T</code>&gt;&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>使用默认客户端执行HTTP请求。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { fetch } from '@tauri-apps/api/http';
+const response = await fetch('http://localhost:3003/users/2', {
+  method: 'GET',
+  timeout: 30,
+});</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_类型参数_3"><a class="anchor" href="#_类型参数_3"></a>类型参数</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_参数"><a class="anchor" href="#_参数"></a>参数</h4>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fetch-options">FetchOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#response">Response</a></code>&lt;<code>T</code>&gt;&gt;</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="get-client"><a class="anchor" href="#get-client"></a>getClient</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>getClient(<code>options?</code>: <code><a href="#client-options">ClientOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#client">Client</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>使用指定的选项创建一个新的客户端。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { getClient } from '@tauri-apps/api/http';
+const client = await getClient();</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_since_1_0_0_8"><a class="anchor" href="#_since_1_0_0_8"></a>Since: 1.0.0</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_参数_2"><a class="anchor" href="#_参数_2"></a>参数</h4>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#client-options">ClientOptions</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">客户端配置</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#client">Client</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个承诺对象，解析为客户端实例。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

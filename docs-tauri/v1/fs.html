@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>文件系统(fs) :: docs-tauri</title>
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-tauri</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-tauri" data-version="v1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Tauri API 文档</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configuration.html">配置</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command_line_runner.html">CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript/TypeScript</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="app.html">应用(app)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli.html">命令行(cli)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clipboard.html">剪贴板(clipboard)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dialog.html">对话框(dialog)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="event.html">事件(event)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="fs.html">文件系统(fs)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="globalShortcut.html">快捷键(globalShortcut)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="http.html">http</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mocks.html">mocks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="notification.html">通知(notification)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="os.html">操作系统(os)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="path.html">路径(path)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="process.html">进程(process)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shell.html">shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tauri.html">tauri</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="updater.html">更新(updater)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="window.html">窗口(window)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://tauri.app/zh-cn/v1/guides/">官方地址</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Tauri API 文档</span>
+    <span class="version">v1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Tauri API 文档</a></li>
+    <li>JavaScript/TypeScript</li>
+    <li><a href="fs.html">文件系统(fs)</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-tauri/edit/master/modules/ROOT/pages/fs.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">文件系统(fs)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://tauri.app/zh-cn/v1/api/js/fs">原文地址</a></p>
+</div>
+<div class="paragraph">
+<p>访问文件系统。</p>
+</div>
+<div class="paragraph">
+<p>当在 <code>tauri.conf.json</code> 中设置 <code><a href="configuration.html#build-config" class="xref page">build.withGlobalTauri</a></code> 为 <code>true</code> 时，该包也可以通过 <code>window.__TAURI__.fs</code> 访问。</p>
+</div>
+<div class="paragraph">
+<p>这些 API 必须添加到 <code>tauri.conf.json</code> 的 <code><a href="configuration.html#tauri-config" class="xref page">tauri.allowlist.fs</a></code> 中：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "tauri": {
+    "allowlist": {
+      "fs": {
+        "all": true, // enable all FS APIs
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "copyFile": true,
+        "createDir": true,
+        "removeDir": true,
+        "removeFile": true,
+        "renameFile": true,
+        "exists": true
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>建议仅将你使用的 API 加入白名单，以获得最佳的包大小和安全性。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="security"><a class="anchor" href="#security"></a>Security</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>该模块防止路径遍历，不允许使用绝对路径或父目录组件（即不允许使用"/usr/path/to/file"或"../path/to/file"路径）。使用此 API 访问的路径必须相对于其中一个 <a href="#base-directory">BaseDirectory</a>，因此如果需要访问任意文件系统路径，必须在核心层编写此类逻辑。</p>
+</div>
+<div class="paragraph">
+<p>该 API 具有强制限制使用全局模式访问路径的范围配置。</p>
+</div>
+<div class="paragraph">
+<p>范围配置是一个描述允许的文件夹路径的全局模式数组。例如，此范围配置仅允许访问 <a href="path.html#app-data-dir" class="xref page">$APPDATA directory</a> 的 <em>databases</em> 文件夹中的文件：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "tauri": {
+    "allowlist": {
+      "fs": {
+        "scope": ["$APPDATA/databases/*"]
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>请注意 <code>$APPDATA</code> 变量的使用。该值在运行时注入，解析为 <a href="path.html#app-data-dir" class="xref page">app data directory</a>。可用的变量有：<code><a href="path.html#app-config-dir" class="xref page">$APPCONFIG</a></code>、<code><a href="path.html#app-data-dir" class="xref page">$APPDATA</a></code>、<code><a href="path.html#app-local-data-dir" class="xref page">$APPLOCALDATA</a></code>、<code><a href="path.html#app-cache-dir" class="xref page">$APPCACHE</a></code>、<code><a href="path.html#app-log-dir" class="xref page">$APPLOG</a></code>、<code><a href="path.html#audio-dir" class="xref page">$AUDIO</a></code>、<code><a href="path.html#cache-dir" class="xref page">$CACHE</a></code>、<code><a href="path.html#config-dir" class="xref page">$CONFIG</a></code>、<code><a href="path.html#data-dir" class="xref page">$DATA</a></code>、<code><a href="path.html#local-data-dir" class="xref page">$LOCALDATA</a></code>、<code><a href="path.html#desktop-dir" class="xref page">$DESKTOP</a></code>、<code><a href="path.html#document-dir" class="xref page">$DOCUMENT</a></code>、<code><a href="path.html#download-dir" class="xref page">$DOWNLOAD</a></code>、<code><a href="path.html#executable-dir" class="xref page">$EXE</a></code>、<code><a href="path.html#font-dir" class="xref page">$FONT</a></code>、<code><a href="path.html#home-dir" class="xref page">$HOME</a></code>、<code><a href="path.html#picture-dir" class="xref page">$PICTURE</a></code>、<code><a href="path.html#public-dir" class="xref page">$PUBLIC</a></code>、<code><a href="path.html#runtime-dir" class="xref page">$RUNTIME</a></code>、<code><a href="path.html#template-dir" class="xref page">$TEMPLATE</a></code>、<code><a href="path.html#video-dir" class="xref page">$VIDEO</a></code>、<code><a href="path.html#resource-dir" class="xref page">$RESOURCE</a></code>、<code><a href="path.html#app-dir" class="xref page">$APP</a></code>、<code><a href="path.html#log-dir" class="xref page">$LOG</a></code>、<code><a href="os.html#tempdir" class="xref page">$TEMP</a></code>。</p>
+</div>
+<div class="paragraph">
+<p>尝试执行任何未在范围内配置的 URL 的 API 时，由于访问被拒绝，将导致 Promise 被拒绝。</p>
+</div>
+<div class="paragraph">
+<p>请注意，此范围适用于此模块中的所有 API。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="references"><a class="anchor" href="#references"></a>References</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="dir"><a class="anchor" href="#dir"></a>Dir</h3>
+<div class="paragraph">
+<p><a href="#base-directory">BaseDirectory</a> 的重命名以及重新导出。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="write-file"><a class="anchor" href="#write-file"></a>writeFile</h3>
+<div class="paragraph">
+<p><a href="#write-text-file">writeTextFile</a> 的重命名以及重新导出。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="enumerations"><a class="anchor" href="#enumerations"></a>Enumerations</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="base-directory"><a class="anchor" href="#base-directory"></a>BaseDirectory</h3>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>枚举成员</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">定义在</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Audio</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L81">fs.ts:81</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Cache</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L82">fs.ts:82</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Config</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L83">fs.ts:83</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>4</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L84">fs.ts:84</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LocalData</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L85">fs.ts:85</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Desktop</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>6</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L86">fs.ts:86</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Document</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>7</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L87">fs.ts:87</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Download</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>8</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L88">fs.ts:88</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Executable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>9</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L89">fs.ts:89</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Font</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L90">fs.ts:90</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Home</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>11</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L91">fs.ts:91</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Picture</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>12</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L92">fs.ts:92</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Public</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>13</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L93">fs.ts:93</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Runtime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>14</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L94">fs.ts:94</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Template</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>15</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L95">fs.ts:95</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Video</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>16</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L96">fs.ts:96</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Resource</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>17</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L97">fs.ts:97</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>App</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>18</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L98">fs.ts:98</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Log</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>19</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L99">fs.ts:99</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Temp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>20</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L100">fs.ts:100</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AppConfig</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>21</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L101">fs.ts:101</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AppData</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>22</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L102">fs.ts:102</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AppLocalData</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>23</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L103">fs.ts:103</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AppCache</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>24</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L104">fs.ts:104</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AppLog</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>25</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L105">fs.ts:105</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="interfaces"><a class="anchor" href="#interfaces"></a>Interfaces</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="file-entry"><a class="anchor" href="#file-entry"></a>FileEntry</h3>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Optional <code>children</code>: <code><a href="#file-entry">FileEntry</a>[]</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>如果是目录，此条目的子项；否则为null</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L161">fs.ts:161</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Optional <code>name</code>: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>目录/文件的名称可以为null，如果路径以 <code>..</code> 结尾</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L159">fs.ts:159</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>path: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L154">fs.ts:154</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fs-binary-file-option"><a class="anchor" href="#fs-binary-file-option"></a>FsBinaryFileOption</h3>
+<div class="paragraph">
+<p>用于将二进制数据写入文件的选项对象。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>contents: <code><a href="#binary-file-contents">BinaryFileContents</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>字节数组的内容。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L147">fs.ts:147</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>path: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>要写入的文件路径。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L145">fs.ts:145</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fs-dir-options"><a class="anchor" href="#fs-dir-options"></a>FsDirOptions</h3>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> dir: <code><a href="#base-directory">BaseDirectory</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L120">fs.ts:120</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> recursive: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L121">fs.ts:121</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fs-options"><a class="anchor" href="#fs-options"></a>FsOptions</h3>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> dir: <code><a href="#base-directory">BaseDirectory</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L112">fs.ts:112</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fs-text-file-option"><a class="anchor" href="#fs-text-file-option"></a>FsTextFileOption</h3>
+<div class="paragraph">
+<p>用于将UTF-8字符串写入文件的选项对象。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>contents: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>要写入文件的UTF-8字符串。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L133">fs.ts:133</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>path: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>要写入的文件路径。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L131">fs.ts:131</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="type-aliases"><a class="anchor" href="#type-aliases"></a>Type Aliases</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="binary-file-contents"><a class="anchor" href="#binary-file-contents"></a>BinaryFileContents</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>BinaryFileContents: <code>Iterable</code>&lt;<code>number</code>&gt; | <code>ArrayLike</code>&lt;<code>number</code>&gt; | <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/fs.ts#L136">fs.ts:136</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="copy-file"><a class="anchor" href="#copy-file"></a>copyFile</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>copyFile(<code>source</code>: <code>string</code>, <code>destination</code>: <code>string</code>, <code>options?</code>: <code><a href="#fs-options">FsOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将文件复制到目的地。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { copyFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Copy the `$APPCONFIG/app.conf` file to `$APPCONFIG/app.conf.bk`
+await copyFile('app.conf', 'app.conf.bk', { dir: BaseDirectory.AppConfig });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>source</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>destination</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fs-options">FsOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>指示操作成功或失败的Promise。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="create-dir"><a class="anchor" href="#create-dir"></a>createDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>createDir(<code>dir</code>: <code>string</code>, <code>options?</code>: <code><a href="#fs-dir-options">FsDirOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>创建目录。如果路径的父组件之一不存在且未将 <code>recursive</code> 选项设置为true，则Promise将被拒绝。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { createDir, BaseDirectory } from '@tauri-apps/api/fs';
+// Create the `$APPDATA/users` directory
+await createDir('users', { dir: BaseDirectory.AppData, recursive: true });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dir</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fs-options">FsOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>指示操作成功或失败的Promise。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exists"><a class="anchor" href="#exists"></a>exists</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>exists(<code>path</code>: <code>string</code>, <code>options?</code>: <code><a href="#fs-options">FsOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>检查路径是否存在。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { exists, BaseDirectory } from '@tauri-apps/api/fs';
+// Check if the `$APPDATA/avatar.png` file exists
+await exists('avatar.png', { dir: BaseDirectory.AppData });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fs-options">FsOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="read-binary-file"><a class="anchor" href="#read-binary-file"></a>readBinaryFile</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>readBinaryFile(<code>filePath</code>: <code>string</code>, <code>options?</code>: <code><a href="#fs-options">FsOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将文件读取为字节数组。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { readBinaryFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Read the image file in the `$RESOURCEDIR/avatar.png` path
+const contents = await readBinaryFile('avatar.png', { dir: BaseDirectory.Resource });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>filePath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fs-options">FsOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a></code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="read-dir"><a class="anchor" href="#read-dir"></a>readDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>readDir(<code>dir</code>: <code>string</code>, <code>options?</code>: <code><a href="#fs-dir-options">FsDirOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#file-entry">FileEntry</a></code>[]&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>列出目录文件。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { readDir, BaseDirectory } from '@tauri-apps/api/fs';
+// Reads the `$APPDATA/users` directory recursively
+const entries = await readDir('users', { dir: BaseDirectory.AppData, recursive: true });
+
+function processEntries(entries) {
+  for (const entry of entries) {
+    console.log(`Entry: ${entry.path}`);
+    if (entry.children) {
+      processEntries(entry.children)
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dir</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fs-options">FsOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#file-entry">FileEntry</a></code>[]&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="read-text-file"><a class="anchor" href="#read-text-file"></a>readTextFile</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>readTextFile(<code>filePath</code>: <code>string</code>, <code>options?</code>: <code><a href="#fs-options">FsOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将文件读取为UTF-8编码的字符串。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { readTextFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Read the text file in the `$APPCONFIG/app.conf` path
+const contents = await readTextFile('app.conf', { dir: BaseDirectory.AppConfig });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>filePath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fs-options">FsOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remove-dir"><a class="anchor" href="#remove-dir"></a>removeDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>removeDir(<code>dir</code>: <code>string</code>, <code>options?</code>: <code><a href="#fs-dir-options">FsDirOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>删除目录。如果目录不为空且未将 <code>recursive</code> 选项设置为true，则Promise将被拒绝。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { removeDir, BaseDirectory } from '@tauri-apps/api/fs';
+// Remove the directory `$APPDATA/users`
+await removeDir('users', { dir: BaseDirectory.AppData });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dir</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fs-dir-options">FsDirOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>指示操作成功或失败的Promise。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remove-file"><a class="anchor" href="#remove-file"></a>removeFile</h3>
+<div class="paragraph">
+<p>removeFile(<code>file</code>: <code>string</code>, <code>options?</code>: <code><a href="#fs-options">FsOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>删除文件。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { removeFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Remove the `$APPConfig/app.conf` file
+await removeFile('app.conf', { dir: BaseDirectory.AppConfig });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>file</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fs-options">FsOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>指示操作成功或失败的Promise。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="rename-file"><a class="anchor" href="#rename-file"></a>renameFile</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>renameFile(<code>oldPath</code>: <code>string</code>, <code>newPath</code>: <code>string</code>, <code>options?</code>: <code><a href="#fs-options">FsOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>重命名文件。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { renameFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Rename the `$APPDATA/avatar.png` file
+await renameFile('avatar.png', 'deleted.png', { dir: BaseDirectory.AppData });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oldPath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>newPath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fs-options">FsOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>指示操作成功或失败的Promise。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="write-binary-file"><a class="anchor" href="#write-binary-file"></a>writeBinaryFile</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>writeBinaryFile(<code>path</code>: <code>string</code>, <code>contents</code>: <code><a href="#binary-file-contents">BinaryFileContents</a></code>, <code>options?</code>: <code><a href="#fs-options">FsOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将字节数组内容写入文件。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { writeBinaryFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Write a binary file to the `$APPDATA/avatar.png` path
+await writeBinaryFile('avatar.png', new Uint8Array([]), { dir: BaseDirectory.AppData });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>contents</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#binary-file-contents">BinaryFileContents</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fs-options">FsOptions</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">配置对象。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>指示操作成功或失败的Promise。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="write-text-file"><a class="anchor" href="#write-text-file"></a>writeTextFile</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>writeTextFile(<code>path</code>: <code>string</code>, <code>contents</code>: <code>string</code>, <code>options?</code>: <code><a href="#fs-options">FsOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>写一个UTF-8文本文件。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { writeTextFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Write a text file to the `$APPCONFIG/app.conf` path
+await writeTextFile('app.conf', 'file contents', { dir: BaseDirectory.AppConfig });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>contents</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fs-options">FsOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>writeTextFile(<code>file</code>: <code><a href="#fs-text-file-option">FsTextFileOption</a></code>, <code>options?</code>: <code><a href="#fs-options">FsOptions</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>写一个UTF-8文本文件。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { writeTextFile, BaseDirectory } from '@tauri-apps/api/fs';
+// Write a text file to the `$APPCONFIG/app.conf` path
+await writeTextFile({ path: 'app.conf', contents: 'file contents' }, { dir: BaseDirectory.AppConfig });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fs-options">FsOptions</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>指示操作成功或失败的Promise。</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

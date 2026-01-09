@@ -1,0 +1,3865 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>窗口(window) :: docs-tauri</title>
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-tauri</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-tauri" data-version="v1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Tauri API 文档</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configuration.html">配置</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command_line_runner.html">CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript/TypeScript</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="app.html">应用(app)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli.html">命令行(cli)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clipboard.html">剪贴板(clipboard)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dialog.html">对话框(dialog)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="event.html">事件(event)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fs.html">文件系统(fs)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="globalShortcut.html">快捷键(globalShortcut)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="http.html">http</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mocks.html">mocks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="notification.html">通知(notification)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="os.html">操作系统(os)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="path.html">路径(path)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="process.html">进程(process)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shell.html">shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tauri.html">tauri</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="updater.html">更新(updater)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="window.html">窗口(window)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://tauri.app/zh-cn/v1/guides/">官方地址</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Tauri API 文档</span>
+    <span class="version">v1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Tauri API 文档</a></li>
+    <li>JavaScript/TypeScript</li>
+    <li><a href="window.html">窗口(window)</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-tauri/edit/master/modules/ROOT/pages/window.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">窗口(window)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://tauri.app/zh-cn/v1/api/js/window">原文地址</a></p>
+</div>
+<div class="paragraph">
+<p>提供API以创建窗口，与其他窗口通信并操作当前窗口。</p>
+</div>
+<div class="paragraph">
+<p>当 <code>tauri.conf.json</code> 中的 <code><a href="configuration.html#build-config" class="xref page">build.withGlobalTauri</a></code> 设置为 <code>true</code> 时，也可以通过 <code>window.__TAURI__.window</code> 访问该包。</p>
+</div>
+<div class="paragraph">
+<p>必须将这些API添加到 <code>tauri.conf.json</code> 中的 <code><a href="configuration.html#tauri-config" class="xref page">tauri.allowlist.window</a></code>：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "tauri": {
+    "allowlist": {
+      "window": {
+        "all": true, // enable all window APIs
+        "create": true, // enable window creation
+        "center": true,
+        "requestUserAttention": true,
+        "setResizable": true,
+        "setTitle": true,
+        "maximize": true,
+        "unmaximize": true,
+        "minimize": true,
+        "unminimize": true,
+        "show": true,
+        "hide": true,
+        "close": true,
+        "setDecorations": true,
+        "setAlwaysOnTop": true,
+        "setContentProtected": true,
+        "setSize": true,
+        "setMinSize": true,
+        "setMaxSize": true,
+        "setPosition": true,
+        "setFullscreen": true,
+        "setFocus": true,
+        "setIcon": true,
+        "setSkipTaskbar": true,
+        "setCursorGrab": true,
+        "setCursorVisible": true,
+        "setCursorIcon": true,
+        "setCursorPosition": true,
+        "setIgnoreCursorEvents": true,
+        "startDragging": true,
+        "print": true
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>建议只允许使用的API，以优化包大小和安全性。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="window-events"><a class="anchor" href="#window-events"></a>Window events</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>可以使用 <code>appWindow.listen</code> 监听事件：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from "@tauri-apps/api/window";
+appWindow.listen("my-window-event", ({ event, payload }) =&gt; { });</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="enumerations"><a class="anchor" href="#enumerations"></a>Enumerations</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="user-attention-type"><a class="anchor" href="#user-attention-type"></a>UserAttentionType</h3>
+<div class="paragraph">
+<p>请求窗口时的关注类型。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>枚举成员</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">定义在</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Critical</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">平台特定<br>
+- <strong>macOS</strong>：在应用程序聚焦之前，使Dock图标闪烁。<br>
+- <strong>Windows</strong>：在应用程序聚焦之前，使窗口和任务栏按钮闪烁。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L225">window.ts:225</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Informational</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">平台特定<br>
+- <strong>macOS</strong>：Dock图标闪烁一次。<br>
+- <strong>Windows</strong>：任务栏按钮闪烁，直到应用程序聚焦。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L231">window.ts:231</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="classes"><a class="anchor" href="#classes"></a>Classes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="close-requested-event"><a class="anchor" href="#close-requested-event"></a>CloseRequestedEvent</h3>
+<div class="paragraph">
+<p>Since: 1.0.2</p>
+</div>
+<div class="paragraph">
+<p>构造函数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>new CloseRequestedEvent(<code>event</code>: <code><a href="event.html#event" class="xref page">Event</a></code>&lt;<code>null</code>&gt;): <code><a href="#close-requested-event">CloseRequestedEvent</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>event</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="event.html#event" class="xref page">Event</a></code>&lt;<code>null</code>&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L1933">window.ts:1933</a></p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>event: <code><a href="event.html#event-name" class="xref page">EventName</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>事件名称</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L1926">window.ts:1926</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>id: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>用于取消监听的事件标识符。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L1930">window.ts:1930</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>windowLabel: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>触发此事件的窗口的标签。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L1928">window.ts:1928</a></p>
+</div>
+<div class="paragraph">
+<p>方法</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>isPreventDefault(): <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code>boolean</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>preventDefault(): <code>void</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code>void</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logical-position"><a class="anchor" href="#logical-position"></a>LogicalPosition</h3>
+<div class="paragraph">
+<p>以逻辑像素表示的位置。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>构造函数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>new LogicalPosition(<code>x</code>: <code>number</code>, <code>y</code>: <code>number</code>): <code><a href="#logical-position">LogicalPosition</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>y</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L163">window.ts:163</a></p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>type: <code>string</code> = <code>'Logical'</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L159">window.ts:159</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>x: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L160">window.ts:160</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>y: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L161">window.ts:161</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logical-size"><a class="anchor" href="#logical-size"></a>LogicalSize</h3>
+<div class="paragraph">
+<p>以逻辑像素表示的大小。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>构造函数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>new LogicalSize(<code>width</code>: <code>number</code>, <code>height</code>: <code>number</code>): <code><a href="#logical-size">LogicalSize</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>width</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>height</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L117">window.ts:117</a></p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>height: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L115">window.ts:115</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>type: <code>string</code> = <code>'Logical'</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L113">window.ts:113</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>width: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L114">window.ts:114</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="physical-position"><a class="anchor" href="#physical-position"></a>PhysicalPosition</h3>
+<div class="paragraph">
+<p>以物理像素表示的位置。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>构造函数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>new PhysicalPosition(<code>x</code>: <code>number</code>, <code>y</code>: <code>number</code>): <code><a href="#physical-position">PhysicalPosition</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>y</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L179">window.ts:179</a></p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>type: <code>string</code> = <code>'Physical'</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L175">window.ts:175</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>x: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L176">window.ts:176</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>y: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L177">window.ts:177</a></p>
+</div>
+<div class="paragraph">
+<p>方法</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>toLogical(<code>scaleFactor</code>: <code>number</code>): <code><a href="#logical-position">LogicalPosition</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将物理位置转换为逻辑位置。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const factor = await appWindow.scaleFactor();
+const position = await appWindow.innerPosition();
+const logical = position.toLogical(factor);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scaleFactor</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#logical-position">LogicalPosition</a></code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="physical-size"><a class="anchor" href="#physical-size"></a>PhysicalSize</h3>
+<div class="paragraph">
+<p>以物理像素表示的大小。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>构造函数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>new PhysicalSize(<code>width</code>: <code>number</code>, <code>height</code>: <code>number</code>): <code><a href="#physical-size">PhysicalSize</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>width</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>height</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L133">window.ts:133</a></p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>height: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L131">window.ts:131</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>type: string = <code>'Physical'</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L129">window.ts:129</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>width: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L130">window.ts:130</a></p>
+</div>
+<div class="paragraph">
+<p>方法</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>toLogical(<code>scaleFactor</code>: <code>number</code>): <code><a href="#logical-size">LogicalSize</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将物理大小转换为逻辑大小。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const factor = await appWindow.scaleFactor();
+const size = await appWindow.innerSize();
+const logical = size.toLogical(factor);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scaleFactor</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#logical-size">LogicalSize</a></code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webview-window"><a class="anchor" href="#webview-window"></a>WebviewWindow</h3>
+<div class="paragraph">
+<p>创建新的webview窗口并获取现有窗口的句柄。</p>
+</div>
+<div class="paragraph">
+<p>窗口通过一个标签（唯一标识符）进行识别，可用于以后引用。它只能包含字母数字字符 <code>a-zA-Z</code> 以及以下特殊字符：<code>-</code>，<code>/</code>，<code>:</code> 和 <code>_</code>。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">// loading embedded asset:
+const webview = new WebviewWindow('theUniqueLabel', {
+  url: 'path/to/page.html'
+});
+// alternatively, load a remote URL:
+const webview = new WebviewWindow('theUniqueLabel', {
+  url: 'https://github.com/tauri-apps/tauri'
+});
+
+webview.once('tauri://created', function () {
+ // webview window successfully created
+});
+webview.once('tauri://error', function (e) {
+ // an error happened creating the webview window
+});
+
+// emit an event to the backend
+await webview.emit("some event", "data");
+// listen to an event from the backend
+const unlisten = await webview.listen("event name", e =&gt; {});
+unlisten();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.2</p>
+</div>
+<div class="paragraph">
+<p>层次结构</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>WindowManager</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>WebviewWindow</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>构造函数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>new WebviewWindow(<code>label</code>: <code>string</code>, <code>options?</code>: <code><a href="#window-options">WindowOptions</a></code>): <code><a href="#webview-window">WebviewWindow</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>创建一个新的 WebviewWindow。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { WebviewWindow } from '@tauri-apps/api/window';
+const webview = new WebviewWindow('my-label', {
+  url: 'https://github.com/tauri-apps/tauri'
+});
+webview.once('tauri://created', function () {
+ // webview window successfully created
+});
+webview.once('tauri://error', function (e) {
+ // an error happened creating the webview window
+});</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>label</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">唯一的 webview 窗口标签。必须是字母数字字符：<code>a-zA-Z-/:_</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>options</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#window-options">WindowOptions</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>覆盖</strong>: WindowManager.constructor</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2001">window.ts:2001</a></p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>label: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>窗口标签。它是窗口的唯一标识符，可用于以后引用。</p>
+</div>
+<div class="paragraph">
+<p><strong>继承自</strong>: WindowManager.label</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L315">window.ts:315</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>listeners: <code><a href="https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type">Record</a></code>&lt;<code>string</code>, <code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code>any</code>&gt;[]&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>监听本地事件。</p>
+</div>
+<div class="paragraph">
+<p><strong>继承自</strong>: WindowManager.listeners</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L317">window.ts:317</a></p>
+</div>
+<div class="paragraph">
+<p>方法</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>center(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>居中窗口。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.center();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>close(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>关闭窗口。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.close();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>emit(<code>event</code>: <code>string</code>, <code>payload?</code>: <code>unknown</code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>向后端发出一个与webview窗口相关的事件。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.emit('window-loaded', { loggedIn: true, token: 'authToken' });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>event</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">事件名称。只能包含字母、数字、<code>-</code>、<code>/</code>、<code>:</code> 和 <code>_</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>payload?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>unknown</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">事件负载。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>hide(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将窗口可见性设置为false。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.hide();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>innerPosition(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#physical-position">PhysicalPosition</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>窗口客户端区域左上角相对于桌面左上角的位置。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const position = await appWindow.innerPosition();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#physical-position">PhysicalPosition</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>窗口的内部位置。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>innerSize(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#physical-size">PhysicalSize</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>窗口客户端区域的物理大小。客户端区域是窗口的内容，不包括标题栏和边框。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const size = await appWindow.innerSize();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#physical-size">PhysicalSize</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>窗口的内部大小。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>isDecorated(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>获取窗口当前的装饰状态。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const decorated = await appWindow.isDecorated();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>窗口是否装饰。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>isFullscreen(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>获取窗口当前的全屏状态。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const fullscreen = await appWindow.isFullscreen();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>窗口是否处于全屏模式。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>isMaximized(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>获取窗口当前的最大化状态。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const maximized = await appWindow.isMaximized();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>窗口是否最大化。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>isMinimized(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>获取窗口当前的最小化状态。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const minimized = await appWindow.isMinimized();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.3.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>isResizable(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>获取窗口当前的可调整大小状态。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const resizable = await appWindow.isResizable();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>窗口是否可调整大小。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>isVisible(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>获取窗口当前的可见状态。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const visible = await appWindow.isVisible();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>窗口是否可见。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>listen&lt;T&gt;(<code>event</code>: <code><a href="event.html#event-name" class="xref page">EventName</a></code>, <code>handler</code>: <code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code>T</code>&gt;): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>监听由后端发出的与webview窗口相关的事件。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const unlisten = await appWindow.listen&lt;string&gt;('state-changed', (event) =&gt; {
+  console.log(`Got error: ${payload}`);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>类型参数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>event</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="event.html#event-name" class="xref page">EventName</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">事件名称。只能包含字母、数字、<code>-</code>、<code>/</code>、<code>:</code> 和 <code>_</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handler</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code>T</code>&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">事件句柄。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>maximize(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>最大化窗口。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.maximize();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>minimize(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>最小化窗口。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.minimize();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>onCloseRequested(<code>handler</code>: <code>fn</code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>监听窗口关闭请求。当用户请求关闭窗口时触发。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from "@tauri-apps/api/window";
+import { confirm } from '@tauri-apps/api/dialog';
+const unlisten = await appWindow.onCloseRequested(async (event) =&gt; {
+  const confirmed = await confirm('Are you sure?');
+  if (!confirmed) {
+    // user did not confirm closing the window; let's prevent it
+    event.preventDefault();
+  }
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.2</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handler</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(<code>event</code>: <code><a href="#close-requested-event">CloseRequestedEvent</a></code>) &#8658; <code>void</code> | <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>onFileDropEvent(<code>handler</code>: <code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code><a href="#file-drop-event">FileDropEvent</a></code>&gt;): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>监听文件拖放事件。当用户将选定的文件悬停在窗口上、拖放文件或取消操作时，触发该监听器。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from "@tauri-apps/api/window";
+const unlisten = await appWindow.onFileDropEvent((event) =&gt; {
+ if (event.payload.type === 'hover') {
+   console.log('User hovering', event.payload.paths);
+ } else if (event.payload.type === 'drop') {
+   console.log('User dropped', event.payload.paths);
+ } else {
+   console.log('File drop cancelled');
+ }
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.2</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handler</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code><a href="#file-drop-event">FileDropEvent</a></code>&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>onFocusChanged(<code>handler</code>: <code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code>boolean</code>&gt;): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>监听窗口焦点变化。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from "@tauri-apps/api/window";
+const unlisten = await appWindow.onFocusChanged(({ payload: focused }) =&gt; {
+ console.log('Focus changed, window is focused? ' + focused);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.2</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handler</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code>boolean</code>&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>onMenuClicked(<code>handler</code>: <code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code>string</code>&gt;): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>监听窗口菜单项点击。负载是项目ID。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from "@tauri-apps/api/window";
+const unlisten = await appWindow.onMenuClicked(({ payload: menuId }) =&gt; {
+ console.log('Menu clicked: ' + menuId);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.2</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handler</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code>string</code>&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>onMoved(<code>handler</code>: <code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code><a href="#physical-position">PhysicalPosition</a></code>&gt;): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>监听窗口的移动。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from "@tauri-apps/api/window";
+const unlisten = await appWindow.onMoved(({ payload: position }) =&gt; {
+ console.log('Window moved', position);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.2</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handler</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code><a href="#physical-position">PhysicalPosition</a></code>&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>onResized(<code>handler</code>: <code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code><a href="#physical-size">PhysicalSize</a></code>&gt;): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>监听窗口的大小调整事件。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from "@tauri-apps/api/window";
+const unlisten = await appWindow.onResized(({ payload: size }) =&gt; {
+ console.log('Window resized', size);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.2</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handler</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code><a href="#physical-size">PhysicalSize</a></code>&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>onScaleChanged(<code>handler</code>: <code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code><a href="#scale-factor-changed">ScaleFactorChanged</a></code>&gt;): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>监听窗口比例变化。当窗口的比例因子改变时触发。以下用户操作可能导致DPI变化：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>更改显示器的分辨率。</p>
+</li>
+<li>
+<p>更改显示器的比例因子（例如，在Windows的控制面板中）。</p>
+</li>
+<li>
+<p>将窗口移动到比例因子不同的显示器。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from "@tauri-apps/api/window";
+const unlisten = await appWindow.onScaleChanged(({ payload }) =&gt; {
+ console.log('Scale changed', payload.scaleFactor, payload.size);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.2</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handler</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code><a href="#scale-factor-changed">ScaleFactorChanged</a></code>&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>onThemeChanged(<code>handler</code>: <code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code><a href="#theme">Theme</a></code>&gt;): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>监听系统主题变化。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from "@tauri-apps/api/window";
+const unlisten = await appWindow.onThemeChanged(({ payload: theme }) =&gt; {
+ console.log('New theme: ' + theme);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.2</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handler</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code><a href="#theme">Theme</a></code>&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>once&lt;<code>T</code>&gt;(<code>event</code>: <code>string</code>, <code>handler</code>: <code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code>T</code>&gt;): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>监听由后端发出的与webview窗口相关的单次事件。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const unlisten = await appWindow.once&lt;null&gt;('initialized', (event) =&gt; {
+  console.log(`Window initialized!`);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>类型参数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>event</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">事件名称。只能包含字母、数字、<code>-</code>、<code>/</code>、<code>:</code> 和 <code>_</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handler</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="event.html#event-callback" class="xref page">EventCallback</a></code>&lt;<code>T</code>&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">事件句柄。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为解除事件监听的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>outerPosition(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#physical-position">PhysicalPosition</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>窗口左上角相对于桌面左上角的位置。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const position = await appWindow.outerPosition();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#physical-position">PhysicalPosition</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>窗口的外部位置。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>outerSize(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#physical-size">PhysicalSize</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>整个窗口的物理尺寸。这些尺寸包括标题栏和边框。如果您不需要（通常也不需要），请使用内部大小（inner_size）。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const size = await appWindow.outerSize();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#physical-size">PhysicalSize</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>窗口的外部大小。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>requestUserAttention(<code>requestType</code>: <code>null</code> | <code><a href="#user-attention-type">UserAttentionType</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>请求用户关注窗口，如果应用程序已经聚焦，则此操作无效。请求用户关注的表现方式取决于平台，请参阅 <code>UserAttentionType</code> 了解详情。</p>
+</div>
+<div class="paragraph">
+<p>提供 <code>null</code> 将取消用户关注请求。当窗口接收到输入时，WM可能不会自动取消用户关注请求。</p>
+</div>
+<div class="paragraph">
+<p>平台特定</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>macOS</strong>: <code>null</code> 无效。</p>
+</li>
+<li>
+<p><strong>Linux</strong>: 紧急级别有相同的效果。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.requestUserAttention();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requestType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>null</code> | <code><a href="#user-attention-type">UserAttentionType</a></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>scaleFactor(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>number</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>用于将物理像素映射到逻辑像素的比例因子。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const factor = await appWindow.scaleFactor();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>number</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>窗口的显示器比例因子。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setAlwaysOnTop(<code>alwaysOnTop</code>: <code>boolean</code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>窗口是否应始终位于其他窗口之上。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setAlwaysOnTop(true);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>alwaysOnTop</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口是否应始终位于其他窗口之上。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setContentProtected(<code>protected_</code>: <code>boolean</code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>防止窗口内容被其他应用程序捕获。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setContentProtected(true);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.2.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>protected_</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setCursorGrab(<code>grab</code>: <code>boolean</code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>捕获光标，防止其离开窗口。</p>
+</div>
+<div class="paragraph">
+<p>无法保证光标会隐藏。如果你想隐藏它，应该自己动手。</p>
+</div>
+<div class="paragraph">
+<p>平台特定</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Linux</strong>: 不支持。</p>
+</li>
+<li>
+<p><strong>macOS</strong>: 这会将光标锁定在固定位置，视觉上会显得很尴尬。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setCursorGrab(true);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>grab</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code> 表示捕获光标图标，<code>false</code> 表示释放它。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setCursorIcon(<code>icon</code>: <code><a href="#cursor-icon">CursorIcon</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>修改窗口的光标图标。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setCursorIcon('help');</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>icon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#cursor-icon">CursorIcon</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">新的光标图标。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setCursorPosition(<code>position</code>: <code><a href="#physical-position">PhysicalPosition</a></code> | <code><a href="#logical-position">LogicalPosition</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>更改光标在窗口坐标中的位置。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow, LogicalPosition } from '@tauri-apps/api/window';
+await appWindow.setCursorPosition(new LogicalPosition(600, 300));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>position</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#physical-position">PhysicalPosition</a></code> | <code><a href="#logical-position">LogicalPosition</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">新的光标位置。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setCursorVisible(<code>visible</code>: <code>boolean</code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将光标的可见性进行修改。</p>
+</div>
+<div class="paragraph">
+<p>平台特定：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Windows</strong>: 光标仅在窗口范围内隐藏。</p>
+</li>
+<li>
+<p><strong>macOS</strong>: 只要窗口具有输入焦点，即使光标在窗口外也会隐藏。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setCursorVisible(false);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>visible</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">如果为 <code>false</code>，将隐藏光标。如果为 <code>true</code>，将显示光标。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setDecorations(<code>decorations</code>: <code>boolean</code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>设置窗口是否应有边框和工具栏。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setDecorations(false);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>decorations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口是否应该有边框和条。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setFocus(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将窗口置于前端并聚焦。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setFocus();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setFullscreen(<code>fullscreen</code>: <code>boolean</code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>设置窗口的全屏状态。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setFullscreen(true);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fullscreen</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">是否应将窗口置于全屏状态。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setIcon(<code>icon</code>: <code>string</code> | <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a></code>): Promise&lt;void&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>设置窗口图标。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setIcon('/tauri/awesome.png');</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>注意：使用此 API 需要启用 <code>icon-ico</code> 或 <code>icon-png</code> Cargo 功能。要启用它，请更改您的 Cargo.toml 文件：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-toml hljs" data-lang="toml">[dependencies]
+tauri = { version = "...", features = ["...", "icon-png"] }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>icon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code> | <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">图标的字节或图标文件的路径。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setIgnoreCursorEvents(<code>ignore</code>: <code>boolean</code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>改变光标事件的行为。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setIgnoreCursorEvents(true);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ignore</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code> 忽略光标事件；<code>false</code> 正常处理。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setMaxSize(<code>size</code>: <code>undefined</code> | <code>null</code> | <code><a href="#physical-size">PhysicalSize</a></code> | <code><a href="#logical-size">LogicalSize</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>设置窗口的最大内部尺寸。如果 <code>size</code> 参数未定义，则解除限制。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow, LogicalSize } from '@tauri-apps/api/window';
+await appWindow.setMaxSize(new LogicalSize(600, 500));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>undefined</code> | <code>null</code> | <code><a href="#physical-size">PhysicalSize</a></code> | <code><a href="#logical-size">LogicalSize</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">逻辑或物理内部尺寸，或者为 <code>null</code> 解除限制。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setMinSize(<code>size</code>: <code>undefined</code> | <code>null</code> | <code><a href="#physical-size">PhysicalSize</a></code> | <code><a href="#logical-size">LogicalSize</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>设置窗口的最小内部尺寸。如果没有提供 <code>size</code> 参数，则解除限制。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow, PhysicalSize } from '@tauri-apps/api/window';
+await appWindow.setMinSize(new PhysicalSize(600, 500));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>undefined</code> | <code>null</code> | <code><a href="#physical-size">PhysicalSize</a></code> | <code><a href="#logical-size">LogicalSize</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">逻辑或物理内部尺寸，或者为 <code>null</code> 解除限制。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setPosition(<code>position</code>: <code><a href="#physical-size">PhysicalSize</a></code> | <code><a href="#logical-size">LogicalSize</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>设置窗口外部的位置。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow, LogicalPosition } from '@tauri-apps/api/window';
+await appWindow.setPosition(new LogicalPosition(600, 500));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>position</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#physical-size">PhysicalSize</a></code> | <code><a href="#logical-size">LogicalSize</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">新的位置，以逻辑或物理像素为单位。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setResizable(<code>resizable</code>: <code>boolean</code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>更新窗口的可调整大小标志。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setResizable(false);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setSize(<code>size</code>: <code><a href="#physical-size">PhysicalSize</a></code> | <code><a href="#logical-size">LogicalSize</a></code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>用新的内部尺寸调整窗口大小。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow, LogicalSize } from '@tauri-apps/api/window';
+await appWindow.setSize(new LogicalSize(600, 500));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#physical-size">PhysicalSize</a></code> | <code><a href="#logical-size">LogicalSize</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">逻辑或物理内部尺寸。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setSkipTaskbar(<code>skip</code>: <code>boolean</code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>窗口图标是否应从任务栏中隐藏。</p>
+</div>
+<div class="paragraph">
+<p>平台特定：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>macOS</strong>: 不支持。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setSkipTaskbar(true);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true 隐藏窗口图标，false 显示窗口图标。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setTitle(<code>title</code>: <code>string</code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>设置窗口标题。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.setTitle('Tauri');</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">新标题</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>show(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将窗口设置为可见。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.show();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>startDragging(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>开始拖动窗口。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.startDragging();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>theme(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>null</code> | <code><a href="#theme">Theme</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>获取窗口的当前主题。</p>
+</div>
+<div class="paragraph">
+<p>平台特定：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>macOS</strong>: 主题在 macOS 10.14 上引入。在 macOS 10.13 及以下版本上返回 <code>light</code>。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const theme = await appWindow.theme();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>null</code> | <code><a href="#theme">Theme</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>窗口主题。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>title(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+const title = await appWindow.title();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.3.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>toggleMaximize(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>获取窗口的当前标题。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.toggleMaximize();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>unmaximize(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>取消窗口最大化。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.unmaximize();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>unminimize(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>取消窗口最小化。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appWindow } from '@tauri-apps/api/window';
+await appWindow.unminimize();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个表示操作成功或失败的 Promise。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Static</code> getByLabel(<code>label</code>: <code>string</code>): <code>null</code> | <code><a href="#webview-window">WebviewWindow</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>获取与给定标签关联的 webview 的 WebviewWindow。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { WebviewWindow } from '@tauri-apps/api/window';
+const mainWindow = WebviewWindow.getByLabel('main');</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>label</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">webview窗口标签。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code>null</code> | <code><a href="#webview-window">WebviewWindow</a></code></p>
+</div>
+<div class="paragraph">
+<p>用于与 webview 通信的 WebviewWindow 实例，如果 webview 不存在，则为 null。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="interfaces"><a class="anchor" href="#interfaces"></a>Interfaces</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="monitor"><a class="anchor" href="#monitor"></a>Monitor</h3>
+<div class="paragraph">
+<p>允许您检索有关给定显示器的信息。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>name: <code>null</code> | <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>显示器的可读名称。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L80">window.ts:80</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>position: <code><a href="#physical-position">PhysicalPosition</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>显示器左上角相对于整个屏幕区域的位置。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L84">window.ts:84</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>scaleFactor: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>用于将物理像素映射到逻辑像素的缩放因子。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L86">window.ts:86</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>size: <code><a href="#physical-size">PhysicalSize</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>显示器的分辨率。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L82">window.ts:82</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="scale-factor-changed"><a class="anchor" href="#scale-factor-changed"></a>ScaleFactorChanged</h3>
+<div class="paragraph">
+<p><code>scaleChange</code> 事件的负载。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.2</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>scaleFactor: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>新的窗口缩放因子。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L96">window.ts:96</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>size: <code><a href="#physical-size">PhysicalSize</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>新的窗口大小。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L98">window.ts:98</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="window-options"><a class="anchor" href="#window-options"></a>WindowOptions</h3>
+<div class="paragraph">
+<p>创建窗口的配置。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> acceptFirstMouse: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>在 macOS 上，点击不活跃的窗口是否也会点击到 webview。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2143">window.ts:2143</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> alwaysOnTop: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>窗口是否始终位于其他窗口之上。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2115">window.ts:2115</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> center: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>在屏幕中央显示窗口。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2077">window.ts:2077</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> contentProtected: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>防止窗口内容被其他应用捕获。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2117">window.ts:2117</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> decorations: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>窗口是否应该有边框和栏。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2113">window.ts:2113</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> fileDropEnabled: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>webview 是否启用文件拖放。默认情况下启用。</p>
+</div>
+<div class="paragraph">
+<p>在 Windows 上，禁用它是前端使用拖放功能的前提。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2125">window.ts:2125</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> focus: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>窗口是否最初是聚焦的。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2101">window.ts:2101</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> fullscreen: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>窗口是否处于全屏模式。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2099">window.ts:2099</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> height: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>初始高度。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2085">window.ts:2085</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> hiddenTitle: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>如果为真，在 macOS 上将窗口标题隐藏。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2139">window.ts:2139</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> maxHeight: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>最大高度。仅在设置了 <code>maxWidth</code> 时适用。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2093">window.ts:2093</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> maxWidth: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>最大宽度。仅在设置了 <code>maxHeight</code> 时适用。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2091">window.ts:2091</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> maximized: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>窗口在创建时是否应最大化。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2109">window.ts:2109</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> minHeight: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>最小高度。仅在设置了 <code>minWidth</code> 时适用。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2089">window.ts:2089</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> minWidth: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>最小宽度。仅在设置了 <code>minHeight</code> 时适用。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2087">window.ts:2087</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> resizable: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>窗口是否可调整大小。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2095">window.ts:2095</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> skipTaskbar: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>是否将窗口图标添加到任务栏。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2119">window.ts:2119</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> tabbingIdentifier: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>定义 macOS 上的窗口 <a href="https://developer.apple.com/documentation/appkit/nswindow/1644704-tabbingidentifier">标签标识符</a>。</p>
+</div>
+<div class="paragraph">
+<p>具有相同标签标识符的窗口将被分组在一起。如果没有设置标签标识符，将禁用自动标签。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2150">window.ts:2150</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> theme: <code><a href="#theme">Theme</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>初始窗口主题。默认为系统主题。</p>
+</div>
+<div class="paragraph">
+<p>仅在 Windows 和 macOS 10.14+ 上实现。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2131">window.ts:2131</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> title: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>窗口标题。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2097">window.ts:2097</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> titleBarStyle: <code><a href="#title-bar-style">TitleBarStyle</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>macOS 标题栏的样式。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2135">window.ts:2135</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> transparent: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>窗口是否透明。请注意，在 <code>macOS</code> 上需要启用 <code>macos-private-api</code> 特性标志，该标志在 <code>tauri.conf.json &gt; tauri &gt; macOSPrivateApi</code> 下启用。警告：在 <code>macOS</code> 上使用私有 API 将阻止您的应用程序被 <code>App Store</code> 接受。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2107">window.ts:2107</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> url: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>要打开的远程 URL 或本地文件路径。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>URL，例如 <code><a href="https://github.com/tauri-apps" class="bare">https://github.com/tauri-apps</a></code>，直接在 Tauri 窗口上打开。</p>
+</li>
+<li>
+<p>data: URL，例如 <code>data:text/html,&lt;html&gt;&#8230;&#8203;</code>，仅支持 <code>Tauri</code> 依赖的 <code>window-data-url</code> Cargo 功能。</p>
+</li>
+<li>
+<p>本地文件路径或路由，例如 <code>/path/to/page.html</code> 或 <code>/users</code>，附加到应用程序 URL（开发时为 devServer URL，生产时为 <code>tauri://localhost/</code> 和 <code><a href="https://tauri.localhost/" class="bare">https://tauri.localhost/</a></code>）。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2075">window.ts:2075</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> userAgent: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>webview 的用户代理。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2154">window.ts:2154</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> visible: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>窗口在创建时是否应该立即可见。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2111">window.ts:2111</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> width: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>初始宽度。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2083">window.ts:2083</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> x: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>初始垂直位置。仅在设置了 <code>y</code> 时适用。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2079">window.ts:2079</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> y: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>初始水平位置。仅在设置了 <code>x</code> 时适用。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2081">window.ts:2081</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="type-aliases"><a class="anchor" href="#type-aliases"></a>Type Aliases</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="cursor-icon"><a class="anchor" href="#cursor-icon"></a>CursorIcon</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>CursorIcon: <code>"default"</code> | <code>"crosshair"</code> | <code>"hand"</code> | <code>"arrow"</code> | <code>"move"</code> | <code>"text"</code> | <code>"wait"</code> | <code>"help"</code> | <code>"progress"</code> | <code>"notAllowed"</code> | <code>"contextMenu"</code> | <code>"cell"</code> | <code>"verticalText"</code> | <code>"alias"</code> | <code>"copy"</code> | <code>"noDrop"</code> | <code>"grab"</code> | <code>"grabbing"</code> | <code>"allScroll"</code> | <code>"zoomIn"</code> | <code>"zoomOut"</code> | <code>"eResize"</code> | <code>"nResize"</code> | <code>"neResize"</code> | <code>"nwResize"</code> | <code>"sResize"</code> | <code>"seResize"</code> | <code>"swResize"</code> | <code>"wResize"</code> | <code>"ewResize"</code> | <code>"nsResize"</code> | <code>"neswResize"</code> | <code>"nwseResize"</code> | <code>"colResize"</code> |<code> "rowResize"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L234">window.ts:234</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="file-drop-event"><a class="anchor" href="#file-drop-event"></a>FileDropEvent</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>FileDropEvent: { <code>paths</code>: <code>string</code>[] ; <code>type</code>: <code>"hover"</code> } | { <code>paths</code>: <code>string</code>[] ; <code>type</code>: <code>"drop"</code> } | { <code>type</code>: <code>"cancel"</code> }</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>文件拖放事件类型。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L102">window.ts:102</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="theme"><a class="anchor" href="#theme"></a>Theme</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Theme: <code>"light"</code> | <code>"dark"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L70">window.ts:70</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="title-bar-style"><a class="anchor" href="#title-bar-style"></a>TitleBarStyle</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TitleBarStyle: <code>"visible"</code> | <code>"transparent"</code> | <code>"overlay"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L71">window.ts:71</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="variables"><a class="anchor" href="#variables"></a>Variables</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="app-window"><a class="anchor" href="#app-window"></a>appWindow</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>appWindow: <code><a href="#webview-window">WebviewWindow</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>当前窗口的 WebviewWindow。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/window.ts#L2043">window.ts:2043</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="available-monitors"><a class="anchor" href="#available-monitors"></a>availableMonitors</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>availableMonitors(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#monitor">Monitor</a></code>[]&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回系统上所有可用显示器的列表。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { availableMonitors } from '@tauri-apps/api/window';
+const monitors = availableMonitors();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#monitor">Monitor</a></code>[]&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="current-monitor"><a class="anchor" href="#current-monitor"></a>currentMonitor</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>currentMonitor(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#monitor">Monitor</a></code> | <code>null</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回当前窗口所在的显示器。如果无法检测到当前显示器，则返回 null。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { currentMonitor } from '@tauri-apps/api/window';
+const monitor = currentMonitor();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#monitor">Monitor</a></code> | <code>null</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="get-all"><a class="anchor" href="#get-all"></a>getAll</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>getAll(): <code><a href="#webview-window">WebviewWindow</a></code>[]</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>获取所有可用 Webview 窗口的 WebviewWindow 实例列表。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#webview-window">WebviewWindow</a></code>[]</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="get-current"><a class="anchor" href="#get-current"></a>getCurrent</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>getAll(): <code><a href="#webview-window">WebviewWindow</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>获取当前 Webview 窗口的 WebviewWindow 实例。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#webview-window">WebviewWindow</a></code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="primary-monitor"><a class="anchor" href="#primary-monitor"></a>primaryMonitor</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>primaryMonitor(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#monitor">Monitor</a></code> | <code>null</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回系统的主显示器。如果无法识别任何显示器为主显示器，则返回 <code>null</code>。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { primaryMonitor } from '@tauri-apps/api/window';
+const monitor = primaryMonitor();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#monitor">Monitor</a></code> | <code>null</code>&gt;</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

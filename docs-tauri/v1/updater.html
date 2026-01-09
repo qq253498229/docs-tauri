@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>更新(updater) :: docs-tauri</title>
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-tauri</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-tauri" data-version="v1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Tauri API 文档</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configuration.html">配置</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command_line_runner.html">CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript/TypeScript</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="app.html">应用(app)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli.html">命令行(cli)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clipboard.html">剪贴板(clipboard)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dialog.html">对话框(dialog)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="event.html">事件(event)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fs.html">文件系统(fs)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="globalShortcut.html">快捷键(globalShortcut)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="http.html">http</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mocks.html">mocks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="notification.html">通知(notification)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="os.html">操作系统(os)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="path.html">路径(path)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="process.html">进程(process)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shell.html">shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tauri.html">tauri</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="updater.html">更新(updater)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="window.html">窗口(window)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://tauri.app/zh-cn/v1/guides/">官方地址</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Tauri API 文档</span>
+    <span class="version">v1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Tauri API 文档</a></li>
+    <li>JavaScript/TypeScript</li>
+    <li><a href="updater.html">更新(updater)</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-tauri/edit/master/modules/ROOT/pages/updater.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">更新(updater)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://tauri.app/zh-cn/v1/api/js/updater">原文地址</a></p>
+</div>
+<div class="paragraph">
+<p>定制自动更新流程。</p>
+</div>
+<div class="paragraph">
+<p>当 <code>tauri.conf.json</code> 中的 <code><a href="configuration.html#build-config" class="xref page">build.withGlobalTauri</a></code> 设置为 <code>true</code> 时，该包也可以通过 <code>window.__TAURI__.updater</code> 访问。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="interfaces"><a class="anchor" href="#interfaces"></a>Interfaces</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="update-manifest"><a class="anchor" href="#update-manifest"></a>UpdateManifest</h3>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>body: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/updater.ts#L34">updater.ts:34</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>date: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/updater.ts#L33">updater.ts:33</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>version: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/updater.ts#L32">updater.ts:32</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="update-result"><a class="anchor" href="#update-result"></a>UpdateResult</h3>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> manifest: <code><a href="#update-manifest">UpdateManifest</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/updater.ts#L41">updater.ts:41</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>shouldUpdate: <code>boolean</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/updater.ts#L42">updater.ts:42</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="update-status-result"><a class="anchor" href="#update-status-result"></a>UpdateStatusResult</h3>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Optional</code> error: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/updater.ts#L24">updater.ts:24</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>status: <code><a href="#update-status">UpdateStatus</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/updater.ts#L25">updater.ts:25</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="type-aliases"><a class="anchor" href="#type-aliases"></a>Type Aliases</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="update-status"><a class="anchor" href="#update-status"></a>UpdateStatus</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>UpdateStatus: <code>"PENDING"</code> | <code>"ERROR"</code> | <code>"DONE"</code> | <code>"UPTODATE"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/updater.ts#L18">updater.ts:18</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="check-update"><a class="anchor" href="#check-update"></a>checkUpdate</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>checkUpdate(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#update-result">UpdateResult</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>检查是否有更新可用。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { checkUpdate } from '@tauri-apps/api/updater';
+const update = await checkUpdate();
+// now run installUpdate() if needed</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#update-result">UpdateResult</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为更新状态。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="install-update"><a class="anchor" href="#install-update"></a>installUpdate</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>installUpdate(): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>如果有可用更新，则安装更新。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { checkUpdate, installUpdate } from '@tauri-apps/api/updater';
+const update = await checkUpdate();
+if (update.shouldUpdate) {
+  console.log(`Installing update ${update.manifest?.version}, ${update.manifest?.date}, ${update.manifest.body}`);
+  await installUpdate();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，表示操作成功或失败。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="on-updater-event"><a class="anchor" href="#on-updater-event"></a>onUpdaterEvent</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>onUpdaterEvent(<code>handler</code>: <code>fn</code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>监听更新器事件。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { onUpdaterEvent } from "@tauri-apps/api/updater";
+const unlisten = await onUpdaterEvent(({ error, status }) =&gt; {
+ console.log('Updater event', error, status);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.2</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handler</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(<code>status</code>: <code><a href="#update-status-result">UpdateStatusResult</a></code>) &#8658; <code>void</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="event.html#unlisten-fn" class="xref page">UnlistenFn</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为用于停止监听事件的函数。请注意，如果监听器超出范围（例如组件被卸载），则需要移除监听器。</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

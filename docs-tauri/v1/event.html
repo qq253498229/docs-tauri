@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>事件(event) :: docs-tauri</title>
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-tauri</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-tauri" data-version="v1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Tauri API 文档</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configuration.html">配置</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command_line_runner.html">CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript/TypeScript</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="app.html">应用(app)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli.html">命令行(cli)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clipboard.html">剪贴板(clipboard)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dialog.html">对话框(dialog)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="event.html">事件(event)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fs.html">文件系统(fs)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="globalShortcut.html">快捷键(globalShortcut)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="http.html">http</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mocks.html">mocks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="notification.html">通知(notification)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="os.html">操作系统(os)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="path.html">路径(path)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="process.html">进程(process)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shell.html">shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tauri.html">tauri</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="updater.html">更新(updater)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="window.html">窗口(window)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://tauri.app/zh-cn/v1/guides/">官方地址</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Tauri API 文档</span>
+    <span class="version">v1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Tauri API 文档</a></li>
+    <li>JavaScript/TypeScript</li>
+    <li><a href="event.html">事件(event)</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-tauri/edit/master/modules/ROOT/pages/event.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">事件(event)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://tauri.app/zh-cn/v1/api/js/event">原文地址</a></p>
+</div>
+<div class="paragraph">
+<p>事件系统允许你向后端发送事件，或者是监听来自后端的事件。</p>
+</div>
+<div class="paragraph">
+<p>当在 tauri.conf.json 中设置 <code><a href="configuration.html#build-config" class="xref page">build.withGlobalTauri</a></code> 为 <code>true</code> 时，该包也可以通过 <code>window.__TAURI__.event</code> 访问。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="enumerations"><a class="anchor" href="#enumerations"></a>Enumerations</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="tauri-event"><a class="anchor" href="#tauri-event"></a>TauriEvent</h3>
+<div class="paragraph">
+<p>Since: 1.1.0</p>
+</div>
+<div class="paragraph">
+<p>枚举成员</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">定义在</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CHECK_UPDATE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://update"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L34">event.ts:34</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DOWNLOAD_PROGRESS</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://update-download-progress"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L38">event.ts:38</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>INSTALL_UPDATE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://update-install"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L36">event.ts:36</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MENU</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://menu"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L33">event.ts:33</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>STATUS_UPDATE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://update-status"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L37">event.ts:37</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>UPDATE_AVAILABLE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://update-available"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L35">event.ts:35</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WINDOW_BLUR</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://blur"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L27">event.ts:27</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WINDOW_CLOSE_REQUESTED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://close-requested"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L23">event.ts:23</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WINDOW_CREATED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://window-created"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L24">event.ts:24</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WINDOW_DESTROYED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://destroyed"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L25">event.ts:25</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WINDOW_FILE_DROP</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://file-drop"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L30">event.ts:30</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WINDOW_FILE_DROP_CANCELLED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://file-drop-cancelled"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L32">event.ts:32</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WINDOW_FILE_DROP_HOVER</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://file-drop-hover"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L31">event.ts:31</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WINDOW_FOCUS</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://focus"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L26">event.ts:26</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WINDOW_MOVED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://move"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L22">event.ts:22</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WINDOW_RESIZED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://resize"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L21">event.ts:21</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WINDOW_SCALE_FACTOR_CHANGED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://scale-change"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L28">event.ts:28</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WINDOW_THEME_CHANGED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"tauri://theme-changed"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L29">event.ts:29</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="interfaces"><a class="anchor" href="#interfaces"></a>Interfaces</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="event"><a class="anchor" href="#event"></a>Event&lt;T&gt;</h3>
+<div class="paragraph">
+<p>类型参数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>属性</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>event: <code><a href="#event-name">EventName</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>事件名称。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/helpers/event.ts#L12">helpers/event.ts:12</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>id: <code>number</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>用来取消监听的事件唯一标识符。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/helpers/event.ts#L16">helpers/event.ts:16</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>payload: <code>T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>事件消息体</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/helpers/event.ts#L18">helpers/event.ts:18</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>windowLabel: <code>string</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>发出此事件的窗口的标签。</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/helpers/event.ts#L14">helpers/event.ts:14</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="type-aliases"><a class="anchor" href="#type-aliases"></a>Type Aliases</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="event-callback"><a class="anchor" href="#event-callback"></a>EventCallback&lt;T&gt;</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>EventCallback&lt;<code>T</code>&gt;: (<code>event</code>: <code><a href="#event">Event</a></code>&lt;<code>T</code>&gt;) &#8658; <code>void</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>类型参数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>类型声明</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>(<code>event</code>: <code><a href="#event">Event</a></code>&lt;<code>T</code>&gt;): <code>void</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>event</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#event">Event</a></code>&lt;<code>T</code>&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code>void</code></p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/helpers/event.ts#L21">helpers/event.ts:21</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="event-name"><a class="anchor" href="#event-name"></a>EventName</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>EventName: <code>${TauriEvent}</code> | <code>string</code> &amp; <code><a href="https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type">Record</a></code>&lt;<code>never</code>, <code>never</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/event.ts#L15">event.ts:15</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="unlisten-fn"><a class="anchor" href="#unlisten-fn"></a>UnlistenFn</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>UnlistenFn: () &#8658; <code>void</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>类型声明</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>(): <code>void</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code>void</code></p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/helpers/event.ts#L23">helpers/event.ts:23</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="emit"><a class="anchor" href="#emit"></a>emit</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>emit(<code>event</code>: <code>string</code>, <code>payload?</code>: <code>unknown</code>): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>向后端发送一个事件。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { emit } from '@tauri-apps/api/event';
+await emit('frontend-loaded', { loggedIn: true, token: 'authToken' });</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>event</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">事件名称。只能包含字母、数字、<code>-</code>、<code>/</code>、<code>:</code> 和 <code>_</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>payload?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>unknown</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>void</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listen"><a class="anchor" href="#listen"></a>listen</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>listen&lt;<code>T</code>&gt;(<code>event</code>: <code><a href="#event-name">EventName</a></code>, <code>handler</code>: <code><a href="#event-callback">EventCallback</a></code>&lt;<code>T</code>&gt;): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#unlisten-fn">UnlistenFn</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>监听来自后端的事件。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { listen } from '@tauri-apps/api/event';
+const unlisten = await listen&lt;string&gt;('error', (event) =&gt; {
+  console.log(`Got error in window ${event.windowLabel}, payload: ${event.payload}`);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>类型参数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>event</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#event-name">EventName</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">事件名称。只能包含字母、数字、<code>-</code>、<code>/</code>、<code>:</code> 和 <code>_</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handler</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#event-callback">EventCallback</a></code>&lt;<code>T</code>&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">事件回调句柄。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#unlisten-fn">UnlistenFn</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为一个函数，用于取消事件监听。请注意，如果你的监听器超出作用域，例如组件卸载，必须移除监听器。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="once"><a class="anchor" href="#once"></a>once</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>once&lt;<code>T</code>&gt;(<code>event</code>: <code><a href="#event-name">EventName</a></code>, <code>handler</code>: <code><a href="#event-callback">EventCallback</a></code>&lt;<code>T</code>&gt;): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#unlisten-fn">UnlistenFn</a></code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>监听来自后端的一次性事件。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { once } from '@tauri-apps/api/event';
+interface LoadedPayload {
+  loggedIn: boolean,
+  token: string
+}
+const unlisten = await once&lt;LoadedPayload&gt;('loaded', (event) =&gt; {
+  console.log(`App is loaded, loggedIn: ${event.payload.loggedIn}, token: ${event.payload.token}`);
+});
+
+// you need to call unlisten if your handler goes out of scope e.g. the component is unmounted
+unlisten();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>类型参数</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>event</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#event-name">EventName</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">事件名称。只能包含字母、数字、<code>-</code>、<code>/</code>、<code>:</code> 和 <code>_</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>handler</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#event-callback">EventCallback</a></code>&lt;<code>T</code>&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code><a href="#unlisten-fn">UnlistenFn</a></code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>一个 Promise，解析为一个函数，用于取消事件监听。请注意，如果你的监听器超出作用域，例如组件卸载，必须移除监听器。</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

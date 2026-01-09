@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>路径(path) :: docs-tauri</title>
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-tauri</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-tauri" data-version="v1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Tauri API 文档</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="configuration.html">配置</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command_line_runner.html">CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript/TypeScript</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="app.html">应用(app)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli.html">命令行(cli)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clipboard.html">剪贴板(clipboard)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dialog.html">对话框(dialog)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="event.html">事件(event)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fs.html">文件系统(fs)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="globalShortcut.html">快捷键(globalShortcut)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="http.html">http</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mocks.html">mocks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="notification.html">通知(notification)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="os.html">操作系统(os)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="path.html">路径(path)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="process.html">进程(process)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shell.html">shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tauri.html">tauri</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="updater.html">更新(updater)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="window.html">窗口(window)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://tauri.app/zh-cn/v1/guides/">官方地址</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Tauri API 文档</span>
+    <span class="version">v1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Tauri API 文档</a></li>
+    <li>JavaScript/TypeScript</li>
+    <li><a href="path.html">路径(path)</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-tauri/edit/master/modules/ROOT/pages/path.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="3">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">路径(path)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://tauri.app/zh-cn/v1/api/js/path">原文地址</a></p>
+</div>
+<div class="paragraph">
+<p>路径模块提供了处理文件和目录路径的工具。</p>
+</div>
+<div class="paragraph">
+<p>如果在 <code>tauri.conf.json</code> 中将 <code><a href="configuration.html#build-config" class="xref page">build.withGlobalTauri</a></code> 设置为 <code>true</code>，这个包也可以通过 <code>window.__TAURI__.path</code> 访问。</p>
+</div>
+<div class="paragraph">
+<p>这些 API 必须被添加到 <code>tauri.conf.json</code> 中的 <code><a href="configuration.html#tauri-config" class="xref page">tauri.allowlist.path</a></code>：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "tauri": {
+    "allowlist": {
+      "path": {
+        "all": true, // enable all Path APIs
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>建议只允许列表中使用的 API 以获得最佳的包大小和安全性。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="references"><a class="anchor" href="#references"></a>References</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="base-directory"><a class="anchor" href="#base-directory"></a>BaseDirectory</h3>
+<div class="paragraph">
+<p>重新导出 <code><a href="fs.html#base-directory" class="xref page">BaseDirectory</a></code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="variables"><a class="anchor" href="#variables"></a>Variables</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="delimiter"><a class="anchor" href="#delimiter"></a>delimiter</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Const</code> delimiter: <code>";"</code> | <code>":"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>提供平台特定的路径分段分隔符：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>;</code> on Windows</p>
+</li>
+<li>
+<p><code>:</code> on POSIX</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <code><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/path.ts#L660">path.ts:660</a></code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sep"><a class="anchor" href="#sep"></a>sep</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Const</code> sep: <code>"\\"</code> | <code>"/"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>提供平台特定的路径分段分隔符：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>\</code> on Windows</p>
+</li>
+<li>
+<p><code>/</code> on POSIX</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>定义在</strong>: <code><a href="https://github.com/tauri-apps/tauri/blob/73a0ad4/tooling/api/src/path.ts#L651">path.ts:651</a></code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="function"><a class="anchor" href="#function"></a>Function</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="app-cache-dir"><a class="anchor" href="#app-cache-dir"></a>appCacheDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>appCacheDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回应用程序缓存文件建议目录的路径。解析为 <code>${cacheDir}/${bundleIdentifier}</code>，其中 <code>bundleIdentifier</code> 是在 <code>tauri.conf.json</code> 中配置的 <code><a href="configuration.html#tauri-config" class="xref page">tauri.bundle.identifier</a></code> 的值。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appCacheDir } from '@tauri-apps/api/path';
+const appCacheDirPath = await appCacheDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.2.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="app-config-dir"><a class="anchor" href="#app-config-dir"></a>appConfigDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>appConfigDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回应用程序配置文件建议目录的路径。解析为 <code>${configDir}/${bundleIdentifier}</code>，其中 <code>bundleIdentifier</code> 是在 <code>tauri.conf.json</code> 中配置的 <code><a href="configuration.html#tauri-config" class="xref page">tauri.bundle.identifier</a></code> 的值。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appConfigDir } from '@tauri-apps/api/path';
+const appConfigDirPath = await appConfigDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.2.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="app-data-dir"><a class="anchor" href="#app-data-dir"></a>appDataDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>appDataDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回应用程序数据文件建议目录的路径。解析为 <code>${dataDir}/${bundleIdentifier}</code>，其中 <code>bundleIdentifier</code> 是在 <code>tauri.conf.json</code> 中配置的 <code><a href="configuration.html#tauri-config" class="xref page">tauri.bundle.identifier</a></code> 的值。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appDataDir } from '@tauri-apps/api/path';
+const appDataDirPath = await appDataDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.2.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="app-dir"><a class="anchor" href="#app-dir"></a>appDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>appDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回应用程序配置文件建议目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>弃用</p>
+</div>
+<div class="paragraph">
+<p>since 1.2.0: 将在 2.0.0 版本中移除。请使用 <code><a href="#app-config-dir">appConfigDir</a></code> 或 <code><a href="#app-data-dir">appDataDir</a></code> 代替。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="app-local-data-dir"><a class="anchor" href="#app-local-data-dir"></a>appLocalDataDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>appLocalDataDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回应用程序的本地数据文件建议目录的路径。解析为 <code>${localDataDir}/${bundleIdentifier}</code>，其中 <code>bundleIdentifier</code> 是在 <code>tauri.conf.json</code> 中配置的 <code><a href="configuration.html#tauri-config" class="xref page">tauri.bundle.identifier</a></code> 的值。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appLocalDataDir } from '@tauri-apps/api/path';
+const appLocalDataDirPath = await appLocalDataDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.2.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="app-log-dir"><a class="anchor" href="#app-log-dir"></a>appLogDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>appLogDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回应用程序日志文件建议目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>特定平台的路径：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code>${configDir}/${bundleIdentifier}/logs</code></p>
+</li>
+<li>
+<p>macOS：解析为 <code>${homeDir}/Library/Logs/{bundleIdentifier}</code></p>
+</li>
+<li>
+<p>Windows：解析为 <code>${configDir}/${bundleIdentifier}/logs</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { appLogDir } from '@tauri-apps/api/path';
+const appLogDirPath = await appLogDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.2.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="audio-dir"><a class="anchor" href="#audio-dir"></a>audioDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>audioDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回用户音频目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>特定平台的路径：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code><a href="https://www.freedesktop.org/wiki/Software/xdg-user-dirs/">xdg-user-dirs</a></code> 的 <code>XDG_MUSIC_DIR</code></p>
+</li>
+<li>
+<p>macOS：解析为 <code>$HOME/Music</code></p>
+</li>
+<li>
+<p>Windows：解析为 <code>{FOLDERID_Music}</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { audioDir } from '@tauri-apps/api/path';
+const audioDirPath = await audioDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="basename"><a class="anchor" href="#basename"></a>basename</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>basename(<code>path</code>: <code>string</code>, <code>ext?</code>: <code>string</code>): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回 <code>path</code> 的最后一部分。尾部的目录分隔符将被忽略。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { basename, resolveResource } from '@tauri-apps/api/path';
+const resourcePath = await resolveResource('app.conf');
+const base = await basename(resourcePath);
+assert(base === 'app.conf');</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ext?</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">可选的文件扩展名会从返回的路径中移除。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cache-dir"><a class="anchor" href="#cache-dir"></a>cacheDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>cacheDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回用户缓存目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>特定平台的路径：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code>$XDG_CACHE_HOME</code> 或 <code>$HOME/.cache</code></p>
+</li>
+<li>
+<p>macOS：解析为 <code>$HOME/Library/Caches</code></p>
+</li>
+<li>
+<p>Windows：解析为 <code>{FOLDERID_LocalAppData}</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { cacheDir } from '@tauri-apps/api/path';
+const cacheDirPath = await cacheDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="config-dir"><a class="anchor" href="#config-dir"></a>configDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>configDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回用户配置目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>特定平台的路径：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code>$XDG_CONFIG_HOME</code> 或 <code>$HOME/.config</code></p>
+</li>
+<li>
+<p>macOS：解析为 <code>$HOME/Library/Application Support</code></p>
+</li>
+<li>
+<p>Windows：解析为 <code>{FOLDERID_RoamingAppData}</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { configDir } from '@tauri-apps/api/path';
+const configDirPath = await configDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="data-dir"><a class="anchor" href="#data-dir"></a>dataDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>dataDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回用户数据目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>特定平台的路径：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code>$XDG_DATA_HOME</code> 或 <code>$HOME/.local/share</code></p>
+</li>
+<li>
+<p>macOS：解析为 <code>$HOME/Library/Application Support</code></p>
+</li>
+<li>
+<p>Windows：解析为 <code>{FOLDERID_RoamingAppData}</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { dataDir } from '@tauri-apps/api/path';
+const dataDirPath = await dataDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="desktop-dir"><a class="anchor" href="#desktop-dir"></a>desktopDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>desktopDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回用户桌面目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>特定平台的路径：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code><a href="https://www.freedesktop.org/wiki/Software/xdg-user-dirs/">xdg-user-dirs</a></code> 的 <code>XDG_DESKTOP_DIR</code></p>
+</li>
+<li>
+<p>macOS：解析为 <code>$HOME/Desktop</code></p>
+</li>
+<li>
+<p>Windows：解析为 <code>{FOLDERID_Desktop}</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { desktopDir } from '@tauri-apps/api/path';
+const desktopPath = await desktopDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="dirname"><a class="anchor" href="#dirname"></a>dirname</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>dirname(path: string): <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { dirname, appDataDir } from '@tauri-apps/api/path';
+const appDataDirPath = await appDataDir();
+const dir = await dirname(appDataDirPath);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="document-dir"><a class="anchor" href="#document-dir"></a>documentDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>documentDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回路径的目录名。忽略尾部的目录分隔符。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { documentDir } from '@tauri-apps/api/path';
+const documentDirPath = await documentDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>返回用户的文档目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>平台特定</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code><a href="https://www.freedesktop.org/wiki/Software/xdg-user-dirs/">xdg-user-dirs</a></code> 的 <code>XDG_DOCUMENTS_DIR</code>。</p>
+</li>
+<li>
+<p>macOS：解析为 <code>$HOME/Documents</code>。</p>
+</li>
+<li>
+<p>Windows：解析为 <code>{FOLDERID_Documents}</code>。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="download-dir"><a class="anchor" href="#download-dir"></a>downloadDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>executableDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回用户的下载目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>平台特定</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code><a href="https://www.freedesktop.org/wiki/Software/xdg-user-dirs/">xdg-user-dirs</a></code> 的 <code>XDG_DOWNLOAD_DIR</code>。</p>
+</li>
+<li>
+<p>macOS：解析为 <code>$HOME/Downloads</code>。</p>
+</li>
+<li>
+<p>Windows：解析为 <code>{FOLDERID_Downloads}</code>。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { downloadDir } from '@tauri-apps/api/path';
+const downloadDirPath = await downloadDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="executable-dir"><a class="anchor" href="#executable-dir"></a>executableDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>executableDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回用户的可执行文件目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>平台特定</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code>$XDG_BIN_HOME/../bin</code> 或 <code>$XDG_DATA_HOME/../bin</code> 或 <code>$HOME/.local/bin</code>。</p>
+</li>
+<li>
+<p>macOS：不支持。</p>
+</li>
+<li>
+<p>Windows：不支持。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { executableDir } from '@tauri-apps/api/path';
+const executableDirPath = await executableDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="extname"><a class="anchor" href="#extname"></a>extname</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>extname(<code>path</code>: <code>string</code>): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回 <code>path</code> 的扩展名。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { extname, resolveResource } from '@tauri-apps/api/path';
+const resourcePath = await resolveResource('app.conf');
+const ext = await extname(resourcePath);
+assert(ext === 'conf');</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="font-dir"><a class="anchor" href="#font-dir"></a>fontDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>fontDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回用户的字体目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>平台特定</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code>$XDG_DATA_HOME/fonts</code> 或 <code>$HOME/.local/share/fonts</code>。</p>
+</li>
+<li>
+<p>macOS：解析为 <code>$HOME/Library/Fonts</code>。</p>
+</li>
+<li>
+<p>Windows：不支持。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { fontDir } from '@tauri-apps/api/path';
+const fontDirPath = await fontDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="home-dir"><a class="anchor" href="#home-dir"></a>homeDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>homeDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回用户的主目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>平台特定</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code>$HOME</code>。</p>
+</li>
+<li>
+<p>macOS：解析为 <code>$HOME</code>。</p>
+</li>
+<li>
+<p>Windows：解析为 <code>{FOLDERID_Profile}</code>。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { homeDir } from '@tauri-apps/api/path';
+const homeDirPath = await homeDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="is-absolute"><a class="anchor" href="#is-absolute"></a>isAbsolute</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>isAbsolute(<code>path</code>: <code>string</code>): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回路径是否是绝对路径。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { isAbsolute } from '@tauri-apps/api/path';
+assert(await isAbsolute('/home/tauri'));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>boolean</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="join"><a class="anchor" href="#join"></a>join</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>join(&#8230;&#8203;<code>paths</code>: <code>string</code>[]): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>使用平台特定的分隔符作为定界符，将所有给定的 <code>path</code> 片段连接在一起，然后规范化生成的路径。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { join, appDataDir } from '@tauri-apps/api/path';
+const appDataDirPath = await appDataDir();
+const path = await join(appDataDirPath, 'users', 'tauri', 'avatar.png');</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&#8230;&#8203;paths</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>[]</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="local-data-dir"><a class="anchor" href="#local-data-dir"></a>localDataDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>localDataDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回用户的本地数据目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>平台特定</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code>$XDG_DATA_HOME</code> 或 <code>$HOME/.local/share</code>。</p>
+</li>
+<li>
+<p>macOS：解析为 <code>$HOME/Library/Application Support</code>。</p>
+</li>
+<li>
+<p>Windows：解析为 <code>{FOLDERID_LocalAppData}</code>。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { localDataDir } from '@tauri-apps/api/path';
+const localDataDirPath = await localDataDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="log-dir"><a class="anchor" href="#log-dir"></a>logDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>logDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回建议的日志目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>已弃用</p>
+</div>
+<div class="paragraph">
+<p>since 1.2.0: 将在 2.0.0 中移除。请使用 <code><a href="#app-log-dir">appLogDir</a></code>。</p>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="normalize"><a class="anchor" href="#normalize"></a>normalize</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>normalize(<code>path</code>: <code>string</code>): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>规范化给定 <code>path</code>，解析 <code>'..'</code> 和 <code>'.'</code> 片段并解析符号链接。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { normalize, appDataDir } from '@tauri-apps/api/path';
+const appDataDirPath = await appDataDir();
+const path = await normalize(appDataDirPath, '..', 'users', 'tauri', 'avatar.png');</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="picture-dir"><a class="anchor" href="#picture-dir"></a>pictureDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>pictureDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回用户的图片目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>平台特定</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code><a href="https://www.freedesktop.org/wiki/Software/xdg-user-dirs/">xdg-user-dirs</a></code> 的 <code>XDG_PICTURES_DIR</code>。</p>
+</li>
+<li>
+<p>macOS：解析为 <code>$HOME/Pictures</code>。</p>
+</li>
+<li>
+<p>Windows：解析为 <code>{FOLDERID_Pictures}</code>。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { pictureDir } from '@tauri-apps/api/path';
+const pictureDirPath = await pictureDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="public-dir"><a class="anchor" href="#public-dir"></a>publicDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>publicDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回用户公共目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>平台特定</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code><a href="https://www.freedesktop.org/wiki/Software/xdg-user-dirs/">xdg-user-dirs</a></code> 的 <code>XDG_PUBLICSHARE_DIR</code>。</p>
+</li>
+<li>
+<p>macOS：解析为 <code>$HOME/Public</code>。</p>
+</li>
+<li>
+<p>Windows：解析为 <code>{FOLDERID_Public}</code>。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { publicDir } from '@tauri-apps/api/path';
+const publicDirPath = await publicDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="resolve"><a class="anchor" href="#resolve"></a>resolve</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>resolve(&#8230;&#8203;<code>paths</code>: <code>string</code>[]): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>将一系列 <code>paths</code> 或 <code>path</code> 解析为绝对路径。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { resolve, appDataDir } from '@tauri-apps/api/path';
+const appDataDirPath = await appDataDir();
+const path = await resolve(appDataDirPath, '..', 'users', 'tauri', 'avatar.png');</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&#8230;&#8203;paths</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>[]</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="resolve-resource"><a class="anchor" href="#resolve-resource"></a>resolveResource</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>resolveResource(<code>resourcePath</code>: <code>string</code>): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>解析资源文件的路径。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { resolveResource } from '@tauri-apps/api/path';
+const resourcePath = await resolveResource('script.sh');</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p>参数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resourcePath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">资源的路径。<br>
+必须遵循 <code>tauri.conf.json &gt; tauri &gt; bundle &gt; resources</code> 中定义的相同语法，即保留子文件夹和父目录组件（<code>../</code>）。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+<div class="paragraph">
+<p>资源的完整路径。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="resource-dir"><a class="anchor" href="#resource-dir"></a>resourceDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>resourceDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回应用程序资源目录的路径。要解析资源路径，请参见 <code><a href="#resolve-resource">resolveResource API</a></code>。</p>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { resourceDir } from '@tauri-apps/api/path';
+const resourceDirPath = await resourceDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="runtime-dir"><a class="anchor" href="#runtime-dir"></a>runtimeDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>runtimeDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回用户运行时目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>平台特定</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code>$XDG_RUNTIME_DIR</code>。</p>
+</li>
+<li>
+<p>macOS：不支持。</p>
+</li>
+<li>
+<p>Windows：不支持。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { runtimeDir } from '@tauri-apps/api/path';
+const runtimeDirPath = await runtimeDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="template-dir"><a class="anchor" href="#template-dir"></a>templateDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>templateDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回用户模板目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>平台特定</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code><a href="https://www.freedesktop.org/wiki/Software/xdg-user-dirs/">xdg-user-dirs</a></code> 的 <code>XDG_TEMPLATES_DIR</code>。</p>
+</li>
+<li>
+<p>macOS：不支持。</p>
+</li>
+<li>
+<p>Windows：解析为 <code>{FOLDERID_Templates}</code>。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { templateDir } from '@tauri-apps/api/path';
+const templateDirPath = await templateDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="video-dir"><a class="anchor" href="#video-dir"></a>videoDir</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>videoDir(): <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>返回用户视频目录的路径。</p>
+</div>
+<div class="paragraph">
+<p>平台特定</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux：解析为 <code><a href="https://www.freedesktop.org/wiki/Software/xdg-user-dirs/">xdg-user-dirs</a></code> 的 <code>XDG_VIDEOS_DIR</code>。</p>
+</li>
+<li>
+<p>macOS：解析为 <code>$HOME/Movies</code>。</p>
+</li>
+<li>
+<p>Windows：解析为 <code>{FOLDERID_Videos}</code>。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>示例</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-typescript hljs" data-lang="typescript">import { videoDir } from '@tauri-apps/api/path';
+const videoDirPath = await videoDir();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since: 1.0.0</p>
+</div>
+<div class="paragraph">
+<p><strong>返回</strong>: <code><a href="#https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>&lt;<code>string</code>&gt;</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

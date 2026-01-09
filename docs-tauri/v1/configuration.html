@@ -1,0 +1,3194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>配置 :: docs-tauri</title>
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">docs-tauri</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs-tauri" data-version="v1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Tauri API 文档</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="configuration.html">配置</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="command_line_runner.html">CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">JavaScript/TypeScript</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="app.html">应用(app)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli.html">命令行(cli)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="clipboard.html">剪贴板(clipboard)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="dialog.html">对话框(dialog)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="event.html">事件(event)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fs.html">文件系统(fs)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="globalShortcut.html">快捷键(globalShortcut)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="http.html">http</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mocks.html">mocks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="notification.html">通知(notification)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="os.html">操作系统(os)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="path.html">路径(path)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="process.html">进程(process)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="shell.html">shell</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tauri.html">tauri</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="updater.html">更新(updater)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="window.html">窗口(window)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://tauri.app/zh-cn/v1/guides/">官方地址</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Tauri API 文档</span>
+    <span class="version">v1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Tauri API 文档</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">v1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Tauri API 文档</a></li>
+    <li><a href="configuration.html">配置</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/qq253498229/docs-tauri/edit/master/modules/ROOT/pages/configuration.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="目录" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">配置</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://tauri.app/v1/api/config">原文地址</a></p>
+</div>
+<div class="paragraph">
+<p>Tauri的配置对象，它是从文件中读取的。 你可以在里面自定义前端资源、配置打包选项、开启应用自动更新、定制系统托盘，还有配置API的白名单等等。</p>
+</div>
+<div class="paragraph">
+<p>配置文件在你的Tauri应用源目录(src-tauri)通过执行 <a href="command_line_runner.html#init" class="xref page">tauri init</a>命令生成。</p>
+</div>
+<div class="paragraph">
+<p>生成后你也可以随时对其进行修改，来自定义Tauri应用。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_文件格式"><a class="anchor" href="#_文件格式"></a>文件格式</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>默认情况下，配置被定义为一个名为 <code>tauri.conf.json</code> 的 <strong>JSON</strong> 文件。</p>
+</div>
+<div class="paragraph">
+<p>Tauri 还分别通过 <code>config-json5</code> 和 <code>config-toml</code> 这两个 Cargo 特性支持 <strong>JSON5</strong> 和 <strong>TOML</strong> 文件。
+<strong>JSON5</strong> 文件名必须为 <code>tauri.conf.json</code> 或 <code>tauri.conf.json5</code>。
+<strong>TOML</strong> 文件名为 <code>Tauri.toml</code>。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_平台特定配置"><a class="anchor" href="#_平台特定配置"></a>平台特定配置</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>除了默认配置文件外，Tauri 还可以从 <code>tauri.linux.conf.json</code>、<code>tauri.windows.conf.json</code> 和 <code>tauri.macos.conf.json</code>（如果使用 <code>Tauri.toml</code> 格式，则为 <code>Tauri.linux.toml</code>、<code>Tauri.windows.toml</code> 和 <code>Tauri.macos.toml</code>）中读取平台特定的配置，这些配置将与主配置对象合并。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_配置结构"><a class="anchor" href="#_配置结构"></a>配置结构</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>配置由以下对象组成：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#package-config">package</a>: 包设置</p>
+</li>
+<li>
+<p><a href="#tauri-config">tauri</a>: Tauri 配置</p>
+</li>
+<li>
+<p><a href="#build-config">build</a>: 构建配置</p>
+</li>
+<li>
+<p><a href="#plugin-config">plugins</a>: 插件配置</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">tauri.config.json文件示例</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "build": {
+    "beforeBuildCommand": "",
+    "beforeDevCommand": "",
+    "devPath": "../dist",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "tauri-app",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true
+    },
+    "bundle": {},
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 600,
+        "resizable": true,
+        "title": "Tauri App",
+        "width": 800
+      }
+    ]
+  }
+}</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="package-config"><a class="anchor" href="#package-config"></a>PackageConfig</h3>
+<div class="paragraph">
+<p>包相关的配置。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>productName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">App名称</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>version</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">应用程序版本。它是一个符合语义化版本控制的版本号，或者是包含 <code>version</code> 字段的 <code>package.json</code> 文件的路径。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="tauri-config"><a class="anchor" href="#tauri-config"></a>TauriConfig</h3>
+<div class="paragraph">
+<p>Tauri相关的配置。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pattern</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#pattern-kind">PatternKind</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#pattern-kind">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用的模式。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>windows</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#window-config">WindowConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口配置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cli</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#cli-config">CliConfig</a></code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#cli-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">命令行配置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bundle</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#bundle-config">BundleConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#bundle-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">打包配置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>allowlist</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#allowlist-config">AllowlistConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#allowlist-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">白名单配置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>security</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#security-config">SecurityConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#security-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">安全配置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>updater</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#updater-config">UpdaterConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#updater-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">更新配置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>systemTray</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#system-tray-config">SystemTrayConfig</a></code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#system-tray-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">应用系统托盘配置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>macOSPrivateApi</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">macOS 私有 API 配置。启用透明背景 API 并将 <code>fullScreenEnabled</code> 设置为 <code>true</code>。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="pattern-kind"><a class="anchor" href="#pattern-kind"></a>PatternKind</h4>
+<div class="paragraph">
+<p>应用的模式。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下类型中的任意<strong>一个</strong>：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>{"user":"brownfield"}</code>: Brownfield模式。</p>
+</li>
+<li>
+<p><code>{"user":"isolation","options":{"dir":string}}</code>: Isolation(隔离)模式。以安全为目标的时候建议使用。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="window-config"><a class="anchor" href="#window-config"></a>WindowConfig</h3>
+<div class="paragraph">
+<p>窗口配置对象。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>label</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口的id标识符。必须由字母数字组成。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#window-url">WindowUrl</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#window-url">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口的 webview URL。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>userAgent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">webview中的user agent。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fileDropEnabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">webview是否启用了文件拖放功能。默认情况下它是启用的。</p>
+<p class="tableblock">在Windows的前端禁用它是为了使用拖放功能。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>center</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口启动时是否居中显示。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code>?(format: <code>double</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口左上角的水平位置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>y</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code>?(format: <code>double</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口左上角的垂直位置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>width</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code>?(format: <code>double</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>800</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口宽度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>height</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code>?(format: <code>double</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>600</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口高度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minWidth</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code>?(format: <code>double</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口的最小宽度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minHeight</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code>?(format: <code>double</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口的最小高度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxWidth</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code>?(format: <code>double</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口的最大宽度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxHeight</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code>?(format: <code>double</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口的最大高度。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口是否允许调整大小。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口的标题。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fullscreen</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口启动后是否全屏。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>focus</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口启动后是否获得焦点。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>transparent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口是否透明。</p>
+<p class="tableblock">注意，在 <code>macOS</code> 上，这需要在 <code>tauri &gt; macOSPrivateApi</code> 下启用 <code>macos-private-api</code> 特性标志。<br>
+警告：在 <code>macOS</code> 上使用私有API可能会阻止您的应用程序发布到 <code>App Store</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maximized</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口是否最大化。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>visible</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口是否可见。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>decorations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口是否应该拥有边框和条栏。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>alwaysOnTop</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口是否保持在其它窗口的上方。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>contentProtected</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">防止窗口内容被其他应用程序捕获。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>skipTaskbar</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">如果为 <code>true</code>，则在Windows和Linux上从任务栏隐藏窗口图标。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>theme</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#theme">Theme</a></code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#theme">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">初始窗口主题。默认为系统主题。仅在Windows和macOS 10.14及以上版本可用。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>titleBarStyle</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#title-bar-style">titleBarStyle</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#title-bar-style">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">macOS 标题栏的风格。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hiddenTitle</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">如果为 <code>true</code>，则在macOS系统中隐藏窗口标题。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>acceptFirstMouse</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在macOS上，点击非活动窗口是否也会传递点击webview的事件。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tabbingIdentifier</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">定义了macOS的 <a href="https://developer.apple.com/documentation/appkit/nswindow/1644704-tabbingidentifier">窗口标签标识符</a>。</p>
+<p class="tableblock">具有匹配标签标识符的窗口将被分组在一起。如果未设置标签标识符，则自动标签功能将被禁用。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>additionalBrowserArgs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在Windows上定义额外的浏览器参数。默认情况下会传递参数 <code>--disable-features=msWebOOUI,msPdfOOUI,msSmartScreenProtection</code>，所以如果你使用这个方法，你也需要自己禁用这些组件，如果你想要的话。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="window-url"><a class="anchor" href="#window-url"></a>WindowUrl</h4>
+<div class="paragraph">
+<p>打开Tauri webview窗口的URL。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下任意类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>string</code>(format: <code>uri</code>):一个外部URL。</p>
+</li>
+<li>
+<p><code>string</code>:应用程序URL的路径部分。例如，要加载 <code>tauri://localhost/users/john</code>，你可以在简单地配置为 <code>users/john</code>。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="theme"><a class="anchor" href="#theme"></a>Theme</h4>
+<div class="paragraph">
+<p>系统主题。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下类型中的任何<strong>一个</strong>：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"Light": 明亮主题。</p>
+</li>
+<li>
+<p>"Dark": 黑暗主题。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="title-bar-style"><a class="anchor" href="#title-bar-style"></a>TitleBarStyle</h4>
+<div class="paragraph">
+<p>在macOS上，窗口标题栏应该如何显示。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下类型中的任何<strong>一个</strong>：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"Visible": 正常的标题栏。</p>
+</li>
+<li>
+<p>"Transparent": 透明的标题栏，以便显示窗口背景颜色。<br>
+如果您不需要在标题栏下有实际的HTML内容，这可以让您避免使用 <code>TitleBarStyle::Overlay</code> 的注意事项。当Tauri允许您设置自定义窗口背景颜色时，这将更加有用。</p>
+</li>
+<li>
+<p>"Overlay": 在窗口内容上以透明覆盖层的形式显示标题栏。<br></p>
+<div class="paragraph">
+<p>请注意：</p>
+</div>
+</li>
+<li>
+<p>不同操作系统版本的标题栏高度可能不同，这可能导致窗口控件和标题出现在您意想不到的位置。</p>
+</li>
+<li>
+<p>您需要定义一个自定义拖拽区域来使窗口可拖动，但由于一个限制，当窗口没有焦点时您无法拖动窗口，有关这个问题的讨论可以在Tauri的GitHub问题跟踪器中找到，链接是： <a href="https://github.com/tauri-apps/tauri/issues/4316。" class="bare">https://github.com/tauri-apps/tauri/issues/4316。</a></p>
+</li>
+<li>
+<p>窗口标题的颜色取决于系统主题。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cli-config"><a class="anchor" href="#cli-config"></a>CliConfig</h3>
+<div class="paragraph">
+<p>描述命令行的配置</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">命令描述，将显示在帮助信息中。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>longDescription</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">命令的详细描述，将在帮助信息中展示。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>beforeHelp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在帮助信息中除了自动生成的帮助内容外，添加额外的帮助信息。这些信息会在自动生成的帮助信息之前显示。这通常用于显示头部信息。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>afterHelp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在自动生成的帮助信息之外添加额外的帮助信息。这些信息会在自动生成的帮助信息之后显示。这通常用于描述如何使用参数，或者需要注意的事项。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>args</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">命令的参数列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>subcommands</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>object</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">命令的子命令列表。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="cli-arg"><a class="anchor" href="#cli-arg"></a>CliArg</h4>
+<div class="paragraph">
+<p>CLI参数定义。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>short</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">参数的简短版本，不包括前面的 -。</p>
+<p class="tableblock">注意：任何前导的 <code>-</code> 字符将被剥离，并且只使用第一个非 - 字符作为简短版本。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>(required)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">唯一参数名称。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">参数的描述，将在帮助信息中显示。通常，这是对参数的简短（一行）描述。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>longDescription</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">参数的详细描述，将在帮助信息中展示。通常这是一个更详细（多行）的消息，用来描述参数。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>takesValue</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">指定该参数在运行时需要一个值。</p>
+<p class="tableblock">注意：参数的值可以通过以下任何一种方式指定：<br>
+- 使用空格，例如 <code>-o value</code> 或 <code>--option value</code><br>
+- 使用等号且没有空格，例如 <code>-o=value</code> 或 <code>--option=value</code><br>
+- 使用简短形式且没有空格，例如 <code>-ovalue</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multiple</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">指定参数可能具有未知数量的多个值。如果没有其他设置，此参数只能出现一次。</p>
+<p class="tableblock">例如，<code>--opt val1 val2</code> 是允许的，但 <code>--opt val1 val2 --opt val3</code> 是不允许的。</p>
+<p class="tableblock">注意：设置此项需要将 <code>takes_value</code> 设置为 <code>true</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multipleOccurrences</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">指定参数可以出现多次。对于标志（flags），这将记录标志出现的次数。例如，<code>-ddd</code> 或 <code>-d -d -d</code> 将被计为三次出现。对于需要值的选项或参数，这不会影响它们可以接受的值的数量。（即只允许一次接受一个值）</p>
+<p class="tableblock">例如，允许使用 <code>--opt val1 --opt val2</code>，但不允许使用 <code>--opt val1 val2</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>numberOfValues</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code>? (format: <code>uint</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">指定需要多少个值来满足这个参数。例如，如果你有一个 <code>-f &lt;file&gt;</code> 参数，你希望正好有3个 'files'，你会设置 <code>number_of_values = 3</code>，并且除非用户提供了3个且仅有3个值，否则这个参数不会得到满足。</p>
+<p class="tableblock">注意：不需要设置 <code>multiple_occurrences = true</code>。设置 <code>multiple_occurrences = true</code> 将允许 <code>-f &lt;file&gt; &lt;file&gt; &lt;file&gt; -f &lt;file&gt; &lt;file&gt; &lt;file&gt;</code>，而如果不设置它，则只允许这个参数出现一次。</p>
+<p class="tableblock">注意：隐式设置 <code>takes_value = true</code> 和 <code>multiple_values = true</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>possibleValues</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">指定此参数的可能值列表。在运行时，CLI会验证是否只使用了指定值中的一个，否则会以错误消息失败。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minValues</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code>? (format: <code>uint</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">指定此参数的最小值数量。例如，如果你有一个 <code>-f &lt;file&gt;</code> 参数，你希望至少有2个 'files'，你会设置 <code>minValues: 2</code>，如果用户提供了2个或更多的值，这个参数就会得到满足。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxValues</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code>? (format: <code>uint</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">指定此参数的最大值数量。例如，如果你有一个 <code>-f &lt;file&gt;</code> 参数，你希望最多有3个 'files'，你会设置 <code>.max_values(3)</code>，如果用户提供了1、2或3个值，这个参数就会得到满足。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>required</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认情况下设置参数是否必需。</p>
+<p class="tableblock">- 默认必需意味着它是必需的，当没有其他冲突的规则被评估时<br>
+- 冲突的规则优先于必需性。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requiredUnlessPresent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">设置一个参数，该参数会覆盖此参数的必需设置，即除非存在另一个参数，否则此参数将是必需的。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requiredUnlessPresentAll</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">设置参数，这些参数会覆盖此参数的必需设置，即除非所有这些其他参数都存在，否则此参数将是必需的。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requiredUnlessPresentAny</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">设置参数，这些参数会覆盖此参数的必需设置，即除非至少有一个这些其他参数存在，否则此参数将是必需的。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>conflictsWith</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">设置一个冲突的参数，通过名称指定，即当使用这个参数时，以下参数不能存在，反之亦然。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>conflictsWithAll</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">与 <code>conflictsWith</code> 相同，但允许为每个参数指定多个双向冲突。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requires</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">测试一个参数，通过名称指定，即当此参数存在时，以下参数必须存在。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requiresAll</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">设置多个参数，通过名称指定，这些参数在当前参数存在时是必需的，即在使用这个参数时，以下参数必须存在。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requiresIf</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许有条件的需求，具有签名 [arg, value]，只有在 <code>arg</code> 的值等于 <code>${value}</code> 时，需求才会变得有效。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requiredIfEq</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许指定参数的需求是有条件的，具有签名 [arg, value]，只有在 <code>arg</code> 的值等于 <code>${value}</code> 时，需求才会变得有效。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requireEquals</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要求选项使用 <code>--option=val</code> 的语法，即选项和相关值之间需要有一个等号。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>index</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>integer</code>? (format: <code>uint</code>, minimum: <code>1</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">位置参数的索引，从1开始。</p>
+<p class="tableblock">该索引是相对于其他位置参数的位置。它并不定义在整个参数列表中的位置。当与 <code>multiple=true</code> 一起使用时，只有最后一个位置参数可以被定义为多个（即具有最高索引的那个）。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="bundle-config"><a class="anchor" href="#bundle-config"></a>BundleConfig</h3>
+<div class="paragraph">
+<p>Tauri打包的配置。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>active</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tauri 是否应该打包你的应用程序还是只输出可执行文件。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>targets</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#bundle-target">BundleTarget</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#bundle-target">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">目前支持的打包目标包括 ["deb", "rpm", "appimage", "nsis", "msi", "app", "dmg", "updater"] 或 "all"。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>identifier</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>(required)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">应用程序标识符应使用反向域名表示法（例如 <code>com.tauri.example</code>）。这个字符串必须是唯一的，因为它用于系统配置，如包 ID 和 webview 数据目录的路径。此字符串只能包含字母数字字符（A-Z，a-z 和 0-9）、连字符（-）和点（.）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>publisher</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">应用程序的发布者。默认情况下，它是标识符字符串中的第二个元素。目前它对应于 Windows 安装程序的 Manufacturer 属性。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>icon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">应用的图标</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resources</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">应用程序需要打包的资源。每个资源是指向文件或目录的路径。支持使用通配符模式。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>copyright</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">与您的应用程序相关的版权字符串。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>category</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">应用程序类型。</p>
+<p class="tableblock">应该是以下之一：商务、开发者工具、教育、娱乐、金融、游戏、动作游戏、冒险游戏、街机游戏、棋盘游戏、纸牌游戏、赌场游戏、骰子游戏、教育游戏、家庭游戏、儿童游戏、音乐游戏、益智游戏、赛车游戏、角色扮演游戏、模拟游戏、体育游戏、策略游戏、问答游戏、文字游戏、图形与设计、健康与健身、生活方式、医疗、音乐、新闻、摄影、生产力、参考、社交网络、体育、旅行、实用工具、视频、天气。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>shortDescription</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">您的应用程序的简短描述。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>longDescription</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">应用程序的详细描述是一个多行文本。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>appimage</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#app-image-config">AppImageConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#app-image-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AppImage 捆绑包的配置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deb</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#deb-config">DebConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#deb-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Debian 捆绑包的配置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>macOS</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#mac-config">MacConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#mac-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">macOS 捆绑包的配置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>externalBin</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">用于应用程序的二进制文件列表——可以是绝对路径或相对路径。</p>
+<p class="tableblock">请注意，Tauri 会按照 "binary-name{-target-triple}{.system-extension}" 的模式寻找特定于系统的二进制文件。</p>
+<p class="tableblock">例如，对于外部二进制文件 "my-binary"，Tauri 会寻找：</p>
+<p class="tableblock">- Windows 系统下的 "my-binary-x86_64-pc-windows-msvc.exe"<br>
+- macOS 系统下的 "my-binary-x86_64-apple-darwin"<br>
+- Linux 系统下的 "my-binary-x86_64-unknown-linux-gnu"</p>
+<p class="tableblock">因此，别忘了为所有目标平台提供二进制文件。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>windows</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#windows-config">WindowsConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#windows-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows 包的配置。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="bundle-target"><a class="anchor" href="#bundle-target"></a>BundleTarget</h4>
+<div class="paragraph">
+<p>打包的目标。每个值都不区分大小写。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下类型之一：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>"all"</code>：打包所有目标。</p>
+</li>
+<li>
+<p><code><a href="#bundle-type">BundleType[]</a></code>：打包目标的列表。</p>
+</li>
+<li>
+<p><code><a href="#bundle-type">BundleType</a></code>：单个打包目标。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="bundle-type"><a class="anchor" href="#bundle-type"></a>BundleType</h4>
+<div class="paragraph">
+<p>由 tauri-bundler 引用的打包类型。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下类型中的任何<strong>一个</strong>：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"deb"：Debian 打包（.deb）。</p>
+</li>
+<li>
+<p>"appimage"：AppImage 打包（.appimage）。</p>
+</li>
+<li>
+<p>"msi"：微软安装程序打包（.msi）。</p>
+</li>
+<li>
+<p>"nsis"：NSIS 打包（.exe）。</p>
+</li>
+<li>
+<p>"app"：macOS 应用程序打包（.app）。</p>
+</li>
+<li>
+<p>"dmg"：苹果磁盘映像打包（.dmg）。</p>
+</li>
+<li>
+<p>"updater"：Tauri 更新程序打包。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="app-image-config"><a class="anchor" href="#app-image-config"></a>AppImageConfig</h3>
+<div class="paragraph">
+<p>AppImage 打包的配置。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bundleMediaFramework</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">包括音频和视频播放所需的额外 gstreamer 依赖项。这将根据你的构建系统，使打包大小增加约 15-35MB。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="deb-config"><a class="anchor" href="#deb-config"></a>DebConfig</h3>
+<div class="paragraph">
+<p>Debian（.deb）打包的配置。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>depends</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">您的应用程序所依赖的Debian软件包列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>files</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">软件包中要包含的文件列表。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="mac-config"><a class="anchor" href="#mac-config"></a>MacConfig</h3>
+<div class="paragraph">
+<p>macOS捆绑包的配置。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>frameworks</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">指示需要与应用程序捆绑的任何macOS X框架的字符串列表。</p>
+<p class="tableblock">如果使用名称，则必须省略“.framework”，系统会查找标准安装位置。您还可以使用指向特定框架的路径。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minimumSystemVersion</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">一个版本字符串，指示捆绑的应用程序支持的最低macOS X版本。默认为<code>10.13</code>。</p>
+<p class="tableblock">将其设置为<code>null</code>会完全删除捆绑包<code>Info.plist</code>中的<code>LSMinimumSystemVersion</code>字段和<code>MACOSX_DEPLOYMENT_TARGET</code>环境变量。</p>
+<p class="tableblock">空字符串被视为无效值，因此使用默认值。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exceptionDomain</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许您的应用程序与外界通信。它应该是小写的，不带端口和协议的域名。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>license</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要添加到DMG捆绑包的许可证文件的路径。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>signingIdentity</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">用于代码签名的身份。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>providerShortName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">公证的提供商简称。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>entitlements</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">权利文件的路径。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="windows-config"><a class="anchor" href="#windows-config"></a>WindowsConfig</h3>
+<div class="paragraph">
+<p>Windows打包配置。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>digestAlgorithm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">指定用于创建文件签名的文件摘要算法。代码签名时必需。建议使用SHA-256。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>certificateThumbprint</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">指定签名证书的SHA1哈希。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>timestampUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">时间戳使用的服务器。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tsp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">是否使用时间戳协议（TSP，即RFC 3161）作为时间戳服务器。您的代码签名提供商可能使用TSP时间戳服务器，例如SSL.com。如果是这样，请将其设置为true以启用TSP。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>webviewInstallMode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#webview-install-mode">WebviewInstallMode</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#webview-install-mode">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Webview2运行时的安装模式。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>webviewFixedRuntimePath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要使用的Webview固定运行时的路径。如果设置，将覆盖 <code>webview_install_mode</code>。</p>
+<p class="tableblock">将在v2中删除，建议使用 <code>webview_install_mode</code> 选项。</p>
+<p class="tableblock">固定版本可以从 <a href="https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section">官方网站</a> 下载。必须将 <code>.cab</code> 文件解压到一个文件夹中，并在此字段中定义该文件夹路径。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>allowDowngrades</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">验证第二次应用程序安装，如果设置为 <code>false</code>，则阻止用户安装旧版本。</p>
+<p class="tableblock">例如，如果已安装 <code>1.2.1</code> 版本，则用户将无法安装 <code>1.2.0</code> 或 <code>1.1.5</code> 版本的应用程序。</p>
+<p class="tableblock">此标志的默认值为 <code>true</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>wix</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#wix-config">WixConfig</a></code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#wix-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用WiX生成的MSI的配置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nsis</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#nsis-config">NsisConfig</a></code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#nsis-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用NSIS生成的安装程序的配置。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="webview-install-mode"><a class="anchor" href="#webview-install-mode"></a>WebviewInstallMode</h4>
+<div class="paragraph">
+<p>Webview2运行时的安装模式。请注意，对于更新程序捆绑包，使用 <code>DownloadBootstrapper</code>。</p>
+</div>
+<div class="paragraph">
+<p>有关更多信息，请参见 <a href="https://tauri.app/zh-cn/v1/guides/building/windows。" class="bare">https://tauri.app/zh-cn/v1/guides/building/windows。</a></p>
+</div>
+<div class="paragraph">
+<p>可以是以下类型中的任何<strong>一个</strong>：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>{"type":"skip"}</code>: 不要将Webview2作为Windows安装程序的一部分进行安装。</p>
+</li>
+<li>
+<p><code>{ "type": "downloadBootstrapper", "silent": boolean }</code>: 下载引导程序并运行它。需要互联网连接。结果是安装程序的大小较小，但不建议在Windows 7上使用。</p>
+</li>
+<li>
+<p><code>{ "type": "embedBootstrapper", "silent": boolean }</code>: 嵌入引导程序并运行它。需要互联网连接。会增加约1.8MB的安装程序大小，但在Windows 7上提供更好的支持。</p>
+</li>
+<li>
+<p><code>{ "type": "offlineInstaller", "silent": boolean }</code>: 嵌入离线安装程序并运行它。不需要互联网连接。会增加约127MB的安装程序大小。</p>
+</li>
+<li>
+<p><code>{ "type": "fixedRuntime", "path": string }</code>: 嵌入固定的Webview2版本并在运行时使用。会增加约180MB的安装程序大小。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="wix-config"><a class="anchor" href="#wix-config"></a>WixConfig</h3>
+<div class="paragraph">
+<p>使用WiX的MSI捆绑包配置。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>language</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#wix-language">WixLanguage</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#wix-language">WixLanguage</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要构建的安装程序语言。请参见  <a href="https://docs.microsoft.com/en-us/windows/win32/msi/localizing-the-error-and-actiontext-tables。" class="bare">https://docs.microsoft.com/en-us/windows/win32/msi/localizing-the-error-and-actiontext-tables。</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>template</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">自定义 .wxs 模板以供使用。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fragmentPaths</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用的包含 WiX 片段的 .wxs 文件路径列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>componentGroupRefs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要从片段中引用的 ComponentGroup 元素 ID。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>componentRefs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要从片段中引用的 Component 元素 ID。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>featureGroupRefs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要从片段中引用的 FeatureGroup 元素 ID。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>featureRefs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要从片段中引用的 Feature 元素 ID。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mergeRefs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要从片段中引用的 Merge 元素 ID。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>skipWebviewInstall</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在应用安装后禁用 Webview2 运行时安装。</p>
+<p class="tableblock">将在 v2 中移除，建议使用 [<code>WindowsConfig::webview_install_mode</code>] 选项。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>license</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要在安装程序中呈现的许可证文件路径。</p>
+<p class="tableblock">必须是 RTF 文件，如果提供了其他扩展名，我们会将其转换为 RTF 格式。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enableElevatedUpdateTask</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在 Windows 任务计划程序中创建一个提升权限的更新任务。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bannerPath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">用作安装用户界面横幅的位图文件路径。此位图将出现在安装程序的所有页面顶部，但不包括第一页。</p>
+<p class="tableblock">所需的尺寸为 493 像素 × 58 像素。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dialogImagePath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">用作安装用户界面对话框的位图文件路径。它用于欢迎和完成对话框。所需的尺寸为 493 像素 × 312 像素。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="wix-language"><a class="anchor" href="#wix-language"></a>WixLanguage</h4>
+<div class="paragraph">
+<p>使用 WiX 构建的语言。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下任何类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>string</code>: 单一语言构建，无需配置。</p>
+</li>
+<li>
+<p><code>string[]</code>: 语言列表构建，无需配置。</p>
+</li>
+<li>
+<p><code>object</code>: 语言及其配置的映射。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="wix-language-config"><a class="anchor" href="#wix-language-config"></a>WixLanguageConfig</h3>
+<div class="paragraph">
+<p>WiX 构建目标语言的配置。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>localePath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">区域设置 (<code>.wxl</code>) 文件的路径。请参见 <a href="https://wixtoolset.org/documentation/manual/v3/howtos/ui_and_localization/build_a_localized_version.html。" class="bare">https://wixtoolset.org/documentation/manual/v3/howtos/ui_and_localization/build_a_localized_version.html。</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="nsis-config"><a class="anchor" href="#nsis-config"></a>NsisConfig</h3>
+<div class="paragraph">
+<p>使用 NSIS 的安装程序捆绑包配置。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>license</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要在安装程序中呈现的许可证文件路径。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>headerImage</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要在安装程序页面头部显示的位图文件路径。</p>
+<p class="tableblock">推荐的尺寸为 150 像素 × 57 像素。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sidebarImage</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">欢迎页面和完成页面使用的位图文件路径。</p>
+<p class="tableblock">推荐尺寸为 164 像素 × 314 像素。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>installerIcon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">用作安装程序图标的图标文件路径。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>installMode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#nsisinstaller-mode">NSISInstallerMode</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#nsisinstaller-mode">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">安装是为所有用户还是仅为当前用户。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>languages</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">安装程序语言列表。默认情况下使用操作系统语言。如果操作系统语言不在语言列表中，将使用第一个语言。要允许用户选择语言，请将 <code>display_language_selector</code> 设置为 <code>true</code>。</p>
+<p class="tableblock">请参见 <a href="https://github.com/kichik/nsis/tree/9465c08046f00ccb6eda985abbdbf52c275c6c4d/Contrib/Language%20files" class="bare">https://github.com/kichik/nsis/tree/9465c08046f00ccb6eda985abbdbf52c275c6c4d/Contrib/Language%20files</a> 获取完整的语言列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>displayLanguageSelector</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">是否在安装程序和卸载程序窗口呈现之前显示语言选择对话框。默认情况下，选择操作系统语言，如果操作系统语言不在语言数组中，则回退到 <code>languages</code> 数组中的第一个语言。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="nsisinstaller-mode"><a class="anchor" href="#nsisinstaller-mode"></a>NSISInstallerMode</h4>
+<div class="paragraph">
+<p>NSIS 安装程序的安装模式。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下任意<strong>一种</strong>类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"currentUser": 安装程序的默认模式。<br></p>
+<div class="paragraph">
+<p>默认将应用程序安装在不需要管理员访问权限的目录中。</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>安装程序元数据将保存在 <code>HKCU</code> 注册表路径下。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"perMachine": 默认将应用程序安装在 <code>Program Files</code> 文件夹中，安装需要管理员访问权限。<br></p>
+<div class="paragraph">
+<p>安装程序元数据将保存在 <code>HKLM</code> 注册表路径下。</p>
+</div>
+</li>
+<li>
+<p>"both": 结合了两种模式，允许用户在安装时选择是为当前用户还是为所有用户安装。请注意，即使用户仅希望为当前用户安装，此模式也需要管理员访问权限。<br></p>
+<div class="paragraph">
+<p>安装程序元数据将根据用户的选择保存在 <code>HKLM</code> 或 <code>HKCU</code> 注册表路径下。</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="allowlist-config"><a class="anchor" href="#allowlist-config"></a>AllowlistConfig</h3>
+<div class="paragraph">
+<p>允许列表配置。允许列表是 <a href="https://docs.rs/tauri/latest/tauri/#cargo-allowlist-features">Cargo 允许列表功能</a> 的翻译。</p>
+</div>
+<div class="sect3">
+<h4 id="_注意事项"><a class="anchor" href="#_注意事项"></a>注意事项</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>没有自己的允许列表选项的端点默认启用。</p>
+</li>
+<li>
+<p>只有“选择加入”，没有“选择退出”。将选项设置为 <code>false</code> 不会有任何效果。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_示例"><a class="anchor" href="#_示例"></a>示例</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code><a href="#allowlist-config">"app-all": true</a></code> 将使 <a href="app.html#hide" class="xref page">hide</a> 端点可用，无论允许列表中的 <code>hide</code> 设置为 <code>false</code> 还是 <code>true</code>。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>all</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用此标志以启用所有 API 功能。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fs-allowlist-config">FsAllowlistConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#fs-allowlist-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">文件系统 API 允许列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>window</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#window-allowlist-config">WindowAllowlistConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#window-allowlist-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">窗口 API 允许列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>shell</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#shell-allowlist-config">ShellAllowlistConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#shell-allowlist-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shell API 允许列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dialog</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#dialog-allowlist-config">DialogAllowlistConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dialog-allowlist-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">对话框 API 允许列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>http</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#http-allowlist-config">HttpAllowlistConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#http-allowlist-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP API 允许列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>notification</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#notification-allowlist-config">NotificationAllowlistConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#notification-allowlist-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">通知 API 允许列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>globalShortcut</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#global-shortcut-allowlist-config">GlobalShortcutAllowlistConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#global-shortcut-allowlist-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">全局快捷键 API 允许列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>os</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#os-allowlist-config">OsAllowlistConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#os-allowlist-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">操作系统允许列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#path-allowlist-config">PathAllowlistConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#path-allowlist-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">路径 API 允许列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>protocol</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#protocol-allowlist-config">ProtocolAllowlistConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#protocol-allowlist-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">自定义协议允许列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>process</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#process-allowlist-config">ProcessAllowlistConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#process-allowlist-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">进程 API 允许列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clipboard</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#clipboard-allowlist-config">ClipboardAllowlistConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#clipboard-allowlist-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">剪贴板 API 允许列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>app</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#app-allowlist-config">AppAllowlistConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#app-allowlist-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">应用程序 API 允许列表。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fs-allowlist-config"><a class="anchor" href="#fs-allowlist-config"></a>FsAllowlistConfig</h3>
+<div class="paragraph">
+<p>用于文件系统API的允许列表。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scope</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fs-allowlist-scope">FsAllowlistScope</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">文件系统 API 的访问范围。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>all</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用此标志来启用所有文件系统 API 功能。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readFile</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">从本地文件系统读取文件。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>writeFile</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">将文件写入本地文件系统。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readDir</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">从本地文件系统读取目录。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>copyFile</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">从本地文件系统复制文件。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createDir</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">创建本地文件系统的目录。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>removeDir</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">从本地文件系统删除目录。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>removeFile</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">从本地文件系统删除文件。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>renameFile</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">从本地文件系统重命名文件。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exists</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">检查本地文件系统上路径是否存在。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="fs-allowlist-scope"><a class="anchor" href="#fs-allowlist-scope"></a>FsAllowlistScope</h4>
+<div class="paragraph">
+<p>文件系统范围定义。它是一组限制webview API访问的全局模式列表。</p>
+</div>
+<div class="paragraph">
+<p>每个模式可以以变量开始，该变量解析为系统基础目录。变量包括：<code>$AUDIO</code>, <code>$CACHE</code>, <code>$CONFIG</code>, <code>$DATA</code>, <code>$LOCALDATA</code>, <code>$DESKTOP</code>, <code>$DOCUMENT</code>, <code>$DOWNLOAD</code>, <code>$EXE</code>, <code>$FONT</code>, <code>$HOME</code>, <code>$PICTURE</code>, <code>$PUBLIC</code>, <code>$RUNTIME</code>, <code>$TEMPLATE</code>, <code>$VIDEO</code>, <code>$RESOURCE</code>, <code>$APP</code>, <code>$LOG</code>, <code>$TEMP</code>, <code>$APPCONFIG</code>, <code>$APPDATA</code>, <code>$APPLOCALDATA</code>, <code>$APPCACHE</code>, <code>$APPLOG</code>。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下任何类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>string[]</code>: 此范围允许的路径列表。</p>
+</li>
+<li>
+<p><code>object</code>: 完整的范围配置。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="window-allowlist-config"><a class="anchor" href="#window-allowlist-config"></a>WindowAllowlistConfig</h3>
+<div class="paragraph">
+<p>窗口 API 的允许列表。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>all</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">启用此标志以启用所有窗口 API 功能。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>create</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许动态窗口创建。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>center</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许窗口居中。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requestUserAttention</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许请求窗口上用户的关注。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setResizable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许设置窗口的可调整大小标志。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setTitle</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许更改窗口标题。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maximize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许最大化窗口。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>unmaximize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许还原最大化的窗口。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minimize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许最小化窗口。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>unminimize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许还原最小化的窗口。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>show</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许显示窗口。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hide</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许隐藏窗口。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>close</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许关闭窗口。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setDecorations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许设置窗口的装饰标志。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setAlwaysOnTop</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许设置窗口的“always_on_top”标志。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setContentProtected</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许防止窗口内容被其他应用程序捕获。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许设置窗口大小。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setMinSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许设置窗口的最小尺寸。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setMaxSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许设置窗口的最大尺寸。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setPosition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许更改窗口的位置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setFullscreen</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许设置窗口的全屏标志。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setFocus</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许使窗口获得焦点。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setIcon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许更改窗口图标。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setSkipTaskbar</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许设置窗口的“跳过任务栏”标志。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setCursorGrab</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许捕获光标。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setCursorVisible</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许设置光标的可见性。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setCursorIcon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许更改光标图标。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setCursorPosition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许设置光标位置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setIgnoreCursorEvents</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许忽略光标事件。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>startDragging</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许在窗口上开始拖动操作。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>print</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许打开系统对话框以打印窗口内容。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="shell-allowlist-config"><a class="anchor" href="#shell-allowlist-config"></a>ShellAllowlistConfig</h3>
+<div class="paragraph">
+<p>shell API 的白名单。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scope</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#shell-allowlist-scope">ShellAllowlistScope</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">二进制执行 API 的访问范围。Sidecars 会自动启用。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>all</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用此标志以启用所有 shell API 功能。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>execute</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">启用二进制执行。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sidecar</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">启用 sidecar 执行，允许 JavaScript 层启动一个 sidecar 命令，这是一个与应用程序一起提供的可执行文件。有关更多信息，请参见 <a href="https://tauri.app/v1/guides/building/sidecar。" class="bare">https://tauri.app/v1/guides/building/sidecar。</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>open</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#shell-allowlist-open">ShellAllowlistOpen</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用用户的默认应用程序打开 URL。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="shell-allowlist-scope"><a class="anchor" href="#shell-allowlist-scope"></a>ShellAllowlistScope</h4>
+<div class="paragraph">
+<p>Shell 范围定义。这是一个命令名称列表及其相关的命令行参数，用于限制从 webview 访问 API。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code><a href="#shell-allowed-command">ShellAllowedCommand[]</a></code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="shell-allowed-command"><a class="anchor" href="#shell-allowed-command"></a>ShellAllowedCommand</h4>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>(required)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">此允许的 shell 命令配置的名称。</p>
+<p class="tableblock">该名称将在 webview API 中用于调用此命令及任何指定的参数。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cmd</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">命令名称。它可以以解析为系统基本目录的变量开头。变量包括：<code>$AUDIO</code>, <code>$CACHE</code>, <code>$CONFIG</code>, <code>$DATA</code>, <code>$LOCALDATA</code>, <code>$DESKTOP</code>, <code>$DOCUMENT</code>, <code>$DOWNLOAD</code>, <code>$EXE</code>, <code>$FONT</code>, <code>$HOME</code>, <code>$PICTURE</code>, <code>$PUBLIC</code>, <code>$RUNTIME</code>, <code>$TEMPLATE</code>, <code>$VIDEO</code>, <code>$RESOURCE</code>, <code>$APP</code>, <code>$LOG</code>, <code>$TEMP</code>, <code>$APPCONFIG</code>, <code>$APPDATA</code>, <code>$APPLOCALDATA</code>, <code>$APPCACHE</code>, <code>$APPLOG</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>args</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#shell-allowed-args">ShellAllowedArgs</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许的命令执行参数。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sidecar</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">如果此命令是一个 sidecar 命令。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="shell-allowed-args"><a class="anchor" href="#shell-allowed-args"></a>ShellAllowedArgs</h4>
+<div class="paragraph">
+<p>由 webview API 允许执行的一组命令参数。</p>
+</div>
+<div class="paragraph">
+<p>设置为 <code>true</code> 时，允许传递任何参数给命令；设置为 <code>false</code> 时，禁用所有参数。使用 [<code>ShellAllowedArg</code>] 列表时，将这些参数设置为唯一有效的参数，用于传递给附加的命令配置。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下任意类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>boolean</code>：使用简单的布尔值允许或禁用所有参数传递给此命令配置。</p>
+</li>
+<li>
+<p><code><a href="#shell-allowed-arg">ShellAllowedArg[]</a></code>：特定的一组 [<code>ShellAllowedArg</code>]，这些参数在命令配置中是有效的。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="shell-allowed-arg"><a class="anchor" href="#shell-allowed-arg"></a>ShellAllowedArg</h4>
+<div class="paragraph">
+<p>由 webview API 允许执行的命令参数。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下任意类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>string</code>：一个非可配置的参数，以指定的顺序传递给命令。</p>
+</li>
+<li>
+<p><code>object</code>：从 webview API 调用命令时设置的变量。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="shell-allowlist-open"><a class="anchor" href="#shell-allowlist-open"></a>ShellAllowlistOpen</h4>
+<div class="paragraph">
+<p>定义 <code>shell &gt; open</code> API 范围。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下任意类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>boolean</code>：是否应启用 shell open API。<br></p>
+<div class="paragraph">
+<p>如果启用，将使用默认的验证正则表达式 (<code>^mailto:\w+)|(tel:\w+)|(https?://\w+.+</code>)。</p>
+</div>
+</li>
+<li>
+<p><code>string</code>：启用 shell open API，并使用一个自定义正则表达式来验证打开的路径。<br></p>
+<div class="paragraph">
+<p>如果使用自定义正则表达式来支持非 http(s) 协议，应小心避免通过验证的值包含类似标志的字符串，例如 <code>--enable-debugging</code>, <code>-i</code>, <code>/R</code>。</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="dialog-allowlist-config"><a class="anchor" href="#dialog-allowlist-config"></a>DialogAllowlistConfig</h3>
+<div class="paragraph">
+<p>对话框 API 的允许列表。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>all</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用此标志以启用所有对话框 API 功能。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>open</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许 API 打开对话窗口以选择文件。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>save</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许 API 打开对话窗口以选择文件保存位置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许 API 显示消息对话窗口。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ask</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许 API 显示带有“是”/“否”按钮的对话窗口。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>confirm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许 API 显示带有“确定”/“取消”按钮的对话窗口。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="http-allowlist-config"><a class="anchor" href="#http-allowlist-config"></a>HttpAllowlistConfig</h3>
+<div class="paragraph">
+<p>HTTP API 的允许列表。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scope</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#http-allowlist-scope">HttpAllowlistScope</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP API 的访问范围。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>all</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用此标志以启用所有 HTTP API 功能。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>request</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许发起 HTTP 请求。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="http-allowlist-scope"><a class="anchor" href="#http-allowlist-scope"></a>HttpAllowlistScope</h4>
+<div class="paragraph">
+<p>HTTP API 范围定义。这是一个 URL 列表，webview 在使用 HTTP API 时可以访问这些 URL。范围 URL 使用 glob 模式与请求 URL 进行匹配。</p>
+</div>
+<div class="paragraph">
+<p>示例：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"https://*": 允许所有 HTTPS URL</p>
+</li>
+<li>
+<p>"https://*.github.com/tauri-apps/tauri": 允许任何 "github.com" 的子域，并且路径为 "tauri-apps/api"</p>
+</li>
+<li>
+<p>"https://myapi.service.com/users/*": 允许访问以 "https://myapi.service.com/users/" 开头的任何 URL</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>类型：<code>string</code> <em>(格式: <code>uri</code>)</em></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="notification-allowlist-config"><a class="anchor" href="#notification-allowlist-config"></a>NotificationAllowlistConfig</h3>
+<div class="paragraph">
+<p>通知 API 的允许列表。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>all</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用此标志以启用所有通知 API 功能。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="global-shortcut-allowlist-config"><a class="anchor" href="#global-shortcut-allowlist-config"></a>GlobalShortcutAllowlistConfig</h3>
+<div class="paragraph">
+<p>全局快捷键 API 的允许列表。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>all</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用此标志以启用所有全局快捷键 API 功能。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="os-allowlist-config"><a class="anchor" href="#os-allowlist-config"></a>OsAllowlistConfig</h3>
+<div class="paragraph">
+<p>操作系统 API 的允许列表。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>all</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用此标志以启用所有操作系统 API 功能。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="path-allowlist-config"><a class="anchor" href="#path-allowlist-config"></a>PathAllowlistConfig</h3>
+<div class="paragraph">
+<p>路径 API 的允许列表。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>all</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用此标志以启用所有路径 API 功能。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="protocol-allowlist-config"><a class="anchor" href="#protocol-allowlist-config"></a>ProtocolAllowlistConfig</h3>
+<div class="paragraph">
+<p>自定义协议的允许列表。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>assetScope</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#fs-allowlist-scope">FsAllowlistScope</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">资产协议的访问范围。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>all</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用此标志以启用所有自定义协议。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">启用资产协议。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="process-allowlist-config"><a class="anchor" href="#process-allowlist-config"></a>ProcessAllowlistConfig</h3>
+<div class="paragraph">
+<p>进程 API 的允许列表。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>all</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用此标志以启用所有进程 API。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>relaunch</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">启用重新启动 API。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>relaunchDangerousAllowSymlinkMacos</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">危险选项，允许 macOS 在二进制文件包含符号链接的情况下重新启动。</p>
+<p class="tableblock">这是由于 macOS 对符号链接的保护较少。强烈建议不要设置此标志，除非你有非常具体的理由，并且理解其影响。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">启用退出 API。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="clipboard-allowlist-config"><a class="anchor" href="#clipboard-allowlist-config"></a>ClipboardAllowlistConfig</h3>
+<div class="paragraph">
+<p>剪贴板 API 的允许列表。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>all</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用此标志以启用所有剪贴板 API。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>writeText</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">启用剪贴板的 <code>writeText</code> API。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readText</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">启用剪贴板的 <code>readText</code> API。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="app-allowlist-config"><a class="anchor" href="#app-allowlist-config"></a>AppAllowlistConfig</h3>
+<div class="paragraph">
+<p>应用程序 API 的允许列表。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>all</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用此标志以启用所有应用程序 API。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>show</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">启用应用程序的 <code>show</code> API。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hide</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">启用应用程序的 <code>hide</code> API。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="security-config"><a class="anchor" href="#security-config"></a>SecurityConfig</h3>
+<div class="paragraph">
+<p>安全相关配置。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>csp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#csp">Csp</a></code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#csp">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">将注入到构建应用程序的所有 HTML 文件中的内容安全策略。如果未指定 <code>dev_csp</code>，此值也会在开发模式中注入。</p>
+<p class="tableblock">这是配置的一个非常重要的部分，因为它帮助确保你的 WebView 是安全的。请参见 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP。" class="bare">https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP。</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>devCsp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#csp">Csp</a>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#csp">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在开发模式中注入到所有 HTML 文件中的内容安全策略。</p>
+<p class="tableblock">这是配置的一个非常重要的部分，因为它帮助确保你的 WebView 是安全的。请参见 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP。" class="bare">https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP。</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>freezePrototype</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在使用自定义协议时冻结 <code>Object.prototype</code>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dangerousDisableAssetCspModification</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#disabled-csp-modification-kind">DisabledCspModificationKind</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">禁用 Tauri 注入的 CSP 源。</p>
+<p class="tableblock">在编译时，Tauri 会解析所有前端资产，并将内容安全策略更改为仅允许加载你自己的脚本和样式，通过注入 nonce 和 hash 源来实现。这会严格限制你的 CSP，这可能在与其他灵活的源一起使用时引入问题。</p>
+<p class="tableblock">此配置选项允许使用布尔值和字符串列表作为值。布尔值指示 Tauri 禁用所有 CSP 注入，而字符串列表则表示 Tauri 无法注入的 CSP 指令。</p>
+<p class="tableblock">警告：只有在你知道自己在做什么并且已正确配置 CSP 的情况下才禁用此功能。没有这个 Tauri 保护，你的应用程序可能会受到 XSS 攻击的风险。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dangerousRemoteDomainIpcAccess</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#remote-domain-access-scope">RemoteDomainAccessScope[]</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许外部域发送命令到 Tauri。</p>
+<p class="tableblock">默认情况下，外部域无法访问 <code>window.__TAURI__</code>，这意味着它们无法与 Rust 中定义的命令进行通信。这可以防止外部加载的恶意或受损网站在用户设备上执行命令的攻击。</p>
+<p class="tableblock">此配置允许一组外部域访问 Tauri 命令。当你配置一个域允许访问 IPC 时，所有子路径都被允许。子域名是不允许的。</p>
+<p class="tableblock">警告：仅在你有内部检查来防范恶意外部网站或可以信任允许的外部网站时使用此选项。否则，你的应用程序可能会受到危险的 Tauri 命令相关攻击的风险。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="csp"><a class="anchor" href="#csp"></a>Csp</h4>
+<div class="paragraph">
+<p>内容安全策略定义。请参见 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP。" class="bare">https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP。</a></p>
+</div>
+<div class="paragraph">
+<p>可以是以下任意类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>string</code>：整个 CSP 策略以单个文本字符串形式。</p>
+</li>
+<li>
+<p><code>object</code>：一个对象，映射指令及其源值为字符串列表。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="csp-directive-sources"><a class="anchor" href="#csp-directive-sources"></a>CspDirectiveSources</h4>
+<div class="paragraph">
+<p>内容安全策略指令源列表。请参见 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources。" class="bare">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources。</a></p>
+</div>
+<div class="paragraph">
+<p>可以是以下任意类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>string</code>：CSP 源的内联列表。与 <code>List</code> 相同，但用空格分隔连接。</p>
+</li>
+<li>
+<p><code>string[]</code>：CSP 源的列表。集合将用空格分隔连接以形成 CSP 字符串。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="disabled-csp-modification-kind"><a class="anchor" href="#disabled-csp-modification-kind"></a>DisabledCspModificationKind</h4>
+<div class="paragraph">
+<p>危险的 <code>dangerous_disable_asset_csp_modification</code> 配置选项的可能值。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下任意类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>boolean</code>：如果为 <code>true</code>，禁用所有 CSP 修改。<code>false</code> 是默认值，配置 Tauri 以控制 CSP。</p>
+</li>
+<li>
+<p><code>string[]</code>：禁用给定列表中的 CSP 指令修改。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="remote-domain-access-scope"><a class="anchor" href="#remote-domain-access-scope"></a>RemoteDomainAccessScope</h4>
+<div class="paragraph">
+<p>外部命令访问定义。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scheme</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许的 URL 协议。默认情况下，所有协议都是允许的。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>domain</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>(required)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许的域。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>windows</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string[]</code>(required)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">此范围适用的窗口标签列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>plugins</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">此范围内允许的插件列表。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enableTauriAPI</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">启用对 Tauri API 的访问。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="updater-config"><a class="anchor" href="#updater-config"></a>UpdaterConfig</h3>
+<div class="paragraph">
+<p>更新程序配置对象。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>active</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">更新程序是否处于活动状态。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dialog</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">显示内置对话框或在禁用时使用事件系统。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>endpoints</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">更新程序端点。生产环境强制使用 TLS。</p>
+<p class="tableblock">更新程序 URL 可以包含以下变量：<br>
+- {{current_version}}: 请求更新的应用程序版本<br>
+- {{target}}: 操作系统名称（<code>linux</code>、<code>windows</code> 或 <code>darwin</code> 之一）<br>
+- {{arch}}: 机器的架构（<code>x86_64</code>、<code>i686</code>、<code>aarch64</code> 或 <code>armv7</code> 之一）</p>
+<p class="tableblock"># 示例<br>
+- "<a href="https://my.cdn.com/latest.json" class="bare">https://my.cdn.com/latest.json</a>": 一个原始 JSON 端点，返回最新版本和每个平台的下载链接。<br>
+- "<a href="https://updates.app.dev/{{target}}?version={{current_version}}&amp;arch={{arch}}" class="bare">https://updates.app.dev/{{target}}?version={{current_version}}&amp;arch={{arch}}</a>": 一个具有位置和查询字符串参数的专用 API。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pubkey</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">签名公钥。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>windows</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#updater-windows-config">UpdaterWindowsConfig</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#updater-windows-config">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">更新程序的 Windows 配置。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="updater-endpoint"><a class="anchor" href="#updater-endpoint"></a>UpdaterEndpoint</h4>
+<div class="paragraph">
+<p>指向更新服务器的 URL。</p>
+</div>
+<div class="paragraph">
+<p>URL 在生产环境中必须使用 <code>https</code> 协议。</p>
+</div>
+<div class="paragraph">
+<p>类型：<code>string</code> (格式：<code>uri</code>)</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="updater-windows-config"><a class="anchor" href="#updater-windows-config"></a>UpdaterWindowsConfig</h3>
+<div class="paragraph">
+<p>Windows 的更新程序配置。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>installerArgs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">提供给 NSIS 或 WiX 安装程序的附加参数。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>installMode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#windows-update-install-mode">WindowsUpdateInstallMode</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#windows-update-install-mode">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows 上更新的安装模式。默认为 <code>passive</code> 模式。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="windows-update-install-mode"><a class="anchor" href="#windows-update-install-mode"></a>WindowsUpdateInstallMode</h4>
+<div class="paragraph">
+<p>Windows 更新的安装模式。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下任意<strong>一种</strong>类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"basicUi": 指定安装过程中有基本的用户界面，包括最后的对话框。</p>
+</li>
+<li>
+<p>"quiet": 静默模式，意味着不需要用户交互。如果安装程序需要，则需要管理员权限。</p>
+</li>
+<li>
+<p>"passive": 指定无人值守模式，即安装过程仅显示进度条。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="system-tray-config"><a class="anchor" href="#system-tray-config"></a>SystemTrayConfig</h3>
+<div class="paragraph">
+<p>应用程序系统托盘图标的配置。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iconPath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>(required)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">系统托盘上使用的默认图标的路径。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iconAsTemplate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">一个布尔值，决定图像是否表示 macOS 上的 <a href="https://developer.apple.com/documentation/appkit/nsimage/1520017-template?language=objc">模板</a> 图像。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>menuOnLeftClick</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">一个布尔值，决定在 macOS 上托盘图标接收到左键点击时是否显示菜单。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">macOS 托盘的标题。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="build-config"><a class="anchor" href="#build-config"></a>BuildConfig</h3>
+<div class="paragraph">
+<p>构建配置对象。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">名称</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">类型</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">默认</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">描述</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>runner</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>string</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">用于构建和运行应用程序的二进制文件。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>devPath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#app-url">AppUrl</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#app-url">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">应用程序资产的路径或开发时加载的 URL。</p>
+<p class="tableblock">这通常是一个指向开发服务器的 URL，该服务器提供应用程序资产并支持实时重新加载。大多数现代 JavaScript 打包工具默认提供启动开发服务器的方式。</p>
+<p class="tableblock">请参见 <a href="https://vitejs.dev/guide/">vite</a>、 <a href="https://webpack.js.org/configuration/dev-server/">Webpack DevServer</a> 和 <a href="https://github.com/lukeed/sirv">sirv</a>，以了解如何设置开发服务器的示例。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>distDir</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#app-url">AppUrl</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#app-url">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">应用程序资产的路径或生产时加载的 URL。</p>
+<p class="tableblock">当提供一个相对于配置文件的路径时，它会递归读取所有文件，并将它们嵌入到应用程序二进制文件中。除非提供自定义窗口 URL，否则 Tauri 会查找 <code>index.html</code> 文件。</p>
+<p class="tableblock">您还可以提供一个路径列表以进行嵌入，这允许对添加到二进制文件的文件进行细粒度控制。在这种情况下，所有文件都添加到根目录中，您必须在 HTML 文件中以这种方式引用它们。</p>
+<p class="tableblock">当提供 URL 时，应用程序将没有打包的资产，应用程序将默认加载该 URL。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>beforeDevCommand</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#before-dev-command">BeforeDevCommand</a></code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#before-dev-command">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在 <code>tauri dev</code> 启动之前运行的 shell 命令。</p>
+<p class="tableblock">如果执行条件编译，将会设置 TAURI_PLATFORM、TAURI_ARCH、TAURI_FAMILY、TAURI_PLATFORM_VERSION、TAURI_PLATFORM_TYPE 和 TAURI_DEBUG 环境变量。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>beforeBuildCommand</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#hook-command">HookCommand</a></code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#hook-command">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在 <code>tauri build</code> 启动之前运行的 shell 命令。</p>
+<p class="tableblock">如果执行条件编译，将会设置 TAURI_PLATFORM、TAURI_ARCH、TAURI_FAMILY、TAURI_PLATFORM_VERSION、TAURI_PLATFORM_TYPE 和 TAURI_DEBUG 环境变量。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>beforeBundleCommand</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#hook-command">HookCommand</a></code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#hook-command">view</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">在 <code>tauri build</code> 的打包阶段开始之前运行的 shell 命令。</p>
+<p class="tableblock">如果执行条件编译，将会设置 TAURI_PLATFORM、TAURI_ARCH、TAURI_FAMILY、TAURI_PLATFORM_VERSION、TAURI_PLATFORM_TYPE 和 TAURI_DEBUG 环境变量。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>features</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>array</code>?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>null</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">传递给 <code>cargo</code> 命令的功能。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>withGlobalTauri</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">是否应该在 <code>window.__TAURI__</code> 上注入 Tauri API。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="app-url"><a class="anchor" href="#app-url"></a>AppUrl</h4>
+<div class="paragraph">
+<p>定义嵌入应用程序中的 URL 或资源。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下任何类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><a href="#window-url">WindowUrl</a></code>：应用程序的外部 URL，或包含应用程序资源的目录路径。</p>
+</li>
+<li>
+<p><code>string[]</code>：要嵌入应用程序中的文件数组。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="before-dev-command"><a class="anchor" href="#before-dev-command"></a>BeforeDevCommand</h4>
+<div class="paragraph">
+<p>描述在 <code>tauri dev</code> 之前运行的 shell 命令。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下任何类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>string</code>：使用默认选项运行给定的脚本。</p>
+</li>
+<li>
+<p><code>object</code>：使用自定义选项运行给定的脚本。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="hook-command"><a class="anchor" href="#hook-command"></a>HookCommand</h4>
+<div class="paragraph">
+<p>描述在触发 CLI 钩子时要执行的 shell 命令。</p>
+</div>
+<div class="paragraph">
+<p>可以是以下任何类型：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>string</code>: 使用默认选项运行给定的脚本。</p>
+</li>
+<li>
+<p><code>object</code>: 使用自定义选项运行给定的脚本。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="plugin-config"><a class="anchor" href="#plugin-config"></a>PluginConfig</h3>
+<div class="paragraph">
+<p>插件配置包含一个 HashMap，将插件名称映射到其配置对象。</p>
+</div>
+<div class="paragraph">
+<p>类型: <code>对象</code></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
